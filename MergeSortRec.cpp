@@ -53,14 +53,63 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=0;
- 
+ void printArr(int arr[],int size){
+ 	for( int i=0;i<size;i++){
+ 		cout<<arr[i]<<" ";
+ 	}
+ 	cout<<endl;
+ }
+ void merge(int arr[],int low,  int mid,int  high){
+ 	int n=mid-low+1, m=high-(mid+1)+1;
+ 	debug(n);
+ 	debug(m);
+ 	int l[n],r[m];
 
- 
+ 	// copy array in l and m
+ 	for(int i=0;i<n;i++){
+ 		l[i]=arr[low +i];
+ 	}
+ 	for( int j=0;j<m;j++){
+ 		r[j]=arr[mid+1+j];
+ 	}
+ 	int i=0,j=0,k=low;
+ 	while ( i<n && j<m){
+ 		if(l[i]<r[j]){
+ 			arr[k]=l[i];
+ 			i++;
+ 			k++;
+ 		}
+ 		else{
+ 			arr[k]=r[j];
+ 			k++;
+ 			j++;
+ 		}
+ 	}
+ 	while(i<n){
+ 		arr[k]=l[i];
+ 		i++;
+ 		k++;
+ 	}
+ 	while(j<m){
+ 		arr[k]=r[j];
+ 		j++;
+ 		k++;
+ 	}
+ }
+ void mergeSort(int arr[],int low,int high){
+ 	if(low<high){
+ 		int mid=low + (high-low)/2;
+ 		mergeSort(arr,low,mid);
+ 		mergeSort(arr,mid+1,high);
+ 		merge(arr,low,mid,high);
+ 	}
+
+ }
 void solve(){
-	int ans=299;
-	cout<<7<<endl;
-	//debug(ans);
-	debug(ans);
+	int arr[]={4,5,3,5,2,6,2,1};
+	int n=sizeof(arr)/sizeof(arr[0]);
+	mergeSort(arr,0,n-1);
+	printArr(arr,n);
 }
 signed main(){
 	ios_base::sync_with_stdio(false);

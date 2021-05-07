@@ -57,8 +57,8 @@ const int N=0;
 
  
 void solve(){
-	int ans=29;
-	cout<<5<<endl;
+	int ans=299;
+	cout<<7<<endl;
 	//debug(ans);
 	debug(ans);
 }
