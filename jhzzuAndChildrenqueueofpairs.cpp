@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 using namespace std;
-#define int               long long
+//#define int               long long
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -24,7 +24,7 @@ using namespace std;
 #define debug(x)
 #endif
 
-//void _print(long long t) {cerr << t;}
+void _print(long long t) {cerr << t;}
 void _print(int t) {cerr << t;}
 void _print(string t) {cerr << t;}
 void _print(char t) {cerr << t;}
@@ -51,68 +51,49 @@ template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
+
+
  
+
 const int N=0;
 
-/*void solve(){
-	int n,x,k;
-	scanf("%lld %lld %lld",&n,&x,&k);
-	
-	bool flag=false;
-	int a=0 ,b=n+1;
-	for(int i=1;a<n+1;i++){
-		a=(i-1)*k;
-		if(x==a){
-			flag=true;
-			break;
-		}
-		
-	}
-	for(int i=1; b>=0;i++){
-		b=n+1 +(1-i)*k;
-		if(x==b){
-			flag=true;
-			break;
-		}
-
-	}
-
-	if(flag==true){
-		printf("YES\n");
-	}
-	else{
-		printf("NO\n");
-	}
-
-}*/
-int gcd( int a , int b){
-	if(b==0){
-		return a;
-	}
-	else{
-		return gcd(b, a%b);
-	}
-}
 void solve(){
-	int k;
-	cin>>k;
-	vector<int > arr(2*k +1,0);
-	for( int i=0;i<2*k+1;i++){
-		arr[i]=k+pow(i+1,2);
+	int n, m;
+	cin>>n>>m;
+	int arr[n];
+	for(int i=0;i<n;i++){
+		cin>>arr[i];
 	}
-	int sum=0;
-	debug(arr);
-	for(int i=0;i<2*k;i++){
-		sum+=gcd(arr[i],arr[i+1]);
-		debug(sum);
+	queue<pair<int,int> > q;
+	for(int i=0;i<n;i++){
+		q.push(make_pair(i,arr[i]));
+
 	}
-	cout<<sum<<endl;
+	int lastChild=-1;
+	while(!q.empty()){
+		if(q.size()==1){
+			lastChild=q.front().first;
+		}
+		q.front().second-=m;
+
+		if(q.front().second >0){
+			q.push(q.front());
+			q.pop();
+		}
+		else{
+			q.pop();
+		}
+	}
+	cout<<lastChild+1<<endl;
+
+
+
 }
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	freopen("input.in", "r", stdin);
-	freopen("output.in", "w", stdout);
+	//freopen("input.in", "r", stdin);
+	//freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
@@ -124,7 +105,7 @@ signed main(){
 	#endif
 	
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
 	return 0;
 }

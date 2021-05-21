@@ -65,8 +65,8 @@ void solve(){
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	freopen("input.in", "r", stdin);
-	freopen("output.in", "w", stdout);
+	//freopen("input.in", "r", stdin);
+	//freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
