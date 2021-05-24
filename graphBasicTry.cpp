@@ -67,16 +67,59 @@ const int32_t MM=998244353;
 const int N=0;
  
 
+int n=12;
+vector< vector<pair<int,int> > > g(12);
 
+void printV1(vector < pair< int, int> > v1){
+    vector<pair<int ,int> > :: iterator it;
+    for( it=v1.begin();it!=v1.end();it++){
+        cout<<it->first<< " "<< it->second<<" "<<endl;
+    }
+}
+void printAdjList(vector< vector< pair< int, int> > > g){
+    for(int i=0;i<n;i++){
+        vector<pair<int,int> > :: iterator it;
+        for( it=g[i].begin();it!=g[i].end();it++){
+            cout<<it->first<<" "<<it->second<<"\t";
+        }
+        cout<<endl;
+    }
+    
+    cout<<endl;
+    
+}
+//insert  adjacency list
+void insertAdjList(){
+	for(int i=0;i<n;i++){
+		vector<pair<int,int> > v1;
+		char choice;
+		cout<<"Do you want to add connected verteces of vertex "<<i<<"y/n"<<endl;
+		cin>>choice;
+		while(choice=='y' || choice=='Y'){
+			int vertex, weight;
+			pair<int, int> p;
+			cout<<"Enter vertex and weight "<<endl;
+			cin>>vertex>>weight;
+			p=make_pair(vertex,weight);
+			v1.push_back(p);
+			cout<<"Do you want to add more vertices for vertex no"<<i<<"(y/n)"<<endl;
+			cin>>choice;
+
+			}
+		g.push_back(v1);	
+
+	}
+
+}
  
 void solve(){
-	
+	 
 }
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	//freopen("input.in", "r", stdin);
-	//freopen("output.in", "w", stdout);
+	freopen("input.in", "r", stdin);
+	freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif

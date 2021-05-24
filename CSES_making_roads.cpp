@@ -24,8 +24,7 @@ using namespace std;
 #define debug(x)
 #endif
 
-
-//void _print(long long t) {cerr << t;}
+void _print(long long t) {cerr << t;}
 void _print(int t) {cerr << t;}
 void _print(string t) {cerr << t;}
 void _print(char t) {cerr << t;}
@@ -33,7 +32,6 @@ void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
 void _print(unsigned long long t) {cerr << t;}
 
-//template <class T> void _print(T arr[]);
 template <class T, class V> void _print(pair <T, V> p);
 template <class T> void _print(vector <T> v);
 template <class T> void _print(set <T> v);
@@ -44,33 +42,55 @@ template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_prin
 template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
-//template <class T> void _print(T arr[]){cerr <<"["; for( T i: arr){_print(arr[i]);cerr << " ";}cerr<<"]";}
-
-
-
+ 
 template<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}
 template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<" "<<a.sc;return out;}
 template<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}
 template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
  
 const long long INF=1e18;
-void printQ(queue<int> q){
-	while(!q.empty()){
-		cout<< q.front();
-		q.pop();
-	}
-	cout<<endl;
-}
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
-const int N=0;
- 
+const int N=1000000;
+vector<int> adj[N];
+int n,m,cnt=0;
+vector<bool> visitedd(N,0);
 
+void dfs(int vertex){
+	visitedd[vertex]=true;
+
+	for( int x: adj[vertex]){
+		if(visitedd[x])continue;
+		dfs(x);
+	}
+}
 
  
 void solve(){
-	
+	cin>>n>>m;
+	for(int i=0;i<m;i++){
+		int x,y;
+		cin>>x>>y;
+		x-=1;
+		y-=1;
+		adj[x].push_back(y);
+		adj[y].push_back(x);
+
+	}
+	vector<int> v1;
+	for( int i=0;i<n;i++){
+		if(visitedd[i])continue;
+		v1.push_back(i);
+		dfs(i);
+		debug(cnt);
+		cnt++;
+	}
+
+	cout<<cnt-1<<endl;
+	for( int i=0;i<v1.size()-1;i++){
+		cout<<v1[i]+1<<" "<<v1[i+1]+1<<endl;
+	}
 }
 signed main(){
 	ios_base::sync_with_stdio(false);

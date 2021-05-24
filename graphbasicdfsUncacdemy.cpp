@@ -54,22 +54,49 @@ template<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}
 template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
  
 const long long INF=1e18;
-void printQ(queue<int> q){
-	while(!q.empty()){
-		cout<< q.front();
-		q.pop();
-	}
-	cout<<endl;
-}
+
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
-const int N=0;
+const int N=100000;// maximum no of nodes
+
+vector<int> adj[N];// adjancy matrix
+int cnt=0;
+bool visited[N];
+
+void dfs(int node ){
+	visited[node]=true;
+	cnt++;
+	for(auto x :adj[node]){
+		if(visited[x])continue;
+		dfs(x);
+	}
+
+}
  
 
 
  
 void solve(){
+	int n,m;
+	cin>>n>>m;
+	// no of nodes and edges
+
+	for( int i=0;i<m;i++){
+		int x,y;
+		cin>>x>>y;
+		//considering undirected
+		adj[x].push_back(y);
+		adj[y].push_back(x);
+	}
+	dfs(1);
+
+	if(cnt==n){
+		cout<<"It is connected"<<endl;
+	}
+	else{
+		cout<<"It is not connected"<<endl;
+	}
 	
 }
 signed main(){

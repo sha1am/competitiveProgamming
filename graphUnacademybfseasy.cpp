@@ -54,23 +54,52 @@ template<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}
 template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
  
 const long long INF=1e18;
-void printQ(queue<int> q){
-	while(!q.empty()){
-		cout<< q.front();
-		q.pop();
-	}
-	cout<<endl;
-}
+
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
-const int N=0;
+const int N=10000;
+vector<int> adj[N];
+int distancee[N];
+int cnt=0;
+//bool visited[N];
+bool pushedIntoQueueOnce[N];
+
  
 
 
  
 void solve(){
-	
+	int n,m;
+	cin>>n>>m;
+
+	for( int i=0;i<m;i++){
+		int x, y;
+		cin>>x>>y;
+
+		adj[x].push_back(y);
+		adj[y].push_back(x);
+	}
+
+	queue<int> q;
+	q.push(1);
+	distancee[1]=0;
+	//visited[1]=true;
+	pushedIntoQueueOnce[1]=true;
+
+	while(!q.empty()){
+		int currentVertex=q.front();
+		q.pop();
+		cnt+=1;
+		for( int x: adj[currentVertex]){
+			if(pushedIntoQueueOnce[x]) continue;
+			q.push(x);
+			distancee[x]=distancee[currentVertex]+1;
+			pushedIntoQueueOnce[x]=true;
+		}
+	}
+
+	cout<<cnt<<endl;
 }
 signed main(){
 	ios_base::sync_with_stdio(false);

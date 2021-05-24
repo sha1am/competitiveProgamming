@@ -1,97 +1,68 @@
-#include <iostream>
-
+#include "bits/stdc++.h"
 using namespace std;
-
-class node{
-    public:
-    int data;
-    node* next;
-    node(int d)
-    {
-        data = d;
-        next = NULL;
-    }
-};
-
-void insertAtTail(node*&head, int d)
+bool sortbysecdesc(const pair<int,int> &a,
+                   const pair<int,int> &b)
 {
-    if(head==NULL)
-    {
-        head = new node(d);
-        return;
-    }
-    node* tail = head;
-    while(tail->next!=NULL)
-    {
-        tail = tail->next;
-    }
-    tail->next = new node(d);
-    return;
+       return a.second>b.second;
 }
-
-void print(node*head)
+ 
+ 
+void solve()
 {
-    while(head!=NULL)
+    // Declaring vector of pairs
+    vector< pair <int,int> > vect;
+ 
+    // Initializing 1st and 2nd element of
+    // pairs with array values
+    int arr[] = {5, 20, 10, 40 };
+    int arr1[] = {30, 60, 20, 50};
+    int n = sizeof(arr)/sizeof(arr[0]);
+ 
+    // Entering values in vector of pairs
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+ 
+    // Printing the original vector(before sort())
+    cout << "The vector before sort operation is:\n" ;
+    for (int i=0; i<n; i++)
     {
-        cout << head->data << " ";
-        head = head->next;
+        // "first" and "second" are used to access
+        // 1st and 2nd element of pair respectively
+        cout << vect[i].first << " "
+            << vect[i].second << endl;
     }
-    cout << endl;
+ 
+    // using modified sort() function to sort
+    sort(vect.begin(), vect.end(), sortbysecdesc);
+ 
+    // Printing the sorted vector(after using sort())
+    cout << "The vector after applying sort operation is:\n" ;
+    for (int i=0; i<n; i++)
+    {
+        // "first" and "second" are used to access
+        // 1st and 2nd element of pair respectively
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+    //return 0;
 }
-
-node* evenOdd(node*&head)
-{
-    if(head==NULL || head->next==NULL)
-    {
-        return head;
-    }
-    
-    
-    node* prev = head;
-    node * temp1= new node(0);
-    temp1->next=head;
-    
-    node* c = temp1;
-    node* p = head;
-    //node* firsteve = head;
-    //int k=0;
-    while(c->next!=NULL)
-    {
-
-        prev = c;
-        c = c->next;
-        if(c->data%2==1)
-        {
-            node* temp = p->next;
-            prev->next = c->next;
-            p->next = c;
-            c->next = temp;
-            p = p->next;
-        }
-    }
-    if(c->data%2==1)
-    {
-        node* temp = p->next;
-        prev->next = NULL;
-        p->next = c;
-        c->next = temp;
-    }
-    return head;
-}
-
-int main() 
-{
+signed main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
     freopen("input.in", "r", stdin);
     freopen("output.in", "w", stdout);
-    node* head = NULL;
-    int n, d;
-    cin >> n;
-    while(n--)
-    {
-        cin >> d;
-        insertAtTail(head, d);
-    }
-    node* fin = evenOdd(head);
-    print(fin);
+    #ifndef ONLINE_JUDGE
+    freopen("error.in", "w", stderr);
+    #endif
+    #ifdef SIEVE
+        sieve();
+    #endif
+    #ifdef NCR
+        init();
+    #endif
+    
+    int t=1;
+    //cin>>t;
+    while(t--) solve();
     return 0;
 }
