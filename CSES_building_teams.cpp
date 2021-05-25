@@ -53,13 +53,10 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=1000000;
-
- int n,m;
- vector<int> adj[N];
- vector<int> distancee(N,0);
- vector<bool> pushedIntoQueueOnce(N,0);
- vector<int> prevv(N,-1);
-
+int n,m;
+vector<int> adj[N];
+vector<int> col(N,-1);
+vector<bool>pushedIntoQueueOnce(N,0);
  
 void solve(){
 	cin>>n>>m;
@@ -70,49 +67,56 @@ void solve(){
 		y-=1;
 		adj[x].push_back(y);
 		adj[y].push_back(x);
-
 	}
 
 	queue<int> q;
-	q.push(0);//1
-	distancee[0]=0;
-	pushedIntoQueueOnce[0]=1;
-	prevv[0]=-1;
+	int max=0;
 
-	while(!q.empty()){
-		int lastVertex=q.front();
+	for(int i=0;i<n;i++){
+		if(pushedIntoQueueOnce[i])continue;
+		q.push(i);
+	//col[0]=1;
+	pushedIntoQueueOnce[i]=1;
+	//int max=0;
+		while(!q.empty()){
+		int parentVertex=q.front();
+		debug(parentVertex);
 		q.pop();
-		for(int x:adj[lastVertex]){
-			if(pushedIntoQueueOnce[x])continue;
 
-			q.push(x);
-			distancee[x]=distancee[lastVertex]+1;
-			pushedIntoQueueOnce[x]=1;
-			prevv[x]=lastVertex;
-		}
-	}
-
-	if(distancee[n-1]==0){
-		cout<<"IMPOSSIBLE"<<endl;
-	}
-	else{
-		cout<<distancee[n-1]+1<<endl;
-
-		vector<int> v1;
-		for(int at=prevv[n-1];at!=-1;at=prevv[at]){
-			v1.push_back(at);
-		}
-		reverse(v1.begin(),v1.end());
-
-		if(v1[0]==0){
-			for(vector<int> ::iterator it=v1.begin();it!=v1.end();it++){
-				cout<<*it+1<<" ";
+		for(int i=1;;i++){
+			bool flag=true;
+			for(int x: adj[parentVertex]){
+				//cout<<"a1"<<endl;
+				if(col[x]==i)flag=false;
+				//cout<<"a"<<endl;
+				
 			}
-			cout<<n;
-			cout<<endl;
+			if(flag==true){
+				col[parentVertex]=i;
+				//cout<<"b"<<endl;
+				if(i>max)max=i;
+				break;
+			}
+		}
+
+		for(int x: adj[parentVertex]){
+			debug(x);
+			if(pushedIntoQueueOnce[x])continue;
+			q.push(x);
+			pushedIntoQueueOnce[x]=1;
 		}
 	}
+	}
+	
 
+	debug(max);
+
+	if(max==2){
+		for(int i=0;i<n;i++){
+			cout<<col[i]<<" ";
+			}
+	}
+	else cout<<"IMPOSSIBLE"<<endl;
 }
 signed main(){
 	ios_base::sync_with_stdio(false);
