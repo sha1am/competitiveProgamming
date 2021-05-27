@@ -52,113 +52,48 @@ const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
-const int N=1000000;
+const int N=0;
  
- int n,m;
- vector<int> adj[N];
- vector<bool> pushedIntoQueueOnce(N,0);
-vector<int> prevv(N,-1);
-vector<int> distancee(N,-1);
-int startingVertex=-1;
 
- 
 void solve(){
-	cin>>n>>m;
-	for(int i=0;i<n;i++){
-		int x,y;
-		cin>>x>>y;
-		x-=1;
-		y-=1;
-		adj[x].push_back(y);
-		adj[y].push_back(x);
-	}	
+	int n;
+	cin>>n;
 
-	for(int i=0;i<n;i++){
-		cout<<"a"<<endl;
-	 	if(adj[i].size()>=2){
-	 		startingVertex=i;
-	 		break;
-	 		
-	 	
-	 	
-	 }
+	int s,r;
+	int flag1=true;
+	int r1;
+	for(r=0;r<=2*n;r++){
+		if(r<=n)r1=r;
+		else r1=2*n-r;
+		//space 
+		for( int i=0;i<2*n-r1*2;i++){
+			cout<<" ";
+		}
+		//pattern
+		int n=0;
+		bool flag=false;
+		int count=0;
+		for(int i=0;n>=0;i++){
+			cout<<n;
+			debug(n);
+			if(n==0)count++;
+			if(n==0 && count>=2);
+			else cout<<" ";
+			if(n==r1)flag=true;
+			debug(flag);
+			if(flag)n-=1;
+			else n++;
+		}
+		cout<<endl;
 
-	 if(startingVertex==-1){
-	 	cout<<"IMPOSSIBLE"<<endl;
-	 }
-	 else{
-	 	startingVertex=i;
-	 		
-	 		queue<int> q;
-	 		q.push(startingVertex);
-	 		prevv[startingVertex]=-1;
-	 		distancee[startingVertex]=0;
-	 		pushedIntoQueueOnce[startingVertex]=1;
-
-
-
-	 		while(!q.empty()){
-	 			int vertex=q.front();
-	 			q.pop();
-
-	 			for(int x: adj[vertex]){
-	 				if(pushedIntoQueueOnce[x])continue;
-	 				q.push(x);
-	 				distancee[x]=distancee[vertex]+1;
-	 				pushedIntoQueueOnce[x]=1;
-	 				prevv[x]=vertex;
-	 			}
-	 		}
-
-	 		
-
-
-	 		if(distancee[startingVertex]!=0){
-
-	 			cout<<"b"<<endl;
-
-	 			vector<int> path;
-	 			int i=0;
-
-	 			for(int i=0;i<n;i++){
-	 			cout<<prevv[i]<<" ";
-	 				}
-	 			cout<<endl;
-
-	 			for(int at=prevv[startingVertex];at!=1 && i<5;at=prevv[at],i++){
-	 				path.push_back(at);
-	 				cout<<"e"<<endl;
-	 			}
-	 			reverse(path.begin(),path.end());
-
-	 			for(vector<int> ::iterator it=path.begin();it!=path.end();it++){
-	 				cout<<*it<<" ";
-	 				cout<<"c"<<endl;
-	 			}
-	 			break;
-	 		}
-	 		else 
-	 		{
-	 			cout<<"d"<<endl;
-	 			distancee.clear();
-	 			distancee.resize(N,-1);
-	 			prevv.clear();
-	 			prevv.resize(N,-1);
-	 			continue;
-	 		}
-
-
-
-	 	}
-	 }
-	 		
-	 }
+	}
+}
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	freopen("input.in", "r", stdin);
-	freopen("output.in", "w", stdout);
+	//freopen("input.in", "r", stdin);
+	//freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
