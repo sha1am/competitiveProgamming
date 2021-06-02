@@ -2,15 +2,22 @@
 	{
 		"correct_answers":
 		[
-			"0\n  0 1 0\n0 1 2 1 0\n  0 1 0\n    0"
+			"O-|OO-OO"
 		],
 		"test": "2\n"
 	},
 	{
 		"correct_answers":
 		[
-			"0\n    0 1 0\n  0 1 2 1 0\n0 1 2 3 2 1 0\n  0 1 2 1 0\n    0 1 0\n      0"
+			"O-|OOO-O\nO-|O-OOO"
 		],
-		"test": "3\n"
+		"test": "13\n"
+	},
+	{
+		"correct_answers":
+		[
+			"O-|-OOOO\nO-|OO-OO\n-O|OO-OO"
+		],
+		"test": "720\n"
 	}
 ]

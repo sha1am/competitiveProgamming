@@ -60,48 +60,74 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-void printAbacus(int digit){
 
-	string s="O-|-OOOO";
-	int a=digit;
-	debug(s);
-	if(digit>=5){
-		s[0]='-';
-		s[1]='O';
-		a=digit-5;
+bool check(deque<int> q){
+	int a=q.front();
+	while(!q.empty()){
+		if(a!=q.front()) return false;
+		q.pop_front();
 	}
-	rep(i,3,3+a){
-		s[i]='O';
-	}
-	s[3+a]='-';
-	debug(s);
-	cout<<s<<endl;
+	return true;
+
 }
-
 void solve(){
-	int num;
-	cin>>num;
-	debug(num);
-	if(num==0){
-		cout<<"O-|-OOOO";
-	}
-	else{
-		while(num>0){
-		int a=num%10;
-		debug(a);
-		printAbacus(a);
-		num/=10;
-	}
-	}
+	int n,k;
+	cin>>n>>k;
+	 debug(n);
+	 debug(k);
+	deque<int > q;
+	stack<int> s;
 
+	rep(i,0,n){
+		int a;
+		cin>>a;
+		q.push_back(a);
+	}
+	debug(q);
+
+	//
+	int n1=n;
+	int count=0;
+	bool flag=false;
+	while(n1>0){
+		n1--;
+		int k1=k ;
+		while(k1>0){
+			k1--;
+			s.push(q.front());
+			
+			q.pop_front();
+			
+		}
+		debug(s);
+		debug(q);
+
+		q.push_back(s.top());
+		while(!s.empty()){
+			q.push_front(s.top());
+			s.pop();
+		}
+		q.pop_front();
+		count+=1;
+		debug(s);
+		debug(q);
+
+		if(check(q)){
+			cout<<count<<endl;
+			flag=check(q);
+			break;
+		}
+
+	}
+	if(!flag){
+	cout<<-1<<endl;
+	}
 	
 }
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	//freopen("input.txt", "r", stdin);
-	//freopen("output.txt", "w", stdout);
 	//freopen("input.in", "r", stdin);
 	//freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
