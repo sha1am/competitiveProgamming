@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 using namespace std;
-//#define int               long long
+#define int               long long
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -25,53 +25,65 @@ using namespace std;
 #endif
 
 
-//void _print(long long t) {cerr << t;}
-void _print(int t) {cerr << t;}
+void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
+//void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
 void _print(unsigned long long t) {cerr << t;}
 
-//template <class T> void _print(T arr[]);
 template <class T, class V> void _print(pair <T, V> p);
+template <class T> void _print(deque<T> d);
+template <class T> void _print(queue<T> q);
+template <class T> void _print(stack<T> s);
 template <class T> void _print(vector <T> v);
 template <class T> void _print(set <T> v);
 template <class T, class V> void _print(map <T, V> v);
 template <class T> void _print(multiset <T> v);
 template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.first); cerr << ","; _print(p.second); cerr << "}";}
+template <class T> void _print(deque<T> d){cerr <<"["; while(!d.empty()){_print(d.front());cerr<<" "; d.pop_front();}cerr<< "]"; }
+template <class T> void _print(queue<T> q){cerr <<"["; while(!q.empty()){_print(q.front());cerr<<" "; q.pop();}cerr<< "]"; }
+template <class T> void _print(stack<T> s){cerr <<"["; while(!s.empty()){_print(s.top());cerr<<" "; s.pop();} cerr <<"]";}
 template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
-//template <class T> void _print(T arr[]){cerr <<"["; for( T i: arr){_print(arr[i]);cerr << " ";}cerr<<"]";}
-
-
-
+ 
 template<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}
 template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<" "<<a.sc;return out;}
 template<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}
 template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
  
 const long long INF=1e18;
-void printQ(queue<int> q){
-	while(!q.empty()){
-		cout<< q.front();
-		q.pop();
-	}
-	cout<<endl;
-}
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
-const int N=0;
- 
+const int N=105;
 
-
- 
+bool findKey(map<char,int> mp,char key){
+	if(mp.find(key)==mp.end()){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
 void solve(){
 	
+
+
+	
+	
+
+
+
+
+	
+
+	
 }
+
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);

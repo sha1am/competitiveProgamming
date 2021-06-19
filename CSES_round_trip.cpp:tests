@@ -4,7 +4,7 @@
 		[
 			"O-|OO-OO"
 		],
-		"test": "2\n"
+		"test": "6\n"
 	},
 	{
 		"correct_answers":
@@ -19,5 +19,8 @@
 			"O-|-OOOO\nO-|OO-OO\n-O|OO-OO"
 		],
 		"test": "720\n"
+	},
+	{
+		"test": "6\n"
 	}
 ]

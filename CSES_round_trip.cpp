@@ -60,40 +60,21 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-void printAbacus(int digit){
 
-	string s="O-|-OOOO";
-	int a=digit;
-	debug(s);
-	if(digit>=5){
-		s[0]='-';
-		s[1]='O';
-		a=digit-5;
-	}
-	rep(i,3,3+a){
-		s[i]='O';
-	}
-	s[3+a]='-';
-	debug(s);
-	cout<<s<<endl;
-}
 
 void solve(){
-	int num;
-	cin>>num;
-	debug(num);
-	if(num==0){
-		cout<<"O-|-OOOO";
-	}
-	else{
-		while(num>0){
-		int a=num%10;
-		debug(a);
-		printAbacus(a);
-		num/=10;
-	}
-	}
-
+	int n;
+	cin>>n;
+	    vector<int> fibb(n+1,-1);
+        fibb[0]=0;
+        fibb[1]=1;
+        for(int i=2;i<n+1;i++){
+            fibb[i]=fibb[i-1]+fibb[i-2];
+        }
+       rep(i,0,n+1){
+       	cout<<fibb[i]<<endl;
+       }
+	
 	
 }
 
@@ -102,8 +83,8 @@ signed main(){
 	cin.tie(0);cout.tie(0);
 	//freopen("input.txt", "r", stdin);
 	//freopen("output.txt", "w", stdout);
-	//freopen("input.in", "r", stdin);
-	//freopen("output.in", "w", stdout);
+	freopen("input.in", "r", stdin);
+	freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
