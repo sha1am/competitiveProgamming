@@ -61,33 +61,12 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-int w=2002, n=202;
-
-int knapsack(vector<int> weight, vector<int> value, int w, int n){
-
-	// base case
-
-	if(w==0||n==0)return 0;
-
-	// choice daigram
-	if(weight[n-1]<=w){
-		return max(value[n-1]+knapsack(weight, value, w-weight[n-1],n-1),knapsack(weight,value,w,n-1));
-	}
-	else{
-		return knapsack(weight, value,w,n-1);
-	}
-}
-
 
 void solve(){
 	
 
-vector<int> weight{10,20,30},value{60,100,120};
-int w=50;
-int n=weight.size();
-
-cout<<"the maximum profit that can be earned is "<<knapsack(weight,value,w, n);
-
+	
+	
 	
 
 

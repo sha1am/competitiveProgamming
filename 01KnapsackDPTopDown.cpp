@@ -61,33 +61,53 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-int w=2002, n=202;
-
-int knapsack(vector<int> weight, vector<int> value, int w, int n){
-
-	// base case
-
-	if(w==0||n==0)return 0;
-
-	// choice daigram
-	if(weight[n-1]<=w){
-		return max(value[n-1]+knapsack(weight, value, w-weight[n-1],n-1),knapsack(weight,value,w,n-1));
+bool findKey(map<char,int> mp,char key){
+	if(mp.find(key)==mp.end()){
+		return false;
 	}
 	else{
-		return knapsack(weight, value,w,n-1);
+		return true;
 	}
 }
+int knapsack(vector<int> weight, vector<int> value, int w, int n){
+	vector<int> tempV(w+1,-1);
+	vector<vector<int>> t(n+1,tempV);
 
+	// base condition
 
+	for(int i=0;i<n+1;i++){
+		for(int j=0;j<w+1;j++){
+			if(i==0 || j==0){
+				t[i][j]=0;
+			}
+		}
+	}
+
+	//
+	for(int i=1;i<n+1;i++){
+		for(int j=1;j<w+1;j++){
+			if(weight[i-1]>j){
+				t[i][j]=t[i-1][j];
+			}
+			else{
+				t[i][j]=max(t[i-1][j],value[i-1]+t[i-1][j-weight[i-1]]);
+			}
+		}
+	}
+
+	for(int i=0;i<n+1;i++){
+		debug(t[i]);
+	}
+
+	return t[n][w];
+}
 void solve(){
 	
 
-vector<int> weight{10,20,30},value{60,100,120};
-int w=50;
-int n=weight.size();
 
-cout<<"the maximum profit that can be earned is "<<knapsack(weight,value,w, n);
-
+	vector<int> weight{10,20,30},value{60,100,120};
+	int w=50;int n=3;
+	cout<<"The max profit that can be earned is"<<knapsack(weight,value,w,n);
 	
 
 
