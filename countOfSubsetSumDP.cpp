@@ -60,51 +60,56 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
+int w=1002,n=202;
+pair<bool,int> tempP=make_pair(false,0);
+vector<pair<bool,int>> tempV(w+1,tempP);
+vector<vector<pair<bool,int>>> t(n+1,tempV);
 
-int w=2002, n=202;
-vector<int> tempV(w,-1);
-vector<vector<int>> t(n,tempV);
-int knapsack(vector<int> weight, vector<int> value, int w, int n){
+int knapsack(vector<int> arr, int w, int n){
+	//initalization
+	rep(i,0,n+1){
+		rep(j,0,w+1){
+			if(i==0) { t[i][j].fr=false;
+				t[i][j].sc=0;
 
-	// base case
-
-	if(w==0||n==0)return 0;
-
-	// choice daigram
-	if(t[n][w]!=-1){
-		return t[n][w];
-	}
-	else{
-		if(weight[n-1]<=w){
-		return t[n][w]=max(value[n-1]+knapsack(weight, value, w-weight[n-1],n-1),knapsack(weight,value,w,n-1));
-	}
-	else{
-		return t[n][w]=knapsack(weight, value,w,n-1);
-	}
+			}
+			if(j==0){
+				t[i][j].fr=true;
+				t[i][j].sc=1;
+			}
+		}
 	}
 
+	//choice daigram
+
+	rep(i,1,n+1){
+		rep(j,1,w+1){
+			if(arr[i-1]>j){
+				t[i][j].fr=t[i-1][j].fr;
+				t[i][j].sc=t[i-1][j].sc;
+			}
+			else{
+				t[i][j].fr= t[i-1][j].fr ||t[i-1][j-arr[i-1]].fr;
+				if(t[i][j].fr==true){
+					t[i][j].sc=t[i-1][j].sc +t[i-1][j-arr[i-1]].sc;
+				}
+				else{
+					t[i][j].sc=0;
+				}
+			}
+		}
+	}
+	return t[n][w].sc;
 }
-
 
 void solve(){
 	
+	vector<int> arr{2,3,5,6,8,10};
+	int w=10;
+	int n=arr.size();
 
-vector<int> weight{10,20,30},value{60,100,120};
-int w=50;
-int n=weight.size();
+	cout<< "the count of subsets with sum"<<w<<"is"<<knapsack(arr,w,n);
 
-cout<<"the maximum profit that can be earned is "<<knapsack(weight,value,w, n);
-
-	
-
-
-
-// function to print a vector
-
-
-
-
-	
 
 	
 }

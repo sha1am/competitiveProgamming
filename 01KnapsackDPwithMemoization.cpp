@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 using namespace std;
-#define int               long long
+#define int               long long	
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -70,6 +70,7 @@ bool findKey(map<char,int> mp,char key){
 	}
 }
 int w=1002,n=202;
+
 vector<int> tempVector(w,-1);
 vector<vector<int>> t(n,tempVector);
 

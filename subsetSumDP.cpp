@@ -61,45 +61,47 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-int w=2002, n=202;
-vector<int> tempV(w,-1);
-vector<vector<int>> t(n,tempV);
-int knapsack(vector<int> weight, vector<int> value, int w, int n){
+int w=4, n=5;
 
-	// base case
+vector<int> tempV(w+1,false);
+vector<vector<int>> t(n+1,tempV);
 
-	if(w==0||n==0)return 0;
-
-	// choice daigram
-	if(t[n][w]!=-1){
-		return t[n][w];
-	}
-	else{
-		if(weight[n-1]<=w){
-		return t[n][w]=max(value[n-1]+knapsack(weight, value, w-weight[n-1],n-1),knapsack(weight,value,w,n-1));
-	}
-	else{
-		return t[n][w]=knapsack(weight, value,w,n-1);
-	}
+bool knapsack(vector<int> arr, int w, int n){
+	// initiallization 
+	for(int i=0;i<n+1;i++){
+		for(int j=0;j<w+1;j++){
+			if(i==0) t[i][j]=false;
+			if(j==0) t[i][j]=true;
+		}
 	}
 
+	// 
+	for(int i=1;i<n+1; i++){
+		for(int j=1;j<w+1;j++){
+			if(arr[i-1]>j){
+				 t[i][j]=t[i-1][j];
+			}
+			else{
+			 t[i][j]= t[i-1][j-arr[i-1]] || t[i-1][j];
+			}
+		}
+	}
+	return t[n][w];
 }
-
 
 void solve(){
 	
+vector<int> arr{2, 5, 1,4};
+int w=3;
+int n= arr.size();
+bool ans=true;
+cout<<ans<<endl;
 
-vector<int> weight{10,20,30},value{60,100,120};
-int w=50;
-int n=weight.size();
+cout<<  knapsack(arr,w, n);
 
-cout<<"the maximum profit that can be earned is "<<knapsack(weight,value,w, n);
-
-	
-
-
-
-// function to print a vector
+rep(i,0,n+1){
+	debug(t[i]);
+}
 
 
 
