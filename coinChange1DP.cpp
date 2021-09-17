@@ -60,16 +60,17 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
+int w=2002,n =202;
+vector<int> tempV(w+1,-1);
+vector<vector<int>> t(n+1,tempV);
+int knapsack(vector<int> arr, int w , int n){
+	//intialization
 	rep(i,0,n+1){
 		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
+			if(i==0) t[i][j]=0;
+			if(j==0) t[i][j]=1;
+
 		}
 	}
 
@@ -79,28 +80,26 @@ bool knapsack(vector<int> arr, int w, int n){
 		rep(j,1,w+1){
 			if(arr[i-1]>j) t[i][j]=t[i-1][j];
 			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
+				t[i][j]=t[i][j-arr[i-1]] + t[i-1][j];
 			}
 		}
 	}
-
 	return t[n][w];
 }
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
 
+	vector<int> arr{1,2,5};
+	int w=5;
 	int n=arr.size();
+	cout<<n<<endl;
 
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
+	cout<<" the number of ways is "<< knapsack(arr,w, n);
+
+	rep(i,0,n+1){
+		debug(t[i]);
 	}
-
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
-
-
 
 
 

@@ -60,50 +60,79 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
+int n=2002,m=2002;
+
+vector<string> tempV(m+1,"");
+vector<vector<string>> t(n+1,tempV);
+
+string lcs(string a,string b, int n, int m){
 	//initialization
 	rep(i,0,n+1){
-		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
+		rep(j,0,m+1){
+			if(i==0||j==0) t[i][j]="";
 		}
 	}
 
-	// choice daigram
+	//choice daigram 
 
 	rep(i,1,n+1){
-		rep(j,1,w+1){
-			if(arr[i-1]>j) t[i][j]=t[i-1][j];
-			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
-			}
+		rep(j,1,m+1){
+			if(a[i-1]==b[j-1]) t[i][j]=t[i-1][j-1]+a[i-1];
+			else t[i][j]="";
 		}
 	}
 
-	return t[n][w];
+	//find the max length substring 
+	string ans="";
+
+	rep(i,0,n+1){
+		rep(j,0,m+1){
+			ans=t[i][j].length()>ans.length()?t[i][j]:ans;
+		}
+	}
+	return ans;
 }
+
+// vector<int> tempV(m+1,-1);
+// vector<vector<int>> t(n+1,tempV);
+
+// string lcs(string a, string b , int n , int m){
+// 	//initialization
+// 	rep(i,0,n+1){
+// 		rep(j,0,m+1){
+// 			if(i==0||j==0) t[i][j]=0;
+// 		}
+// 	}
+
+// 	//choice daigram 
+
+// 	rep(i,1,n+1){
+// 		rep(j,1,m+1){
+// 			if(a[i-1]==b[j-1]) t[i][j]=t[i-1][j-1]+1;
+// 			else t[i][j]=0;
+// 		}
+// 	}
+
+// 	//print t
+// 	rep(i,0,n+1){
+// 		rep(j,0,m+1){
+// 			cout<<t[i][j]<<" ";
+// 		}
+// 		cout<<endl;
+// 	}
+
+
+// }
+
+
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
 
-	int n=arr.size();
-
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
-	}
-
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
-
-
-
-
-
+	string a="dsdfas",b="fdgasg";
+	string ans=lcs(a,b,a.length(),b.length());
+	cout<<"the longest common substring is "<<ans<<" and length is "<<ans.length()<<endl;
 	
 
 	

@@ -60,48 +60,25 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
-	rep(i,0,n+1){
-		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
-		}
+int lcs(string s1, string s2, int n, int m){
+	// base condition
+	if(n==0||m==0) return 0;
+
+	//choice daigram
+	if(s1[n-1]==s2[m-1]) return lcs(s1,s2,n-1,m-1)+1;
+	else{
+		return max(lcs(s1,s2,n-1,m), lcs(s1,s2,n,m-1));
 	}
-
-	// choice daigram
-
-	rep(i,1,n+1){
-		rep(j,1,w+1){
-			if(arr[i-1]>j) t[i][j]=t[i-1][j];
-			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
-			}
-		}
-	}
-
-	return t[n][w];
 }
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
+	string s1="abhddhhsd";
+	string s2="abcddhjjhs";
 
-	int n=arr.size();
-
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
-	}
-
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
-
-
-
+	cout<<"the length of Longest common subsequence is :"<<lcs(s1,s2,s1.length(),s2.length());
+	
 
 
 	

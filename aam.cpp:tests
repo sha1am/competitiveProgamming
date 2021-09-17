@@ -2,18 +2,8 @@
 	{
 		"correct_answers":
 		[
-			"6"
+			"3\n2\n100"
 		],
-		"test": "4 3\n3 2 3\n"
-	},
-	{
-		"correct_answers":
-		[
-			"2"
-		],
-		"test": "4 3\n2 3 3\n"
-	},
-	{
-		"test": "5\n6\n7\n4\n3\n2\n"
+		"test": "3\n9 3 4\n"
 	}
 ]

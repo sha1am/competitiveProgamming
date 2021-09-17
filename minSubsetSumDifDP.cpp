@@ -60,11 +60,14 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
+
+
+int knapsack(vector<int> arr, int w, int n){
+	vector<int> possibleSubsetSum;
+
+	vector<bool> tempV(w+1);
+	vector<vector<bool>> t(n+1,tempV);
 	//initialization
 	rep(i,0,n+1){
 		rep(j,0,w+1){
@@ -73,34 +76,48 @@ bool knapsack(vector<int> arr, int w, int n){
 		}
 	}
 
-	// choice daigram
-
 	rep(i,1,n+1){
 		rep(j,1,w+1){
 			if(arr[i-1]>j) t[i][j]=t[i-1][j];
 			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
+				t[i][j]=t[i-1][j] || t[i-1][j-arr[i-1]];
 			}
 		}
 	}
+	// get the vector of poissible subsetsum
+	rep(j,0,w+1){
+		if(t[n][j]) possibleSubsetSum.push_back(j);
+	}
+	// find the absolute value
+	rep(i,0,possibleSubsetSum.size()/2){
+		possibleSubsetSum[i]=abs(w-2*possibleSubsetSum[i]);
+	}
 
-	return t[n][w];
+	// sort the absolute diff vector
+	sort(possibleSubsetSum.begin(), possibleSubsetSum.end());
+
+	return possibleSubsetSum[0];
+
+
 }
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
-
+	vector<int> arr{2,6,11,5};
 	int n=arr.size();
+
+	// sum of the array
 
 	int sum=0;
 	rep(i,0,n){
 		sum+=arr[i];
 	}
 
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
 
 
+	
+
+	
+	cout<<"The min subset sum diff"<<knapsack(arr,sum,n);
 
 
 

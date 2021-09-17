@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"ababa\nabaca\nabcba\nacaba\nacaca\nacbaa\nacbca"
+		],
+		"test": "1\nabcabcaa\nacbacba\n"
+	}
+]

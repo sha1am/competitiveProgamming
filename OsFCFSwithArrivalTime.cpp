@@ -60,60 +60,138 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
-	rep(i,0,n+1){
-		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
-		}
+// {
+// 	int numProcess=0;
+// 	cout<<"Enter the number of processes";
+// 	cin>>numProcess;
+
+// 	vector<int> bt(numProcess,0); //burst times
+// 	vector<int> wt(numProcess,0); //waiting times
+// 	//enter burst time
+// 	rep(i,0,numProcess){
+// 		cout<<"Enter burst time of process "<<i+1;
+// 		cin>>bt[i];
+// 	}
+// 	cout<<endl;
+
+// 	//calculate waiting time for all processes
+// 	rep(i,1,numProcess){
+// 		wt[i]=bt[i-1] + wt[i-1];
+// 	}
+
+// 	//calculate turn around time for all processes
+// 	vector<int> tat(numProcess,0);
+
+// 	rep(i,0,numProcess){
+// 		tat[i]=bt[i] + wt[i];
+// 	}
+
+// 	// print all info
+
+// 	rep(i,0,numProcess){
+// 		cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<endl;
+// 	}
+
+// 	int averageWT=0;
+// 	int averageTAT=0;
+
+// 	rep(i,0,numProcess){
+// 		averageWT+=wt[i];
+// 		averageTAT+=tat[i];
+// 	}
+
+// 	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
+// 	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
+// }
+
+//function which returns the num of task that need to be completed.
+
+int fun(vector<pair<int,int>> v1,vector<bool> status)
+{
+	sort(v1.begin(),v1.end());
+
+	rep(i,0,v1.size()){
+		if(status[v1[i].sc]!=true) return v1[i].sc;
 	}
 
-	// choice daigram
-
-	rep(i,1,n+1){
-		rep(j,1,w+1){
-			if(arr[i-1]>j) t[i][j]=t[i-1][j];
-			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
-			}
-		}
-	}
-
-	return t[n][w];
+	return -1;
 }
+// Fcfs with arrival time
+
 void solve(){
+
+	int numProcess=0;
+	cout<<"Enter the number of processes";
+	cin>>numProcess;
+
+	vector<int> bt(numProcess,0); //burst times
+	vector<int> wt(numProcess,0); //waiting times
+	vector<int> at(numProcess,0); // arrival time
+	vector<int> tat(numProcess,0);
+	vector<bool> status(numProcess,false);
 	
-	vector<int> arr{1,5,11,5};
+	//enter burst time
+	rep(i,0,numProcess){
+		//cout<<"Enter burst time of process "<<i+1;
+		cin>>bt[i];
+	}
+	cout<<endl;
 
-	int n=arr.size();
+	//enter arrival time
+	rep(i,0,numProcess){
+		//cout<<"Enter arrival time of process "<<i+1;
+		cin>>at[i];
+	}
+	cout<<endl;
 
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
+	//Make pair
+	vector<pair<int,int>> v1;
+	rep(i,0,numProcess){
+		pair<int,int> p=make_pair(at[i],i);
+		v1.push_back(p);
 	}
 
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
+	//cout<<"V1[0]="<<v1[0].fr<<" "<<v1[0].sc<<endl;
+
+	int lastProcess=-2;
+	int lastWT=0;
+	while(fun(v1,status)!=-1){
+		int currentProcessNum=fun(v1,status);
+		//cout<<"CP="<<currentProcessNum<<endl;
+		int i=currentProcessNum;
+
+		wt[currentProcessNum]=bt[lastProcess]+lastWT;
+		lastWT=wt[currentProcessNum];
+		lastProcess=currentProcessNum;
+		tat[currentProcessNum]=wt[currentProcessNum]+ bt[currentProcessNum];
+		cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<" Arrival T:-"<<at[i]<<endl;
+		status[currentProcessNum]=true;
+	}
 
 
 
 
 
-	
+	// print all info
 
-	
+	double averageWT=0;
+	double averageTAT=0;
+
+	rep(i,0,numProcess){
+		averageWT+=wt[i];
+		averageTAT+=tat[i];
+	}
+
+	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
+	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
 }
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	//freopen("input.in", "r", stdin);
-	//freopen("output.in", "w", stdout);
+	freopen("input.in", "r", stdin);
+	freopen("output.in", "w", stdout);
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif

@@ -60,16 +60,18 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
+int w=2002,n=202;
+vector<int> tempV(w+1,-1);
+vector<vector<int>> t(n+1,tempV);
+
+
+int knapsack(vector<int> weight, vector<int> value,int w, int n){
+	//initilization 
 	rep(i,0,n+1){
 		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
+			if(i==0) t[i][j]=0;
+			if(j==0) t[i][j]=0;
 		}
 	}
 
@@ -77,30 +79,24 @@ bool knapsack(vector<int> arr, int w, int n){
 
 	rep(i,1,n+1){
 		rep(j,1,w+1){
-			if(arr[i-1]>j) t[i][j]=t[i-1][j];
+			if(weight[i-1]>j) t[i][j]=t[i-1][j];
 			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
+				t[i][j]=max(t[i-1][j], value[i-1]+t[i][j-weight[i-1]]);
 			}
 		}
 	}
 
 	return t[n][w];
 }
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
 
-	int n=arr.size();
+vector<int> weight{1,2,3,4,5,6,7,8},value{1,5,8,9,10,17,17,20};
+int w=8;
+int n=weight.size();
 
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
-	}
-
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
-
-
+cout<<"the maximum profit that can be earned is "<< knapsack(weight,value,w,n);
 
 
 

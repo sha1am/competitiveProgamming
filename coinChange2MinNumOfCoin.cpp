@@ -60,48 +60,73 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
-	rep(i,0,n+1){
-		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
+int w=11,n=3;
+vector<int> tempV(w+1,-1);
+vector<vector<int>> t(n+1,tempV);
+
+
+int knapsack(vector<int> arr, int w ,int n){
+
+
+	//initialiaation
+	for(int i=0;i<n+1;i++){
+		for(int j=0;j<w+1;j++){
+			if(j==0) t[i][j]=0;
+			if(i==0) t[i][j]=INT_MAX-1;
 		}
 	}
 
-	// choice daigram
+	// rep(i,0,n+1){
+	// 	rep(j,0,w+1){
+	// 		if(j==0) t[i][j]=0;
+	// 		if(i==0) t[i][j]=INT_MAX-1;
+	// 	}
+	// }
 
-	rep(i,1,n+1){
-		rep(j,1,w+1){
+	
+	
+
+
+	debug(arr[0]);
+
+	for(int j=1;j<w+1;j++){
+		if(j%arr[0]==0) t[1][j]=j/arr[0];
+		else t[1][j]=INT_MAX-1;
+	}
+
+	
+
+	//choice daigram
+
+	for(int i=2;i<n+1;i++){
+		for(int j=1;j<w+1;j++){
 			if(arr[i-1]>j) t[i][j]=t[i-1][j];
 			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
+				t[i][j]=min(t[i][j-arr[i-1]]+1,t[i-1][j]);
 			}
 		}
 	}
 
+	// rep(i,0,n+1){
+	// 	debug(t[i]);
+	// }
+	
+	
 	return t[n][w];
 }
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
+	//did not understand this one
 
+	vector<int> arr{2,1,5};
+	int w=11;
 	int n=arr.size();
 
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
-	}
-
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
-
-
-
+	int ans=knapsack(arr,w,n);
+	if(ans==0) cout<<"the given denomination can not be achieved using these coins";
+	else{cout<<"the min number of coins required"<<ans;}
 
 
 	

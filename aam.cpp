@@ -61,52 +61,53 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-int w=2002, n=202;
-vector<int> tempV(w,-1);
-vector<vector<int>> t(n,tempV);
-int knapsack(vector<int> weight, vector<int> value, int w, int n){
 
-	// base case
 
-	if(w==0||n==0)return 0;
-
-	// choice daigram
-	if(t[n][w]!=-1){
-		return t[n][w];
-	}
-	else{
-		if(weight[n-1]<=w){
-		return t[n][w]=max(value[n-1]+knapsack(weight, value, w-weight[n-1],n-1),knapsack(weight,value,w,n-1));
-	}
-	else{
-		return t[n][w]=knapsack(weight, value,w,n-1);
-	}
-	}
-
-}
 
 
 void solve(){
-	
 
-vector<int> weight{10,20,30},value{60,100,120};
-int w=50;
-int n=weight.size();
+	int numProcess=0;
+	cout<<"Enter the number of processes";
+	cin>>numProcess;
 
-cout<<"the maximum profit that can be earned is "<<knapsack(weight,value,w, n);
+	vector<int> bt(numProcess,0); //burst times
+	vector<int> wt(numProcess,0); //waiting times
+	//enter burst time
+	rep(i,0,numProcess){
+		cout<<"Enter burst time of process "<<i+1;
+		cin>>bt[i];
+	}
+	cout<<endl;
 
-	
+	//calculate waiting time for all processes
+	rep(i,1,numProcess){
+		wt[i]=bt[i-1] + wt[i-1];
+	}
 
+	//calculate turn around time for all processes
+	vector<int> tat(numProcess,0);
 
+	rep(i,0,numProcess){
+		tat[i]=bt[i] + wt[i];
+	}
 
-// function to print a vector
+	// print all info
 
+	rep(i,0,numProcess){
+		cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<endl;
+	}
 
+	int averageWT=0;
+	int averageTAT=0;
 
+	rep(i,0,numProcess){
+		averageWT+=wt[i];
+		averageTAT+=tat[i];
+	}
 
-	
-
-	
+	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
+	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
 }
 
 signed main(){

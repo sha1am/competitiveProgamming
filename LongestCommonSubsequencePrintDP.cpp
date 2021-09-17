@@ -60,48 +60,85 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
+int n=2002,m=2002;
+vector<string> tempV(m+1,"");
+vector<vector<string>> t(n+1,tempV);
+
+string lcs(string a, string b, int n, int m){
+	// initialization
 	rep(i,0,n+1){
-		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
+		rep(j,0,m+1){
+			if(i==0||j==0) t[i][j]="";
 		}
 	}
+	rep(i,0,n+1){
+		rep(j,0,m+1){
+			cout<<t[i][j]<<" ";
+		}
+		cout<<endl;
+	}
 
-	// choice daigram
-
+	//choice daigram 
 	rep(i,1,n+1){
-		rep(j,1,w+1){
-			if(arr[i-1]>j) t[i][j]=t[i-1][j];
-			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
-			}
+		rep(j,1,m+1){
+			if(a[i-1]==b[j-1]) t[i][j]=t[i-1][j-1]+a[i-1];
+			else t[i][j]=t[i-1][j].length()>t[i][j-1].length()?t[i-1][j]:t[i][j-1];
 		}
 	}
 
-	return t[n][w];
+	rep(i,0,n+1){
+		rep(j,0,m+1){
+			cout<<t[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+
+	return t[n][m];
 }
+//tcs1 using int to fill the t matrix
+vector<int> tempVV(m+1,-1);
+vector<vector<int>> tt(n+1,tempVV);
+string lcs1(string a,string b, int n , int m){
+	//initilization
+
+	rep(i,0,n+1){
+		rep(j,0,m+1){
+			if(i==0||j==0) tt[i][j]=0;
+		}
+	}
+
+	//choice daigram
+	rep(i,1,n+1){
+		rep(j,1,m+1){
+			if(a[i-1]==b[j-1]) tt[i][j]=tt[i-1][j-1] +1;
+			else tt[i][j]=max(tt[i-1][j],tt[i][j-1]);
+		}
+	}
+
+	string ans="";
+	int i=n,j=m;
+	while(i>0 && j>0){
+		if(a[i-1]==b[j-1]){
+			ans+=a[i-1];
+			i--;
+			j--;
+		}		
+		else{
+			tt[i-1][j]>tt[i][j-1]?i--:j--;
+		}
+	}
+	reverse(ans.begin(),ans.end());
+	return ans;
+}
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
 
-	int n=arr.size();
-
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
-	}
-
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
-
-
-
+	string a="abcabcaa",b="acbacba";
+	string ans=lcs1(a,b,a.length(),b.length());
+	cout<<"the longest common subsequence is "<<ans<<"and its length is "<< ans.length();
+	
 
 
 	

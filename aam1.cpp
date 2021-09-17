@@ -60,51 +60,97 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
 const int N=105;
-int w=2002,n=202;
-vector<bool> tempV(w+1);
-vector<vector<bool>> t(n+1,tempV);
 
-bool knapsack(vector<int> arr, int w, int n){
-	//initialization
+int z=30,n=202,m=2002;
+// for storing the vectors of strings
+vector<string> tempV;
+vector<vector<string>> u(z,tempV);
+
+
+// for making the matrix
+vector<string> tempV1(m+1,"");
+vector<vector<string>> t(n+1,tempV1);
+
+
+vector<string> lcs(string a, string b, int n ,int m){
+
+	//initialiazation
 	rep(i,0,n+1){
-		rep(j,0,w+1){
-			if(i==0) t[i][j]=false;
-			if(j==0) t[i][j]=true;
+		rep(j,0,m+1){
+			if(i==0||j==0) t[i][j]="";
 		}
 	}
+	u[0].pb("#");
 
-	// choice daigram
-
+	//choice daigram 
 	rep(i,1,n+1){
-		rep(j,1,w+1){
-			if(arr[i-1]>j) t[i][j]=t[i-1][j];
+		rep(j,1,m+1){
+			if(a[i-1]==b[j-1]) {
+				t[i][j]=t[i-1][j-1]+a[i-1];
+				//char add=a[i-1];
+				
+				//u[t[i-1][j-1].length()] me a[i-1] add;
+				int k=t[i-1][j-1].length();
+				debug(k);
+				
+
+				rep(i,0,u[k].size()){
+
+					//debug(add);
+					debug(u[k][i]);
+					u[k][i]+=a[i-1];
+					debug(a[i-1]); 
+					debug(u[k][i]);
+					u[k+1].pb(u[k][i]);
+
+					
+				}
+
+			}
 			else{
-				t[i][j]= t[i-1][j] || t[i-1][j-arr[i-1]];
+				//t[i][j]=max(t[i][j-1],t[i-1][j]);
+				t[i][j]=t[i-1][j].length()>t[i][j-1].length()?t[i-1][j]:t[i][j-1];
+
+
 			}
 		}
 	}
+	int sz=t[n][m].length();
 
-	return t[n][w];
+	return u[sz];
 }
+
+
 void solve(){
 	
-	vector<int> arr{1,5,11,5};
+	string a,b;
+	cin>>a>>b;
+	int n=a.length(),m=b.length();
+	vector<string> ans= lcs(a,b,n,m);
 
-	int n=arr.size();
+	sort(ans.begin(),ans.end());
+	// rep(i,0,ans.size()){
+	// 	cout<<ans[i]<<endl;
+	// }
+	// cout<<endl;
+	//cout<<5<<endl;
 
-	int sum=0;
-	rep(i,0,n){
-		sum+=arr[i];
+	// //print u
+	rep(i,0,28){
+		rep(j,0,u[i].size()){
+					cout<<u[i][j]<<"$";
+				}
+		cout<<endl;
 	}
 
-	if(sum%2!=0) cout<<"false";
-	else{ cout<< knapsack(arr,sum/2,n);}
+	//print matrix t
+	rep(i,0,n+1){
+		rep(j,0,m+1){
+			cout<<t[i][j]<<" ";
+		}
+		cout<<endl;
+	}
 
-
-
-
-
-	
 
 	
 }
@@ -125,7 +171,7 @@ signed main(){
 	#endif
 	
 	int t=1;
-	//cin>>t;
+	cin>>t;
 	while(t--) solve();
 	return 0;
 }
