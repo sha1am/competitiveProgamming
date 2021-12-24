@@ -1,0 +1,43 @@
+//appLevelBuildDotGradle.in
+
+plugins{
+	id 'com.android.application'
+}
+
+android{
+	compileSdkVersion 30
+	buildToolsVersion "30.0.3"
+	defaultConfig{
+		applicationId "com.example.app1"
+		minSdkVersion 26
+		targetSdkVersion 45
+		versionCode 1
+		versionName "1.0."
+
+		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+	}
+
+	buildTypes{
+		 release {
+		 	minifiyEnabled false
+		 	proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		 }
+
+	}
+
+	compileOptions{
+		sourceCompatiability JavaVersion.VERSION_1_8
+		targetCompatiabililty JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies{
+	implementation fileTree(dir:'libs' , Include:['*.jar'])
+	implementation // another implementation
+	implementation // another implementation
+	testImplementation 'junit:junit:4.+'
+
+	androidTestImplementation // another andoridImplementation
+
+}

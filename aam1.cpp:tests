@@ -2,8 +2,8 @@
 	{
 		"correct_answers":
 		[
-			"ababa\nabaca\nabcba\nacaba\nacaca\nacbaa\nacbca"
+			"6\n2\n5"
 		],
-		"test": "1\nabcabcaa\nacbacba\n"
+		"test": "3\n216 2 7\n256 2 4\n31 3 5\n"
 	}
 ]

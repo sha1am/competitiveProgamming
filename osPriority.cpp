@@ -61,150 +61,99 @@ const int32_t MM=998244353;
  
 const int N=105;
 
-// {
-// 	int numProcess=0;
-// 	cout<<"Enter the number of processes";
-// 	cin>>numProcess;
-
-// 	vector<int> bt(numProcess,0); //burst times
-// 	vector<int> wt(numProcess,0); //waiting times
-// 	//enter burst time
-// 	rep(i,0,numProcess){
-// 		cout<<"Enter burst time of process "<<i+1;
-// 		cin>>bt[i];
-// 	}
-// 	cout<<endl;
-
-// 	//calculate waiting time for all processes
-// 	rep(i,1,numProcess){
-// 		wt[i]=bt[i-1] + wt[i-1];
-// 	}
-
-// 	//calculate turn around time for all processes
-// 	vector<int> tat(numProcess,0);
-
-// 	rep(i,0,numProcess){
-// 		tat[i]=bt[i] + wt[i];
-// 	}
-
-// 	// print all info
-
-// 	rep(i,0,numProcess){
-// 		cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<endl;
-// 	}
-
-// 	int averageWT=0;
-// 	int averageTAT=0;
-
-// 	rep(i,0,numProcess){
-// 		averageWT+=wt[i];
-// 		averageTAT+=tat[i];
-// 	}
-
-// 	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
-// 	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
-// }
 
 //function which returns the num of task that need to be completed.
 
 int fun(vector<pair<int,int>> v1,int lastProcess,vector<bool> status)
 {
-	sort(v1.begin(),v1.end());
+    sort(v1.begin(),v1.end());
 
-	rep(i,0,v1.size()){
-		if(status[v1[i].sc]!=true) return v1[i].sc;
-	}
+    rep(i,0,v1.size()){
+        if(status[v1[i].sc]!=true) return v1[i].sc;
+    }
 
-	return -1;
+    return -1;
 }
+// shortest job first ( non-preemtive)
 
 void solve(){
 
-	int numProcess=0;
-	cout<<"Enter the number of processes";
-	cin>>numProcess;
+    int numProcess=0;
+    cout<<"Enter the number of processes";
+    cin>>numProcess;
 
-	vector<int> bt(numProcess,0); //burst times
-	vector<int> wt(numProcess,0); //waiting times
-	//calculate turn around time for all processes
-	vector<int> tat(numProcess,0);
-	vector<bool> status(numProcess,false);
-	vector<int> priority(numProcess,0);
-	//enter burst time
-	rep(i,0,numProcess){
-		//cout<<"Enter burst time of process "<<i+1;
-		cin>>bt[i];
-	}
-	cout<<endl;
-	//enter priority
-	rep(i,0,numProcess){
-		//cout<<"Enter burst time of process "<<i+1;
-		cin>>priority[i];
-	}
-	cout<<endl;
+    vector<int> bt(numProcess,0); //burst times
+    vector<int> wt(numProcess,0); //waiting times
+    //calculate turn around time for all processes
+    vector<int> tat(numProcess,0);
+    vector<bool> status(numProcess,false);
+    
+    //enter burst time
+    rep(i,0,numProcess){
+        //cout<<"Enter burst time of process "<<i+1;
+        cin>>bt[i];
+    }
+    cout<<endl;
 
-	//Make pair
-	vector<pair<int,int>> v1;
-	rep(i,0,numProcess){
-		pair<int,int> p=make_pair(priority[i],i);
-		v1.push_back(p);
-	}
+    //Make pair
+    vector<pair<int,int>> v1;
+    rep(i,0,numProcess){
+        pair<int,int> p=make_pair(bt[i],i);
+        v1.push_back(p);
+    }
 
-	//cout<<"V1[0]="<<v1[0].fr<<" "<<v1[0].sc<<endl;
+    //cout<<"V1[0]="<<v1[0].fr<<" "<<v1[0].sc<<endl;
 
-	int lastProcess=-2;
-	int lastWT=0;
-	while(fun(v1,lastProcess,status)!=-1){
-		int currentProcessNum=fun(v1,lastProcess,status);
-		//cout<<"CP="<<currentProcessNum<<endl;
-		int i=currentProcessNum;
+    int lastProcess=-2;
+    int lastWT=0;
+    while(fun(v1,lastProcess,status)!=-1){
+        int currentProcessNum=fun(v1,lastProcess,status);
+        //cout<<"CP="<<currentProcessNum<<endl;
+        int i=currentProcessNum;
 
-		wt[currentProcessNum]=bt[lastProcess]+lastWT;
-		lastWT=wt[currentProcessNum];
-		lastProcess=currentProcessNum;
-		tat[currentProcessNum]=wt[currentProcessNum]+ bt[currentProcessNum];
-		cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<" Priority:- "<<priority[i]<<endl;
-		status[currentProcessNum]=true;
-	}
-
-	debug(bt);
-	debug(wt);
-	debug(tat);
-	debug(bt[89]);
+        wt[currentProcessNum]=bt[lastProcess]+lastWT;
+        lastWT=wt[currentProcessNum];
+        lastProcess=currentProcessNum;
+        tat[currentProcessNum]=wt[currentProcessNum]+ bt[currentProcessNum];
+        cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<endl;
+        status[currentProcessNum]=true;
+    }
 
 
 
-	// print all info
 
-	double averageWT=0;
-	double averageTAT=0;
 
-	rep(i,0,numProcess){
-		averageWT+=wt[i];
-		averageTAT+=tat[i];
-	}
+    // print all info
 
-	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
-	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
+    double averageWT=0;
+    double averageTAT=0;
+
+    rep(i,0,numProcess){
+        averageWT+=wt[i];
+        averageTAT+=tat[i];
+    }
+
+    cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
+    cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
 }
 
 signed main(){
-	ios_base::sync_with_stdio(false);
-	cin.tie(0);cout.tie(0);
-	freopen("input.in", "r", stdin);
-	freopen("output.in", "w", stdout);
-	#ifndef ONLINE_JUDGE
-	freopen("error.in", "w", stderr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+    freopen("input.in", "r", stdin);
+    freopen("output.in", "w", stdout);
+    #ifndef ONLINE_JUDGE
+    freopen("error.in", "w", stderr);
     #endif
-	#ifdef SIEVE
-		sieve();
-	#endif
-	#ifdef NCR
-		init();
-	#endif
-	
-	int t=1;
-	//cin>>t;
-	while(t--) solve();
-	return 0;
+    #ifdef SIEVE
+        sieve();
+    #endif
+    #ifdef NCR
+        init();
+    #endif
+    
+    int t=1;
+    //cin>>t;
+    while(t--) solve();
+    return 0;
 }

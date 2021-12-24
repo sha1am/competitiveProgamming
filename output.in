@@ -1,9 +1,2 @@
-Enter the number of processes
-
-Process:-4 BT:-3 WT:-0 TAT:- 3 Priority:- 0
-Process:-3 BT:-8 WT:-3 TAT:- 11 Priority:- 1
-Process:-1 BT:-6 WT:-11 TAT:- 17 Priority:- 2
-Process:-5 BT:-4 WT:-17 TAT:- 21 Priority:- 4
-Process:-2 BT:-2 WT:-21 TAT:- 23 Priority:- 5
-The Av.WT is 10.4
-The Av.TAT is 15
+1100
+11101

@@ -1,4 +1,19 @@
-bt [ 6 2 8 3 4 ]
-wt [ 11 21 3 0 17 ]
-tat [ 17 23 11 3 21 ]
-bt[89] 0
+rem 8
+lastValue 8
+S
+rem 0
+lastValue 0
+S
+rem 7
+rem 3
+rem 0
+lastValue 0
+S
+rem 3
+rem 0
+rem 2
+lastValue 2
+S
+rem 6
+rem 2
+0.000786

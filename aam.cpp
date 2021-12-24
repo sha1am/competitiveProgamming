@@ -16,6 +16,9 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
+//
+#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
+#define lcm(a, b)      (a * (b / __gcd(a,b))) 
 
 
 #ifndef ONLINE_JUDGE
@@ -24,6 +27,9 @@ using namespace std;
 #define debug(x)
 #endif
 
+//clock 
+clock_t start;
+mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
 void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
@@ -58,63 +64,23 @@ template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
- 
-const int N=105;
 
 
-
-
-
-void solve(){
-
-	int numProcess=0;
-	cout<<"Enter the number of processes";
-	cin>>numProcess;
-
-	vector<int> bt(numProcess,0); //burst times
-	vector<int> wt(numProcess,0); //waiting times
-	//enter burst time
-	rep(i,0,numProcess){
-		cout<<"Enter burst time of process "<<i+1;
-		cin>>bt[i];
-	}
-	cout<<endl;
-
-	//calculate waiting time for all processes
-	rep(i,1,numProcess){
-		wt[i]=bt[i-1] + wt[i-1];
-	}
-
-	//calculate turn around time for all processes
-	vector<int> tat(numProcess,0);
-
-	rep(i,0,numProcess){
-		tat[i]=bt[i] + wt[i];
-	}
-
-	// print all info
-
-	rep(i,0,numProcess){
-		cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<endl;
-	}
-
-	int averageWT=0;
-	int averageTAT=0;
-
-	rep(i,0,numProcess){
-		averageWT+=wt[i];
-		averageTAT+=tat[i];
-	}
-
-	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
-	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
+void solve()
+{
+	
+	cout<<"Shadab"<<endl;
+	
 }
+
+
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	//freopen("input.in", "r", stdin);
-	//freopen("output.in", "w", stdout);
+	// freopen("input.in", "r", stdin);
+	// freopen("output.in", "w", stdout);
+	start = clock(); 
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
@@ -124,9 +90,11 @@ signed main(){
 	#ifdef NCR
 		init();
 	#endif
+	cout << fixed << setprecision(12);
 	
 	int t=1;
-	//cin>>t;
+	cin>>t;
 	while(t--) solve();
+	cerr << time(start);
 	return 0;
 }

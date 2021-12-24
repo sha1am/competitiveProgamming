@@ -1,6 +1,12 @@
 #include "bits/stdc++.h"
+#include<semaphore.h>
+#include<thread>
+//#include<mutex>
+#include <pthread.h>
+#include <semaphore.h>
+
 using namespace std;
-#define int               long long
+//#define int               long long
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -16,6 +22,16 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
+//
+#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
+#define lcm(a, b)      (a * (b / __gcd(a,b))) 
+
+#define N 5
+#define THINKING 2
+#define HUNGRY 1
+#define EATING 0
+#define LEFT (phnum + 4) % N
+#define RIGHT (phnum + 1) % N
 
 
 #ifndef ONLINE_JUDGE
@@ -24,10 +40,13 @@ using namespace std;
 #define debug(x)
 #endif
 
+//clock 
+clock_t start;
+mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
 void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
-//void _print(int t) {cerr << t;}
+void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
@@ -58,136 +77,130 @@ template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
+
+
+
  
-const int N=105;
-
-
-//function which returns the num of task that need to be completed.
-
-int fun(vector<pair<int,int>> v1,vector<bool> status,int totalTimeElapsed, vector<int> remBt)
+int state[N];
+int phil[N] = { 0, 1, 2, 3, 4 };
+ 
+sem_t mutex;
+sem_t S[N];
+ 
+void test(int phnum)
 {
-	//sort by arrival time
-	sort(v1.begin(),v1.end());
-
-	// till what time can be considered?
-	int limit=0;
-	for(int i=0; i<v1.size();i++){
-		if(v1[i].fr<=totalTimeElapsed) limit=i;
-	}
-
-
-	for(int i=0;i<=limit;i++){
-		//cout<<"status of process "<<v1[i].sc<<"is "<<status[v1[i].sc]
-		if(status[v1[i].sc]!=true) return v1[i].sc;
-	}
-
-	
-	return -1;
+    if (state[phnum] == HUNGRY
+        && state[LEFT] != EATING
+        && state[RIGHT] != EATING) {
+        // state that eating
+        state[phnum] = EATING;
+ 
+        sleep(2);
+ 
+        printf("Philosopher %d takes fork %d and %d\n",
+                      phnum + 1, LEFT + 1, phnum + 1);
+ 
+        printf("Philosopher %d is Eating\n", phnum + 1);
+ 
+        // sem_post(&S[phnum]) has no effect
+        // during takefork
+        // used to wake up hungry philosophers
+        // during putfork
+        sem_post(&S[phnum]);
+    }
 }
-// round robin 
+ 
+// take up chopsticks
+void take_fork(int phnum)
+{
+ 
+    sem_wait(&mutex);
+ 
+    // state that hungry
+    state[phnum] = HUNGRY;
+ 
+    printf("Philosopher %d is Hungry\n", phnum + 1);
+ 
+    // eat if neighbours are not eating
+    test(phnum);
+ 
+    sem_post(&mutex);
+ 
+    // if unable to eat wait to be signalled
+    sem_wait(&S[phnum]);
+ 
+    sleep(1);
+}
+ 
+// put down chopsticks
+void put_fork(int phnum)
+{
+ 
+    sem_wait(&mutex);
+ 
+    // state that thinking
+    state[phnum] = THINKING;
+ 
+    printf("Philosopher %d putting fork %d and %d down\n",
+           phnum + 1, LEFT + 1, phnum + 1);
+    printf("Philosopher %d is thinking\n", phnum + 1);
+ 
+    test(LEFT);
+    test(RIGHT);
+ 
+    sem_post(&mutex);
+}
+ 
+void* philosopher(void* num)
+{
+ 
+    while (1) {
+ 
+        int* i = num;
+ 
+        sleep(1);
+ 
+        take_fork(*i);
+ 
+        sleep(0);
+ 
+        put_fork(*i);
+    }
+}
+
 
 void solve(){
 
-	int numProcess=0;
-	cout<<"Enter the number of processes";
-	cin>>numProcess;
+     int i;
+    pthread_t thread_id[N];
+ 
+    // initialize the semaphores
+    sem_init(&mutex, 0, 1);
+ 
+    for (i = 0; i < N; i++)
+ 
+        sem_init(&S[i], 0, 0);
+ 
+    for (i = 0; i < N; i++) {
+ 
+        // create philosopher processes
+        pthread_create(&thread_id[i], NULL,
+                       philosopher, &phil[i]);
+ 
+        printf("Philosopher %d is thinking\n", i + 1);
+    }
+ 
+    for (i = 0; i < N; i++)
+ 
+        pthread_join(thread_id[i], NULL);
 
-	int q=-1;
-	cout<<"Enter the time quantum ";
-	cin>>q;
+
+ 
 
 
-	vector<int> bt(numProcess,0); //burst times
-	vector<int> wt(numProcess,0); //waiting times
-	vector<int> at(numProcess,0); // arrival time
-	vector<int> remBt(numProcess,0); // remaining burst time left
-	vector<int> tat(numProcess,0);
-	vector<bool> status(numProcess,false);
-	vector<int> timeQuantum(numProcess,q);
-	
-	//enter burst time
-	rep(i,0,numProcess){
-		//cout<<"Enter burst time of process "<<i+1;
-		cin>>bt[i];
-	}
-	cout<<endl;
-
-	//enter arrival time
-	rep(i,0,numProcess){
-		//cout<<"Enter arrival time of process "<<i+1;
-		cin>>at[i];
-	}
-	cout<<endl;
-
-	//remBt == bt
-	remBt=bt;
-
-	//Make pair
-	vector<pair<int,int>> v1;
-	rep(i,0,numProcess){
-		pair<int,int> p=make_pair(at[i],i);
-		v1.push_back(p);
-	}
 
 	
-
-	int lastProcess=-2;
-	int lastWT=0;
-	int totalTimeElapsed=0;
-
-	while(fun(v1,status,totalTimeElapsed,remBt)!=-1){
-		int currentProcessNum=fun(v1,status,totalTimeElapsed,remBt);
-		//cout<<"CP="<<currentProcessNum<<endl;
-		int i=currentProcessNum;
-
-		//things happen every second
-		remBt[i]-=1;
-		totalTimeElapsed+=1;
-		timeQuantum[i]-=1;
-		//cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" RemBt:-"<<remBt[i]<<" TotalTimeElapsed:-"<<totalTimeElapsed<<endl;
-		if(timeQuantum[currentProcessNum]==0){
-			//this process cant be processed due to time quantum 
-			at[currentProcessNum]=*max_element(at.begin(), at.end())+1;
-			timeQuantum[currentProcessNum]=q;
-
-			v1.clear();
-			rep(i,0,numProcess)
-			{
-			pair<int,int> p=make_pair(at[i],i);
-			v1.push_back(p);
-			}
-		}
-		
-		if(remBt[i]==0){
-			//the process has been completed
-			status[i]=true;
-			tat[i]=totalTimeElapsed-at[i];
-			wt[i]=tat[i]-bt[i];
-
-			cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<" Arrival T:-"<<at[i]<<endl;
-		}
-		//cout<<"Process:- "<< i+1<< " rembt = "<<remBt[i]<<"timeQuantum= "<< timeQuantum[i]<<endl;
-
-
-
-	}
-
-
-
-
-
-	// print all info
-
-	double averageWT=0;
-	double averageTAT=0;
-
-	rep(i,0,numProcess){
-		averageWT+=wt[i];
-		averageTAT+=tat[i];
-	}
-
-	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
-	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
+ 
 }
 
 signed main(){
@@ -195,6 +208,7 @@ signed main(){
 	cin.tie(0);cout.tie(0);
 	freopen("input.in", "r", stdin);
 	freopen("output.in", "w", stdout);
+	start = clock(); 
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
@@ -204,9 +218,11 @@ signed main(){
 	#ifdef NCR
 		init();
 	#endif
+	cout << fixed << setprecision(12);
 	
 	int t=1;
-	//cin>>t;
+	cin>>t;
 	while(t--) solve();
+	cerr << time(start);
 	return 0;
 }

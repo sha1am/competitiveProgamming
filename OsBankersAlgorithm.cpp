@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 using namespace std;
-#define int               long long
+//#define int               long long
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -16,6 +16,9 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
+//
+#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
+#define lcm(a, b)      (a * (b / __gcd(a,b))) 
 
 
 #ifndef ONLINE_JUDGE
@@ -24,10 +27,13 @@ using namespace std;
 #define debug(x)
 #endif
 
+//clock 
+clock_t start;
+mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
 void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
-//void _print(int t) {cerr << t;}
+void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
@@ -59,135 +65,95 @@ const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
  
-const int N=105;
 
 
-//function which returns the num of task that need to be completed.
-
-int fun(vector<pair<int,int>> v1,vector<bool> status,int totalTimeElapsed, vector<int> remBt)
-{
-	//sort by arrival time
-	sort(v1.begin(),v1.end());
-
-	// till what time can be considered?
-	int limit=0;
-	for(int i=0; i<v1.size();i++){
-		if(v1[i].fr<=totalTimeElapsed) limit=i;
-	}
-
-
-	for(int i=0;i<=limit;i++){
-		//cout<<"status of process "<<v1[i].sc<<"is "<<status[v1[i].sc]
-		if(status[v1[i].sc]!=true) return v1[i].sc;
-	}
-
-	
-	return -1;
-}
-// round robin 
 
 void solve(){
-
-	int numProcess=0;
-	cout<<"Enter the number of processes";
-	cin>>numProcess;
-
-	int q=-1;
-	cout<<"Enter the time quantum ";
-	cin>>q;
-
-
-	vector<int> bt(numProcess,0); //burst times
-	vector<int> wt(numProcess,0); //waiting times
-	vector<int> at(numProcess,0); // arrival time
-	vector<int> remBt(numProcess,0); // remaining burst time left
-	vector<int> tat(numProcess,0);
-	vector<bool> status(numProcess,false);
-	vector<int> timeQuantum(numProcess,q);
 	
-	//enter burst time
-	rep(i,0,numProcess){
-		//cout<<"Enter burst time of process "<<i+1;
-		cin>>bt[i];
-	}
-	cout<<endl;
+ int n=5,m=3; //number of processes and m num of resources n=5,m=3
+ //cin>>n>>m;
 
-	//enter arrival time
-	rep(i,0,numProcess){
-		//cout<<"Enter arrival time of process "<<i+1;
-		cin>>at[i];
-	}
-	cout<<endl;
+ vector<int> ans;
 
-	//remBt == bt
-	remBt=bt;
+ //available 
+ vector<int> avail(m,0); // get input of total available resources initially
 
-	//Make pair
-	vector<pair<int,int>> v1;
-	rep(i,0,numProcess){
-		pair<int,int> p=make_pair(at[i],i);
-		v1.push_back(p);
-	}
+ //update available resources
+ avail={3,3,2};
+ 
+
+ //Max 
+ vector<int> tempV(m,-1);
+ vector<vector<int>> mmax(n,tempV);
+ mmax={{7,5,3},{3,2,2},{9,0,2},{2,2,2},{4,3,3}};
+
+ //allocation 
+ vector<vector<int>> allocated(n,tempV);
+ allocated= {{0,1,0},{2,0,0},{3,0,2},{2,1,1},{0,0,2}};
+
+ //Need 
+ vector<vector<int>> need(n,tempV);//mmax-allocation
+
+ rep(i,0,n){
+ 	rep(j,0,m){
+ 		need[i][j]=mmax[i][j]-allocated[i][j];
+ 	}
+ }
+
+ // application of safety algo.
+
+ vector<bool> finished(n,false);
+ bool allFinished=false;
+
+ queue<int> q;
+
+ rep(i,0,n){
+ 	q.push(i);
+ }
+debug(q);
+ while(!q.empty()){
+
+ 	if(finished[q.front()]!=true){
+
+ 		//check if need is less than 
+ 		bool flag0=true;
+ 		for(int i=0;i<m;i++){
+ 			if(need[q.front()][i]>avail[i]) flag0=false;
+ 		}
+ 		debug(q.front());
+ 		debug(flag0);
+
+ 		if(flag0){
+
+ 		finished[q.front()]=true;
+ 		
+
+ 		//avail+=allocated after the process completes
+ 		rep(i,0,m){
+ 			avail[i]+=allocated[q.front()][i];
+ 		}
+
+ 		ans.push_back(q.front());
+ 		q.pop();
+ 		}
+
+ 		else{
+ 			q.push(q.front());
+ 			q.pop();
+ 		}
+
+ 	}
+
+ }
+
+
+//Print the safe sequence
+ cout<<"The safe sequence is"<<endl; 
+ rep(i,0,n){
+ 	cout<<"P"<<ans[i]<<" ";
+ }
 
 	
-
-	int lastProcess=-2;
-	int lastWT=0;
-	int totalTimeElapsed=0;
-
-	while(fun(v1,status,totalTimeElapsed,remBt)!=-1){
-		int currentProcessNum=fun(v1,status,totalTimeElapsed,remBt);
-		//cout<<"CP="<<currentProcessNum<<endl;
-		int i=currentProcessNum;
-
-		//things happen every second
-		remBt[i]-=1;
-		totalTimeElapsed+=1;
-		timeQuantum[i]-=1;
-		//cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" RemBt:-"<<remBt[i]<<" TotalTimeElapsed:-"<<totalTimeElapsed<<endl;
-		if(timeQuantum[currentProcessNum]==0){
-			//this process cant be processed due to time quantum 
-			at[currentProcessNum]=*max_element(at.begin(), at.end())+1;
-			timeQuantum[currentProcessNum]=q;
-
-			v1.clear();
-			rep(i,0,numProcess)
-			{
-			pair<int,int> p=make_pair(at[i],i);
-			v1.push_back(p);
-			}
-		}
-		
-		if(remBt[i]==0){
-			//the process has been completed
-			status[i]=true;
-			tat[i]=totalTimeElapsed-at[i];
-			wt[i]=tat[i]-bt[i];
-
-			cout<<"Process:-"<<i+1<<" BT:-"<<bt[i]<<" WT:-"<<wt[i]<<" TAT:- "<<tat[i]<<" Arrival T:-"<<at[i]<<endl;
-		}
-		//cout<<"Process:- "<< i+1<< " rembt = "<<remBt[i]<<"timeQuantum= "<< timeQuantum[i]<<endl;
-
-
-
-	}
-
-
-
-
-
-	// print all info
-
-	double averageWT=0;
-	double averageTAT=0;
-
-	rep(i,0,numProcess){
-		averageWT+=wt[i];
-		averageTAT+=tat[i];
-	}
-
-	cout<<"The Av.WT is "<<(averageWT/numProcess)<<endl;
-	cout<<"The Av.TAT is "<<(averageTAT/numProcess)<<endl;
 }
 
 signed main(){
@@ -195,6 +161,7 @@ signed main(){
 	cin.tie(0);cout.tie(0);
 	freopen("input.in", "r", stdin);
 	freopen("output.in", "w", stdout);
+	start = clock(); 
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
@@ -204,9 +171,11 @@ signed main(){
 	#ifdef NCR
 		init();
 	#endif
+	cout << fixed << setprecision(12);
 	
 	int t=1;
 	//cin>>t;
 	while(t--) solve();
+	cerr << time(start);
 	return 0;
 }

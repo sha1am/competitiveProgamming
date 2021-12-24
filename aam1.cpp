@@ -1,5 +1,9 @@
 #include "bits/stdc++.h"
+
+
 using namespace std;
+
+
 #define int               long long
 #define pb                push_back
 #define ppb               pop_back
@@ -16,6 +20,9 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
+//
+#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
+#define lcm(a, b)      (a * (b / __gcd(a,b))) 
 
 
 #ifndef ONLINE_JUDGE
@@ -24,6 +31,9 @@ using namespace std;
 #define debug(x)
 #endif
 
+//clock 
+clock_t start;
+mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
 void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
@@ -58,108 +68,59 @@ template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
- 
-const int N=105;
-
-int z=30,n=202,m=2002;
-// for storing the vectors of strings
-vector<string> tempV;
-vector<vector<string>> u(z,tempV);
 
 
-// for making the matrix
-vector<string> tempV1(m+1,"");
-vector<vector<string>> t(n+1,tempV1);
+int fun(int num, int base){
+	int rem=0;
 
-
-vector<string> lcs(string a, string b, int n ,int m){
-
-	//initialiazation
-	rep(i,0,n+1){
-		rep(j,0,m+1){
-			if(i==0||j==0) t[i][j]="";
-		}
+	while(num>base){
+		rem=rem+ num%base;
+		num/=base;
 	}
-	u[0].pb("#");
 
-	//choice daigram 
-	rep(i,1,n+1){
-		rep(j,1,m+1){
-			if(a[i-1]==b[j-1]) {
-				t[i][j]=t[i-1][j-1]+a[i-1];
-				//char add=a[i-1];
-				
-				//u[t[i-1][j-1].length()] me a[i-1] add;
-				int k=t[i-1][j-1].length();
-				debug(k);
-				
-
-				rep(i,0,u[k].size()){
-
-					//debug(add);
-					debug(u[k][i]);
-					u[k][i]+=a[i-1];
-					debug(a[i-1]); 
-					debug(u[k][i]);
-					u[k+1].pb(u[k][i]);
-
-					
-				}
-
-			}
-			else{
-				//t[i][j]=max(t[i][j-1],t[i-1][j]);
-				t[i][j]=t[i-1][j].length()>t[i][j-1].length()?t[i-1][j]:t[i][j-1];
-
-
-			}
-		}
-	}
-	int sz=t[n][m].length();
-
-	return u[sz];
+	debug(rem);
+	return rem;
 }
 
-
 void solve(){
-	
-	string a,b;
-	cin>>a>>b;
-	int n=a.length(),m=b.length();
-	vector<string> ans= lcs(a,b,n,m);
 
-	sort(ans.begin(),ans.end());
-	// rep(i,0,ans.size()){
-	// 	cout<<ans[i]<<endl;
-	// }
-	// cout<<endl;
-	//cout<<5<<endl;
+	int n, l, r;
+	cin>>n>>l>>r;
 
-	// //print u
-	rep(i,0,28){
-		rep(j,0,u[i].size()){
-					cout<<u[i][j]<<"$";
-				}
-		cout<<endl;
-	}
 
-	//print matrix t
-	rep(i,0,n+1){
-		rep(j,0,m+1){
-			cout<<t[i][j]<<" ";
+	int lastValue=INF;
+	int lastValueAtBase=-1;
+
+	for(int i=r;i>=l;i--){
+		int thisValue=fun(n,i);
+		if(thisValue>lastValue) {
+			break;
 		}
-		cout<<endl;
+		else{
+			lastValue=thisValue;
+			lastValueAtBase=i;
+		}
+		debug(lastValue);
+		cerr<<"S"<<endl;
 	}
+
+	int ans=fun(n,l);
+	if(ans<lastValue) cout<<r;
+	else cout<<lastValueAtBase;
+
+	cout<<endl;
 
 
 	
+ 
 }
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
-	//freopen("input.in", "r", stdin);
-	//freopen("output.in", "w", stdout);
+	// freopen("input.in", "r", stdin);
+	// freopen("output.in", "w", stdout);
+	start = clock(); 
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
@@ -169,9 +130,11 @@ signed main(){
 	#ifdef NCR
 		init();
 	#endif
+	cout << fixed << setprecision(12);
 	
 	int t=1;
 	cin>>t;
 	while(t--) solve();
+	cerr << time(start);
 	return 0;
 }
