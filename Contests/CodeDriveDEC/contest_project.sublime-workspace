@@ -1,0 +1,602 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"timeQuantum"
+			],
+			[
+				"max",
+				"maxPrime"
+			],
+			[
+				"if",
+				"ifChoosed"
+			],
+			[
+				"LRU",
+				"LRUFun"
+			],
+			[
+				"page",
+				"pageReplacement"
+			],
+			[
+				"thread",
+				"pthread_create"
+			],
+			[
+				"ava",
+				"avail"
+			],
+			[
+				"current",
+				"currentProcessNum"
+			],
+			[
+				"prime",
+				"primeFactorsOfA"
+			],
+			[
+				"primeFa",
+				"primeFactors."
+			],
+			[
+				"cnt",
+				"cntAnar"
+			],
+			[
+				"cost",
+				"costOfOneChakri"
+			],
+			[
+				"costOf",
+				"costOfOneChakri"
+			],
+			[
+				"tot",
+				"totMoneyLeft"
+			],
+			[
+				"costOfo",
+				"costOfOneChakri"
+			],
+			[
+				"costOfOne",
+				"costOfOneAnar"
+			],
+			[
+				"priceOf",
+				"priceOfFuljhadi"
+			],
+			[
+				"In",
+				"INT_MAX"
+			],
+			[
+				"IN",
+				"INT_MAX"
+			],
+			[
+				"vi",
+				"vi"
+			],
+			[
+				"void",
+				"void print(){"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "a.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "b.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "c.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "d.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "e.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/c++14.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++14.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/temp.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/c++14.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++14.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++14.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/c++14.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"run",
+				"FastOlympicCoding: Run"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"diab",
+				"Package Control: Disable Package"
+			],
+			[
+				"tab",
+				"⌬ tabnine: Open Configuration"
+			],
+			[
+				"pakage res",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"gtimeout --help",
+			"sublime.log_commands(True)",
+			"command: insert_snippet {\"name\": \"Packages/XML/long-tag.sublime-snippet\"}",
+			"sublime.log_commands(True)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/shadab/Documents/GitHub/competativeProgamming/contest"
+	],
+	"file_history":
+	[
+		"/Users/shadab/Documents/GitHub/competativeProgamming/subsetSumDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/equalSumPartitionDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/countOfSubsetSumDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LowestCommonSubstringDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequenceTopDownDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequenceMemoizationDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequenceDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/coinChange2MinNumOfCoin.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/coinChange1DP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/rodCuttingProblemDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/countNumberOfSubsetWithGivenDiffDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/minSubsetSumDifDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequencePrintDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01KnapsackDPTopDown.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01KnapsackDPwithMemoization.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01KnapsackDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/shortestCommonSuperesequencePrintDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/minInsertionsDeletionsToConvertatob.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/ShortestCommonSupersequenceDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubstringPrintDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/os.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/osPriority.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSdiningPhilosopher.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSPagereplacement",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/func.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/output.in",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSPagereplacement.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSreaderWriter.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OsBankersAlgorithm.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/func",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01Knapsack.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/test.java",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/absanda.c",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/Sorting/output.in",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/error.in",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/monadidi1.c",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/unboundedKnapsackDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/coinchangeIWaysDP.cpp",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/PackageResourceViewer/README.md",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/PackageResourceViewer/PackageResourceViewer.sublime-settings",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/User/temp.sublime-build",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/CSES_making_roads",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "a.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "b.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "c.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "d.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "e.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 79.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/c++14.sublime-build",
+	"project": "contest_project.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"aam.cpp"
+			],
+			[
+				"os",
+				"OSPagereplacement"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/GitHub/competativeProgamming/p3.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

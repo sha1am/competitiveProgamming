@@ -1,9 +1,5 @@
 #include "bits/stdc++.h"
-
-
 using namespace std;
-
-
 #define int               long long
 #define pb                push_back
 #define ppb               pop_back
@@ -70,71 +66,38 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
 
-int fun(int num, int base){
-	int rem=0;
+void solve()
+{
 
-	while(num>base){
-		rem=rem+ num%base;
-		num/=base;
-	}
-
-	debug(rem);
-	return rem;
-}
-
-void solve(){
-
-	int n, l, r;
-	cin>>n>>l>>r;
-
-
-	int lastValue=INF;
-	int lastValueAtBase=-1;
-
-	for(int i=r;i>=l;i--){
-		int thisValue=fun(n,i);
-		if(thisValue>lastValue) {
-			break;
-		}
-		else{
-			lastValue=thisValue;
-			lastValueAtBase=i;
-		}
-		debug(lastValue);
-		cerr<<"S"<<endl;
-	}
-
-	int ans=fun(n,l);
-	if(ans<lastValue) cout<<r;
-	else cout<<lastValueAtBase;
-
-	cout<<endl;
-
+	cout<<"Shadab"<<endl;
 
 	
- 
-}
+
+}		
+
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
+
 	// freopen("input.in", "r", stdin);
 	// freopen("output.in", "w", stdout);
 	start = clock(); 
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
+
 	#ifdef SIEVE
 		sieve();
 	#endif
-	#ifdef NCR
+	#ifdef NCRk
 		init();
 	#endif
 	cout << fixed << setprecision(12);
 	
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
-	cerr << time(start);
+	cerr <<"Time Taken: "<<time(start);
 	return 0;
 }

@@ -1,4 +1,5 @@
 #include "bits/stdc++.h"
+#include "headerType.h"
 using namespace std;
 #define int               long long
 #define pb                push_back
@@ -68,33 +69,42 @@ const int32_t MM=998244353;
 
 void solve()
 {
-	
-	cout<<"Shadab"<<endl;
-	
-}
 
+	int a;
+	
+
+
+ 	auto name = type_name<decltype(a)>();	
+	cout<<name<<endl;
+	//cout<<getType(a).type_name()<<endl;
+
+	
+
+}		
 
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
+
 	// freopen("input.in", "r", stdin);
 	// freopen("output.in", "w", stdout);
 	start = clock(); 
 	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
     #endif
+
 	#ifdef SIEVE
 		sieve();
 	#endif
-	#ifdef NCR
+	#ifdef NCRk
 		init();
 	#endif
 	cout << fixed << setprecision(12);
 	
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
-	cerr << time(start);
+	cerr <<"Time Taken: "<<time(start);
 	return 0;
 }

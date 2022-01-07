@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"AC\nWA\nAC\nWA"
+		],
+		"test": "4\n8\ncodechef\n8\nchefcode\n14\nsxycodeghychef\n21\nsxychefvsvcodehghchef\n"
+	}
+]

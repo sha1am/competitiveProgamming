@@ -1,0 +1,1117 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"prime",
+				"primeFactorArr"
+			],
+			[
+				"primeFactor",
+				"primeFactors"
+			],
+			[
+				"sum",
+				"sumExtrema"
+			],
+			[
+				"noOf",
+				"noOfCoinsNithya"
+			],
+			[
+				"time",
+				"timeQuantum"
+			],
+			[
+				"max",
+				"maxPrime"
+			],
+			[
+				"if",
+				"ifChoosed"
+			],
+			[
+				"LRU",
+				"LRUFun"
+			],
+			[
+				"page",
+				"pageReplacement"
+			],
+			[
+				"thread",
+				"pthread_create"
+			],
+			[
+				"ava",
+				"avail"
+			],
+			[
+				"current",
+				"currentProcessNum"
+			],
+			[
+				"primeFa",
+				"primeFactors."
+			],
+			[
+				"cnt",
+				"cntAnar"
+			],
+			[
+				"cost",
+				"costOfOneChakri"
+			],
+			[
+				"costOf",
+				"costOfOneChakri"
+			],
+			[
+				"tot",
+				"totMoneyLeft"
+			],
+			[
+				"costOfo",
+				"costOfOneChakri"
+			],
+			[
+				"costOfOne",
+				"costOfOneAnar"
+			],
+			[
+				"priceOf",
+				"priceOfFuljhadi"
+			],
+			[
+				"In",
+				"INT_MAX"
+			],
+			[
+				"IN",
+				"INT_MAX"
+			],
+			[
+				"vi",
+				"vi"
+			],
+			[
+				"void",
+				"void print(){"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "a.cpp",
+			"settings":
+			{
+				"buffer_size": 3568,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "v"
+					},
+					"AgAAACsMAAAAAAAALAwAAAAAAAAAAAAALAwAAAAAAAAsDAAAAAAAAN4CAAAKaW50IGZ1bldob1dpbm5pbmcoaW50IGEsaW50IGIpewoJaWYoYT5iKSByZXR1cm4gMTsKCWVsc2UgcmV0dXJuIDI7Cn0Kdm9pZCBzb2x2ZSgpCnsKCSBpbnQgYSxiLGMsZDsKCSBjaW4+PmE+PmI+PmM+PmQ7CgoJIGludCBub09mQ29pbnNTb2JoYWd5YT1iLG5vT2ZDb2luc05pdGh5YT1hOwoKCSBkZWJ1Zyhub09mQ29pbnNTb2JoYWd5YSk7CgkgZGVidWcobm9PZkNvaW5zTml0aHlhKTsKCgoJIGludCB3aG9tVG9HaXZlPWZ1bldob1dpbm5pbmcobm9PZkNvaW5zU29iaGFneWEsbm9PZkNvaW5zTml0aHlhKTsKCSBpZih3aG9tVG9HaXZlPT0xKSBub09mQ29pbnNOaXRoeWErPWM7CgkgZWxzZSBub09mQ29pbnNTb2JoYWd5YSs9YzsKCgkgZGVidWcobm9PZkNvaW5zU29iaGFneWEpOwoJIGRlYnVnKG5vT2ZDb2luc05pdGh5YSk7CgoJIHdob21Ub0dpdmU9ZnVuV2hvV2lubmluZyhub09mQ29pbnNTb2JoYWd5YSxub09mQ29pbnNOaXRoeWEpOwoJICBpZih3aG9tVG9HaXZlPT0xKSBub09mQ29pbnNOaXRoeWErPWQ7CgkgZWxzZSBub09mQ29pbnNTb2JoYWd5YSs9ZDsKCgkgIGRlYnVnKG5vT2ZDb2luc1NvYmhhZ3lhKTsKCSBkZWJ1Zyhub09mQ29pbnNOaXRoeWEpOwoKCSB3aG9tVG9HaXZlPWZ1bldob1dpbm5pbmcobm9PZkNvaW5zU29iaGFneWEsbm9PZkNvaW5zTml0aHlhKTsKCSBpZih3aG9tVG9HaXZlPT0xKSBjb3V0PDwiUyI8PGVuZGw7CgkgZWxzZSBjb3V0PDwiTiI8PGVuZGw7CgoKCQoKfQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAJDwAAAAAAACsMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "o"
+					},
+					"AQAAACwMAAAAAAAALQwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAsDAAAAAAAACwMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "i"
+					},
+					"AQAAAC0MAAAAAAAALgwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAtDAAAAAAAAC0MAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "d"
+					},
+					"AQAAAC4MAAAAAAAALwwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAuDAAAAAAAAC4MAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAC8MAAAAAAAAMAwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAvDAAAAAAAAC8MAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAADAMAAAAAAAAMQwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAwDAAAAAAAADAMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": "o"
+					},
+					"AQAAADEMAAAAAAAAMgwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAxDAAAAAAAADEMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "l"
+					},
+					"AQAAADIMAAAAAAAAMwwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAyDAAAAAAAADIMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": "v"
+					},
+					"AQAAADMMAAAAAAAANAwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAzDAAAAAAAADMMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": "e"
+					},
+					"AQAAADQMAAAAAAAANQwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA0DAAAAAAAADQMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					29,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAADUMAAAAAAAANwwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA1DAAAAAAAADUMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAADYMAAAAAAAANwwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA2DAAAAAAAADYMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					33,
+					1,
+					"left_delete",
+					null,
+					"AQAAADYMAAAAAAAANgwAAAAAAAABAAAAMA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3DAAAAAAAADcMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					36,
+					1,
+					"left_delete",
+					null,
+					"AQAAADYMAAAAAAAANgwAAAAAAAABAAAAKQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3DAAAAAAAADcMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": ")"
+					},
+					"AQAAADYMAAAAAAAANwwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA2DAAAAAAAADYMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					40,
+					1,
+					"left_delete",
+					null,
+					"AQAAADYMAAAAAAAANgwAAAAAAAABAAAAKQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3DAAAAAAAADcMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": ")"
+					},
+					"AQAAADYMAAAAAAAANwwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA2DAAAAAAAADYMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					44,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAADcMAAAAAAAAOQwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3DAAAAAAAADcMAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					46,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"AwAAADgMAAAAAAAAOQwAAAAAAAAAAAAAOQwAAAAAAAA6DAAAAAAAAAAAAAA5DAAAAAAAADoMAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA4DAAAAAAAADgMAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"contents": "#include \"bits/stdc++.h\"\nusing namespace std;\n#define int               long long\n#define pb                push_back\n#define ppb               pop_back\n#define pf                push_front\n#define ppf               pop_front\n#define all(x)            (x).begin(),(x).end()\n#define uniq(v)           (v).erase(unique(all(v)),(v).end())\n#define sz(x)             (int)((x).size())\n#define fr                first\n#define sc                second\n#define pii               pair<int,int>\n#define rep(i,a,b)        for(int i=a;i<b;i++)\n#define mem1(a)           memset(a,-1,sizeof(a))\n#define mem0(a)           memset(a,0,sizeof(a))\n#define ppc               __builtin_popcount\n#define ppcll             __builtin_popcountll\n//\n#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))\n#define lcm(a, b)      (a * (b / __gcd(a,b))) \n\n\n#ifndef ONLINE_JUDGE\n#define debug(x) cerr << #x <<\" \"; _print(x); cerr << endl;\n#else\n#define debug(x)\n#endif\n\n//clock \nclock_t start;\nmt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());\n\nvoid _print(long long t) {cerr << t;}\nvoid _print(string t) {cerr << t;}\n//void _print(int t) {cerr << t;}\nvoid _print(char t) {cerr << t;}\nvoid _print(long double t) {cerr << t;}\nvoid _print(double t) {cerr << t;}\nvoid _print(unsigned long long t) {cerr << t;}\n\ntemplate <class T, class V> void _print(pair <T, V> p);\ntemplate <class T> void _print(deque<T> d);\ntemplate <class T> void _print(queue<T> q);\ntemplate <class T> void _print(stack<T> s);\ntemplate <class T> void _print(vector <T> v);\ntemplate <class T> void _print(set <T> v);\ntemplate <class T, class V> void _print(map <T, V> v);\ntemplate <class T> void _print(multiset <T> v);\ntemplate <class T, class V> void _print(pair <T, V> p) {cerr << \"{\"; _print(p.first); cerr << \",\"; _print(p.second); cerr << \"}\";}\ntemplate <class T> void _print(deque<T> d){cerr <<\"[\"; while(!d.empty()){_print(d.front());cerr<<\" \"; d.pop_front();}cerr<< \"]\"; }\ntemplate <class T> void _print(queue<T> q){cerr <<\"[\"; while(!q.empty()){_print(q.front());cerr<<\" \"; q.pop();}cerr<< \"]\"; }\ntemplate <class T> void _print(stack<T> s){cerr <<\"[\"; while(!s.empty()){_print(s.top());cerr<<\" \"; s.pop();} cerr <<\"]\";}\ntemplate <class T> void _print(vector <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(set <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(multiset <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T, class V> void _print(map <T, V> v) {cerr << \"[ \"; for (auto i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\n \ntemplate<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}\ntemplate<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<\" \"<<a.sc;return out;}\ntemplate<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}\ntemplate<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}\n \nconst long long INF=1e18;\nconst int32_t M=1e9+7;\nconst int32_t MM=998244353;\nvoid solve(){\n\t\n}\t\t\n\n\nsigned main(){\n\tios_base::sync_with_stdio(false);\n\tcin.tie(0);cout.tie(0);\n\n\t// freopen(\"input.in\", \"r\", stdin);\n\t// freopen(\"output.in\", \"w\", stdout);\n\tstart = clock(); \n\t#ifndef ONLINE_JUDGE\n\tfreopen(\"error.in\", \"w\", stderr);\n    #endif\n\n\t#ifdef SIEVE\n\t\tsieve();\n\t#endif\n\t#ifdef NCRk\n\t\tinit();\n\t#endif\n\tcout << fixed << setprecision(12);\n\t\n\tint t=1;\n\tcin>>t;\n\twhile(t--) solve();\n\tcerr <<\"Time Taken: \"<<time(start);\n\treturn 0;\n}",
+			"file": "b.cpp",
+			"file_size": 4060,
+			"file_write_time": 132853516380000000,
+			"settings":
+			{
+				"buffer_size": 3568,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					8,
+					1,
+					"paste",
+					null,
+					"AgAAAAAAAAAAAAAA8A0AAAAAAAAAAAAA8A0AAAAAAADwDQAAAAAAANwPAAAjaW5jbHVkZSAiYml0cy9zdGRjKysuaCIKdXNpbmcgbmFtZXNwYWNlIHN0ZDsKI2RlZmluZSBpbnQgICAgICAgICAgICAgICBsb25nIGxvbmcKI2RlZmluZSBwYiAgICAgICAgICAgICAgICBwdXNoX2JhY2sKI2RlZmluZSBwcGIgICAgICAgICAgICAgICBwb3BfYmFjawojZGVmaW5lIHBmICAgICAgICAgICAgICAgIHB1c2hfZnJvbnQKI2RlZmluZSBwcGYgICAgICAgICAgICAgICBwb3BfZnJvbnQKI2RlZmluZSBhbGwoeCkgICAgICAgICAgICAoeCkuYmVnaW4oKSwoeCkuZW5kKCkKI2RlZmluZSB1bmlxKHYpICAgICAgICAgICAodikuZXJhc2UodW5pcXVlKGFsbCh2KSksKHYpLmVuZCgpKQojZGVmaW5lIHN6KHgpICAgICAgICAgICAgIChpbnQpKCh4KS5zaXplKCkpCiNkZWZpbmUgZnIgICAgICAgICAgICAgICAgZmlyc3QKI2RlZmluZSBzYyAgICAgICAgICAgICAgICBzZWNvbmQKI2RlZmluZSBwaWkgICAgICAgICAgICAgICBwYWlyPGludCxpbnQ+CiNkZWZpbmUgcmVwKGksYSxiKSAgICAgICAgZm9yKGludCBpPWE7aTxiO2krKykKI2RlZmluZSBtZW0xKGEpICAgICAgICAgICBtZW1zZXQoYSwtMSxzaXplb2YoYSkpCiNkZWZpbmUgbWVtMChhKSAgICAgICAgICAgbWVtc2V0KGEsMCxzaXplb2YoYSkpCiNkZWZpbmUgcHBjICAgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50CiNkZWZpbmUgcHBjbGwgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50bGwKLy8KI2RlZmluZSB0aW1lKHMpICAgICAgIChkb3VibGUoY2xvY2soKS1zKS9kb3VibGUoQ0xPQ0tTX1BFUl9TRUMpKQojZGVmaW5lIGxjbShhLCBiKSAgICAgIChhICogKGIgLyBfX2djZChhLGIpKSkgCgoKI2lmbmRlZiBPTkxJTkVfSlVER0UKI2RlZmluZSBkZWJ1Zyh4KSBjZXJyIDw8ICN4IDw8IiAiOyBfcHJpbnQoeCk7IGNlcnIgPDwgZW5kbDsKI2Vsc2UKI2RlZmluZSBkZWJ1Zyh4KQojZW5kaWYKCi8vY2xvY2sgCmNsb2NrX3Qgc3RhcnQ7Cm10MTk5MzdfNjQgcm5nKGNocm9ubzo6c3lzdGVtX2Nsb2NrOjpub3coKS50aW1lX3NpbmNlX2Vwb2NoKCkuY291bnQoKSk7Cgp2b2lkIF9wcmludChsb25nIGxvbmcgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KHN0cmluZyB0KSB7Y2VyciA8PCB0O30KLy92b2lkIF9wcmludChpbnQgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KGNoYXIgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KGxvbmcgZG91YmxlIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChkb3VibGUgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KHVuc2lnbmVkIGxvbmcgbG9uZyB0KSB7Y2VyciA8PCB0O30KCnRlbXBsYXRlIDxjbGFzcyBULCBjbGFzcyBWPiB2b2lkIF9wcmludChwYWlyIDxULCBWPiBwKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KGRlcXVlPFQ+IGQpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQocXVldWU8VD4gcSk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzdGFjazxUPiBzKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdik7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzZXQgPFQ+IHYpOwp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQsIGNsYXNzIFY+IHZvaWQgX3ByaW50KHBhaXIgPFQsIFY+IHApIHtjZXJyIDw8ICJ7IjsgX3ByaW50KHAuZmlyc3QpOyBjZXJyIDw8ICIsIjsgX3ByaW50KHAuc2Vjb25kKTsgY2VyciA8PCAifSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoZGVxdWU8VD4gZCl7Y2VyciA8PCJbIjsgd2hpbGUoIWQuZW1wdHkoKSl7X3ByaW50KGQuZnJvbnQoKSk7Y2Vycjw8IiAiOyBkLnBvcF9mcm9udCgpO31jZXJyPDwgIl0iOyB9CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChxdWV1ZTxUPiBxKXtjZXJyIDw8IlsiOyB3aGlsZSghcS5lbXB0eSgpKXtfcHJpbnQocS5mcm9udCgpKTtjZXJyPDwiICI7IHEucG9wKCk7fWNlcnI8PCAiXSI7IH0KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHN0YWNrPFQ+IHMpe2NlcnIgPDwiWyI7IHdoaWxlKCFzLmVtcHR5KCkpe19wcmludChzLnRvcCgpKTtjZXJyPDwiICI7IHMucG9wKCk7fSBjZXJyIDw8Il0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHNldCA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKFQgaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKGF1dG8gaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQogCnRlbXBsYXRlPHR5cGVuYW1lIFQxLHR5cGVuYW1lIFQyPmlzdHJlYW0mIG9wZXJhdG9yPj4oaXN0cmVhbSYgaW4scGFpcjxUMSxUMj4gJmEpe2luPj5hLmZyPj5hLnNjO3JldHVybiBpbjt9CnRlbXBsYXRlPHR5cGVuYW1lIFQxLHR5cGVuYW1lIFQyPm9zdHJlYW0mIG9wZXJhdG9yPDwob3N0cmVhbSYgb3V0LHBhaXI8VDEsVDI+IGEpe291dDw8YS5mcjw8IiAiPDxhLnNjO3JldHVybiBvdXQ7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1heChUICZhLFQxIGIpe2lmKGI+YSlhPWI7cmV0dXJuIGE7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1pbihUICZhLFQxIGIpe2lmKGI8YSlhPWI7cmV0dXJuIGE7fQogCmNvbnN0IGxvbmcgbG9uZyBJTkY9MWUxODsKY29uc3QgaW50MzJfdCBNPTFlOSs3Owpjb25zdCBpbnQzMl90IE1NPTk5ODI0NDM1MzsKCgp2b2lkIHNvbHZlKCkKewoJaW50IG47CglzdHJpbmcgc3RyaW5nMT0iY29kZSIsc3RyaW5nMj0iY2hlZiI7CglzdHJpbmcgczsKCWNpbj4+bj4+czsKCgkvL2NoZWNrIHN0cmluZyBpbiBzdHJpbmcKCglzdGFjazxjaGFyPiBzdGs7CgoJZm9yKGludCBpPW4tMTtpPj0wO2ktLSl7CgkJc3RrLnB1c2goc1tpXSk7Cgl9CglkZWJ1ZyhzdGspOwoKCWRlcXVlPGNoYXI+IHE7CgoJIHN0cmluZyB0ZW1wUz0iIjsKCXdoaWxlKCFzdGsuZW1wdHkoKSl7CgkJaWYoc3RrLnRvcCgpPT0nYycpIHRlbXBTPSIiOwoKCQl0ZW1wUys9c3RrLnRvcCgpOwoJCXN0ay5wb3AoKTsKCgkJaWYodGVtcFM9PXN0cmluZzEpIHEucHVzaF9iYWNrKCcoJyk7CgkJaWYodGVtcFM9PXN0cmluZzIpIHEucHVzaF9iYWNrKCcpJyk7Cgl9CgoJZGVidWcocSk7CgoJLy9ub3cgcG9wIGJyYWNrZXRzIGFuZCBzdHVmZgoKCWlmKHEuZnJvbnQoKT09JyknKSBjb3V0PDwiV0EiPDxlbmRsOwoJZWxzZSBjb3V0PDwiQUMiPDxlbmRsOwoKCn0JCQoKCnNpZ25lZCBtYWluKCl7Cglpb3NfYmFzZTo6c3luY193aXRoX3N0ZGlvKGZhbHNlKTsKCWNpbi50aWUoMCk7Y291dC50aWUoMCk7CgoJLy8gZnJlb3BlbigiaW5wdXQuaW4iLCAiciIsIHN0ZGluKTsKCS8vIGZyZW9wZW4oIm91dHB1dC5pbiIsICJ3Iiwgc3Rkb3V0KTsKCXN0YXJ0ID0gY2xvY2soKTsgCgkjaWZuZGVmIE9OTElORV9KVURHRQoJZnJlb3BlbigiZXJyb3IuaW4iLCAidyIsIHN0ZGVycik7CiAgICAjZW5kaWYKCgkjaWZkZWYgU0lFVkUKCQlzaWV2ZSgpOwoJI2VuZGlmCgkjaWZkZWYgTkNSawoJCWluaXQoKTsKCSNlbmRpZgoJY291dCA8PCBmaXhlZCA8PCBzZXRwcmVjaXNpb24oMTIpOwoJCglpbnQgdD0xOwoJY2luPj50OwoJd2hpbGUodC0tKSBzb2x2ZSgpOwoJY2VyciA8PCJUaW1lIFRha2VuOiAiPDx0aW1lKHN0YXJ0KTsKCXJldHVybiAwOwp9",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAANwPAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"contents": "#include \"bits/stdc++.h\"\nusing namespace std;\n#define int               long long\n#define pb                push_back\n#define ppb               pop_back\n#define pf                push_front\n#define ppf               pop_front\n#define all(x)            (x).begin(),(x).end()\n#define uniq(v)           (v).erase(unique(all(v)),(v).end())\n#define sz(x)             (int)((x).size())\n#define fr                first\n#define sc                second\n#define pii               pair<int,int>\n#define rep(i,a,b)        for(int i=a;i<b;i++)\n#define mem1(a)           memset(a,-1,sizeof(a))\n#define mem0(a)           memset(a,0,sizeof(a))\n#define ppc               __builtin_popcount\n#define ppcll             __builtin_popcountll\n//\n#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))\n#define lcm(a, b)      (a * (b / __gcd(a,b))) \n\n\n#ifndef ONLINE_JUDGE\n#define debug(x) cerr << #x <<\" \"; _print(x); cerr << endl;\n#else\n#define debug(x)\n#endif\n\n//clock \nclock_t start;\nmt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());\n\nvoid _print(long long t) {cerr << t;}\nvoid _print(string t) {cerr << t;}\n//void _print(int t) {cerr << t;}\nvoid _print(char t) {cerr << t;}\nvoid _print(long double t) {cerr << t;}\nvoid _print(double t) {cerr << t;}\nvoid _print(unsigned long long t) {cerr << t;}\n\ntemplate <class T, class V> void _print(pair <T, V> p);\ntemplate <class T> void _print(deque<T> d);\ntemplate <class T> void _print(queue<T> q);\ntemplate <class T> void _print(stack<T> s);\ntemplate <class T> void _print(vector <T> v);\ntemplate <class T> void _print(set <T> v);\ntemplate <class T, class V> void _print(map <T, V> v);\ntemplate <class T> void _print(multiset <T> v);\ntemplate <class T, class V> void _print(pair <T, V> p) {cerr << \"{\"; _print(p.first); cerr << \",\"; _print(p.second); cerr << \"}\";}\ntemplate <class T> void _print(deque<T> d){cerr <<\"[\"; while(!d.empty()){_print(d.front());cerr<<\" \"; d.pop_front();}cerr<< \"]\"; }\ntemplate <class T> void _print(queue<T> q){cerr <<\"[\"; while(!q.empty()){_print(q.front());cerr<<\" \"; q.pop();}cerr<< \"]\"; }\ntemplate <class T> void _print(stack<T> s){cerr <<\"[\"; while(!s.empty()){_print(s.top());cerr<<\" \"; s.pop();} cerr <<\"]\";}\ntemplate <class T> void _print(vector <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(set <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(multiset <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T, class V> void _print(map <T, V> v) {cerr << \"[ \"; for (auto i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\n \ntemplate<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}\ntemplate<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<\" \"<<a.sc;return out;}\ntemplate<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}\ntemplate<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}\n \nconst long long INF=1e18;\nconst int32_t M=1e9+7;\nconst int32_t MM=998244353;\nvoid solve(){\n\t\n}\t\t\n\n\nsigned main(){\n\tios_base::sync_with_stdio(false);\n\tcin.tie(0);cout.tie(0);\n\n\t// freopen(\"input.in\", \"r\", stdin);\n\t// freopen(\"output.in\", \"w\", stdout);\n\tstart = clock(); \n\t#ifndef ONLINE_JUDGE\n\tfreopen(\"error.in\", \"w\", stderr);\n    #endif\n\n\t#ifdef SIEVE\n\t\tsieve();\n\t#endif\n\t#ifdef NCRk\n\t\tinit();\n\t#endif\n\tcout << fixed << setprecision(12);\n\t\n\tint t=1;\n\tcin>>t;\n\twhile(t--) solve();\n\tcerr <<\"Time Taken: \"<<time(start);\n\treturn 0;\n}",
+			"file": "c.cpp",
+			"file_size": 4799,
+			"file_write_time": 132857288190000000,
+			"settings":
+			{
+				"buffer_size": 3568,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					8,
+					1,
+					"paste",
+					null,
+					"AgAAAAAAAAAAAAAA8A0AAAAAAAAAAAAA8A0AAAAAAADwDQAAAAAAAL8SAAAjaW5jbHVkZSAiYml0cy9zdGRjKysuaCIKdXNpbmcgbmFtZXNwYWNlIHN0ZDsKI2RlZmluZSBpbnQgICAgICAgICAgICAgICBsb25nIGxvbmcKI2RlZmluZSBwYiAgICAgICAgICAgICAgICBwdXNoX2JhY2sKI2RlZmluZSBwcGIgICAgICAgICAgICAgICBwb3BfYmFjawojZGVmaW5lIHBmICAgICAgICAgICAgICAgIHB1c2hfZnJvbnQKI2RlZmluZSBwcGYgICAgICAgICAgICAgICBwb3BfZnJvbnQKI2RlZmluZSBhbGwoeCkgICAgICAgICAgICAoeCkuYmVnaW4oKSwoeCkuZW5kKCkKI2RlZmluZSB1bmlxKHYpICAgICAgICAgICAodikuZXJhc2UodW5pcXVlKGFsbCh2KSksKHYpLmVuZCgpKQojZGVmaW5lIHN6KHgpICAgICAgICAgICAgIChpbnQpKCh4KS5zaXplKCkpCiNkZWZpbmUgZnIgICAgICAgICAgICAgICAgZmlyc3QKI2RlZmluZSBzYyAgICAgICAgICAgICAgICBzZWNvbmQKI2RlZmluZSBwaWkgICAgICAgICAgICAgICBwYWlyPGludCxpbnQ+CiNkZWZpbmUgcmVwKGksYSxiKSAgICAgICAgZm9yKGludCBpPWE7aTxiO2krKykKI2RlZmluZSBtZW0xKGEpICAgICAgICAgICBtZW1zZXQoYSwtMSxzaXplb2YoYSkpCiNkZWZpbmUgbWVtMChhKSAgICAgICAgICAgbWVtc2V0KGEsMCxzaXplb2YoYSkpCiNkZWZpbmUgcHBjICAgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50CiNkZWZpbmUgcHBjbGwgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50bGwKLy8KI2RlZmluZSB0aW1lKHMpICAgICAgIChkb3VibGUoY2xvY2soKS1zKS9kb3VibGUoQ0xPQ0tTX1BFUl9TRUMpKQojZGVmaW5lIGxjbShhLCBiKSAgICAgIChhICogKGIgLyBfX2djZChhLGIpKSkKCgojaWZuZGVmIE9OTElORV9KVURHRQojZGVmaW5lIGRlYnVnKHgpIGNlcnIgPDwgI3ggPDwiICI7IF9wcmludCh4KTsgY2VyciA8PCBlbmRsOwojZWxzZQojZGVmaW5lIGRlYnVnKHgpCiNlbmRpZgoKLy9jbG9jawpjbG9ja190IHN0YXJ0OwptdDE5OTM3XzY0IHJuZyhjaHJvbm86OnN5c3RlbV9jbG9jazo6bm93KCkudGltZV9zaW5jZV9lcG9jaCgpLmNvdW50KCkpOwoKdm9pZCBfcHJpbnQobG9uZyBsb25nIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChzdHJpbmcgdCkge2NlcnIgPDwgdDt9Ci8vdm9pZCBfcHJpbnQoaW50IHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChjaGFyIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChsb25nIGRvdWJsZSB0KSB7Y2VyciA8PCB0O30Kdm9pZCBfcHJpbnQoZG91YmxlIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludCh1bnNpZ25lZCBsb25nIGxvbmcgdCkge2NlcnIgPDwgdDt9Cgp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQocGFpciA8VCwgVj4gcCk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChkZXF1ZTxUPiBkKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHF1ZXVlPFQ+IHEpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoc3RhY2s8VD4gcyk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludCh2ZWN0b3IgPFQ+IHYpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoc2V0IDxUPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQsIGNsYXNzIFY+IHZvaWQgX3ByaW50KG1hcCA8VCwgVj4gdik7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChtdWx0aXNldCA8VD4gdik7CnRlbXBsYXRlIDxjbGFzcyBULCBjbGFzcyBWPiB2b2lkIF9wcmludChwYWlyIDxULCBWPiBwKSB7Y2VyciA8PCAieyI7IF9wcmludChwLmZpcnN0KTsgY2VyciA8PCAiLCI7IF9wcmludChwLnNlY29uZCk7IGNlcnIgPDwgIn0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KGRlcXVlPFQ+IGQpIHtjZXJyIDw8ICJbIjsgd2hpbGUgKCFkLmVtcHR5KCkpIHtfcHJpbnQoZC5mcm9udCgpKTsgY2VyciA8PCAiICI7IGQucG9wX2Zyb250KCk7fSBjZXJyIDw8ICJdIjsgfQp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQocXVldWU8VD4gcSkge2NlcnIgPDwgIlsiOyB3aGlsZSAoIXEuZW1wdHkoKSkge19wcmludChxLmZyb250KCkpOyBjZXJyIDw8ICIgIjsgcS5wb3AoKTt9IGNlcnIgPDwgIl0iOyB9CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzdGFjazxUPiBzKSB7Y2VyciA8PCAiWyI7IHdoaWxlICghcy5lbXB0eSgpKSB7X3ByaW50KHMudG9wKCkpOyBjZXJyIDw8ICIgIjsgcy5wb3AoKTt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHNldCA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKFQgaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKGF1dG8gaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQoKdGVtcGxhdGU8dHlwZW5hbWUgVDEsIHR5cGVuYW1lIFQyPmlzdHJlYW0mIG9wZXJhdG9yPj4oaXN0cmVhbSYgaW4sIHBhaXI8VDEsIFQyPiAmYSkge2luID4+IGEuZnIgPj4gYS5zYzsgcmV0dXJuIGluO30KdGVtcGxhdGU8dHlwZW5hbWUgVDEsIHR5cGVuYW1lIFQyPm9zdHJlYW0mIG9wZXJhdG9yPDwob3N0cmVhbSYgb3V0LCBwYWlyPFQxLCBUMj4gYSkge291dCA8PCBhLmZyIDw8ICIgIiA8PCBhLnNjOyByZXR1cm4gb3V0O30KdGVtcGxhdGU8dHlwZW5hbWUgVCwgdHlwZW5hbWUgVDE+VCBhbWF4KFQgJmEsIFQxIGIpIHtpZiAoYiA+IGEpYSA9IGI7IHJldHVybiBhO30KdGVtcGxhdGU8dHlwZW5hbWUgVCwgdHlwZW5hbWUgVDE+VCBhbWluKFQgJmEsIFQxIGIpIHtpZiAoYiA8IGEpYSA9IGI7IHJldHVybiBhO30KCmNvbnN0IGxvbmcgbG9uZyBJTkYgPSAxZTE4Owpjb25zdCBpbnQzMl90IE0gPSAxZTkgKyA3Owpjb25zdCBpbnQzMl90IE1NID0gOTk4MjQ0MzUzOwoKaW50IHRvdGFsU3VtID0gMDsKLy8gcmV0dXJucyB0aGUgc3VtIG9mIGFsbCBleHRyZW1hcwp2b2lkICBzdW1FeHRyZW1hKHZlY3RvcjxpbnQ+IGFyciwgaW50IGFyclNpemUpIHsKCWludCBzdW0gPSAwOwoJcmVwKGksIDEsIGFyci5zaXplKCkgLSAxKSB7CgkJaWYgKChhcnJbaV0gPiBhcnJbaSAtIDFdICYmIGFycltpXSA+IGFycltpICsgMV0pIHx8IChhcnJbaV0gPCBhcnJbaSAtIDFdICYmIGFycltpXSA8IGFycltpICsgMV0pKSB7CgkJCXN1bSArPSBhcnJbaV07CgkJfQoJfQoJaWYoc3VtIT0wKXsKCWRlYnVnKHN1bSk7CgoJfQoJdG90YWxTdW0gKz0gc3VtOwp9Cgp2b2lkIHJlY3Vyc2l2ZVBlcm11dGF0aW9uRnVuY3Rpb24odmVjdG9yPGludCA+IHYxLCB2ZWN0b3I8aW50PiB0ZW1wVmVjICwgaW50IGZyYW1lU2l6ZSwgaW50IHBvcykgewoKCS8vYmFzZSBjb25kaXRpb24KCWlmIChwb3MgPT0gZnJhbWVTaXplKSB7CgkJLy9wcmludCB0aGUgYXJycmF5CgkJZGVidWcodGVtcFZlYyk7CgkJc3VtRXh0cmVtYSh0ZW1wVmVjLGZyYW1lU2l6ZSk7CgoJCXJldHVybjsKCX0KCgkvL2luIHRoaXMgbG9vcAoJLy9maWxsIGluIHRoZSBmaXJzdChudGggcGxhY2UpCglmb3IgKGludCBpID0gMDsgaSA8IHYxLnNpemUoKTsgaSsrKSB7CgkJdGVtcFZlY1twb3NdID0gdjFbaV07CgkJLy9yZWN1cnNldmVseSBjYWxsIGZvcgoJCXJlY3Vyc2l2ZVBlcm11dGF0aW9uRnVuY3Rpb24odjEsIHRlbXBWZWMsIGZyYW1lU2l6ZSwgcG9zICsgMSk7CgoJfQp9Cgp2b2lkIHByaW50QWxsUGVybXV0YXRpb25zKHZlY3RvcjxpbnQ+IHYxLCBpbnQgZnJhbWVTaXplKSB7CgoJdmVjdG9yPGludD4gdGVtcFZlYyhmcmFtZVNpemUsIC0xKTsKCS8vIGNvdXQgPDwgInNoYWRhMyIgPDwgZW5kbDsKCglyZWN1cnNpdmVQZXJtdXRhdGlvbkZ1bmN0aW9uKHYxLCB0ZW1wVmVjLCBmcmFtZVNpemUsIDApOwoKCn0Kdm9pZCBzb2x2ZSgpCnsKCS8vcmVmcmVzaCB0b3RhbFN1bSBhdCBlYWNoIGl0ZXJhdGlvbgoJdG90YWxTdW09MDsKCXZlY3RvcjxpbnQ+IGFyciA9IHswLDEsMn07CglpbnQgZnJhbWVTaXplID0gMjsKCWNpbj4+ZnJhbWVTaXplOwoKCS8vIGNvdXQgPDwgInNoYWRhMSIgPDwgZW5kbDsKCglwcmludEFsbFBlcm11dGF0aW9ucyhhcnIsIGZyYW1lU2l6ZSk7Cgljb3V0IDw8IHRvdGFsU3VtIDw8IGVuZGw7CgoKfQoKCnNpZ25lZCBtYWluKCkgewoJaW9zX2Jhc2U6OnN5bmNfd2l0aF9zdGRpbyhmYWxzZSk7CgljaW4udGllKDApOyBjb3V0LnRpZSgwKTsKCS8vIGZyZW9wZW4oImlucHV0LmluIiwgInIiLCBzdGRpbik7CgkvLyBmcmVvcGVuKCJvdXRwdXQuaW4iLCAidyIsIHN0ZG91dCk7CglzdGFydCA9IGNsb2NrKCk7CiNpZm5kZWYgT05MSU5FX0pVREdFCglmcmVvcGVuKCJlcnJvci5pbiIsICJ3Iiwgc3RkZXJyKTsKI2VuZGlmCgojaWZkZWYgU0lFVkUKCXNpZXZlKCk7CgkKI2VuZGlmCiNpZmRlZiBOQ1JrCglpbml0KCk7CiNlbmRpZgoJY291dCA8PCBmaXhlZCA8PCBzZXRwcmVjaXNpb24oMTIpOwoKCWludCB0ID0gMTsKCWNpbiA+PiB0OwoJd2hpbGUgKHQtLSkgc29sdmUoKTsKCWNlcnIgPDwgIlRpbWUgVGFrZW46ICIgPDwgdGltZShzdGFydCk7CglyZXR1cm4gMDsKfQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAL8SAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"contents": "#include \"bits/stdc++.h\"\nusing namespace std;\n#define int               long long\n#define pb                push_back\n#define ppb               pop_back\n#define pf                push_front\n#define ppf               pop_front\n#define all(x)            (x).begin(),(x).end()\n#define uniq(v)           (v).erase(unique(all(v)),(v).end())\n#define sz(x)             (int)((x).size())\n#define fr                first\n#define sc                second\n#define pii               pair<int,int>\n#define rep(i,a,b)        for(int i=a;i<b;i++)\n#define mem1(a)           memset(a,-1,sizeof(a))\n#define mem0(a)           memset(a,0,sizeof(a))\n#define ppc               __builtin_popcount\n#define ppcll             __builtin_popcountll\n//\n#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))\n#define lcm(a, b)      (a * (b / __gcd(a,b))) \n\n\n#ifndef ONLINE_JUDGE\n#define debug(x) cerr << #x <<\" \"; _print(x); cerr << endl;\n#else\n#define debug(x)\n#endif\n\n//clock \nclock_t start;\nmt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());\n\nvoid _print(long long t) {cerr << t;}\nvoid _print(string t) {cerr << t;}\n//void _print(int t) {cerr << t;}\nvoid _print(char t) {cerr << t;}\nvoid _print(long double t) {cerr << t;}\nvoid _print(double t) {cerr << t;}\nvoid _print(unsigned long long t) {cerr << t;}\n\ntemplate <class T, class V> void _print(pair <T, V> p);\ntemplate <class T> void _print(deque<T> d);\ntemplate <class T> void _print(queue<T> q);\ntemplate <class T> void _print(stack<T> s);\ntemplate <class T> void _print(vector <T> v);\ntemplate <class T> void _print(set <T> v);\ntemplate <class T, class V> void _print(map <T, V> v);\ntemplate <class T> void _print(multiset <T> v);\ntemplate <class T, class V> void _print(pair <T, V> p) {cerr << \"{\"; _print(p.first); cerr << \",\"; _print(p.second); cerr << \"}\";}\ntemplate <class T> void _print(deque<T> d){cerr <<\"[\"; while(!d.empty()){_print(d.front());cerr<<\" \"; d.pop_front();}cerr<< \"]\"; }\ntemplate <class T> void _print(queue<T> q){cerr <<\"[\"; while(!q.empty()){_print(q.front());cerr<<\" \"; q.pop();}cerr<< \"]\"; }\ntemplate <class T> void _print(stack<T> s){cerr <<\"[\"; while(!s.empty()){_print(s.top());cerr<<\" \"; s.pop();} cerr <<\"]\";}\ntemplate <class T> void _print(vector <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(set <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(multiset <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T, class V> void _print(map <T, V> v) {cerr << \"[ \"; for (auto i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\n \ntemplate<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}\ntemplate<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<\" \"<<a.sc;return out;}\ntemplate<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}\ntemplate<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}\n \nconst long long INF=1e18;\nconst int32_t M=1e9+7;\nconst int32_t MM=998244353;\nvoid solve(){\n\t\n}\t\t\n\n\nsigned main(){\n\tios_base::sync_with_stdio(false);\n\tcin.tie(0);cout.tie(0);\n\n\t// freopen(\"input.in\", \"r\", stdin);\n\t// freopen(\"output.in\", \"w\", stdout);\n\tstart = clock(); \n\t#ifndef ONLINE_JUDGE\n\tfreopen(\"error.in\", \"w\", stderr);\n    #endif\n\n\t#ifdef SIEVE\n\t\tsieve();\n\t#endif\n\t#ifdef NCRk\n\t\tinit();\n\t#endif\n\tcout << fixed << setprecision(12);\n\t\n\tint t=1;\n\tcin>>t;\n\twhile(t--) solve();\n\tcerr <<\"Time Taken: \"<<time(start);\n\treturn 0;\n}",
+			"file": "d.cpp",
+			"file_size": 4537,
+			"file_write_time": 132853576760000000,
+			"settings":
+			{
+				"buffer_size": 3568,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					20,
+					1,
+					"paste",
+					null,
+					"AgAAAAAAAAAAAAAA8A0AAAAAAAAAAAAA8A0AAAAAAADwDQAAAAAAALkRAAAjaW5jbHVkZSAiYml0cy9zdGRjKysuaCIKdXNpbmcgbmFtZXNwYWNlIHN0ZDsKI2RlZmluZSBpbnQgICAgICAgICAgICAgICBsb25nIGxvbmcKI2RlZmluZSBwYiAgICAgICAgICAgICAgICBwdXNoX2JhY2sKI2RlZmluZSBwcGIgICAgICAgICAgICAgICBwb3BfYmFjawojZGVmaW5lIHBmICAgICAgICAgICAgICAgIHB1c2hfZnJvbnQKI2RlZmluZSBwcGYgICAgICAgICAgICAgICBwb3BfZnJvbnQKI2RlZmluZSBhbGwoeCkgICAgICAgICAgICAoeCkuYmVnaW4oKSwoeCkuZW5kKCkKI2RlZmluZSB1bmlxKHYpICAgICAgICAgICAodikuZXJhc2UodW5pcXVlKGFsbCh2KSksKHYpLmVuZCgpKQojZGVmaW5lIHN6KHgpICAgICAgICAgICAgIChpbnQpKCh4KS5zaXplKCkpCiNkZWZpbmUgZnIgICAgICAgICAgICAgICAgZmlyc3QKI2RlZmluZSBzYyAgICAgICAgICAgICAgICBzZWNvbmQKI2RlZmluZSBwaWkgICAgICAgICAgICAgICBwYWlyPGludCxpbnQ+CiNkZWZpbmUgcmVwKGksYSxiKSAgICAgICAgZm9yKGludCBpPWE7aTxiO2krKykKI2RlZmluZSBtZW0xKGEpICAgICAgICAgICBtZW1zZXQoYSwtMSxzaXplb2YoYSkpCiNkZWZpbmUgbWVtMChhKSAgICAgICAgICAgbWVtc2V0KGEsMCxzaXplb2YoYSkpCiNkZWZpbmUgcHBjICAgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50CiNkZWZpbmUgcHBjbGwgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50bGwKLy8KI2RlZmluZSB0aW1lKHMpICAgICAgIChkb3VibGUoY2xvY2soKS1zKS9kb3VibGUoQ0xPQ0tTX1BFUl9TRUMpKQojZGVmaW5lIGxjbShhLCBiKSAgICAgIChhICogKGIgLyBfX2djZChhLGIpKSkgCgoKI2lmbmRlZiBPTkxJTkVfSlVER0UKI2RlZmluZSBkZWJ1Zyh4KSBjZXJyIDw8ICN4IDw8IiAiOyBfcHJpbnQoeCk7IGNlcnIgPDwgZW5kbDsKI2Vsc2UKI2RlZmluZSBkZWJ1Zyh4KQojZW5kaWYKCi8vY2xvY2sgCmNsb2NrX3Qgc3RhcnQ7Cm10MTk5MzdfNjQgcm5nKGNocm9ubzo6c3lzdGVtX2Nsb2NrOjpub3coKS50aW1lX3NpbmNlX2Vwb2NoKCkuY291bnQoKSk7Cgp2b2lkIF9wcmludChsb25nIGxvbmcgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KHN0cmluZyB0KSB7Y2VyciA8PCB0O30KLy92b2lkIF9wcmludChpbnQgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KGNoYXIgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KGxvbmcgZG91YmxlIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChkb3VibGUgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KHVuc2lnbmVkIGxvbmcgbG9uZyB0KSB7Y2VyciA8PCB0O30KCnRlbXBsYXRlIDxjbGFzcyBULCBjbGFzcyBWPiB2b2lkIF9wcmludChwYWlyIDxULCBWPiBwKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KGRlcXVlPFQ+IGQpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQocXVldWU8VD4gcSk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzdGFjazxUPiBzKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdik7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzZXQgPFQ+IHYpOwp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQsIGNsYXNzIFY+IHZvaWQgX3ByaW50KHBhaXIgPFQsIFY+IHApIHtjZXJyIDw8ICJ7IjsgX3ByaW50KHAuZmlyc3QpOyBjZXJyIDw8ICIsIjsgX3ByaW50KHAuc2Vjb25kKTsgY2VyciA8PCAifSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoZGVxdWU8VD4gZCl7Y2VyciA8PCJbIjsgd2hpbGUoIWQuZW1wdHkoKSl7X3ByaW50KGQuZnJvbnQoKSk7Y2Vycjw8IiAiOyBkLnBvcF9mcm9udCgpO31jZXJyPDwgIl0iOyB9CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChxdWV1ZTxUPiBxKXtjZXJyIDw8IlsiOyB3aGlsZSghcS5lbXB0eSgpKXtfcHJpbnQocS5mcm9udCgpKTtjZXJyPDwiICI7IHEucG9wKCk7fWNlcnI8PCAiXSI7IH0KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHN0YWNrPFQ+IHMpe2NlcnIgPDwiWyI7IHdoaWxlKCFzLmVtcHR5KCkpe19wcmludChzLnRvcCgpKTtjZXJyPDwiICI7IHMucG9wKCk7fSBjZXJyIDw8Il0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHNldCA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKFQgaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKGF1dG8gaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQogCnRlbXBsYXRlPHR5cGVuYW1lIFQxLHR5cGVuYW1lIFQyPmlzdHJlYW0mIG9wZXJhdG9yPj4oaXN0cmVhbSYgaW4scGFpcjxUMSxUMj4gJmEpe2luPj5hLmZyPj5hLnNjO3JldHVybiBpbjt9CnRlbXBsYXRlPHR5cGVuYW1lIFQxLHR5cGVuYW1lIFQyPm9zdHJlYW0mIG9wZXJhdG9yPDwob3N0cmVhbSYgb3V0LHBhaXI8VDEsVDI+IGEpe291dDw8YS5mcjw8IiAiPDxhLnNjO3JldHVybiBvdXQ7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1heChUICZhLFQxIGIpe2lmKGI+YSlhPWI7cmV0dXJuIGE7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1pbihUICZhLFQxIGIpe2lmKGI8YSlhPWI7cmV0dXJuIGE7fQogCmNvbnN0IGxvbmcgbG9uZyBJTkY9MWUxODsKY29uc3QgaW50MzJfdCBNPTFlOSs3Owpjb25zdCBpbnQzMl90IE1NPTk5ODI0NDM1MzsKCgoKdm9pZCBzb2x2ZSgpCnsKCSBpbnQgbixrOwoJIGNpbj4+bj4+azsKCgkgc3RyaW5nIHM7CgkgY2luPj5zOwoKCSB2ZWN0b3I8aW50PiB2OwoJIHJlcChpLDAsbil7CgkgCXYucHVzaF9iYWNrKHNbaV0tJzAnKTsKCSB9CgoJIGlmKG49PWspewoJIAlpbnQgc3VtPTA7CgkgCWludCBjb3VudE9mT2RkU3Vtcz0wOwoJIAlyZXAoaSwwLG4pewoJIAkJc3VtKz12W2ldOwoJIAl9CgoJIAljb3V0PDxzdW08PGVuZGw7CgkgfQoKCSBlbHNlewoJIAlkZWJ1Zyh2KTsKCgkgaW50IEs9bi1rKzE7CgkgaW50IG5ld1dpbmRvd1NpemU9SzsKCSBpbnQgc3VtPTA7CgoJIGZvcihpbnQgaT0wO2k8SztpKyspewoJIAlzdW0rPXZbaV07CgkgfQoKCSBkZWJ1ZyhzdW0pOwoJIGRlYnVnKEspOwoKCSB2ZWN0b3I8aW50PiBzdW1BcnJheT17c3VtfTsKCSBpbnQgcHJldlN1bT1zdW07CgkgZm9yKGludCBpPTArMTsoaStLLTEpPG47aSsrKXsKCSAJLy9kZWJ1ZyhpKTsKCSAJaW50IHN1bU9mVGhpc1dpbmRvdz1wcmV2U3VtOwoJIAlkZWJ1ZyhzdW1PZlRoaXNXaW5kb3cpOwoJIAlzdW1PZlRoaXNXaW5kb3crPXZbaStLLTFdOwoJIAlkZWJ1ZyhzdW1PZlRoaXNXaW5kb3cpOwoKCSAJc3VtT2ZUaGlzV2luZG93LT12W2ktMV07CgkgCWRlYnVnKHN1bU9mVGhpc1dpbmRvdyk7CgoJIAlzdW1BcnJheS5wdXNoX2JhY2soc3VtT2ZUaGlzV2luZG93KTsKCSAJcHJldlN1bT1zdW1PZlRoaXNXaW5kb3c7CgkgCWRlYnVnKHByZXZTdW0pOwoJIAkvL2RlYnVnKHN1bUFycmF5KTsKCSB9CgoJIGRlYnVnKHN1bUFycmF5KTsKCgkgaW50IGNvdW50Tm9PZk9kZFN1bXM9MDsKCgkgcmVwKGksMCxzdW1BcnJheS5zaXplKCkpewoJIAlpZihzdW1BcnJheVtpXSUyPT0wKXs7fQoJIAkJZWxzZXsKCSAJCQljb3VudE5vT2ZPZGRTdW1zKz0xOwoJIAkJfQoJIH0KCSBkZWJ1Zyhjb3VudE5vT2ZPZGRTdW1zKTsKCgkgY291dDw8Y291bnROb09mT2RkU3Vtczw8ZW5kbDsKCgkgfQoKCSAKCn0JCQoKCnNpZ25lZCBtYWluKCl7Cglpb3NfYmFzZTo6c3luY193aXRoX3N0ZGlvKGZhbHNlKTsKCWNpbi50aWUoMCk7Y291dC50aWUoMCk7CgoJLy8gZnJlb3BlbigiaW5wdXQuaW4iLCAiciIsIHN0ZGluKTsKCS8vIGZyZW9wZW4oIm91dHB1dC5pbiIsICJ3Iiwgc3Rkb3V0KTsKCXN0YXJ0ID0gY2xvY2soKTsgCgkjaWZuZGVmIE9OTElORV9KVURHRQoJZnJlb3BlbigiZXJyb3IuaW4iLCAidyIsIHN0ZGVycik7CiAgICAjZW5kaWYKCgkjaWZkZWYgU0lFVkUKCQlzaWV2ZSgpOwoJI2VuZGlmCgkjaWZkZWYgTkNSawoJCWluaXQoKTsKCSNlbmRpZgoJY291dCA8PCBmaXhlZCA8PCBzZXRwcmVjaXNpb24oMTIpOwoJCglpbnQgdD0xOwoJY2luPj50OwoJd2hpbGUodC0tKSBzb2x2ZSgpOwoJY2VyciA8PCJUaW1lIFRha2VuOiAiPDx0aW1lKHN0YXJ0KTsKCXJldHVybiAwOwp9",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAALkRAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"contents": "#include \"bits/stdc++.h\"\nusing namespace std;\n#define int               long long\n#define pb                push_back\n#define ppb               pop_back\n#define pf                push_front\n#define ppf               pop_front\n#define all(x)            (x).begin(),(x).end()\n#define uniq(v)           (v).erase(unique(all(v)),(v).end())\n#define sz(x)             (int)((x).size())\n#define fr                first\n#define sc                second\n#define pii               pair<int,int>\n#define rep(i,a,b)        for(int i=a;i<b;i++)\n#define mem1(a)           memset(a,-1,sizeof(a))\n#define mem0(a)           memset(a,0,sizeof(a))\n#define ppc               __builtin_popcount\n#define ppcll             __builtin_popcountll\n//\n#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))\n#define lcm(a, b)      (a * (b / __gcd(a,b))) \n\n\n#ifndef ONLINE_JUDGE\n#define debug(x) cerr << #x <<\" \"; _print(x); cerr << endl;\n#else\n#define debug(x)\n#endif\n\n//clock \nclock_t start;\nmt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());\n\nvoid _print(long long t) {cerr << t;}\nvoid _print(string t) {cerr << t;}\n//void _print(int t) {cerr << t;}\nvoid _print(char t) {cerr << t;}\nvoid _print(long double t) {cerr << t;}\nvoid _print(double t) {cerr << t;}\nvoid _print(unsigned long long t) {cerr << t;}\n\ntemplate <class T, class V> void _print(pair <T, V> p);\ntemplate <class T> void _print(deque<T> d);\ntemplate <class T> void _print(queue<T> q);\ntemplate <class T> void _print(stack<T> s);\ntemplate <class T> void _print(vector <T> v);\ntemplate <class T> void _print(set <T> v);\ntemplate <class T, class V> void _print(map <T, V> v);\ntemplate <class T> void _print(multiset <T> v);\ntemplate <class T, class V> void _print(pair <T, V> p) {cerr << \"{\"; _print(p.first); cerr << \",\"; _print(p.second); cerr << \"}\";}\ntemplate <class T> void _print(deque<T> d){cerr <<\"[\"; while(!d.empty()){_print(d.front());cerr<<\" \"; d.pop_front();}cerr<< \"]\"; }\ntemplate <class T> void _print(queue<T> q){cerr <<\"[\"; while(!q.empty()){_print(q.front());cerr<<\" \"; q.pop();}cerr<< \"]\"; }\ntemplate <class T> void _print(stack<T> s){cerr <<\"[\"; while(!s.empty()){_print(s.top());cerr<<\" \"; s.pop();} cerr <<\"]\";}\ntemplate <class T> void _print(vector <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(set <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(multiset <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T, class V> void _print(map <T, V> v) {cerr << \"[ \"; for (auto i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\n \ntemplate<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}\ntemplate<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<\" \"<<a.sc;return out;}\ntemplate<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}\ntemplate<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}\n \nconst long long INF=1e18;\nconst int32_t M=1e9+7;\nconst int32_t MM=998244353;\nvoid solve(){\n\t\n}\t\t\n\n\nsigned main(){\n\tios_base::sync_with_stdio(false);\n\tcin.tie(0);cout.tie(0);\n\n\t// freopen(\"input.in\", \"r\", stdin);\n\t// freopen(\"output.in\", \"w\", stdout);\n\tstart = clock(); \n\t#ifndef ONLINE_JUDGE\n\tfreopen(\"error.in\", \"w\", stderr);\n    #endif\n\n\t#ifdef SIEVE\n\t\tsieve();\n\t#endif\n\t#ifdef NCRk\n\t\tinit();\n\t#endif\n\tcout << fixed << setprecision(12);\n\t\n\tint t=1;\n\tcin>>t;\n\twhile(t--) solve();\n\tcerr <<\"Time Taken: \"<<time(start);\n\treturn 0;\n}",
+			"file": "e.cpp",
+			"file_size": 3644,
+			"file_write_time": 132856840990000000,
+			"settings":
+			{
+				"buffer_size": 3568,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"paste",
+					null,
+					"AgAAAAAAAAAAAAAA8A0AAAAAAAAAAAAA8A0AAAAAAADwDQAAAAAAADwOAAAjaW5jbHVkZSAiYml0cy9zdGRjKysuaCIKdXNpbmcgbmFtZXNwYWNlIHN0ZDsKI2RlZmluZSBpbnQgICAgICAgICAgICAgICBsb25nIGxvbmcKI2RlZmluZSBwYiAgICAgICAgICAgICAgICBwdXNoX2JhY2sKI2RlZmluZSBwcGIgICAgICAgICAgICAgICBwb3BfYmFjawojZGVmaW5lIHBmICAgICAgICAgICAgICAgIHB1c2hfZnJvbnQKI2RlZmluZSBwcGYgICAgICAgICAgICAgICBwb3BfZnJvbnQKI2RlZmluZSBhbGwoeCkgICAgICAgICAgICAoeCkuYmVnaW4oKSwoeCkuZW5kKCkKI2RlZmluZSB1bmlxKHYpICAgICAgICAgICAodikuZXJhc2UodW5pcXVlKGFsbCh2KSksKHYpLmVuZCgpKQojZGVmaW5lIHN6KHgpICAgICAgICAgICAgIChpbnQpKCh4KS5zaXplKCkpCiNkZWZpbmUgZnIgICAgICAgICAgICAgICAgZmlyc3QKI2RlZmluZSBzYyAgICAgICAgICAgICAgICBzZWNvbmQKI2RlZmluZSBwaWkgICAgICAgICAgICAgICBwYWlyPGludCxpbnQ+CiNkZWZpbmUgcmVwKGksYSxiKSAgICAgICAgZm9yKGludCBpPWE7aTxiO2krKykKI2RlZmluZSBtZW0xKGEpICAgICAgICAgICBtZW1zZXQoYSwtMSxzaXplb2YoYSkpCiNkZWZpbmUgbWVtMChhKSAgICAgICAgICAgbWVtc2V0KGEsMCxzaXplb2YoYSkpCiNkZWZpbmUgcHBjICAgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50CiNkZWZpbmUgcHBjbGwgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50bGwKLy8KI2RlZmluZSB0aW1lKHMpICAgICAgIChkb3VibGUoY2xvY2soKS1zKS9kb3VibGUoQ0xPQ0tTX1BFUl9TRUMpKQojZGVmaW5lIGxjbShhLCBiKSAgICAgIChhICogKGIgLyBfX2djZChhLGIpKSkgCgoKI2lmbmRlZiBPTkxJTkVfSlVER0UKI2RlZmluZSBkZWJ1Zyh4KSBjZXJyIDw8ICN4IDw8IiAiOyBfcHJpbnQoeCk7IGNlcnIgPDwgZW5kbDsKI2Vsc2UKI2RlZmluZSBkZWJ1Zyh4KQojZW5kaWYKCi8vY2xvY2sgCmNsb2NrX3Qgc3RhcnQ7Cm10MTk5MzdfNjQgcm5nKGNocm9ubzo6c3lzdGVtX2Nsb2NrOjpub3coKS50aW1lX3NpbmNlX2Vwb2NoKCkuY291bnQoKSk7Cgp2b2lkIF9wcmludChsb25nIGxvbmcgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KHN0cmluZyB0KSB7Y2VyciA8PCB0O30KLy92b2lkIF9wcmludChpbnQgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KGNoYXIgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KGxvbmcgZG91YmxlIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChkb3VibGUgdCkge2NlcnIgPDwgdDt9CnZvaWQgX3ByaW50KHVuc2lnbmVkIGxvbmcgbG9uZyB0KSB7Y2VyciA8PCB0O30KCnRlbXBsYXRlIDxjbGFzcyBULCBjbGFzcyBWPiB2b2lkIF9wcmludChwYWlyIDxULCBWPiBwKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KGRlcXVlPFQ+IGQpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQocXVldWU8VD4gcSk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzdGFjazxUPiBzKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdik7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChzZXQgPFQ+IHYpOwp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQsIGNsYXNzIFY+IHZvaWQgX3ByaW50KHBhaXIgPFQsIFY+IHApIHtjZXJyIDw8ICJ7IjsgX3ByaW50KHAuZmlyc3QpOyBjZXJyIDw8ICIsIjsgX3ByaW50KHAuc2Vjb25kKTsgY2VyciA8PCAifSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoZGVxdWU8VD4gZCl7Y2VyciA8PCJbIjsgd2hpbGUoIWQuZW1wdHkoKSl7X3ByaW50KGQuZnJvbnQoKSk7Y2Vycjw8IiAiOyBkLnBvcF9mcm9udCgpO31jZXJyPDwgIl0iOyB9CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChxdWV1ZTxUPiBxKXtjZXJyIDw8IlsiOyB3aGlsZSghcS5lbXB0eSgpKXtfcHJpbnQocS5mcm9udCgpKTtjZXJyPDwiICI7IHEucG9wKCk7fWNlcnI8PCAiXSI7IH0KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHN0YWNrPFQ+IHMpe2NlcnIgPDwiWyI7IHdoaWxlKCFzLmVtcHR5KCkpe19wcmludChzLnRvcCgpKTtjZXJyPDwiICI7IHMucG9wKCk7fSBjZXJyIDw8Il0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHNldCA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKFQgaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKGF1dG8gaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQogCnRlbXBsYXRlPHR5cGVuYW1lIFQxLHR5cGVuYW1lIFQyPmlzdHJlYW0mIG9wZXJhdG9yPj4oaXN0cmVhbSYgaW4scGFpcjxUMSxUMj4gJmEpe2luPj5hLmZyPj5hLnNjO3JldHVybiBpbjt9CnRlbXBsYXRlPHR5cGVuYW1lIFQxLHR5cGVuYW1lIFQyPm9zdHJlYW0mIG9wZXJhdG9yPDwob3N0cmVhbSYgb3V0LHBhaXI8VDEsVDI+IGEpe291dDw8YS5mcjw8IiAiPDxhLnNjO3JldHVybiBvdXQ7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1heChUICZhLFQxIGIpe2lmKGI+YSlhPWI7cmV0dXJuIGE7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1pbihUICZhLFQxIGIpe2lmKGI8YSlhPWI7cmV0dXJuIGE7fQogCmNvbnN0IGxvbmcgbG9uZyBJTkY9MWUxODsKY29uc3QgaW50MzJfdCBNPTFlOSs3Owpjb25zdCBpbnQzMl90IE1NPTk5ODI0NDM1MzsKCnZlY3RvcjxpbnQ+IHByaW1lRmFjdG9ycyhpbnQgbnVtKXsKCXZlY3RvcjxpbnQ+IGZhY3RvcnM7CgoJd2hpbGUoKQp9Cgp2b2lkIHNvbHZlKCkKewoKCQoKfQkJCgoKc2lnbmVkIG1haW4oKXsKCWlvc19iYXNlOjpzeW5jX3dpdGhfc3RkaW8oZmFsc2UpOwoJY2luLnRpZSgwKTtjb3V0LnRpZSgwKTsKCgkvLyBmcmVvcGVuKCJpbnB1dC5pbiIsICJyIiwgc3RkaW4pOwoJLy8gZnJlb3Blbigib3V0cHV0LmluIiwgInciLCBzdGRvdXQpOwoJc3RhcnQgPSBjbG9jaygpOyAKCSNpZm5kZWYgT05MSU5FX0pVREdFCglmcmVvcGVuKCJlcnJvci5pbiIsICJ3Iiwgc3RkZXJyKTsKICAgICNlbmRpZgoKCSNpZmRlZiBTSUVWRQoJCXNpZXZlKCk7CgkjZW5kaWYKCSNpZmRlZiBOQ1JrCgkJaW5pdCgpOwoJI2VuZGlmCgljb3V0IDw8IGZpeGVkIDw8IHNldHByZWNpc2lvbigxMik7CgkKCWludCB0PTE7CgkvL2Npbj4+dDsKCXdoaWxlKHQtLSkgc29sdmUoKTsKCWNlcnIgPDwiVGltZSBUYWtlbjogIjw8dGltZShzdGFydCk7CglyZXR1cm4gMDsKfQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAADwOAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"contents": "#include \"bits/stdc++.h\"\nusing namespace std;\n#define int               long long\n#define pb                push_back\n#define ppb               pop_back\n#define pf                push_front\n#define ppf               pop_front\n#define all(x)            (x).begin(),(x).end()\n#define uniq(v)           (v).erase(unique(all(v)),(v).end())\n#define sz(x)             (int)((x).size())\n#define fr                first\n#define sc                second\n#define pii               pair<int,int>\n#define rep(i,a,b)        for(int i=a;i<b;i++)\n#define mem1(a)           memset(a,-1,sizeof(a))\n#define mem0(a)           memset(a,0,sizeof(a))\n#define ppc               __builtin_popcount\n#define ppcll             __builtin_popcountll\n//\n#define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))\n#define lcm(a, b)      (a * (b / __gcd(a,b))) \n\n\n#ifndef ONLINE_JUDGE\n#define debug(x) cerr << #x <<\" \"; _print(x); cerr << endl;\n#else\n#define debug(x)\n#endif\n\n//clock \nclock_t start;\nmt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());\n\nvoid _print(long long t) {cerr << t;}\nvoid _print(string t) {cerr << t;}\n//void _print(int t) {cerr << t;}\nvoid _print(char t) {cerr << t;}\nvoid _print(long double t) {cerr << t;}\nvoid _print(double t) {cerr << t;}\nvoid _print(unsigned long long t) {cerr << t;}\n\ntemplate <class T, class V> void _print(pair <T, V> p);\ntemplate <class T> void _print(deque<T> d);\ntemplate <class T> void _print(queue<T> q);\ntemplate <class T> void _print(stack<T> s);\ntemplate <class T> void _print(vector <T> v);\ntemplate <class T> void _print(set <T> v);\ntemplate <class T, class V> void _print(map <T, V> v);\ntemplate <class T> void _print(multiset <T> v);\ntemplate <class T, class V> void _print(pair <T, V> p) {cerr << \"{\"; _print(p.first); cerr << \",\"; _print(p.second); cerr << \"}\";}\ntemplate <class T> void _print(deque<T> d){cerr <<\"[\"; while(!d.empty()){_print(d.front());cerr<<\" \"; d.pop_front();}cerr<< \"]\"; }\ntemplate <class T> void _print(queue<T> q){cerr <<\"[\"; while(!q.empty()){_print(q.front());cerr<<\" \"; q.pop();}cerr<< \"]\"; }\ntemplate <class T> void _print(stack<T> s){cerr <<\"[\"; while(!s.empty()){_print(s.top());cerr<<\" \"; s.pop();} cerr <<\"]\";}\ntemplate <class T> void _print(vector <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(set <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T> void _print(multiset <T> v) {cerr << \"[ \"; for (T i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\ntemplate <class T, class V> void _print(map <T, V> v) {cerr << \"[ \"; for (auto i : v) {_print(i); cerr << \" \";} cerr << \"]\";}\n \ntemplate<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}\ntemplate<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<\" \"<<a.sc;return out;}\ntemplate<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}\ntemplate<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}\n \nconst long long INF=1e18;\nconst int32_t M=1e9+7;\nconst int32_t MM=998244353;\nvoid solve(){\n\t\n}\t\t\n\n\nsigned main(){\n\tios_base::sync_with_stdio(false);\n\tcin.tie(0);cout.tie(0);\n\n\t// freopen(\"input.in\", \"r\", stdin);\n\t// freopen(\"output.in\", \"w\", stdout);\n\tstart = clock(); \n\t#ifndef ONLINE_JUDGE\n\tfreopen(\"error.in\", \"w\", stderr);\n    #endif\n\n\t#ifdef SIEVE\n\t\tsieve();\n\t#endif\n\t#ifdef NCRk\n\t\tinit();\n\t#endif\n\tcout << fixed << setprecision(12);\n\t\n\tint t=1;\n\tcin>>t;\n\twhile(t--) solve();\n\tcerr <<\"Time Taken: \"<<time(start);\n\treturn 0;\n}",
+			"file": "f.cpp",
+			"file_size": 4331,
+			"file_write_time": 132858602570000000,
+			"settings":
+			{
+				"buffer_size": 3568,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"paste",
+					null,
+					"AgAAAAAAAAAAAAAA8A0AAAAAAAAAAAAA8A0AAAAAAADwDQAAAAAAAOsQAAAjaW5jbHVkZSAiYml0cy9zdGRjKysuaCIKdXNpbmcgbmFtZXNwYWNlIHN0ZDsKI2RlZmluZSBpbnQgICAgICAgICAgICAgICBsb25nIGxvbmcKI2RlZmluZSBwYiAgICAgICAgICAgICAgICBwdXNoX2JhY2sKI2RlZmluZSBwcGIgICAgICAgICAgICAgICBwb3BfYmFjawojZGVmaW5lIHBmICAgICAgICAgICAgICAgIHB1c2hfZnJvbnQKI2RlZmluZSBwcGYgICAgICAgICAgICAgICBwb3BfZnJvbnQKI2RlZmluZSBhbGwoeCkgICAgICAgICAgICAoeCkuYmVnaW4oKSwoeCkuZW5kKCkKI2RlZmluZSB1bmlxKHYpICAgICAgICAgICAodikuZXJhc2UodW5pcXVlKGFsbCh2KSksKHYpLmVuZCgpKQojZGVmaW5lIHN6KHgpICAgICAgICAgICAgIChpbnQpKCh4KS5zaXplKCkpCiNkZWZpbmUgZnIgICAgICAgICAgICAgICAgZmlyc3QKI2RlZmluZSBzYyAgICAgICAgICAgICAgICBzZWNvbmQKI2RlZmluZSBwaWkgICAgICAgICAgICAgICBwYWlyPGludCxpbnQ+CiNkZWZpbmUgcmVwKGksYSxiKSAgICAgICAgZm9yKGludCBpPWE7aTxiO2krKykKI2RlZmluZSBtZW0xKGEpICAgICAgICAgICBtZW1zZXQoYSwtMSxzaXplb2YoYSkpCiNkZWZpbmUgbWVtMChhKSAgICAgICAgICAgbWVtc2V0KGEsMCxzaXplb2YoYSkpCiNkZWZpbmUgcHBjICAgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50CiNkZWZpbmUgcHBjbGwgICAgICAgICAgICAgX19idWlsdGluX3BvcGNvdW50bGwKLy8KI2RlZmluZSB0aW1lKHMpICAgICAgIChkb3VibGUoY2xvY2soKS1zKS9kb3VibGUoQ0xPQ0tTX1BFUl9TRUMpKQojZGVmaW5lIGxjbShhLCBiKSAgICAgIChhICogKGIgLyBfX2djZChhLGIpKSkKCgojaWZuZGVmIE9OTElORV9KVURHRQojZGVmaW5lIGRlYnVnKHgpIGNlcnIgPDwgI3ggPDwiICI7IF9wcmludCh4KTsgY2VyciA8PCBlbmRsOwojZWxzZQojZGVmaW5lIGRlYnVnKHgpCiNlbmRpZgoKLy9jbG9jawpjbG9ja190IHN0YXJ0OwptdDE5OTM3XzY0IHJuZyhjaHJvbm86OnN5c3RlbV9jbG9jazo6bm93KCkudGltZV9zaW5jZV9lcG9jaCgpLmNvdW50KCkpOwoKdm9pZCBfcHJpbnQobG9uZyBsb25nIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChzdHJpbmcgdCkge2NlcnIgPDwgdDt9Ci8vdm9pZCBfcHJpbnQoaW50IHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChjaGFyIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludChsb25nIGRvdWJsZSB0KSB7Y2VyciA8PCB0O30Kdm9pZCBfcHJpbnQoZG91YmxlIHQpIHtjZXJyIDw8IHQ7fQp2b2lkIF9wcmludCh1bnNpZ25lZCBsb25nIGxvbmcgdCkge2NlcnIgPDwgdDt9Cgp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQocGFpciA8VCwgVj4gcCk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChkZXF1ZTxUPiBkKTsKdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHF1ZXVlPFQ+IHEpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoc3RhY2s8VD4gcyk7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludCh2ZWN0b3IgPFQ+IHYpOwp0ZW1wbGF0ZSA8Y2xhc3MgVD4gdm9pZCBfcHJpbnQoc2V0IDxUPiB2KTsKdGVtcGxhdGUgPGNsYXNzIFQsIGNsYXNzIFY+IHZvaWQgX3ByaW50KG1hcCA8VCwgVj4gdik7CnRlbXBsYXRlIDxjbGFzcyBUPiB2b2lkIF9wcmludChtdWx0aXNldCA8VD4gdik7CnRlbXBsYXRlIDxjbGFzcyBULCBjbGFzcyBWPiB2b2lkIF9wcmludChwYWlyIDxULCBWPiBwKSB7Y2VyciA8PCAieyI7IF9wcmludChwLmZpcnN0KTsgY2VyciA8PCAiLCI7IF9wcmludChwLnNlY29uZCk7IGNlcnIgPDwgIn0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KGRlcXVlPFQ+IGQpIHtjZXJyIDw8IlsiOyB3aGlsZSghZC5lbXB0eSgpKSB7X3ByaW50KGQuZnJvbnQoKSk7IGNlcnI8PCIgIjsgZC5wb3BfZnJvbnQoKTt9IGNlcnI8PCAiXSI7IH0KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHF1ZXVlPFQ+IHEpIHtjZXJyIDw8IlsiOyB3aGlsZSghcS5lbXB0eSgpKSB7X3ByaW50KHEuZnJvbnQoKSk7IGNlcnI8PCIgIjsgcS5wb3AoKTt9IGNlcnI8PCAiXSI7IH0KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHN0YWNrPFQ+IHMpIHtjZXJyIDw8IlsiOyB3aGlsZSghcy5lbXB0eSgpKSB7X3ByaW50KHMudG9wKCkpOyBjZXJyPDwiICI7IHMucG9wKCk7fSBjZXJyIDw8Il0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHZlY3RvciA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KHNldCA8VD4gdikge2NlcnIgPDwgIlsgIjsgZm9yIChUIGkgOiB2KSB7X3ByaW50KGkpOyBjZXJyIDw8ICIgIjt9IGNlcnIgPDwgIl0iO30KdGVtcGxhdGUgPGNsYXNzIFQ+IHZvaWQgX3ByaW50KG11bHRpc2V0IDxUPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKFQgaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQp0ZW1wbGF0ZSA8Y2xhc3MgVCwgY2xhc3MgVj4gdm9pZCBfcHJpbnQobWFwIDxULCBWPiB2KSB7Y2VyciA8PCAiWyAiOyBmb3IgKGF1dG8gaSA6IHYpIHtfcHJpbnQoaSk7IGNlcnIgPDwgIiAiO30gY2VyciA8PCAiXSI7fQoKdGVtcGxhdGU8dHlwZW5hbWUgVDEsdHlwZW5hbWUgVDI+aXN0cmVhbSYgb3BlcmF0b3I+Pihpc3RyZWFtJiBpbixwYWlyPFQxLFQyPiAmYSkge2luPj5hLmZyPj5hLnNjOyByZXR1cm4gaW47fQp0ZW1wbGF0ZTx0eXBlbmFtZSBUMSx0eXBlbmFtZSBUMj5vc3RyZWFtJiBvcGVyYXRvcjw8KG9zdHJlYW0mIG91dCxwYWlyPFQxLFQyPiBhKSB7b3V0PDxhLmZyPDwiICI8PGEuc2M7IHJldHVybiBvdXQ7fQp0ZW1wbGF0ZTx0eXBlbmFtZSBULHR5cGVuYW1lIFQxPlQgYW1heChUICZhLFQxIGIpIHtpZihiPmEpYT1iOyByZXR1cm4gYTt9CnRlbXBsYXRlPHR5cGVuYW1lIFQsdHlwZW5hbWUgVDE+VCBhbWluKFQgJmEsVDEgYikge2lmKGI8YSlhPWI7IHJldHVybiBhO30KCmNvbnN0IGxvbmcgbG9uZyBJTkY9MWUxODsKY29uc3QgaW50MzJfdCBNPTFlOSs3Owpjb25zdCBpbnQzMl90IE1NPTk5ODI0NDM1MzsKCnZlY3RvcjxwYWlyPGludCxpbnQ+PiBwcmltZUZhY3RvcnMoaW50IG4pIHsKCS8vdG8gc3RvcmUgdGhlIGZhY3RvcnMKCXZlY3RvcjxwYWlyPGludCxpbnQ+PiBwcmltZUZhY3RvckFycjsKCglpbnQgY291bnRPZjI9MDsKCXdoaWxlKG4lMj09MCkgewoJCW4vPTI7CgkJY291bnRPZjIrPTE7Cgl9CgoJaWYoY291bnRPZjI+MCkgewoJCXByaW1lRmFjdG9yQXJyLnB1c2hfYmFjayhtYWtlX3BhaXIoMixjb3VudE9mMikpOwoJfQoKCWZvcihpbnQgaT0zOyBpKmk8PW47IGkrPTIpIHsKCQlpbnQgY291bnRPZkk9MDsKCQl3aGlsZShuJWk9PTApIHsKCQkJbi89aTsKCQkJY291bnRPZkkrPTE7CgkJfQoJCWlmKGNvdW50T2ZJPjApIHsKCQkJcHJpbWVGYWN0b3JBcnIucHVzaF9iYWNrKG1ha2VfcGFpcihpLGNvdW50T2ZJKSk7CgkJfQoJfQoKCWRlYnVnKG4pCgoJLy9pZiBhIG51bWJlciBpdHNlbGYgaXMgcHJpbWUgZmFjdG9yIHRvIGFkZCBpdCB0b28KCWlmKG4+MikgewoJCXByaW1lRmFjdG9yQXJyLnB1c2hfYmFjayhtawoKCX0KCglkZWJ1ZyhwcmltZUZhY3RvckFycik7CgoJcmV0dXJuIHByaW1lRmFjdG9yQXJyOwoKCn0KCnZvaWQgc29sdmUoKSB7CglpbnQgbj0oMTcqMTcqNSk7CgkvLyBpbnQgbj01OwoJLy8gY2luPj4gbjsKCgl2ZWN0b3I8cGFpcjxpbnQsaW50Pj4gcmVzdWx0PXByaW1lRmFjdG9ycyhuKTsKCglmb3IoaW50IGk9MDsgaTxyZXN1bHQuc2l6ZSgpOyBpKyspIHsKCQljb3V0PDxyZXN1bHRbaV0uZmlyc3Q8PCIgIjsKCX0KCWNvdXQ8PGVuZGw7CgoKCn0KCgpzaWduZWQgbWFpbigpIHsKCWlvc19iYXNlOjpzeW5jX3dpdGhfc3RkaW8oZmFsc2UpOwoJY2luLnRpZSgwKTsgY291dC50aWUoMCk7CgoJLy8gZnJlb3BlbigiaW5wdXQuaW4iLCAiciIsIHN0ZGluKTsKCS8vIGZyZW9wZW4oIm91dHB1dC5pbiIsICJ3Iiwgc3Rkb3V0KTsKCXN0YXJ0ID0gY2xvY2soKTsKI2lmbmRlZiBPTkxJTkVfSlVER0UKCWZyZW9wZW4oImVycm9yLmluIiwgInciLCBzdGRlcnIpOwojZW5kaWYKCiNpZmRlZiBTSUVWRQoJc2lldmUoKTsKI2VuZGlmCiNpZmRlZiBOQ1JrCglpbml0KCk7CiNlbmRpZgoJY291dCA8PCBmaXhlZCA8PCBzZXRwcmVjaXNpb24oMTIpOwoKCWludCB0PTE7CgkvL2Npbj4+dDsKCXdoaWxlKHQtLSkgc29sdmUoKTsKCWNlcnIgPDwiVGltZSBUYWtlbjogIjw8dGltZShzdGFydCk7CglyZXR1cm4gMDsKfQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAOsQAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"file": "g.cpp",
+			"settings":
+			{
+				"buffer_size": 3576,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"left_delete",
+					null,
+					"AQAAACwMAAAAAAAALAwAAAAAAABEAAAAdmVjdG9yPGludD4gcHJpbWVGYWN0b3JzKGludCBudW0pewoJdmVjdG9yPGludD4gZmFjdG9yczsKCgl3aGlsZSgpCn0",
+					"AQAAAAAAAAABAAAAcAwAAAAAAAAsDAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"contents": "\n3\n2 3 4 5\n3 3 3 3\n2 3 1 2\n\n\n\n",
+			"settings":
+			{
+				"buffer_size": 30,
+				"line_ending": "Unix",
+				"name": "a.cpp -run",
+				"read_only": true,
+				"scratch": true
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"test_manager",
+					{
+						"action": "make_opd",
+						"build_sys": "source.c++",
+						"clr_tests": false,
+						"code_view_id": 27,
+						"run_file": "/Users/shadab/Documents/GitHub/competativeProgamming/Contests/Contests_Starter21/a.cpp",
+						"sync_out": true,
+						"use_debugger": false
+					},
+					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"test_manager",
+					{
+						"action": "insert_opd_input",
+						"text": "3\n2 3 4 5\n3 3 3 3\n2 3 1 2\n"
+					},
+					"AQAAAAEAAAAAAAAAGwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"test_manager",
+					{
+						"action": "insert_opd_out",
+						"text": ""
+					},
+					"AQAAABsAAAAAAAAAGwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwAAAAAAAAAbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"test_manager",
+					{
+						"action": "insert_opd_out",
+						"text": ""
+					},
+					"AQAAABsAAAAAAAAAGwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwAAAAAAAAAbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"test_manager",
+					{
+						"action": "replace",
+						"region":
+						[
+							1,
+							27
+						],
+						"text": "3\n2 3 4 5\n3 3 3 3\n2 3 1 2\n\n\n\n"
+					},
+					"AQAAAAEAAAAAAAAAHgAAAAAAAAAaAAAAMwoyIDMgNCA1CjMgMyAzIDMKMiAzIDEgMgo",
+					"AQAAAAAAAAABAAAAGwAAAAAAAAAbAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/c++14.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++14.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/temp.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/c++14.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++14.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++14.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/c++14.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"run",
+				"FastOlympicCoding: Run"
+			],
+			[
+				"resouce",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"comap",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"installed packages",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"diab",
+				"Package Control: Disable Package"
+			],
+			[
+				"tab",
+				"⌬ tabnine: Open Configuration"
+			],
+			[
+				"pakage res",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"gtimeout --help",
+			"sublime.log_commands(True)",
+			"command: insert_snippet {\"name\": \"Packages/XML/long-tag.sublime-snippet\"}",
+			"sublime.log_commands(True)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/shadab/Documents/GitHub/competativeProgamming/Contests/Contests_Starter21"
+	],
+	"file_history":
+	[
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/subsetSumDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/equalSumPartitionDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/countOfSubsetSumDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LowestCommonSubstringDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequenceTopDownDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequenceMemoizationDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequenceDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/coinChange2MinNumOfCoin.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/coinChange1DP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/rodCuttingProblemDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/countNumberOfSubsetWithGivenDiffDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/minSubsetSumDifDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubsequencePrintDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01KnapsackDPTopDown.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01KnapsackDPwithMemoization.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01KnapsackDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/shortestCommonSuperesequencePrintDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/minInsertionsDeletionsToConvertatob.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/ShortestCommonSupersequenceDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/LongestCommonSubstringPrintDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/os.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/osPriority.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSdiningPhilosopher.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSPagereplacement",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/func.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/output.in",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSPagereplacement.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OSreaderWriter.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/OsBankersAlgorithm.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/func",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/01Knapsack.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/test.java",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/absanda.c",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/Sorting/output.in",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/error.in",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/monadidi1.c",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/unboundedKnapsackDP.cpp",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/coinchangeIWaysDP.cpp",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/PackageResourceViewer/README.md",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/PackageResourceViewer/PackageResourceViewer.sublime-settings",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/User/temp.sublime-build",
+		"/Users/shadab/Documents/GitHub/competativeProgamming/CSES_making_roads",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/Users/shadab/Library/Application Support/Sublime Text/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "a.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2668,
+								2668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 938.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "b.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3568,
+								3568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "c.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3568,
+								3568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "d.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3568,
+								3568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "e.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3568,
+								3568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "f.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3568,
+								3568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "g.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3116,
+								3116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"delete_forb": true,
+							"edit_mode": false,
+							"fold_buttons": false,
+							"line_numbers": false,
+							"syntax": "Packages/CppFastOlympicCoding/TestSyntax.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.68,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 79.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/c++14.sublime-build",
+	"project": "ContestsTemplateNew.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"aam.cpp"
+			],
+			[
+				"os",
+				"OSPagereplacement"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/GitHub/competativeProgamming/p3.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
