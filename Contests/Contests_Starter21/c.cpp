@@ -78,7 +78,7 @@ int YN[]={1,-1,+1,-1};
 bool flagG=false;
 
 int  distance(int  xo,int  yo, int  xn, int yn){
-	//find distance ampng coordinates
+	//find distance png coordinates
 	double dx=abs(xn-xo);
 	double dy=abs(yn-yo);
 
@@ -86,49 +86,6 @@ int  distance(int  xo,int  yo, int  xn, int yn){
 
 }
 
-// double absDistance(double xo,double yo, double xn, double yn){
-// 	//find distance ampng coordinates
-// 	double  dx=abs(xn-xo);
-// 	double dy=abs(yn-yo);
-// 	debug(dx);
-// 	debug(dy);
-// 	double  ans=sqrt(dx*dx+dy*dy);
-// 	debug(ans);
-// 	return ans;
-
-// }
-
-
-// void function1(double xn, double yn, double d){
-
-// 	//check if distance is deceasing then dicrease the value of coordinates
-
-// 	int flag=false;
-// 	rep(i,0,4){
-// 		double newDis=absDistance(xn+XN[i],yn+YN[i],xn,yn);
-
-// 		debug(d);
-// 		debug(newDis)
-
-// 		if(newDis<d){
-
-// 			flag=true;
-// 			d=newDis;
-// 			debug(flag);
-// 			x=xn+XN[i];
-// 			y=yn+YN[i];
-// 			break;
-// 		}
-// 	}
-
-// 	if(flag==false){
-// 		// no use , calculate the distance and print
-// 		double ans=distance(centerX,centerY,xn,yn);
-// 		flagG=true;
-// 		cout<<(int)ans<<endl;
-// 	}
-
-// }
 void solve(){
 	int n=-1,x=-1,y=-1;
 	int centerX=-1;

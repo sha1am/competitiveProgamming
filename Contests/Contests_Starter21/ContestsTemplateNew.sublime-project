@@ -2,7 +2,53 @@
 	"folders":
 	[
 		{
-			"path": "."
+			"path": ".",
 		}
-	]
+	],
+	
+	"debugger_configurations":
+	[
+		{
+			"type": "gdb",
+			"request": "launch",
+			"name": "Launch Program",
+			"target": "./bin/executable",
+			"cwd": "^${workspaceRoot}",
+			"valuesFormatting": "parseText"
+		},
+
+		{
+			"type": "lldb",
+			"request": "attach",
+			"name": "AttachByName",
+			// "pid": "^\"${command:pickMyProcess}\" // use ${command:pickProcess} to pick other users' processes"
+			"pid": "${command_pick_process}" // sublime text 4 only
+
+		},
+		{
+			"type": "lldb",
+			"request": "attach",
+			"name": "Attach",
+			"program": "${workspaceFolder}/$file_base_name",
+		},
+	
+
+	
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "LaunchLLDB",
+		
+			"program": "${workspaceFolder}/$file_base_name",
+			//
+
+			"args": [
+			],
+			"cwd": "${workspaceFolder}",
+			"MIMode": "lldb",
+		},
+		
+
+		
+	],
 }

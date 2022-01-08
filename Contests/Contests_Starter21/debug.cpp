@@ -6,7 +6,7 @@ using namespace std;
 #define int               long long
 #define pb                push_back
 #define ppb               pop_back
-#define pf                push_front
+#define pf                  push_front
 #define ppf               pop_front
 #define all(x)            (x).begin(),(x).end()
 #define uniq(v)           (v).erase(unique(all(v)),(v).end())
@@ -67,100 +67,122 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
-	// vector<int> arrB;
-	deque<int> q;
+// vector<int> arrB;
+deque<int> q;
+int whileCount=0;
 
 //using set // unique nhi chiy
 
 
 //now recursive function final
 
-int recursiveFinal(){
+// int recursiveFinal() {
 
 
-	if(q.size()==0) return 0;
-	while(q.size()!=1){
+// 	if(q.size()==0) return 0;
+// 	while(q.size()!=1) {
 
-		deque<int> :: iterator it=q.end();
-		it--;
+// 		deque<int> :: iterator it=q.end();
+// 		it--;
 
-		int a=q.front();
-		int b=*it; 
-		//check this afterwards
+// 		int a=q.front();
+// 		int b=*it;
+// 		//check this afterwards
 
-		//erase these elemeents
+// 		//erase these elemeents
 
-		q.pop_front();
-		q.pop_back();
+// 		q.pop_front();
+// 		q.pop_back();
 
-		q.push_back(a|b);
-
-
-
-	}
-
-	return q.front();
-}
-void realApplicationFunction(vector<int> v){
-	int a=v[0];
-	int b=v[v.size()-1];
-	
-	q.push_back(a&b);
+// 		q.push_back(a|b);
 
 
 
-}
+// 	}
+
+// 	return q.front();
+// }
+// void realApplicationFunction(vector<int> v) {
+// 	int a=v[0];
+// 	int b=v[v.size()-1];
+
+// 	q.push_back(a&b);
+
+// }
 
 void recursiveCombinationFunction(queue<int > q1, vector<int> tempVec , int frameSize, int pos) {
 
-	//base condition
+	// base condition
 	if (pos == frameSize) {
 		//print the arrray
 		debug(tempVec);
 
 		//realApplicationFunction(tempVec);
+	}
+	// if (q1.empty()) {
+	// 	//print the arrray
+	// 	// debug(tempVec);
 
+	// 	//realApplicationFunction(tempVec);
+	// 	return ;
+	// }
+
+	queue<int> tempQ = q1;
+	queue<int> tempQ2 = q1;
+	if(!tempQ.empty()) {
+		// debug(tempQ);
 
 	}
-	
-	queue<int> tempQ = q1;
 
 	//in this loop
 	//fill in the first(nth place)
+
 	while(!tempQ.empty()) {
+		// debug(tempQ);
+		debug(whileCount++);
 
 		int a=-2;
-		if(!tempQ.empty()){
+		if(!tempQ.empty()) {
 			a=tempQ.front();
 		}
 		tempVec[pos] = a;
 
 		//recursevely call for
-		
 
 		if (!tempQ.empty()) {
 			tempQ.pop();
-
 		}
 
-		recursiveCombinationFunction(tempQ, tempVec, frameSize, pos + 1);
+		//find a in q1 and remove it and sent the queue forward.
+		while(!tempQ2.empty() && tempQ2.front()!=a) {
+			int b=tempQ2.front();
+			tempQ2.pop();
+			tempQ2.push(b);
+		}
+		if(!tempQ2.empty()) {
+			tempQ2.pop();
+		}
 
+		debug(tempQ2); debug(tempVec);
+
+		recursiveCombinationFunction(tempQ2, tempVec, frameSize, pos + 1);
 	}
 }
 
 void printAllPermutations(queue<int> q1, int frameSize) {
 
 	vector<int> tempVec(frameSize, -1);
-	// cout << "shada3" << endl;
 
 	recursiveCombinationFunction(q1, tempVec, frameSize, 0);
-
 
 }
 
 
 
 void solve() {
+
+	//clear global variables 
+	q.clear();
 	int n;
 	cin>>n;
 
@@ -171,7 +193,6 @@ void solve() {
 	}
 	debug(arrA);
 
-
 	queue<int> qq;
 
 	rep(i,0,arrA.size()) {
@@ -180,17 +201,13 @@ void solve() {
 
 	debug(qq);
 
-
-	int frameSize = 2;
+	int frameSize = 4;
 
 	printAllPermutations(qq,frameSize);
 
+	// debug(q);
 
-	debug(q);
-
-	//cout<<recursiveFinal()<<endl;
-
-
+	// //cout<<recursiveFinal()<<endl;
 
 }
 
@@ -198,9 +215,9 @@ void solve() {
 signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-
-	freopen("input.in", "r", stdin);
-	freopen("output.in", "w", stdout);
+	//
+	// freopen("input.in", "r", stdin);
+	// freopen("output.in", "w", stdout);
 	start = clock();
 #ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);

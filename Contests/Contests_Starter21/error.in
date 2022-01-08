@@ -1,3 +1,49 @@
 arrA [ 4 6 7 2 ]
 qq [4 6 7 2 ]
-tempVec [ 4 6 ]
+whileCount++ 0
+tempQ2 [6 7 2 ]
+tempVec [ 4 -1 -1 -1 ]
+whileCount++ 1
+tempQ2 [7 2 ]
+tempVec [ 4 6 -1 -1 ]
+whileCount++ 2
+tempQ2 [2 ]
+tempVec [ 4 6 7 -1 ]
+whileCount++ 3
+tempQ2 []
+tempVec [ 4 6 7 2 ]
+tempVec [ 4 6 7 2 ]
+whileCount++ 4
+tempQ2 []
+tempVec [ 4 6 2 -1 ]
+whileCount++ 5
+tempQ2 [2 ]
+tempVec [ 4 7 -1 -1 ]
+whileCount++ 6
+tempQ2 []
+tempVec [ 4 7 2 -1 ]
+whileCount++ 7
+tempQ2 []
+tempVec [ 4 2 -1 -1 ]
+whileCount++ 8
+tempQ2 [7 2 ]
+tempVec [ 6 -1 -1 -1 ]
+whileCount++ 9
+tempQ2 [2 ]
+tempVec [ 6 7 -1 -1 ]
+whileCount++ 10
+tempQ2 []
+tempVec [ 6 7 2 -1 ]
+whileCount++ 11
+tempQ2 []
+tempVec [ 6 2 -1 -1 ]
+whileCount++ 12
+tempQ2 [2 ]
+tempVec [ 7 -1 -1 -1 ]
+whileCount++ 13
+tempQ2 []
+tempVec [ 7 2 -1 -1 ]
+whileCount++ 14
+tempQ2 []
+tempVec [ 2 -1 -1 -1 ]
+Time Taken: 0.002147

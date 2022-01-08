@@ -3,6 +3,10 @@
 #include <cstring>
 #include <ostream>
 
+// usage:-
+//  auto name = type_name<decltype(a)>();
+// cout<<name<<endl;
+//cout<<getType(a).type_name()<<endl;
 #ifndef _MSC_VER
 #  if __cplusplus < 201103
 #    define constexpr
