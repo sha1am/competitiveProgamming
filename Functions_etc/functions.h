@@ -49,77 +49,64 @@ class generalFunctions {
 
 		}
 	}
-
+	//not sure about this one yet
 	class funToPrintCombinations {
-
-		void recursiveCombinationFunction(queue<int> q1, vector<int> tempVec , int frameSize, int pos) {
-
-			// debug(q1);
-			// auto name = type_name<decltype(q1.size())>();
-			//cout<<name<<endl;
-
+		// you can skip the pos
+		void printCombinationUtil(queue<int> q, int frameSize, vector<int> tempVec, int pos) {
 			//base condition
-			if (pos == frameSize) {
-			//print the arrray
-				debug(tempVec);
+			// stop if tempVec.size()==frameSize or q.empty()==1
+			// debug(tempVec);
+			// debug(q);
+
+			if(tempVec.size()==frameSize || q.empty()) {
+				// print tempVec
+				if(tempVec.size()==frameSize) {
+					debug(tempVec);
+
+				}
 				return;
 			}
-			
-			queue<int> tempQ = q1;
 
-			//in this loop
-			//fill in the first(nth place)
-			for (int i = 0; i < q1.size(); i++) {
+			//real job
+			queue<int> tempQ=q;
 
-				if(!tempQ.empty()) {
-					tempVec[pos] = tempQ.front();
+			while(!q.empty()) {
 
-				}
-				//recursevely call for
+				vector<int> tempTempVec=tempVec;
+				//can give signbrt error
+				tempTempVec.pb(q.front());
 
-				//delete tempQ.front()
-				if (!tempQ.empty()) {
-					tempQ.pop();
-				}
-				recursiveCombinationFunction(tempQ, tempVec, frameSize, pos + 1);
+				//forward q-q.front();
+				// debug((int)q.size());
+				q.pop();
+				printCombinationUtil(q,frameSize,tempTempVec,pos+1);
+
 			}
 
-		}
-
-		void printAllCombinations(queue<int> q1, int frameSize) {
-
-			vector<int> tempVec(frameSize, -1);
-			cout << "shada3" << endl;
-
-			recursiveCombinationFunction(q1, tempVec, frameSize, 0);
-
 
 		}
+
+		void printCombination(queue<int> q, int frameSize ) {
+			vector<int> tempVec;
+
+			printCombinationUtil(q,frameSize,tempVec,0);
+		}
+
 		void solve() {
-			//vector<int> arr = {'a', 'b', 'c', 'd'};
 
 
-			// FrameSize should be less than array size
 			queue<int> q;
-			q.push(1);
-			q.push(2);
-			q.push(3);
-			q.push(4);
-			q.push(5);
-			q.push(6);
+			q.insert(1);
+			q.insert(2);
+			q.insert(3);
+			q.insert(4);
 
+			int frameSize=2;
 
-
-
-			int frameSize = 3;
-
-
-			// cout << "shada1" << endl;
-
-			printAllCombinations(q, frameSize);
-			// cout << "shada2" << endl;
+			printCombination(q,frameSize);
 
 		}
+
 
 	}
 

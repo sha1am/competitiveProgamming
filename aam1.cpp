@@ -30,3 +30,12 @@ int main() {
 	}
 	return 0;
 }
+// cd /Applications 
+// nativefier \ 
+// --name "Tasks" \ 
+// --min-width "500" \ 
+// --min-height "500" \ 
+// --x "200" \ 
+// --y "300" \ 
+// -f \ 
+// "https://mail.google.com/tasks/canvas" 

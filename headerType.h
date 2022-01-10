@@ -3,9 +3,6 @@
 #include <cstring>
 #include <ostream>
 
-
-
-
 //Usage
 // Use ___typeFun(variable name );
 
@@ -83,8 +80,6 @@ std::ostream&
 operator<<(std::ostream& os, string_view1 const& s) {
     return os.write(s.data(), s.size());
 }
-
-
 
 template <class T>
 constexpr

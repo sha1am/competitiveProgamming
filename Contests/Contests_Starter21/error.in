@@ -1,49 +1,39 @@
+arrA [ 1 3 ]
+tempVec [ 1 3 ]
+s [ 1 ]
+arrA [ 2 7 1 ]
+tempVec [ 2 7 ]
+s [ 2 ]
+tempVec [ 2 1 ]
+s [ 0 2 ]
+tempVec [ 7 1 ]
+s [ 0 1 2 ]
+s [ 0 1 2 ]
+a 0
+b 2
+s [ 1 2 ]
+a 1
+b 2
 arrA [ 4 6 7 2 ]
-qq [4 6 7 2 ]
-whileCount++ 0
-tempQ2 [6 7 2 ]
-tempVec [ 4 -1 -1 -1 ]
-whileCount++ 1
-tempQ2 [7 2 ]
-tempVec [ 4 6 -1 -1 ]
-whileCount++ 2
-tempQ2 [2 ]
-tempVec [ 4 6 7 -1 ]
-whileCount++ 3
-tempQ2 []
-tempVec [ 4 6 7 2 ]
-tempVec [ 4 6 7 2 ]
-whileCount++ 4
-tempQ2 []
-tempVec [ 4 6 2 -1 ]
-whileCount++ 5
-tempQ2 [2 ]
-tempVec [ 4 7 -1 -1 ]
-whileCount++ 6
-tempQ2 []
-tempVec [ 4 7 2 -1 ]
-whileCount++ 7
-tempQ2 []
-tempVec [ 4 2 -1 -1 ]
-whileCount++ 8
-tempQ2 [7 2 ]
-tempVec [ 6 -1 -1 -1 ]
-whileCount++ 9
-tempQ2 [2 ]
-tempVec [ 6 7 -1 -1 ]
-whileCount++ 10
-tempQ2 []
-tempVec [ 6 7 2 -1 ]
-whileCount++ 11
-tempQ2 []
-tempVec [ 6 2 -1 -1 ]
-whileCount++ 12
-tempQ2 [2 ]
-tempVec [ 7 -1 -1 -1 ]
-whileCount++ 13
-tempQ2 []
-tempVec [ 7 2 -1 -1 ]
-whileCount++ 14
-tempQ2 []
-tempVec [ 2 -1 -1 -1 ]
-Time Taken: 0.002147
+tempVec [ 4 6 ]
+s [ 4 ]
+tempVec [ 4 7 ]
+s [ 4 ]
+tempVec [ 4 2 ]
+s [ 0 4 ]
+tempVec [ 6 7 ]
+s [ 0 4 6 ]
+tempVec [ 6 2 ]
+s [ 0 2 4 6 ]
+tempVec [ 7 2 ]
+s [ 0 2 4 6 ]
+s [ 0 2 4 6 ]
+a 0
+b 6
+s [ 2 4 6 ]
+a 2
+b 6
+s [ 4 6 ]
+a 4
+b 6
+Time Taken: 0.00166

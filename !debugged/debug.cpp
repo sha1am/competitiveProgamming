@@ -1,10 +1,17 @@
+//to debug codes
+
+// codechef code 
+// https://www.codechef.com/CDRV21C/problems/KLXOR
+
+// debug this approach , without bfs
+
+// question and or of this contest
 #include "bits/stdc++.h"
-// #include "/Users/shadab/Documents/GitHub/competativeProgamming/headerType.h"
 using namespace std;
 #define int               long long
 #define pb                push_back
 #define ppb               pop_back
-#define pf                push_front
+#define pf                  push_front
 #define ppf               pop_front
 #define all(x)            (x).begin(),(x).end()
 #define uniq(v)           (v).erase(unique(all(v)),(v).end())
@@ -17,11 +24,9 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
-
-//Changes 
+//
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
 #define lcm(a, b)      (a * (b / __gcd(a,b)))
-#define endl				"\n"
 
 
 #ifndef ONLINE_JUDGE
@@ -36,7 +41,7 @@ mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
 void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
-// void _print(int t) {cerr << t;}
+//void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
@@ -67,84 +72,122 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
+// vector<int> arrB;
+deque<int> q;
+int whileCount=0;
 
-set<int> s;
+//using set // unique nhi chiy
 
-int minMaxOr() {
 
-	while(s.size()!=1) {
+//now recursive function final
 
-		set<int> ::iterator itEnd=s.end();
-		itEnd--;
-		debug(s);
+// int recursiveFinal() {
 
-		int a=*s.begin();
-		int b=*itEnd;
-		debug(a);
-		debug(b);
 
-		s.erase(s.begin());
-		s.erase(itEnd); 
-		// s.erase(s.end()); 
+// 	if(q.size()==0) return 0;
+// 	while(q.size()!=1) {
 
-		s.insert(a|b);
+// 		deque<int> :: iterator it=q.end();
+// 		it--;
+
+// 		int a=q.front();
+// 		int b=*it;
+// 		//check this afterwards
+
+// 		//erase these elemeents
+
+// 		q.pop_front();
+// 		q.pop_back();
+
+// 		q.push_back(a|b);
+
+
+
+// 	}
+
+// 	return q.front();
+// }
+// void realApplicationFunction(vector<int> v) {
+// 	int a=v[0];
+// 	int b=v[v.size()-1];
+
+// 	q.push_back(a&b);
+
+// }
+
+void recursiveCombinationFunction(queue<int > q1, vector<int> tempVec , int frameSize, int pos) {
+
+	// base condition
+	if (pos == frameSize) {
+		//print the arrray
+		debug(tempVec);
+
+		//realApplicationFunction(tempVec);
+	}
+	// if (q1.empty()) {
+	// 	//print the arrray
+	// 	// debug(tempVec);
+
+	// 	//realApplicationFunction(tempVec);
+	// 	return ;
+	// }
+
+	queue<int> tempQ = q1;
+	queue<int> tempQ2 = q1;
+	if(!tempQ.empty()) {
+		// debug(tempQ);
+
 	}
 
-	return *s.begin();
+	//in this loop
+	//fill in the first(nth place)
 
+	while(!tempQ.empty()) {
+		// debug(tempQ);
+		debug(whileCount++);
 
-}
-
-
-void printCombinationUtil(queue<int> q, int frameSize, vector<int> tempVec, int pos) {
-	//base condition
-	// stop if tempVec.size()==frameSize or q.empty()==1
-	// debug(tempVec);
-	// debug(q);
-
-
-
-	if(tempVec.size()==frameSize || q.empty()) {
-		// print tempVec
-		if(tempVec.size()==frameSize) {
-			debug(tempVec);
-			s.insert(tempVec[0]&tempVec[tempVec.size()-1]);
-			debug(s);
+		int a=-2;
+		if(!tempQ.empty()) {
+			a=tempQ.front();
 		}
-		return;
+		tempVec[pos] = a;
+
+		//recursevely call for
+
+		if (!tempQ.empty()) {
+			tempQ.pop();
+		}
+
+		//find a in q1 and remove it and sent the queue forward.
+		while(!tempQ2.empty() && tempQ2.front()!=a) {
+			int b=tempQ2.front();
+			tempQ2.pop();
+			tempQ2.push(b);
+		}
+		if(!tempQ2.empty()) {
+			tempQ2.pop();
+		}
+
+		debug(tempQ2); debug(tempVec);
+
+		recursiveCombinationFunction(tempQ2, tempVec, frameSize, pos + 1);
 	}
+}
 
-	//real job
-	queue<int> tempQ=q;
+void printAllPermutations(queue<int> q1, int frameSize) {
 
-	while(!q.empty()) {
+	vector<int> tempVec(frameSize, -1);
 
-		vector<int> tempTempVec=tempVec;
-		//can give signbrt error
-		tempTempVec.pb(q.front());
-
-		//forward q-q.front();
-		// debug((int)q.size());
-		q.pop();
-		printCombinationUtil(q,frameSize,tempTempVec,pos+1);
-
-
-
-	}
-
+	recursiveCombinationFunction(q1, tempVec, frameSize, 0);
 
 }
 
-void printCombination(queue<int> q, int frameSize ) {
-	vector<int> tempVec;
 
-	printCombinationUtil(q,frameSize,tempVec,0);
-}
 
 void solve() {
-	//clear global variables
-	s.clear();
 
+	//clear global variables 
+	q.clear();
 	int n;
 	cin>>n;
 
@@ -155,22 +198,21 @@ void solve() {
 	}
 	debug(arrA);
 
-	// now combination part
+	queue<int> qq;
 
-	queue<int> q;
-	rep(i,0,n) {
-		q.push(arrA[i]);
+	rep(i,0,arrA.size()) {
+		qq.push(arrA[i]);
 	}
 
-	int frameSize=2;
+	debug(qq);
 
-	printCombination(q,frameSize);
+	int frameSize = 4;
 
-	//now use the minMaxOr function
-	int ans= minMaxOr();
+	printAllPermutations(qq,frameSize);
 
-	cout<<ans<<endl;
+	// debug(q);
 
+	// //cout<<recursiveFinal()<<endl;
 
 }
 
@@ -178,7 +220,7 @@ void solve() {
 signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-
+	//
 	// freopen("input.in", "r", stdin);
 	// freopen("output.in", "w", stdout);
 	start = clock();

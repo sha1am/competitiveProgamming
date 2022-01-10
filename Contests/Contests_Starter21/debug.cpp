@@ -153,19 +153,19 @@ void recursiveCombinationFunction(queue<int > q1, vector<int> tempVec , int fram
 			tempQ.pop();
 		}
 
-		//find a in q1 and remove it and sent the queue forward.
-		while(!tempQ2.empty() && tempQ2.front()!=a) {
-			int b=tempQ2.front();
-			tempQ2.pop();
-			tempQ2.push(b);
-		}
-		if(!tempQ2.empty()) {
-			tempQ2.pop();
-		}
+		// //find a in q1 and remove it and sent the queue forward.
+		// while(!tempQ2.empty() && tempQ2.front()!=a) {
+		// 	int b=tempQ2.front();
+		// 	tempQ2.pop();
+		// 	tempQ2.push(b);
+		// }
+		// if(!tempQ2.empty()) {
+		// 	tempQ2.pop();
+		// }
 
-		debug(tempQ2); debug(tempVec);
+		// debug(tempQ2); debug(tempVec);
 
-		recursiveCombinationFunction(tempQ2, tempVec, frameSize, pos + 1);
+		recursiveCombinationFunction(tempQ, tempVec, frameSize, pos + 1);
 	}
 }
 
@@ -201,7 +201,7 @@ void solve() {
 
 	debug(qq);
 
-	int frameSize = 4;
+	int frameSize = 2;
 
 	printAllPermutations(qq,frameSize);
 
