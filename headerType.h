@@ -3,10 +3,20 @@
 #include <cstring>
 #include <ostream>
 
-// usage:-
+
+
+
+//Usage
+// Use ___typeFun(variable name );
+
+//Usage details
+
 //  auto name = type_name<decltype(a)>();
-// cout<<name<<endl;
-//cout<<getType(a).type_name()<<endl;
+//  cout<<name<<endl;
+
+
+//remember , to use arrays it will give vaule of the pointer to the function
+
 #ifndef _MSC_VER
 #  if __cplusplus < 201103
 #    define constexpr
@@ -42,6 +52,8 @@ class string_view1 {
     const std::size_t sz_;
 
 public:
+    //add typeFun
+    template<class T> void ___typeFun( T  var);
     typedef const char* const_iterator;
 
     template <std::size_t N>
@@ -72,26 +84,6 @@ operator<<(std::ostream& os, string_view1 const& s) {
     return os.write(s.data(), s.size());
 }
 
-// template <class T>
-// CONSTEXPR14_TN
-// string_view1
-// type_name()
-// {
-// #ifdef __clang__
-//     string_view1 p = __PRETTY_FUNCTION__;
-//     return string_view1(p.data() + 31, p.size() - 31 - 1);
-// #elif defined(__GNUC__)
-//     string_view1 p = __PRETTY_FUNCTION__;
-// #  if __cplusplus < 201402
-//     return string_view1(p.data() + 36, p.size() - 36 - 1);
-// #  else
-//     return string_view1(p.data() + 46, p.size() - 46 - 1);
-// #  endif
-// #elif defined(_MSC_VER)
-//     string_view1 p = __FUNCSIG__;
-//     return string_view1(p.data() + 38, p.size() - 38 - 7);
-// #endif
-// }
 
 
 template <class T>
@@ -113,4 +105,10 @@ type_name() {
     string_view1 p = __FUNCSIG__;
     return string_view1(p.data() + 84, p.size() - 84 - 7);
 #endif
+}
+
+template<class T> void ___typeFun( T  var) {
+    auto name = type_name<decltype(var)>();
+    auto length = sizeof(var);
+    std::cout<<"[#("<<name<<")-> "<<length<<"]"<<std::endl;
 }

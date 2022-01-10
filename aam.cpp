@@ -121,13 +121,46 @@ void combinationUtil(int arr[], int data[],
 	}
 }
 
+// template <class T, class V> void _print(pair <T, V> 
+
+
 // Driver code
 void solve()
 {
-	int arr[] = {1, 2, 3, 4, 5};
-	int r = 1;
-	int n = sizeof(arr)/sizeof(arr[0]);
-	printCombination(arr, n, r);
+	// int arr[] = {1, 2, 3, 4, 5};
+	// int r = 1;
+	// int n = sizeof(arr)/sizeof(arr[0]);
+
+	// printCombination(arr, n, r);
+
+// 	int& foo_lref();
+// int&& foo_rref();
+
+	string a;
+	char b;
+	int arr[]={5,6,7,9};
+	double c;
+	vector<int> v;
+	queue<int> q;
+
+	___typeFun(a);
+	___typeFun(b);
+	___typeFun(c);
+	___typeFun(v);
+	___typeFun(q);
+	___typeFun(arr);
+
+	// ___typeFun(foo_lref);
+	// ___typeFun(foo_rref);
+
+
+	// auto name = type_name<decltype(b)>();
+ //    auto length = sizeof(b);
+ //    std::cout<<name<<" "<<length<<std::endl;
+
+	auto name = type_name<decltype(arr)>();
+    auto length = sizeof(arr);
+    std::cout<<name<<" "<<length<<std::endl;
 }
 
 
@@ -137,7 +170,8 @@ signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
 
-	// freopen("input.in", "r", stdin);
+	// freopen("input.in", "r", stdin)c
+
 	// freopen("output.in", "w", stdout);
 	start = clock(); 
 	#ifndef ONLINE_JUDGE
