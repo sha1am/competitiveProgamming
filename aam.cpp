@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "headerType.h"
+// #include "headerType.h"
 using namespace std;
 #define int               long long
 #define pb                push_back
@@ -17,9 +17,11 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
-//
+
+//Modified 
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
 #define lcm(a, b)      (a * (b / __gcd(a,b))) 
+#define endl			"\n"
 
 
 #ifndef ONLINE_JUDGE
@@ -67,78 +69,11 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
 
-void combinationUtil(int arr[], int data[],
-					int start, int end,
-					int index, int r);
+void solve(){
+	int a;
 
-// The main function that prints
-// all combinations of size r
-// in arr[] of size n. This function
-// mainly uses combinationUtil()
-void printCombination(int arr[], int n, int r)
-{
-	// A temporary array to store
-	// all combination one by one
-	int data[r];
-
-	// Print all combination using
-	// temporary array 'data[]'
-	combinationUtil(arr, data, 0, n-1, 0, r);
+	___typeFun(a);
 }
-
-/* arr[] ---> Input Array
-data[] ---> Temporary array to
-store current combination
-start & end ---> Starting and
-Ending indexes in arr[]
-index ---> Current index in data[]
-r ---> Size of a combination to be printed */
-void combinationUtil(int arr[], int data[],
-					int start, int end,
-					int index, int r)
-{
-	// Current combination is ready
-	// to be printed, print it
-	if (index == r)
-	{
-		for (int j = 0; j < r; j++)
-			cout << data[j] << " ";
-		cout << endl;
-		return;
-	}
-
-	// replace index with all possible
-	// elements. The condition "end-i+1 >= r-index"
-	// makes sure that including one element
-	// at index will make a combination with
-	// remaining elements at remaining positions
-	for (int i = start; i <= end &&
-		end - i + 1 >= r - index; i++)
-	{
-		data[index] = arr[i];
-		combinationUtil(arr, data, i+1,
-						end, index+1, r);
-	}
-	// for (int i = start; i <= end; i++)
-	// {
-	// 	data[index] = arr[i];
-	// 	combinationUtil(arr, data, i+1,
-	// 					end, index+1, r);
-	// }
-}
-
-
-
-// Driver code
-void solve()
-{
-	int arr[] = {1, 2, 3, 4, 5};
-	int r = 3;
-	int n = sizeof(arr)/sizeof(arr[0]);
-
-	printCombination(arr, n, r);
-}
-
 
 
 

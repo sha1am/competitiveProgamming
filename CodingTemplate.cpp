@@ -1,5 +1,4 @@
 #include "bits/stdc++.h"
-#include "headerType.h"
 using namespace std;
 #define int               long long
 #define pb                push_back
@@ -70,7 +69,7 @@ const int32_t MM=998244353;
 
 
 void solve(){
-
+	
 }
 
 

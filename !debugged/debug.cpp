@@ -1,5 +1,8 @@
 //to debug codes
 
+// Maybe the method is wrong // but still where is the memory error
+
+///////////////////////////
 // codechef code 
 // https://www.codechef.com/CDRV21C/problems/KLXOR
 

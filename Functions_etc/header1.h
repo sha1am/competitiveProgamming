@@ -1,4 +1,5 @@
-1#include "bits/stdc++.h"
+#include "bits/stdc++.h"
+#include "headerType.h"
 using namespace std;
 #define int               long long
 #define pb                push_back
@@ -16,9 +17,11 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
-//
+
+//Modified 
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
 #define lcm(a, b)      (a * (b / __gcd(a,b))) 
+#define endl			"\n"
 
 
 #ifndef ONLINE_JUDGE
@@ -64,3 +67,6 @@ template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
+
+
+
