@@ -1,39 +1,51 @@
-arrA [ 1 3 ]
-tempVec [ 1 3 ]
-s [ 1 ]
-arrA [ 2 7 1 ]
-tempVec [ 2 7 ]
-s [ 2 ]
-tempVec [ 2 1 ]
-s [ 0 2 ]
-tempVec [ 7 1 ]
-s [ 0 1 2 ]
-s [ 0 1 2 ]
-a 0
-b 2
-s [ 1 2 ]
-a 1
-b 2
-arrA [ 4 6 7 2 ]
-tempVec [ 4 6 ]
-s [ 4 ]
-tempVec [ 4 7 ]
-s [ 4 ]
-tempVec [ 4 2 ]
-s [ 0 4 ]
-tempVec [ 6 7 ]
-s [ 0 4 6 ]
-tempVec [ 6 2 ]
-s [ 0 2 4 6 ]
-tempVec [ 7 2 ]
-s [ 0 2 4 6 ]
-s [ 0 2 4 6 ]
-a 0
-b 6
-s [ 2 4 6 ]
-a 2
-b 6
-s [ 4 6 ]
-a 4
-b 6
-Time Taken: 0.00166
+centerX 2
+centerY 2
+x 2
+y 1
+ans 1
+ans 1
+ans 2.23607
+ans 1
+ans 2.23607
+validDistancesWithCoordinates [ {1,{0,1}} {1,{2,1}} ]
+ans 1
+ans 1
+ans 2.23607
+ans 2.23607
+validDistancesWithCoordinates [ {1,{1,0}} {1,{1,2}} ]
+ans 1
+ans 2.23607
+ans 1
+ans 2.23607
+validDistancesWithCoordinates [ {1,{2,1}} ]
+ans 2.23607
+ans 2.23607
+ans 1
+ans 1
+validDistancesWithCoordinates [ {1,{1,2}} ]
+ans 2.23607
+ans 1
+ans 2.23607
+ans 1
+validDistancesWithCoordinates [ ]
+centerX 3
+centerY 3
+x 3
+y 1
+ans 2
+ans 1.41421
+ans 3.16228
+ans 1.41421
+ans 3.16228
+validDistancesWithCoordinates [ {1.41421,{1,1}} {1.41421,{3,1}} ]
+ans 0
+ans 2
+ans 2
+ans 2.82843
+validDistancesWithCoordinates [ {0,{2,2}} ]
+ans 1.41421
+ans 1.41421
+ans 1.41421
+ans 1.41421
+validDistancesWithCoordinates [ ]
+Time Taken: 0.001844

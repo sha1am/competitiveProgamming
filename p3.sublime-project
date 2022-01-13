@@ -5,4 +5,20 @@
 			"path": ".",
 		}
 	],
+	"debugger_configurations":
+	[
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "LaunchLLDB",
+		
+			"program": "${workspaceFolder}/$file_base_name",
+			//
+
+			"args": [
+			],
+			"cwd": "${workspaceFolder}",
+			"MIMode": "lldb",
+		},
+	],
 }

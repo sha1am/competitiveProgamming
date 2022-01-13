@@ -1,5 +1,23 @@
 [
 	{
-		"test": ""
+		"correct_answers":
+		[
+			"89.50"
+		],
+		"test": "30 120.00\n"
+	},
+	{
+		"correct_answers":
+		[
+			"120.00"
+		],
+		"test": "42 120.00\n"
+	},
+	{
+		"correct_answers":
+		[
+			"120.00"
+		],
+		"test": "300 120.00\n"
 	}
 ]
