@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"SLOTH\nTIE\nDRAGON\nDRAGON"
+		],
+		"test": "4\n10 20 30\n30 20 10\n5 23 87\n5 23 87\n0 15 100\n100 5 5\n50 50 50\n50 49 51\n"
+	}
+]

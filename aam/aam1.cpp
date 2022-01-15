@@ -68,127 +68,12 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
 
-// void eraseEverySecondElement(set<int>* s,int startPos,int gap ) {
-
-
-// 	//does not work in odd number of elements
-// 	set<int>::iterator it;
-// 	// it=s.begin();
-// 	it=s->begin();
-
-// 	//set pointer to starting pos
-// 	rep(i,0,startPos){
-// 		++it;
-// 	}
-
-// 	int count=0;
-// 	for(;it!=s->end();){
-// 		if(count%gap==0){
-// 			it=s->erase(it);
-// 		}
-// 		else{
-// 			++it;
-// 		}
-// 		count++;
-// 	}
-	
-
-// }
-void solveUtil(int I,int m) {
-
-	set<int> s;
-
-	rep(i,0,I) {
-		s.insert(i+1);
-	}
-	debug(s);
-
-	int remN=I;
-	int mNew=m;
-
-	// debug(mNew); debug(remN);
-	// if(mNew<remN) {
-	// 	//cut the faltu numbers
-
-	// 	remN=s.size();
-
-	// 	set<int>::iterator it=s.begin();
-	// 	int whichPos=(mNew-1)%remN;
-	// 	debug(whichPos);
-	// 	rep(i,0,whichPos){
-	// 		++it;
-	// 	}
-
-	// 	s.erase(it,s.end());
-
-
-	// } else {
-	// 	// go by deafault
-
-	// }
-	
-
-	// debug(s);
-
-
-
-	// while(s.size()!=1) {
-
-	// 	// //sort sueue
-	// 	// sort(s.begin(),s.end());
-
-	// 	remN=s.size();
-
-	// 	int whichPos=(mNew-1)%remN;
-	// 	debug(whichPos);
-
-	// 	set<int> ::iterator it1=s.begin();
-
-
-	// 	rep(i,0,whichPos) {
-	// 		++it1;
-	// 	}
-
-	// 	if(whichPos!=0) {
-
-	// 		//erase every second element form here
-	// 		eraseEverySecondElement(&s,whichPos,2);
-
-	// 	}
-	// 	else{
-	// 		if(s.size()!=1){
-	// 			s.erase(s.begin());
-	// 		}
-	// 	}
-	// 	debug(s);
-	// }
-
-	// rep(i,0,5){
-	// 	s.erase(s.begin());
-	// }
-	//print set
-	// debug(s);
-
-	set<int>::iterator it=s.begin();
-//
-	cout<<*it<<" ";
-
-	// debug((int)*it);
-
-}
-
 void solve() {
-	int m,n;
-	cin>>m>>n;
 
-	//TC:- n* time complexity of solveUtil  10^4 *
+	// Creating a sample vecto
 
-	for(int I=1; I<=n; I++) {
-		solveUtil(I,m);
-	}
-
-	cout<<endl;
-
+	int ans=0%2;
+	cout<<ans;
 
 
 }
@@ -199,7 +84,8 @@ signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
 
-	// freopen("input.in", "r", stdin);
+	// freopen("input.in", "r", stdin)c
+
 	// freopen("output.in", "w", stdout);
 	start = clock();
 #ifndef ONLINE_JUDGE
@@ -215,7 +101,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

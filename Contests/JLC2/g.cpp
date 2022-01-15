@@ -69,7 +69,7 @@ const int32_t MM=998244353;
 
 
 void solve(){
-	cout<<"s"<<endl;
+	
 }
 
 

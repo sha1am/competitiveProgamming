@@ -33,9 +33,9 @@ using namespace std;
 clock_t start;
 mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
-void _print(long long t) {cerr << t;}
+// void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
-//void _print(int t) {cerr << t;}
+void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
@@ -67,131 +67,71 @@ const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
+int returnPowOf2(int n) {
+	int pow=-1;
 
-// void eraseEverySecondElement(set<int>* s,int startPos,int gap ) {
-
-
-// 	//does not work in odd number of elements
-// 	set<int>::iterator it;
-// 	// it=s.begin();
-// 	it=s->begin();
-
-// 	//set pointer to starting pos
-// 	rep(i,0,startPos){
-// 		++it;
-// 	}
-
-// 	int count=0;
-// 	for(;it!=s->end();){
-// 		if(count%gap==0){
-// 			it=s->erase(it);
-// 		}
-// 		else{
-// 			++it;
-// 		}
-// 		count++;
-// 	}
-	
-
-// }
-void solveUtil(int I,int m) {
-
-	set<int> s;
-
-	rep(i,0,I) {
-		s.insert(i+1);
+	//if the number is a power of 2;
+	while(n!=0) {
+		n/=2;
+		pow++;
 	}
-	debug(s);
-
-	int remN=I;
-	int mNew=m;
-
-	// debug(mNew); debug(remN);
-	// if(mNew<remN) {
-	// 	//cut the faltu numbers
-
-	// 	remN=s.size();
-
-	// 	set<int>::iterator it=s.begin();
-	// 	int whichPos=(mNew-1)%remN;
-	// 	debug(whichPos);
-	// 	rep(i,0,whichPos){
-	// 		++it;
-	// 	}
-
-	// 	s.erase(it,s.end());
 
 
-	// } else {
-	// 	// go by deafault
-
-	// }
-	
-
-	// debug(s);
-
-
-
-	// while(s.size()!=1) {
-
-	// 	// //sort sueue
-	// 	// sort(s.begin(),s.end());
-
-	// 	remN=s.size();
-
-	// 	int whichPos=(mNew-1)%remN;
-	// 	debug(whichPos);
-
-	// 	set<int> ::iterator it1=s.begin();
-
-
-	// 	rep(i,0,whichPos) {
-	// 		++it1;
-	// 	}
-
-	// 	if(whichPos!=0) {
-
-	// 		//erase every second element form here
-	// 		eraseEverySecondElement(&s,whichPos,2);
-
-	// 	}
-	// 	else{
-	// 		if(s.size()!=1){
-	// 			s.erase(s.begin());
-	// 		}
-	// 	}
-	// 	debug(s);
-	// }
-
-	// rep(i,0,5){
-	// 	s.erase(s.begin());
-	// }
-	//print set
-	// debug(s);
-
-	set<int>::iterator it=s.begin();
-//
-	cout<<*it<<" ";
-
-	// debug((int)*it);
-
+	// debug(pow);
+	return pow;
 }
 
 void solve() {
-	int m,n;
-	cin>>m>>n;
 
-	//TC:- n* time complexity of solveUtil  10^4 *
+	//need not be in ascending , have to make, but then idex would alter
+	vector<int> v= {2,4,8,16,128,512};
 
-	for(int I=1; I<=n; I++) {
-		solveUtil(I,m);
+	int sumOfPowersOf2=14;
+
+	//pair of the number and then its pow of 2
+	vector<pair<int,int>> vp;
+	rep(i,0,v.size()) {
+		vp.pb(make_pair(v[i],returnPowOf2(v[i])));
 	}
 
-	cout<<endl;
+	debug(vp);
+
+	vector<int> newIndexPowers(v.size(),0);
+
+	while(sumOfPowersOf2!=0) {
+		//do this
+		// fill in the first pos
+		newIndexPowers[0]+=1;
+		sumOfPowersOf2-=1;
+		debug(newIndexPowers);
+		debug(sumOfPowersOf2);
+		rep(i,0,v.size()-1) {
+			//check if this index has more than its capacity
+			if(newIndexPowers[i]==vp[i+1].sc) {
+				//reduce this by vp[i+1].sc and increase next indexPower by 1;
+				newIndexPowers[i]-=vp[i+1].sc;
+				newIndexPowers[i+1]+=1;
+				//take care of total sum of powers;
+				sumOfPowersOf2=sumOfPowersOf2 -1 +vp[i+1].sc;
+				debug(newIndexPowers[i]);
+				debug(newIndexPowers[i+1]);
+			}
+			//debug everything
+			debug(newIndexPowers);
+			debug(sumOfPowersOf2);
+
+
+		}
+		cerr<<"nextWHileLoop"<<endl;
+	}
+
+	debug(newIndexPowers);
+
 
 
 
 }
+
 
 
 
@@ -215,7 +155,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

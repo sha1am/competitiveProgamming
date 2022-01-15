@@ -69,6 +69,34 @@ const int32_t MM=998244353;
 
 
 void solve(){
+	int n,x;
+	cin>>n>>x;
+
+	vector<int> arr(n,-1);
+	rep(i,0,n){
+		cin>>arr[i];
+	}
+
+	sort(arr.begin(),arr.end(),greater<int>());
+	debug(arr);
+
+	int countOfDeposits=0;
+	for(int i=0;i<n;i++){
+		x-=arr[i];
+		countOfDeposits++;
+		if(x<=0){
+			break;
+		}
+	}
+
+	if(countOfDeposits==n && x>0){
+		//impossible
+		cout<<-1<<endl;
+	}
+	else{
+		cout<<countOfDeposits<<endl;
+	}
+
 	
 }
 
@@ -79,7 +107,6 @@ signed main(){
 	cin.tie(0);cout.tie(0);
 
 	// freopen("input.in", "r", stdin)c
-
 	// freopen("output.in", "w", stdout);
 	start = clock(); 
 	#ifndef ONLINE_JUDGE
@@ -95,7 +122,7 @@ signed main(){
 	cout << fixed << setprecision(12);
 	
 	int t=1;
-	//cin>>t;
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

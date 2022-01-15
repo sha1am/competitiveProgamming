@@ -17,9 +17,9 @@ using namespace std;
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
 
-//Modified
+//Modified 
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
-#define lcm(a, b)      (a * (b / __gcd(a,b)))
+#define lcm(a, b)      (a * (b / __gcd(a,b))) 
 #define endl			"\n"
 
 
@@ -29,7 +29,7 @@ using namespace std;
 #define debug(x)
 #endif
 
-//clock
+//clock 
 clock_t start;
 mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
@@ -50,153 +50,77 @@ template <class T> void _print(set <T> v);
 template <class T, class V> void _print(map <T, V> v);
 template <class T> void _print(multiset <T> v);
 template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.first); cerr << ","; _print(p.second); cerr << "}";}
-template <class T> void _print(deque<T> d) {cerr <<"["; while(!d.empty()) {_print(d.front()); cerr<<" "; d.pop_front();} cerr<< "]"; }
-template <class T> void _print(queue<T> q) {cerr <<"["; while(!q.empty()) {_print(q.front()); cerr<<" "; q.pop();} cerr<< "]"; }
-template <class T> void _print(stack<T> s) {cerr <<"["; while(!s.empty()) {_print(s.top()); cerr<<" "; s.pop();} cerr <<"]";}
+template <class T> void _print(deque<T> d){cerr <<"["; while(!d.empty()){_print(d.front());cerr<<" "; d.pop_front();}cerr<< "]"; }
+template <class T> void _print(queue<T> q){cerr <<"["; while(!q.empty()){_print(q.front());cerr<<" "; q.pop();}cerr<< "]"; }
+template <class T> void _print(stack<T> s){cerr <<"["; while(!s.empty()){_print(s.top());cerr<<" "; s.pop();} cerr <<"]";}
 template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
-
-template<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a) {in>>a.fr>>a.sc; return in;}
-template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a) {out<<a.fr<<" "<<a.sc; return out;}
-template<typename T,typename T1>T amax(T &a,T1 b) {if(b>a)a=b; return a;}
-template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
-
+ 
+template<typename T1,typename T2>istream& operator>>(istream& in,pair<T1,T2> &a){in>>a.fr>>a.sc;return in;}
+template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a){out<<a.fr<<" "<<a.sc;return out;}
+template<typename T,typename T1>T amax(T &a,T1 b){if(b>a)a=b;return a;}
+template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
+ 
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
 
-void solveUtil(int I,int m) {
+void solve(){
+	int n,x;
+	cin>>n>>x;
 
-	set<int> s;
-
-	rep(i,0,I) {
-		s.insert(i+1);
+	vector<int> arr(n,-1);
+	rep(i,0,n){
+		cin>>arr[i];
 	}
-	debug(s);
 
-	int remN=I;
-	int mNew=m;
+	sort(arr.begin(),arr.end(),greater<int>());
+	debug(arr);
 
-	// int nMinus1=I-1;
-
-	// int attemptNum=0;
-
-	set<int> newS;
-	debug(mNew); debug(remN);
-	if(mNew<remN) {
-		//cut the faltu numbers
-
-		remN=s.size();
-
-		int whichPos=(mNew-1)%remN;
-		debug(whichPos);
-
-		// new set only till that pos;
-		set<int> ::iterator it1=s.begin();
-
-		newS.insert(*s.begin());
-
-		rep(i,0,whichPos) {
-			++it1;
-			newS.insert(*it1);
+	int countOfDeposits=0;
+	for(int i=0;i<n;i++){
+		x-=arr[i];
+		countOfDeposits++;
+		if(x<=0){
+			break;
 		}
-
-	} else {
-		// go by deafault
-		newS=s;
-
-	}
-	//
-
-	debug(newS);
-
-
-
-	while(newS.size()!=1) {
-
-		// //sort sueue
-		// sort(s.begin(),s.end());
-
-		remN=newS.size();
-
-		int whichPos=(mNew-1)%remN;
-		debug(whichPos);
-
-		set<int> ::iterator it1=newS.begin();
-
-
-		rep(i,0,whichPos) {
-			++it1;
-		}
-
-		if(whichPos!=0) {
-
-			//erase every second element form here
-
-			while(it1!=newS.end() || 	(++it1)!=newS.end()){
-				it1=newS.erase(it1);
-			}
-
-		}
-		else{
-			newS.erase(newS.begin());
-		}
-		debug(newS);
 	}
 
-	rep(i,0,5){
-		newS.erase(newS.begin());
+	if(countOfDeposits==n && x>0){
+		//impossible
+		cout<<-1<<endl;
 	}
-	//print set
-
-	set<int>::iterator it=newS.begin();
-//
-	cout<<*it<<" ";
-
-	debug((int)*it);
-
-}
-
-void solve() {
-	int m,n;
-	cin>>m>>n;
-
-	//TC:- n* time complexity of solveUtil  10^4 *
-
-	for(int I=1; I<=n; I++) {
-		solveUtil(I,m);
+	else{
+		cout<<countOfDeposits<<endl;
 	}
 
-	cout<<endl;
-
-
-
+	
 }
 
 
 
-signed main() {
+signed main(){
 	ios_base::sync_with_stdio(false);
-	cin.tie(0); cout.tie(0);
+	cin.tie(0);cout.tie(0);
 
-	// freopen("input.in", "r", stdin);
+	// freopen("input.in", "r", stdin)c
 	// freopen("output.in", "w", stdout);
-	start = clock();
-#ifndef ONLINE_JUDGE
+	start = clock(); 
+	#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
-#endif
+    #endif
 
-#ifdef SIEVE
-	sieve();
-#endif
-#ifdef NCRk
-	init();
-#endif
+	#ifdef SIEVE
+		sieve();
+	#endif
+	#ifdef NCRk
+		init();
+	#endif
 	cout << fixed << setprecision(12);
-
+	
 	int t=1;
 	cin>>t;
 	while(t--) solve();

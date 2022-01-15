@@ -1,3 +1,6 @@
+
+
+// sizeof and size using a vector disparency
 #include "bits/stdc++.h"
 using namespace std;
 #define int               long long
@@ -24,7 +27,9 @@ using namespace std;
 
 
 #ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
 #else
+#define debug(x)
 #endif
 
 //clock
@@ -65,136 +70,96 @@ const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
-// void printSet(set<int,greater<int>> s) {
+deque<pair<int,int>> reverseQ(deque<pair<int,int>> q) {
+	stack<pair<int,int>> s;
 
-// 	set<int,greater<int>>::iterator it;
-// 	it=s.begin();
-
-// 	for(it=s.begin(); it!=s.end(); ++it) {
-// 		cout<<*it<<" ";
-
-// 	}
-// 	cout<<endl;
-
-// }
-
-void printSet(set<int> s) {
-
-	set<int>::iterator it;
-	it=s.begin();
-
-	for(it=s.begin(); it!=s.end(); ++it) {
-		cout<<*it<<" ";
-	}
-	cout<<endl;
-
-}
-void printEverySecondElement(set<int> s ) {
-
-	//does not work in odd number of elements
-	set<int>::iterator it;
-	it=s.begin();
-
-	for(it=s.begin(); it!=s.end()&& ++it!=s.end(); ++it,++it) {
-		cout<<*it<<" ";
-
-	}
-	cout<<endl;
-
-}
-
-void eraseEverySecondElement(set<int> s ) {
-
-	//does not work in odd number of elements
-	set<int>::iterator it;
-	it=s.begin();
-
-	for(it=s.begin(); it!=s.end() && ++it!=s.end() ; ++it) {
-		s.erase(it);
-
-	}
-	cout<<endl;
-
-}
-
-void eraseSet(set<int> s,int pos) {
-
-	set<int> ::iterator it1=s.begin();
-	set<int> ::iterator it2=s.end();
-
-	while(pos--) {
-		++it1;
+	while(!q.empty()) {
+		s.push(q.front());
+		q.pop_front();
 	}
 
-	--it2;
-	--it2;
-	// s.erase(it1);
-	// s.erase(it1,it2);
-	// s.erase(it1,s.end());
+	while(!s.empty()) {
+		q.push_back(s.top());
+		s.pop();
+	}
 
-	//erase element by value
-	// s.erase(3);
-	// s.erase(7);
-
-	printSet(s);
+	// debug(q);
+	return q;
 }
 
-// void eraseSet(set<int,greater<int>> s,int pos) {
-
-// 	set<int,greater<int>> ::iterator it1=s.begin();
-// 	set<int,greater<int>> ::iterator it2=s.end();
-
-// 	while(pos--) {
-// 		++it1;
-// 	}
-
-// 	--it2;
-// 	--it2;
-// 	s.erase(it1);
-// 	// s.erase(it1,it2);
-// 	// s.erase(it1,s.end());
-
-// 	//erase element by value
-// 	// s.erase(3);
-// 	// s.erase(7);
-
-// 	printSet(s);
-// }
-void elementInSet(set<int> s) {
-
-}
 void solve() {
 
+	deque<pair<int,int>> q;
+	q.push_back(make_pair(1,11));
+	q.push_back(make_pair(0,10));
+	q.push_back(make_pair(1,9));
+	q.push_back(make_pair(0,8));
+	q.push_back(make_pair(0,7));
+	q.push_back(make_pair(1,6));
+	q.push_back(make_pair(1,5));
+	q.push_back(make_pair(0,4));
+	q.push_back(make_pair(1,3));
+	q.push_back(make_pair(1,2));
+	q.push_back(make_pair(1,1));
+	q.push_back(make_pair(0,0));
 
-	// set<int> s;
-	set<int> s;
+	//reverse q
 
-	rep(i,0,10) {
-		s.insert(i+1);
+	stack<pair<int,int>> s;
+
+	while(!q.empty()) {
+		s.push(q.front());
+		q.pop_front();
 	}
-	printSet(s);
 
-	// printEverySecondElement(s);
-eraseEverySecondElement(s);
+	while(!s.empty()) {
+		q.push_back(s.top());
+		s.pop();
+	}
 
+	debug(q);
 
+	int count1=0;
+	int count0=0;
+	deque<pair<int,int>> tempQ;
+	while(!q.empty()) {
 
+		if(q.front().fr==0) {
+			while(q.front().fr==0) {
+				q.pop_front();
+				count0++;
+			}
 
+			if(count1!=0) {
+				//there were ones before; they'd be int the tempQ;
+				//print the indexes whos power must be increased by count0
+				tempQ=reverseQ(tempQ);
+				//increase all indexes
+				debug(count0);
+				debug(tempQ);
+				while(!tempQ.empty()) {
+					cerr<<"index"<<tempQ.front().sc<<endl;
+					q.push_front(make_pair(tempQ.front().fr,tempQ.front().sc+count0));
+					tempQ.pop_front();
+				}
+				cout<<endl;
+				count1=0;
+				debug(q);
+			}
+		}
 
+		if(q.front().fr==1) {
+			while(q.front().fr==1) {
+				tempQ.pb(q.front());
+				q.pop_front();
+				count1++;
+			}
+			count0=0;
+		}
+		//deal with tempQ
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+		debug(q);
+	}
 
 
 }

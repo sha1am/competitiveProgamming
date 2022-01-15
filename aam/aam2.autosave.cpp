@@ -33,9 +33,9 @@ using namespace std;
 clock_t start;
 mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
-void _print(long long t) {cerr << t;}
+// void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
-//void _print(int t) {cerr << t;}
+void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(long double t) {cerr << t;}
 void _print(double t) {cerr << t;}
@@ -67,43 +67,36 @@ const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
-double  eucleadianDis(int x1,int y1, int x2, int y2) {
-
-	int dx=abs(x1-x2);
-	int dy= abs(y1-y2);
-
-	double ans=-1;
-
-	// ans= pow(dx,2) +pow(dy,2);
-	// ans=pow(ans,1/2);
-
-	ans= dx*dx + dy*dy;
-	ans=sqrt(ans);
-	debug(ans);
-
-	return ans;
-}
 
 void solve() {
-	int a;
 
-	// int ans=eucleadianDis(1,2,2,4);
-	// cout<<ans<<endl;
-
-
-	// //check vector1=vector2;
-	// //
-	// int m=10;
-	// vector<int> vec1(m+1,true);
-	// vector<int> vec2(m,false);
-
-	// debug(vec1);debug(vec2);
-	// vec1=vec2;
-	// debug(vec1);debug(vec2);
+	vector<pair<int,int>> vp;
+	vector<int> v= {1,1,1,1,1,0,0,1,0,1};
 
 
+	//stores index and 0's before them
+	rep(i,0,v.size()) {
+		vp.pb(make_pair(i,0));
+	}
+	debug(vp);
+	int currentCount0=0;
+	for(int i=v.size()-2;i>=0;i--) {
+		if(v[i]==1){
+			vp[i].sc=currentCount0;
+		}
+
+		else if(v[i]==0){
+			currentCount0+=1;
+		}
+	}
+
+	debug(vp);
+	//update the power of 2 of following indexes;
+	//+udate the power of indexes associated with least significant 1 by +1;
+	
 
 }
+
 
 
 

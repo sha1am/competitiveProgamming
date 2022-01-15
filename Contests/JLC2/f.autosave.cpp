@@ -16,11 +16,9 @@ using namespace std;
 #define mem0(a)           memset(a,0,sizeof(a))
 #define ppc               __builtin_popcount
 #define ppcll             __builtin_popcountll
-
-//Modified 
+//
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
 #define lcm(a, b)      (a * (b / __gcd(a,b))) 
-#define endl			"\n"
 
 
 #ifndef ONLINE_JUDGE
@@ -66,19 +64,16 @@ template<typename T,typename T1>T amin(T &a,T1 b){if(b<a)a=b;return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
-
-
 void solve(){
-	cout<<"s"<<endl;
-}
-
+	
+}		
 
 
 signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);cout.tie(0);
 
-	// freopen("input.in", "r", stdin)c
+	// freopen("input.in", "r", stdin);
 	// freopen("output.in", "w", stdout);
 	start = clock(); 
 	#ifndef ONLINE_JUDGE
@@ -94,7 +89,7 @@ signed main(){
 	cout << fixed << setprecision(12);
 	
 	int t=1;
-	//cin>>t;
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;
