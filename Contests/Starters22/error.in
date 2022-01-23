@@ -1,0 +1,9 @@
+q []
+q [1 1 ]
+tempV [ 1 0 0 0 ]
+(int)tempQ1.size() 2
+tempV [ 1 0 0 0 ]
+tempV [ 1 1 0 0 ]
+(int)tempQ1.size() 1
+tempV [ 1 1 0 0 ]
+tempV [ 1 1 0 0 ]

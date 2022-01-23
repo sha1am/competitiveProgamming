@@ -90,8 +90,7 @@ int knapsack(vector<int> weight, vector<int> value,int w, int n){
 }
 
 void solve(){
-	
-
+ 
 vector<int> weight{10,20,30},value{60,100,120};
 int w=8;
 int n=weight.size();

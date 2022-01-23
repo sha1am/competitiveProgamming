@@ -4,6 +4,8 @@
 using namespace std;
 class set {
 
+	//2^10 =10^3
+
 	// how to delete every second element from s
 
 	void eraseEverySecondElement(set<int> s ) {

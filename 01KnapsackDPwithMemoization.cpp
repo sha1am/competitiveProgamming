@@ -69,7 +69,8 @@ bool findKey(map<char,int> mp,char key){
 		return true;
 	}
 }
-int w=1002,n=202;
+// int w=1002,n=202;
+int w=51,n=4;
 
 vector<int> tempVector(w,-1);
 vector<vector<int>> t(n,tempVector);
@@ -100,8 +101,12 @@ void solve(){
  int n=weight.size();
  debug(n);
  debug(w);
-
  cout<<"The maximum profit that can be earned is "<<knapsack(weight, value, w, n);
+ // debug(t);
+ rep(i,0,t.size()){
+ 	debug(t[i]);
+ 	cerr<<endl;
+ }
 
 	
 	

@@ -1,6 +1,7 @@
 #include "bits/stdc++.h"
 using namespace std;
 #define int               long long
+// #define int              unsigned  long long
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -67,7 +68,412 @@ const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
+int W=102; //increase it before using in realfunction ********* maybe 50-100
+int N=103; // for power one equal to size of array in question
+//intitialise inner pair
+vector<int> tempV0(32,0);
+pair<int,vector<int>> tempP=make_pair(-1,tempV0);
+//now initiliaze outer pair
+vector<pair<int,vector<int>>> tempV1; // size of this array is unknown in the begin
+pair<bool,vector<pair<int,vector<int>>>> element=make_pair(false,tempV1);
+// final t in making
+vector<pair<bool,vector<pair<int,vector<int>>>>> tempV2(W+1,element);
+vector<vector<pair<bool,vector<pair<int,vector<int>>>>>> t(N+1,tempV2);
 
+void debugPrintT() {
+
+	rep(i,0,6+1) {
+		rep(j,0,14+1) {
+			cerr<<t[i][j].fr;
+		}
+		cerr<<endl;
+	}
+	cerr<<endl;
+}
+
+
+void debugPrintTT() {
+	//print the sum and all vectors which have t[i][j].fr==true;
+	//see only in N==1 and
+	rep(i,0,N+1) {
+		rep(j,0,W+1) {
+			if( t[i][j].fr) {
+				cerr<<"i"<<i<<"j"<<j<<" "<<endl;
+
+				rep(k,0,t[i][j].sc.size()) {
+					if(1) {
+						cerr<<"sum: "<<t[i][j].sc[k].fr<<endl;
+
+						//print the sum and all vectors with them
+						// t[i][j].sc[0]; //this is the 0th pair which has (sum+vector)|| sum .(0,1,2,3,4 according to how many sums are formed)
+						// t[i][j].sc[0].fr // this the sum corresponding to the 0th pair
+						// t[i][j].sc[0].sc // this the vector corresponding to the 0th pair
+
+						//print vector
+						debug(t[i][j].sc[k].sc);
+					}
+				}
+
+
+			}
+
+		}
+	}
+	cerr<<endl;
+}
+
+void debugPrintTTt() {
+	//print the sum and all vectors which have t[i][j].fr==true;
+	//see only in N==1 and
+	rep(i,0,N+1) {
+		rep(j,0,W+1) {
+			if( i==1) {
+
+
+
+				cerr<<"i"<<i<<"j"<<j<<" "<<endl;
+
+				//print the sum and all vectors with them
+				// t[i][j].sc[0]; //this is the 0th pair which has (sum+vector)|| sum .(0,1,2,3,4 according to how many sums are formed)
+				// t[i][j].sc[0].fr // this the sum corresponding to the 0th pair
+				// t[i][j].sc[0].sc // this the vector corresponding to the 0th pair
+				rep(k,0,t[i][j].sc.size()) {
+					//print sum
+					cerr<<t[i][j].sc[k].fr<<endl;
+					//print vector
+					debug(t[i][j].sc[k].sc);
+				}
+
+			}
+		}
+		cerr<<endl;
+	}
+}
+
+void debugPrintTTtt() {
+	//print the sum and all vectors which have t[i][j].fr==true;
+	//see only in N==1 and
+	rep(i,0,N+1) {
+		rep(j,0,W+1) {
+			if(i==1) {
+				cerr<<"i"<<i<<"j"<<j<<" "<<endl;
+
+				rep(k,0,t[i][j].sc.size()) {
+					if(1) {
+						cerr<<"sum: "<<t[i][j].sc[k].fr<<endl;
+
+						//print the sum and all vectors with them
+						// t[i][j].sc[0]; //this is the 0th pair which has (sum+vector)|| sum .(0,1,2,3,4 according to how many sums are formed)
+						// t[i][j].sc[0].fr // this the sum corresponding to the 0th pair
+						// t[i][j].sc[0].sc // this the vector corresponding to the 0th pair
+
+						//print vector
+						debug(t[i][j].sc[k].sc);
+					}
+				}
+
+
+			}
+
+		}
+	}
+	cerr<<endl;
+}
+
+
+
+//count no of diffrent types of values in the vector
+int countDiffrentNoSpecies(vector<int> v) {
+	set<int> s;
+	//put everything in set
+	rep(i,0,v.size()) {
+		s.insert(v[i]);
+	}
+	s.erase(0);
+	return (s.size());
+}
+int returnnIndexValueWhen2Set(int n, int poww) {
+	//modified for powersum
+	int ans=-1;
+	// if(poww==0) {
+	// 	ans=0;
+	// } else {
+	// 	ans=n*pow(2,poww);
+	// }
+	ans=n*pow(2,poww);
+	// debug(ans);
+	return ans;
+}
+
+void knapsack(vector<int> weight,vector<int> value,int w,int n,int sumToMake) {
+	// assume sumToMake!=0 in every case
+	//top down appproach
+
+	rep(i,0,n+1) {
+		rep(j,0,w+1) {
+			if(i==0) {
+				//make first one false
+				t[i][j].fr=false;
+				// make t[i][j].sc a empty
+				vector<pair<int,vector<int>>> tempV10;
+				t[i][j].sc=tempV10;
+
+			}
+			if(i>0 && j==0) {
+				//step 1:- calculate all possible sums in this. //only one possible in this vertical row (ie. not taking any one of them)
+				// int sum=0;
+				int sum=0;
+				//mdified for power sum ********
+				rep(k,0,i) {
+					sum+=(int)value[k];
+				}
+				vector<int> tempV01(32,0);
+				//set indexes from starting to 000.. according to size of current array (ie.i) ***** doubt
+				rep(k,0,i) {
+					tempV01[k]=0; //0 in this case ,in other cases according to selected or not
+				}
+				pair<int,vector<int>> tempP=make_pair(sum,tempV01);
+				//push this pair into the vector
+				vector<pair<int,vector<int>>> tempV11;
+				tempV11.pb(tempP);
+
+				if(sum==sumToMake) {
+					t[i][j].fr=true;
+					cerr<<"UnsignedcomparisionWorking"<<endl;
+
+				}
+				// make t[i][j].sc a empty
+				t[i][j].sc=tempV11;
+			}
+		}
+
+	}
+	// cerr<<"endOf1stINitial";
+	// debugPrintT();
+
+
+	//now do it for row i=1, special case;
+	rep(i,0,n+1) {
+		rep(j,0,w+1) {
+			if(i==1 && j!=0) {
+				// just take the biggest value (ie.w) not all combinations (ie.NOT 0,1,2,..w)
+				//because we need to consume all values we get
+				//step 1:- calculate all possible sums in this. //only one possible in this vertical row (ie. not taking any one of them)
+				int sum=returnnIndexValueWhen2Set(value[0],j); //first value*w
+				debug((int)sum);
+
+				vector<int> tempV01(32,0);
+				//set indexes from starting to 000.. according to size of current array (ie.i)
+				tempV01[i-1]=j; //index of i-1 th value to w (ie. J)
+
+				pair<int,vector<int>> tempP=make_pair(sum,tempV01);
+				//push this pair into the vector
+				vector<pair<int,vector<int>>> tempV12;
+				tempV12.pb(tempP);
+
+				if(sum==sumToMake) {
+					t[i][j].fr=true;
+					cerr<<"UnsignedcomparisionWorking"<<endl;
+				}
+				// make t[i][j].sc a empty
+				t[i][j].sc=tempV12;
+			}
+		}
+	}
+	cerr<<"endOf2ndSpecialCaseINitial"<<endl;
+	debugPrintT();
+
+	//main part
+	//now fill the rest
+	rep(i,2,n+1) {
+		cerr<<"i"<<i<<endl;
+		rep(j,1,w+1) {
+			//fill this according to rules
+			cerr<<"j"<<j<<endl;
+			int valAtIJ=value[i-1];
+			debug(valAtIJ);
+			//how many values can be filled at this state? -- (0,1,2..w)
+
+			//this rep loop for only to check if the sumToMakeBeMadeFromThis or not? *** lil doubt
+			for(int k=0; k<=j; k++) {
+				//now at each 0 || 1 || 2 etc (ie. k)
+				int remSumToMake=(int)sumToMake-(int)returnnIndexValueWhen2Set(valAtIJ,k);
+				// debug(k);
+				// debug(remSumToMake);
+				if(remSumToMake<0) {
+					//dont do anything // it is certain that this will not have any .
+				} else {
+					// t[i-1][j-k]; //find value in this
+					rep(l,0,(t[i-1][j-k].sc).size()) {
+						if((t[i-1][j-k].sc)[l].fr==remSumToMake) {
+							t[i][j].fr=true; // this means the sumToMake can be made using this too;
+							cerr<<"TrueSetFlag0"<<endl;
+							break;
+						}
+
+					}
+				}
+
+			}
+
+			vector<pair<int,vector<int>>> tempV13;
+			//to keep track of all the combinations and their respective sums
+			for(int k=0; k<=j; k++) {
+				//now at each 0 || 1 || 2 etc (ie. k)
+
+				// t[i-1][j-k]; //find value in this
+				rep(l,0,(t[i-1][j-k].sc).size()) {
+					// pair<int,vector<int>> tempPToKeepTrackOfAllSumsP;
+					vector<int> tempVToKeepTrackOfAllSums;
+					int sumOfThisIteration =(int)returnnIndexValueWhen2Set(valAtIJ,k)+ (t[i-1][j-k].sc)[l].fr;
+					tempVToKeepTrackOfAllSums=((t[i-1][j-k].sc)[l].sc);
+					//just set the next bit {i th} to k;
+					tempVToKeepTrackOfAllSums[i-1]=k; //i-1 because for i=1 , the index of 0 should be filled
+					//push This vector int vector of vector of this index (ie.t[i][j])
+					tempV13.pb(make_pair(sumOfThisIteration,tempVToKeepTrackOfAllSums));
+					// debug(tempV13);
+
+				}
+			}
+
+			//set the vector vector int now
+			t[i][j].sc=tempV13;
+
+
+		}
+
+		cerr<<"end of this I in main"<<endl;
+		cerr<<endl;
+		cerr<<endl;
+	}
+	cerr<<"endOf3rd Main INitial";
+	debugPrintT();
+
+}
+
+// solveToGetMimimumVariety(&indexPowerOf2,arrOrigionalBase10)
+pair<int,vector<int>> solveToGetMimimumVariety(vector<pair<int,int>>* indexPowerOf2,vector<int> arrOrigionalBase10, int totalSumToBeMade) {
+
+	vector<int> arrOfNumbers= {2,4,8,16,128,512}; //
+
+	//same weight for all // if include same number of noOf2s decreased from totalPowersOf Orgional
+	vector<int> weight= {1,1,1,1,1,1};
+
+	// vector<int> value= {2,4,8,16,128,512};
+	vector<int> value=arrOrigionalBase10;
+
+	// int sum=1024; // this just the condition;
+	// int sum=totalSumToBeMade; // this just the condition;
+	int  sum=totalSumToBeMade; // this just the condition;
+
+	//calculate total powers of 2
+	int totalPowersOf2OrigionalW0=0;
+	rep(i,0,(*indexPowerOf2).size()) {
+		totalPowersOf2OrigionalW0+=(*indexPowerOf2)[i].sc;
+	}
+	debug(totalPowersOf2OrigionalW0);
+	//weight
+	int totalPowersOf2OrigionalW=totalPowersOf2OrigionalW0;
+	// int n=weight.size();
+	int n=value.size();
+
+	int w=totalPowersOf2OrigionalW;
+
+	knapsack(weight,value,totalPowersOf2OrigionalW,n,sum);
+	// knapsack(weight,value,totalPowersOf2OrigionalW,n,2);
+	// knapsack(weight,value,totalPowersOf2OrigionalW,n,6);
+	// knapsack(weight,value,totalPowersOf2OrigionalW,n,14);
+
+	// debugPrintT();
+
+	// debugPrintTT();
+	// debugPrintTTt();
+
+	// debugPrintTTtt();
+
+	//now
+	vector<vector<int>> allVecWhichGiveSumRequired;
+	// bool flag=false;
+	rep(j,0,w+1) {
+		rep(i,0,n+1) {
+			if(t[i][j].fr==true && i==n) {
+				//flag==true
+				cerr<<"i"<<i<<"j"<<j<<" "<<endl;
+
+				rep(k,0,t[i][j].sc.size()) {
+					if(t[i][j].sc[k].fr==sum) {
+						cerr<<"sum: "<<t[i][j].sc[k].fr<<endl;
+
+						//print the sum and all vectors with them
+						// t[i][j].sc[0]; //this is the 0th pair which has (sum+vector)|| sum .(0,1,2,3,4 according to how many sums are formed)
+						// t[i][j].sc[0].fr // this the sum corresponding to the 0th pair
+						// t[i][j].sc[0].sc // this the vector corresponding to the 0th pair
+
+						//print vector
+						debug(t[i][j].sc[k].sc);
+						allVecWhichGiveSumRequired.pb(t[i][j].sc[k].sc);
+
+					}
+				}
+
+
+			}
+		}
+		//if found in this j , then exit.  don't look in further J's
+		// if(flag==true)break; ///**********
+	}
+
+	//now allVec vvi has all the smallest valid vectors;
+
+	vector<pair<int,vector<int>>> tempP; //store vector with their minimum varieties
+	rep(i,0,allVecWhichGiveSumRequired.size()) {
+		int min=countDiffrentNoSpecies(allVecWhichGiveSumRequired[i]);
+		tempP.pb(make_pair(min,allVecWhichGiveSumRequired[i]));
+	}
+	//sort this vector of pair
+	sort(tempP.begin(),tempP.end());
+
+	// debug(tempP);
+	rep(i,0,tempP.size()) {
+		debug(tempP[i]);
+	}
+
+	//send the first vector wherever needed
+
+	if(!tempP.empty()) {
+		return tempP[0];
+	} else {
+		vector<int> tempV1V1(32,0);
+		return make_pair(INF,tempV1V1);
+	}
+
+	//setting it to powers of 2;
+
+
+	//reset global variable
+
+	//intitialise inner pair
+	// vector<int> tempV0(32,0);
+	// pair<int,vector<int>> tempP=make_pair(-1,tempV0);
+// //now initiliaze outer pair
+// 	vector<pair<int,vector<int>>> tempV1; // size of this array is unknown in the begin
+// 	pair<bool,vector<pair<int,vector<int>>>> element=make_pair(false,tempV1);
+// // final t in making
+// 	vector<pair<bool,vector<pair<int,vector<int>>>>> tempV2(w+1,element);
+// 	vector<vector<pair<bool,vector<pair<int,vector<int>>>>>> t(n+1,tempV2);
+
+	rep(i,0,N+1) {
+		rep(j,0,W+1) {
+			// t[i][j].clear();
+			t[i][j]=element;
+		}
+	}
+
+
+}
+
+
+/////////
 int findIndexInSum(int index,vector<int>* sumOfAllBinaryNumbers,vector<vector<int>>* sumIndexDependOnWhichIndex) {
 	int indexInSum=-1;
 	rep(i,0,(*sumIndexDependOnWhichIndex).size()) {
@@ -769,6 +1175,8 @@ void indexPowerOf2Util(vector<pair<int,int>>* indexPowerOf2) {
 	vector<pair<vector<int>,int>> ans;
 	pair<vector<int>,int> tempPP;
 
+	cerr<<"insideindexPowerOf2Util"<<endl;
+	debug((*indexPowerOf2));
 	int numOfMoves=0;
 	while(checkIndexPowerOf2AllSetToZero(indexPowerOf2)==false) {
 		vector<int> thisAns;
@@ -779,16 +1187,18 @@ void indexPowerOf2Util(vector<pair<int,int>>* indexPowerOf2) {
 		numOfMoves+=1;
 	}
 
+	debug(numOfMoves);
+
 	//now printAll the indexes
 
 	debug(ans); // print it +1;
 
+	cout<<ans.size()<<endl;
 	rep(i,0,ans.size()) {
-		cout<<ans.size()<<endl;
 		cout<<ans[i].fr.size()<<" "<<ans[i].sc<<endl;
 		rep(j,0,ans[i].fr.size()) {
 			cout<<ans[i].fr[j]+1;
-			if(j!=ans[i].fr.size()-1){
+			if(j!=ans[i].fr.size()-1) {
 				cout<<" ";
 			}
 		}
@@ -798,6 +1208,34 @@ void indexPowerOf2Util(vector<pair<int,int>>* indexPowerOf2) {
 		}
 	}
 
+
+}
+
+int  totSumCalculator(vector<pair<int,int>>* indexPowerOf2,vector<int> arrOrigionalBase10) {
+	int sum=0;
+	//multiply each index with
+	for(int i=0; i<(*indexPowerOf2).size(); i++) {
+		int powTempCal=pow(2,(*indexPowerOf2)[i].sc);
+		sum+=arrOrigionalBase10[(*indexPowerOf2)[i].fr]*powTempCal;
+	}
+	debug(sum);
+	return sum;
+}
+int biggestPowCalculator(vector<int> arrOrigionalBase10) {
+	int biggestNumber=arrOrigionalBase10[0];
+	rep(i,0,arrOrigionalBase10.size()) {
+		if(arrOrigionalBase10[i]>biggestNumber)biggestNumber=arrOrigionalBase10[i];
+	}
+	int a=-1;
+	int poww=-1;
+	rep(i,0,31) {
+		a=pow(2,i);
+		if(a==biggestNumber) {
+			poww=i;
+		}
+	}
+	debug(poww);
+	return poww;
 
 }
 void solveUtil(vector<int> sumOfAllBinaryNumbers,vector<pair<int,int>> mostSignificantBit,vector<pair<int,int>> indexPowerOf2, vector<int> arrOrigionalBase10) {
@@ -822,6 +1260,57 @@ void solveUtil(vector<int> sumOfAllBinaryNumbers,vector<pair<int,int>> mostSigni
 
 		//now we have our info in the powers of 2
 		debug(indexPowerOf2);
+
+		//change power of 2 here
+
+
+		//apply totalSum to all possible powers of 2 ( 2^0, 2)
+		//give totalSum
+		vector<pair<int,vector<int>>> bossTempP;
+		debug(bossTempP);
+
+		int biggestNumber2Pow=biggestPowCalculator(arrOrigionalBase10);
+		debug(biggestNumber2Pow);
+		rep(kk,biggestNumber2Pow+1,32+1) {  //make it 32 then //
+			int totalSumToBeMade=(int)pow(2,kk);
+			debug((int) totalSumToBeMade);
+
+			pair<int,vector<int>> tempPP1=solveToGetMimimumVariety(&indexPowerOf2,arrOrigionalBase10,totalSumToBeMade);
+			if(tempPP1.fr==INF) {
+				//don't add in the bossTemP;
+			} else {
+				cerr<<"before pushing into bossTempP"<<" "<<totalSumToBeMade<< endl;
+				debug(tempPP1);
+				bossTempP.pb(tempPP1);
+			}
+			//reset global variabeles after each loop //done
+
+
+
+		}
+
+
+		// int totalSumToBeMade=totSumCalculator(&indexPowerOf2,arrOrigionalBase10);
+
+
+
+		debug(bossTempP);
+		//sort bossTempP
+		sort(bossTempP.begin(),bossTempP.end());
+		//when this above loop is over then
+		if(!bossTempP.empty()) {
+			//
+
+			//setting it to powers of 2;
+
+			rep(i,0,(indexPowerOf2).size()) {
+				(indexPowerOf2)[i].sc=bossTempP[0].sc[i];
+			}
+			debug((indexPowerOf2));
+		}
+
+
+
 
 		indexPowerOf2Util(&indexPowerOf2);
 
@@ -876,7 +1365,7 @@ void solve() {
 
 	mostSignificantBit=mostSignificantBitUtil(arrOrigionalBase2);
 
-	//debug most signigicant bit 
+	//debug most signigicant bit
 	debug(mostSignificantBit);
 
 	//index with power of two multiplication

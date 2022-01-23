@@ -23,7 +23,7 @@ using namespace std;
 #define endl			"\n"
 
 
-#ifndef ONLINE_JUDGE
+#ifndef OendlINE_JUDGE
 #define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
 #else
 #define debug(x)
@@ -63,21 +63,17 @@ template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a)
 template<typename T,typename T1>T amax(T &a,T1 b) {if(b>a)a=b; return a;}
 template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 
-const long long INF=1e18;
+const long long INF=1e18; 
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
-
 void solve() {
-
-	// Creating a sample vecto
-
-	int ans=0%2;
-	cout<<ans;
-
-
+	int n=300000;
+	while(n--) {
+		cout<<"s";
+		
+	}
 }
-
 
 
 signed main() {
@@ -88,7 +84,7 @@ signed main() {
 
 	// freopen("output.in", "w", stdout);
 	start = clock();
-#ifndef ONLINE_JUDGE
+#ifndef OendlINE_JUDGE
 	freopen("error.in", "w", stderr);
 #endif
 
@@ -101,7 +97,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	//cin>>t;
+	// cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;
