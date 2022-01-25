@@ -1,8 +1,12 @@
 [
 	{
-		"test": ""
+		"correct_answers":
+		[
+			"NO\nYES\n1 3 2"
+		],
+		"test": "2\n2\n3\n"
 	},
 	{
-		"test": ""
+		"test": "9\n4\n5\n6\n7\n8\n9\n10\n2\n4\n5\n"
 	}
 ]

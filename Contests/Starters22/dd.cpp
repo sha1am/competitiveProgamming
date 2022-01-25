@@ -1,4 +1,8 @@
+
+// worked but time complexity is off the power of npr 1000!/500!
+
 #include "bits/stdc++.h"
+
 using namespace std;
 #define int               long long
 #define pb                push_back
@@ -66,66 +70,114 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 // // const long long INF=1e18;
 // const int32_t M=1e9+7;
 // const int32_t MM=998244353;
-int bitSize=4;
-void makeAllPossibleCombinationsUtiLRecursive(queue<int> q,vector<int> tempV, int pos,	set<vector<int>>* ansForThis2i) {
-	//base condition
-	if(pos==bitSize || q.empty() ) {
-		//you have the vector
-		if(pos==bitSize) {
-			debug(tempV);
-			(*ansForThis2i).insert(tempV);
+int bitSize=20;
+pair<bool,vector<int>> checkThisVector(vector<int> xorArray,vector<int> vec) {
+	vector<int> newXorArrayTemp(bitSize,-1);
+	bool flag=false;
+	int sum=0;
+	rep(i,0,bitSize) {
+		newXorArrayTemp[i]=xorArray[i]^vec[i];
+		sum+=newXorArrayTemp[i];
+	}
+	if(sum%2==0)flag=true;
+	pair<bool,vector<int>> checkResult=make_pair(flag,xorArray);
+	return checkResult;
+
+}
+void checkWhichWillWork(vector<int>* xorArray,vector<set<vector<int>>>*  allPossibleVectorsWith2iOnes,vector<vector<int>>* ans) {
+
+	rep(i,0,(*allPossibleVectorsWith2iOnes).size()) {
+		rep(j,0,(*allPossibleVectorsWith2iOnes)[i].size()) {
+			//iterate this set ( ie. allPossibleVectorsWith2iOnes[i])
+			set<vector<int>> ::iterator it;
+			for(it=(*allPossibleVectorsWith2iOnes)[i].begin(); it!=(*allPossibleVectorsWith2iOnes)[i].end(); it++) {
+				//if this is included , size must increase by 0 or 2
+				if(checkThisVector((*xorArray),*it).fr) {
+					//update new XorArray
+					(*xorArray)=checkThisVector((*xorArray),*it).sc;
+					//add this vector to ans;
+					(*ans).pb(*it);
+					//delete this vector from the vector<set<vector<int>>>
+					it=(*allPossibleVectorsWith2iOnes)[i].erase(it);
+
+					// end this function 
+					return;
+
+				}
+
+			}
+
 		}
+	}
+}
+
+void makeAllPossiblePermutationsUtiLRecursive(queue<int> givenElementsQ,int r, vector<int> tempV,int sPos, int ePos, int pos,set<vector<int>>* ansForThis2i) {
+
+	//base condition
+	if(pos==r) {
+		//you have the vector here;
+		// debug(tempV);
+		(*ansForThis2i).insert(tempV);
 		return;
 	}
-	//main work
-	// debug(q);
-	// debug(tempV);
-	int qSize=q.size();
-	queue<int> tempQ=q;
-	// int j=0;
-	for(int i=pos; i<tempV.size(); i++) {
-		queue<int> tempQ1=q;
-		//fill in the pos the element from the queue
-		int tempQFront=tempQ.front();
-		tempV[i]=tempQ.front();
-		// if(!tempQ.empty()) {
-		// 	tempQ.pop();
-		// }
-		debug(tempV);
 
-		//find the tempQ.front() element and pop that in queue and send the queue forward
-		while(tempQ1.front()!=tempQFront) {
-			tempQ.push(tempQ1.front());
-			tempQ.pop();
-		}
-		//to pop front value;
-		if(!tempQ.empty()) {
-			tempQ.pop();
-		}
-		debug((int)tempQ1.size());
-		debug(tempV);
-		//call recursively
-		makeAllPossibleCombinationsUtiLRecursive(tempQ,tempV,pos+1,ansForThis2i);
+	//main taks
+	vector<int> dummyVForIteration;
+	queue<int> dummyQ0=givenElementsQ;
+	while(!dummyQ0.empty()) {
+		dummyVForIteration.pb(dummyQ0.front());
+		dummyQ0.pop();
+	}
 
+	for(int i=0; i<dummyVForIteration.size(); i++) {
+		queue<int> dummyQ1=givenElementsQ;
+		tempV[pos]=dummyVForIteration[i];
+
+		// now find this pos in dummyQ1 and delete it and send for next pos;
+		while(dummyQ1.front()!=dummyVForIteration[i]) {
+			dummyQ1.push(dummyQ1.front());
+			dummyQ1.pop();
+		}
+		if(!dummyQ1.empty()) {
+			dummyQ1.pop();
+		}
+
+
+		makeAllPossiblePermutationsUtiLRecursive(dummyQ1,r,tempV,sPos,ePos,pos+1,ansForThis2i);
+		while(i!=ePos && dummyVForIteration[i]==dummyVForIteration[i+1]) {
+			i++;
+		}
 	}
 
 
 
 }
 
-set<vector<int>> makeAllPossibleCombinations(int numOfOnes) {
+set<vector<int>> makeAllPossiblePermutations(int numOfOnes) {
 	set<vector<int>> ansForThis2i;
-	vector<int> tempV(bitSize,0);
-	queue<int> q;
-	rep(i,0,numOfOnes) {
-		q.push(1);
-	}
-	// rep(i,0,bitSize-numOfOnes) {
-	// 	q.push(0);
-	// }
-	debug(q);
+	vector<int> tempV(bitSize,-1);
+	queue<int> givenElementsQ;
 
-	makeAllPossibleCombinationsUtiLRecursive( q,tempV,0,&ansForThis2i);
+	rep(i,0,numOfOnes) {
+		givenElementsQ.push(1);
+	}
+	rep(i,0,bitSize-numOfOnes) {
+		givenElementsQ.push(0);
+	}
+
+	vector<int> tempVForSorting;
+	while(!givenElementsQ.empty()) {
+		tempVForSorting.pb(givenElementsQ.front());
+		givenElementsQ.pop();
+	}
+	sort(tempVForSorting.begin(),tempVForSorting.end());
+
+	rep(i,0,tempVForSorting.size()) {
+		givenElementsQ.push(tempVForSorting[i]);
+	}
+
+	debug(givenElementsQ);
+	makeAllPossiblePermutationsUtiLRecursive(givenElementsQ,bitSize,tempV,0,givenElementsQ.size()-1,0,&ansForThis2i);
 
 	return ansForThis2i;
 }
@@ -133,17 +185,23 @@ set<vector<int>> makeAllPossibleCombinations(int numOfOnes) {
 void solveUtil( int n) {
 	//empty answer vector for now //size ==n
 	vector<vector<int>> ans;
-	// make combinations of array of size
+	// make Permutations of array of size
 	vector<set<vector<int>>> allPossibleVectorsWith2iOnes;
 
-	for(int i=0; i<=2; i++) {
-		allPossibleVectorsWith2iOnes.pb(makeAllPossibleCombinations(2*i));
+	for(int i=0; i<=bitSize/2; i++) {
+		allPossibleVectorsWith2iOnes.pb(makeAllPossiblePermutations(2*i));
 	}
 	// now we have all possible vectors with ;
 	debug(allPossibleVectorsWith2iOnes);
 
 	//
 	vector<int> xorArray(bitSize,0);
+
+	while(ans.size()!=n) {
+		checkWhichWillWork(&xorArray,&allPossibleVectorsWith2iOnes,&ans);
+	}
+	//now we have answer;
+	debug(ans);
 }
 void solve() {
 	int n;

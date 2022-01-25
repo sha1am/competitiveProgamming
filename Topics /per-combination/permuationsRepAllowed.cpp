@@ -66,191 +66,41 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
-bool checkSet(queue<int> qAOnes,queue<int> qBOnes){
-	bool flag=false;
-	set<int> sA;
-	set<int> sB;
-	
-	while(!qAOnes.empty()){
-		sA.insert(qAOnes.front());
-		qAOnes.pop();
+void permutationsWithRepetationsUtilRecursive(vector<int> tempV,vector<int> vecOfElements,int r,int pos) {
+
+	//base condition :- when pos==r
+	if(pos==r) {
+		//you have the array here
+		debug(tempV);
+		return;
 	}
-	
-	while(!qBOnes.empty()){
-		sB.insert(qBOnes.front());
-		qBOnes.pop();
+	//main job
+	//fill this pos with all th
+	rep(i,0,vecOfElements.size()) {
+		//notice the value at pos is being overwritten in each loop 
+		tempV[pos]=vecOfElements[i];
+
+		// call recusvely for pos+1
+		permutationsWithRepetationsUtilRecursive(tempV,vecOfElements,r,pos+1);
 	}
-	
-	
-	while(!sA.empty() && !sB.empty()){
-		
-		if(*sA.begin()==*sB.begin()){
-			//
-			int a=*sA.begin();
-			sA.erase(a);
-			sB.erase(a);
-			continue;
-		}
-		else{
-			if(*sB.begin()>*sA.begin()){
-				flag=true;
-				return flag;
-			}
-			else{
-				return flag;
-			}
-		}
-		
-	}
-	
-	if(sA.empty() || sB.empty()){
-		if(sA.empty())flag=true;
-		return flag;
-	}
-	
-	return flag;
+}
+
+
+void permutationsWithRepetations(vector<int> vecOfElements,int r) {
+	//make a tempVec of size r to store the ans;
+	vector<int> tempV(r,-1);
+
+	permutationsWithRepetationsUtilRecursive(tempV,vecOfElements,r,0);
 }
 
 void solve() {
-	int n;
-	cin>>n;
-	string a,b;
-	cin>>a>>b;
-
-	//store the string in a vector
-	queue<int> qA;
-	queue<int> qB;
-
-	rep(i,0,n) {
-		qA.push(a[i]-'0');
-	}
-	rep(i,0,n) {
-		qB.push(b[i]-'0');
-	}
-	debug(qA);
-	debug(qB);
-	
-
-	vector<int> ans;
-
-	//count number of zeros
-	int cntLZ=0;
-	while(qA.front()==0) {
-		cntLZ+=1;
-		qA.pop();
-	}
-	while(qB.front()==0) {
-		cntLZ+=1;
-		qB.pop();
-	}
-
-	//we have all leading zeros
-	rep(i,0,cntLZ) {
-		ans.pb(0);
-	}
-	debug(ans);
-
-
-	//keep track of all 1s with number of zeros after them
-	queue<int> qAOnes;
-	queue<int> qBOnes;
-
-	while(!qA.empty()) {
-		if(qA.front()==1) {
-			//now pop this and count zeros
-			qA.pop();
-			int cntZerosCurrent=0;
-			while(!qA.empty() && qA.front()==0) {
-				cntZerosCurrent+=1;
-				qA.pop();
-			}
-			//now we have all zeros for this 1
-			qAOnes.push(cntZerosCurrent);
-
-		}
-	}
-	while(!qB.empty()) {
-		if(qB.front()==1) {
-			//now pop this and count zeros
-			qB.pop();
-			int cntZerosCurrent=0;
-			while(!qB.empty() && qB.front()==0) {
-				cntZerosCurrent+=1;
-				qB.pop();
-			}
-			//now we have all zeros for this 1
-			qBOnes.push(cntZerosCurrent);
-
-		}
-	}
-	debug(ans);
-	debug(qAOnes);
-	debug(qBOnes);
-	//now check which qX front has greater number of zeros and add them to the answer;
-	bool flag=true;
-	while(!qAOnes.empty() || !qBOnes.empty()) {
-		if(qBOnes.empty() || qAOnes.empty()) {
-			// we either need to print one of them fully into the ans;
-			while(!qBOnes.empty()) {
-				ans.pb(1);
-				rep(i,0,qBOnes.front()) {
-					ans.pb(0);
-				}
-				qBOnes.pop();
-			}
-			while(!qAOnes.empty()) {
-				ans.pb(1);
-				rep(i,0,qAOnes.front()) {
-					ans.pb(0);
-				}
-				qAOnes.pop();
-			}
-		} else {
-			if(qBOnes.front()>qAOnes.front()) {
-				flag=false;
-				
-			}
-			else if(qBOnes.front()==qAOnes.front()){
-				
-				if(checkSet(qAOnes,qBOnes)){
-					flag=false;
-				}
-			}
-			
-			
-			if(flag){
-				ans.pb(1);
-				rep(i,0,qAOnes.front()) {
-					ans.pb(0);
-				}
-				qAOnes.pop();
-			}
-			else {
-				ans.pb(1);
-				rep(i,0,qBOnes.front()) {
-					ans.pb(0);
-				}
-				qBOnes.pop();
-			}
-			debug(ans);
-
-		}
-	}
-	
-	//print ans ;
-	debug(ans);
-	
-	int cntOfOnesTillNow=0;
-	int cntOfInv=0;
-	rep(i,0,ans.size()){
-		if(ans[i]==1) cntOfOnesTillNow+=1;
-		else{
-			cntOfInv+=cntOfOnesTillNow;
-		}
-	}
-	
-	cout<<cntOfInv<<endl;
-
+	// TC:= n*n*n*n... r times =n^r
+	//Condition: works for all r and n ,if not very large // not sure. 
+	vector<int> vecOfElements= {1,2,3,4};
+	int n=vecOfElements.size();
+	int r=5;
+	//repetation is allowed.
+	permutationsWithRepetations(vecOfElements,r);
 }
 
 
@@ -260,6 +110,7 @@ signed main() {
 	cin.tie(0); cout.tie(0);
 
 	// freopen("input.in", "r", stdin)c
+
 	// freopen("output.in", "w", stdout);
 	start = clock();
 #ifndef ONLINE_JUDGE
@@ -275,7 +126,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

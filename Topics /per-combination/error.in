@@ -1,0 +1,12 @@
+tempV [ 1 1 2 3 ]
+tempV [ 1 1 2 4 ]
+tempV [ 1 1 2 5 ]
+tempV [ 1 1 3 4 ]
+tempV [ 1 1 3 5 ]
+tempV [ 1 1 4 5 ]
+tempV [ 1 2 3 4 ]
+tempV [ 1 2 3 5 ]
+tempV [ 1 2 4 5 ]
+tempV [ 1 3 4 5 ]
+tempV [ 2 3 4 5 ]
+Time Taken: 0.001116

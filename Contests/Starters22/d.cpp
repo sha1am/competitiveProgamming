@@ -69,134 +69,32 @@ const int32_t MM=998244353;
 
 int bitSize=4;
 
-vector<vector<vector<int>>> globalVBinary;
-vector<vector<int>> globalVDecimal;
-
-bool xorSumEvenOrNot(vector<vector<int>> vv) {
-	bool flag=false;
-	int sum=0;
-	rep(i,0,vv.size()) {
-		int thisBitXor=vv[i][0];
-		rep(k,1,bitSize) {
-			thisBitXor=thisBitXor ^ vv[i][k];
-		}
-		sum+=thisBitXor;
-		// debug(sum);
-
-	}
-	// debug(sum);
-	if(sum%2==0) {
-		flag=true;
-	}
-
-	return flag;
-}
-int convertBinaryToNum(vector<int> v) {
-
-	int sumB=0;
-	rep(i,0,bitSize) {
-		int a=pow(2,i);
-		if(v[i]==1) {
-			sumB+=a;
-		}
-	}
-	debug(sumB);
-	return sumB;
-}
-
-void recursiveSolve(vector<vector<int>> vv,int posvvStart,int posvvEnd,int sum) {
-	//base condition
-	if(posvvStart==posvvEnd+1) {
-		//now take and print all all if sum is even;
-		rep(i,0,vv.size()) {
-			// debug(vv[i]);
-		}
-		cerr<<endl;
-		if(xorSumEvenOrNot(vv)) {
-			//then push the vector into a vector of vvi;
-			// globalVBinary.pb(vv);
-		}
-
-		return;
-	}
-
-	//real work
-	// vector<vector<int>> tempVV1=vv;
-	// vector<vector<int>> tempVV2=vv;
-
-	// for fill possvv vector in vector<vector<int>>
-	// fill this whole vector in vvi
-	rep(i,0,bitSize) {
-		//just to fill 0,1 in i-th pos recusviely2
-		// debug(posvvStart);
-		// for(int j=0; j<2; j++) {
-		int sumTemp=sum;
-
-		vv[posvvStart][i]=0;
-		recursiveSolve(vv,posvvStart+1,posvvEnd,sumTemp);
-		vv[posvvStart][i]=1;
-		// debug(j)
-		// debug(vv[posvvStart]);
-		// debug(vv[posvvStart][i]);
-		debug(vv);
-		// if(j==1) sumTemp+=1;
-
-		// debug(vv);
-
-		//now leave this and solve all from posvvStart+1--posvvEnd;
-		recursiveSolve(vv,posvvStart+1,posvvEnd,sumTemp);
-
-		cerr<<"####"<<endl;
-
-		// }
-
-		// cerr<<"i"<<i<<"filled"<<endl;
-	}
-
-}
-void solveUtil(int n) {
-	//to represent a number in 4 bits
-	vector<int> v(bitSize,0);
-	vector<vector<int>> vv(n,v);
-	debug(vv);
-	int pos=0;
-	int sum=0;
-	rep(i,0,n) {
-		recursiveSolve(vv,0,i,sum);
-
-	}
-
-	//now we have all our vectors in glbalV
-
-	// cout<<"Shadab"<<endl;
-
-	debug(globalVBinary);
-	// vector<int> vvV={1,1,0,0};
-	// convertBinaryToNum(vvV);
-
-	//convert this into numbers
-
-	rep(i,0,globalVBinary.size()) {
-		vector<int> tempV;
-		rep(j,0,globalVBinary[i].size()) {
-			int a=convertBinaryToNum(globalVBinary[i][j]);
-			tempV.pb(a);
-
-		}
-		debug(tempV);
-		globalVDecimal.pb(tempV);
-	}
 
 
-}
-
-void solve() {
-	int n=2;
+void solve(){
+	// cout<<"s"<<endl;
+	int n;
 	cin>>n;
-
-	//generate all permutations of 32 sized [1,0,1,1,1....];
-	solveUtil(n);
-
+	
+	int count=0;
+	int ii=1;
+	vector<int> ans;
+	debug(ans)
+	
+	while(count!=n){
+		debug(count);
+		if(__builtin_popcountll(ii)%2==0){
+			ans.pb(ii);
+			count++;
+			debug(ans);
+		}
+			ii++;
+	}
+	
+	rep(i,0,ans.size()){
+		cout<<ans[i]<<" ";
+	}
+	cout<<endl;
 }
 
 

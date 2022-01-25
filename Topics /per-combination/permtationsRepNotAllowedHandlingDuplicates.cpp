@@ -66,191 +66,77 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
-bool checkSet(queue<int> qAOnes,queue<int> qBOnes){
-	bool flag=false;
-	set<int> sA;
-	set<int> sB;
-	
-	while(!qAOnes.empty()){
-		sA.insert(qAOnes.front());
-		qAOnes.pop();
+
+set<vector<int>> gS;
+void permutationsWithoutRepetationsUtilRecursive(queue<int> givenArrayQ,int r,vector<int> tempV,int pos){
+	//base condition when pos==r
+	if(pos==r){
+		//we have the vector here.
+		gS.insert(tempV);
+		// debug(tempV);
+		return ;
 	}
 	
-	while(!qBOnes.empty()){
-		sB.insert(qBOnes.front());
-		qBOnes.pop();
+	//main task //to fill the pos with all possible items 
+	vector<int> allItemsInCurrentQ;
+	//dummy q to give values in this allItemsInCurrentArray
+	queue<int> dummyQ0=givenArrayQ;
+	while(!dummyQ0.empty()){
+		allItemsInCurrentQ.pb(dummyQ0.front());
+		dummyQ0.pop();
 	}
-	
-	
-	while(!sA.empty() && !sB.empty()){
-		
-		if(*sA.begin()==*sB.begin()){
-			//
-			int a=*sA.begin();
-			sA.erase(a);
-			sB.erase(a);
-			continue;
+
+	for(int i=0;i<allItemsInCurrentQ.size();i++){
+		//dummyQ which will delte the element currently used and pass it forward.
+		queue<int> dummyQ1=givenArrayQ;
+		tempV[pos]=allItemsInCurrentQ[i];
+
+		//find this element in dummyQ and delte it. 
+		while(dummyQ1.front()!=allItemsInCurrentQ[i]){
+			dummyQ1.push(dummyQ1.front());
+			dummyQ1.pop();
 		}
-		else{
-			if(*sB.begin()>*sA.begin()){
-				flag=true;
-				return flag;
-			}
-			else{
-				return flag;
-			}
+		if(!dummyQ1.empty()) // which it will be not
+		{
+			dummyQ1.pop();
 		}
-		
+
+		// now call recusively 
+		permutationsWithoutRepetationsUtilRecursive(dummyQ1,r, tempV,pos+1);
+
 	}
-	
-	if(sA.empty() || sB.empty()){
-		if(sA.empty())flag=true;
-		return flag;
+
+
 	}
-	
-	return flag;
+
+void	permutationsWithoutRepetations(vector<int> givenArray,int r){
+	//make tempV of r size;
+	vector<int> tempV(r,-1);
+
+	//since repetations are not allowed, we need to delete elements from the ____  so making a queue;
+	queue<int> givenArrayQ;	
+	rep(i,0,givenArray.size()){
+		givenArrayQ.push(givenArray[i]);
+	}
+
+	permutationsWithoutRepetationsUtilRecursive(givenArrayQ,r,tempV,0);
+
+	// now print all permutations;
+	debug(gS);
 }
 
 void solve() {
-	int n;
-	cin>>n;
-	string a,b;
-	cin>>a>>b;
+	//reset global variable for next tc
+	gS.clear();
+	//*** This is the version which handles duplicates too . Just put the array in set
 
-	//store the string in a vector
-	queue<int> qA;
-	queue<int> qB;
+	// Problems: it prints duplicate peermutation when there are dupicate elements in the given string 
+	//			It is where we neeed to divide by k (where k= number of duplicates of an elements);
+	// TC: npr operations ... // same TC in this also
+	vector<int> givenArray={1,1,2,3,4};
 
-	rep(i,0,n) {
-		qA.push(a[i]-'0');
-	}
-	rep(i,0,n) {
-		qB.push(b[i]-'0');
-	}
-	debug(qA);
-	debug(qB);
-	
-
-	vector<int> ans;
-
-	//count number of zeros
-	int cntLZ=0;
-	while(qA.front()==0) {
-		cntLZ+=1;
-		qA.pop();
-	}
-	while(qB.front()==0) {
-		cntLZ+=1;
-		qB.pop();
-	}
-
-	//we have all leading zeros
-	rep(i,0,cntLZ) {
-		ans.pb(0);
-	}
-	debug(ans);
-
-
-	//keep track of all 1s with number of zeros after them
-	queue<int> qAOnes;
-	queue<int> qBOnes;
-
-	while(!qA.empty()) {
-		if(qA.front()==1) {
-			//now pop this and count zeros
-			qA.pop();
-			int cntZerosCurrent=0;
-			while(!qA.empty() && qA.front()==0) {
-				cntZerosCurrent+=1;
-				qA.pop();
-			}
-			//now we have all zeros for this 1
-			qAOnes.push(cntZerosCurrent);
-
-		}
-	}
-	while(!qB.empty()) {
-		if(qB.front()==1) {
-			//now pop this and count zeros
-			qB.pop();
-			int cntZerosCurrent=0;
-			while(!qB.empty() && qB.front()==0) {
-				cntZerosCurrent+=1;
-				qB.pop();
-			}
-			//now we have all zeros for this 1
-			qBOnes.push(cntZerosCurrent);
-
-		}
-	}
-	debug(ans);
-	debug(qAOnes);
-	debug(qBOnes);
-	//now check which qX front has greater number of zeros and add them to the answer;
-	bool flag=true;
-	while(!qAOnes.empty() || !qBOnes.empty()) {
-		if(qBOnes.empty() || qAOnes.empty()) {
-			// we either need to print one of them fully into the ans;
-			while(!qBOnes.empty()) {
-				ans.pb(1);
-				rep(i,0,qBOnes.front()) {
-					ans.pb(0);
-				}
-				qBOnes.pop();
-			}
-			while(!qAOnes.empty()) {
-				ans.pb(1);
-				rep(i,0,qAOnes.front()) {
-					ans.pb(0);
-				}
-				qAOnes.pop();
-			}
-		} else {
-			if(qBOnes.front()>qAOnes.front()) {
-				flag=false;
-				
-			}
-			else if(qBOnes.front()==qAOnes.front()){
-				
-				if(checkSet(qAOnes,qBOnes)){
-					flag=false;
-				}
-			}
-			
-			
-			if(flag){
-				ans.pb(1);
-				rep(i,0,qAOnes.front()) {
-					ans.pb(0);
-				}
-				qAOnes.pop();
-			}
-			else {
-				ans.pb(1);
-				rep(i,0,qBOnes.front()) {
-					ans.pb(0);
-				}
-				qBOnes.pop();
-			}
-			debug(ans);
-
-		}
-	}
-	
-	//print ans ;
-	debug(ans);
-	
-	int cntOfOnesTillNow=0;
-	int cntOfInv=0;
-	rep(i,0,ans.size()){
-		if(ans[i]==1) cntOfOnesTillNow+=1;
-		else{
-			cntOfInv+=cntOfOnesTillNow;
-		}
-	}
-	
-	cout<<cntOfInv<<endl;
-
+	int r=3;
+	permutationsWithoutRepetations(givenArray,r);
 }
 
 
@@ -260,6 +146,7 @@ signed main() {
 	cin.tie(0); cout.tie(0);
 
 	// freopen("input.in", "r", stdin)c
+
 	// freopen("output.in", "w", stdout);
 	start = clock();
 #ifndef ONLINE_JUDGE
@@ -275,7 +162,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	cin>>t;
+	//cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;
