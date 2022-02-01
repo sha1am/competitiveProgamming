@@ -69,7 +69,25 @@ const int32_t MM=998244353;
 
 
 void solve(){
+	int n,q;
+	cin>>n>>q;
 	
+	vector<vector<int>> papaArr;
+	while(n--){
+		int size=-1;
+		cin>>size;
+		vector<int> tempV(size,-1);
+		rep(i,0,size){
+			cin>>tempV[i];
+		}
+		papaArr.pb(tempV);
+	}
+	
+	while(q--){
+		int i,j;
+		cin>>i>>j;
+		cout<<papaArr[i][j]<<endl;
+	}
 }
 
 

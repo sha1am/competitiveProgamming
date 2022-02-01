@@ -20,7 +20,7 @@ using namespace std;
 //Modified
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
 #define lcm(a, b)      (a * (b / __gcd(a,b)))
-#define endl			"\n"
+// #define endl			"\n"
 
 
 #ifndef ONLINE_JUDGE
@@ -66,56 +66,116 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
-bool checkSet(queue<int> qAOnes,queue<int> qBOnes){
+stack<int> sAG;
+stack<int> sBG;
+bool checkSet(queue<int> qAOnes,queue<int> qBOnes) {
+	stack<int> sA;
+	stack<int> sB;
 	bool flag=false;
-	set<int> sA;
-	set<int> sB;
-	
-	while(!qAOnes.empty()){
-		sA.insert(qAOnes.front());
+
+	//if global variables have the value then no need to calculate;
+	// if(!sAG.empty() && !sBG.empty() && sAG.top()!=sBG.top()) {
+	// 	//
+	// 	if(sBG.top()>sAG.top()) {
+	// 		flag=true; return flag;
+	// 	}
+	// }
+
+	while(!qAOnes.empty()) {
+		sA.push(qAOnes.front());
 		qAOnes.pop();
 	}
-	
-	while(!qBOnes.empty()){
-		sB.insert(qBOnes.front());
+	while(!qBOnes.empty()) {
+		sB.push(qBOnes.front());
 		qBOnes.pop();
 	}
-	
-	
-	while(!sA.empty() && !sB.empty()){
-		
-		if(*sA.begin()==*sB.begin()){
-			//
-			int a=*sA.begin();
-			sA.erase(a);
-			sB.erase(a);
-			continue;
-		}
-		else{
-			if(*sB.begin()>*sA.begin()){
-				flag=true;
-				return flag;
-			}
-			else{
-				return flag;
-			}
-		}
-		
+
+	//now reverse the stacks.
+	stack<int> tmpStk;
+
+	//first sA;
+	while(!sA.empty()) {
+		tmpStk.push(sA.top());
+		sA.pop();
 	}
-	
-	if(sA.empty() || sB.empty()){
-		if(sA.empty())flag=true;
+	// sA.clear();
+	sA=tmpStk;
+	stack<int> emptyStk;
+	tmpStk=emptyStk;
+
+	while(!sB.empty()) {
+		tmpStk.push(sB.top());
+		sB.pop();
+	}
+	sB=tmpStk;
+	// stack<int> emptyStk;
+	// tmpStk=emptyStk;
+	int a=-1;
+	int b=-1;
+	//now we have both stacks as reversed.
+	while(!sA.empty() && !sB.empty() && sA.top()==sB.top()) {
+		int c=sA.top();
+		a= sA.top();
+		b= sB.top();
+		if(sB.top()==a) {
+			while(!sB.empty() && sB.top()==c) {
+				a= sA.top();
+				sB.pop();
+			}
+			while(!sA.empty() && sA.top()==c) {
+				b= sB.top();
+
+				sA.pop();
+			}
+		}
+
+	}
+
+	debug(sA);
+	debug(sB);
+	// sAG=sA;
+	// sBG=sB;
+
+	//now we have either one of the stacks empty or one has higher value on top;
+	// there can be a case when both of them are empty;
+	if(sA.empty()) {
+		flag=true;
+		debug(a);
+		debug(b);
+		if(a>b) flag=false;
 		return flag;
 	}
-	
+	if(sB.empty()) {
+		flag=false;
+		if(b>a) flag=false;
+
+		return flag;
+	}
+	//else compare both top values .
+	a=sA.top();
+	b=sB.top();
+
+	if(b>a) flag=true;
 	return flag;
 }
 
 void solve() {
+	//reset global variables
+	stack<int> emptyStk;
+	sAG=emptyStk;
+	sBG=emptyStk;
+
 	int n;
 	cin>>n;
 	string a,b;
 	cin>>a>>b;
+
+	// //just to test case // comment this in final ans
+	// n=n*20;
+	// rep(i,0,20){
+	// 	a+=a;
+	// 	b+=b;
+	// }
 
 	//store the string in a vector
 	queue<int> qA;
@@ -129,7 +189,7 @@ void solve() {
 	}
 	debug(qA);
 	debug(qB);
-	
+
 
 	vector<int> ans;
 
@@ -149,6 +209,9 @@ void solve() {
 		ans.pb(0);
 	}
 	debug(ans);
+	debug(qA);
+	debug(qB);
+
 
 
 	//keep track of all 1s with number of zeros after them
@@ -156,7 +219,7 @@ void solve() {
 	queue<int> qBOnes;
 
 	while(!qA.empty()) {
-		if(qA.front()==1) {
+		if(qA.front()==1 ) {
 			//now pop this and count zeros
 			qA.pop();
 			int cntZerosCurrent=0;
@@ -169,6 +232,7 @@ void solve() {
 
 		}
 	}
+	debug(qAOnes);
 	while(!qB.empty()) {
 		if(qB.front()==1) {
 			//now pop this and count zeros
@@ -182,6 +246,7 @@ void solve() {
 			qBOnes.push(cntZerosCurrent);
 
 		}
+
 	}
 	debug(ans);
 	debug(qAOnes);
@@ -189,6 +254,9 @@ void solve() {
 	//now check which qX front has greater number of zeros and add them to the answer;
 	bool flag=true;
 	while(!qAOnes.empty() || !qBOnes.empty()) {
+		debug(qAOnes);
+		debug(qBOnes);
+
 		if(qBOnes.empty() || qAOnes.empty()) {
 			// we either need to print one of them fully into the ans;
 			while(!qBOnes.empty()) {
@@ -208,24 +276,26 @@ void solve() {
 		} else {
 			if(qBOnes.front()>qAOnes.front()) {
 				flag=false;
-				
-			}
-			else if(qBOnes.front()==qAOnes.front()){
-				
-				if(checkSet(qAOnes,qBOnes)){
-					flag=false;
+
+			} else
+				if(qBOnes.front()==qAOnes.front()) {
+
+					if(checkSet(qAOnes,qBOnes)) {
+						flag=false;
+						// sBG.pop();
+					} else {
+						// sAG.pop();
+					}
 				}
-			}
-			
-			
-			if(flag){
+
+
+			if(flag) {
 				ans.pb(1);
 				rep(i,0,qAOnes.front()) {
 					ans.pb(0);
 				}
 				qAOnes.pop();
-			}
-			else {
+			} else {
 				ans.pb(1);
 				rep(i,0,qBOnes.front()) {
 					ans.pb(0);
@@ -236,19 +306,19 @@ void solve() {
 
 		}
 	}
-	
+
 	//print ans ;
 	debug(ans);
-	
+
 	int cntOfOnesTillNow=0;
 	int cntOfInv=0;
-	rep(i,0,ans.size()){
+	rep(i,0,ans.size()) {
 		if(ans[i]==1) cntOfOnesTillNow+=1;
-		else{
+		else {
 			cntOfInv+=cntOfOnesTillNow;
 		}
 	}
-	
+
 	cout<<cntOfInv<<endl;
 
 }

@@ -20,10 +20,10 @@ using namespace std;
 //Modified
 #define time(s)       (double(clock()-s)/double(CLOCKS_PER_SEC))
 #define lcm(a, b)      (a * (b / __gcd(a,b)))
-#define endl			"\n"
+// #define endl			"\n"
 
 
-#ifndef OendlINE_JUDGE
+#ifndef ONLINE_JUDGE
 #define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
 #else
 #define debug(x)
@@ -63,14 +63,166 @@ template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a)
 template<typename T,typename T1>T amax(T &a,T1 b) {if(b>a)a=b; return a;}
 template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 
-const long long INF=1e18; 
+const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
-void solve(){
-	vector<int> v={1};
-	___typeFun(v[0]);
+
+void solve() {
+
+
+	int n;
+	cin>>n;
+	string a,b;
+	cin>>a>>b;
+
+
+	//store the string in a vector
+	queue<int> qA;
+	queue<int> qB;
+
+	rep(i,0,n) {
+		qA.push(a[i]-'0');
+	}
+	rep(i,0,n) {
+		qB.push(b[i]-'0');
+	}
+	debug(qA);
+	debug(qB);
+
+
+	vector<int> ans;
+
+	//count number of zeros
+	int cntLZ=0;
+	while(qA.front()==0) {
+		cntLZ+=1;
+		qA.pop();
+	}
+	while(qB.front()==0) {
+		cntLZ+=1;
+		qB.pop();
+	}
+
+	//we have all leading zeros
+	rep(i,0,cntLZ) {
+		ans.pb(0);
+	}
+	debug(ans);
+	debug(qA);
+	debug(qB);
+
+
+
+	//keep track of all 1s with number of zeros after them
+	queue<int> qAOnes;
+	queue<int> qBOnes;
+
+	while(!qA.empty()) {
+		if(qA.front()==1 ) {
+			//now pop this and count zeros
+			qA.pop();
+			int cntZerosCurrent=0;
+			while(!qA.empty() && qA.front()==0) {
+				cntZerosCurrent+=1;
+				qA.pop();
+			}
+			//now we have all zeros for this 1
+			qAOnes.push(cntZerosCurrent);
+
+		}
+	}
+	debug(qAOnes);
+	while(!qB.empty()) {
+		if(qB.front()==1) {
+			//now pop this and count zeros
+			qB.pop();
+			int cntZerosCurrent=0;
+			while(!qB.empty() && qB.front()==0) {
+				cntZerosCurrent+=1;
+				qB.pop();
+			}
+			//now we have all zeros for this 1
+			qBOnes.push(cntZerosCurrent);
+
+		}
+
+	}
+	debug(ans);
+	debug(qAOnes);
+	debug(qBOnes);
+	//now check which qX front has greater number of zeros and add them to the answer;
+	bool flag=true;
+	while(!qAOnes.empty() || !qBOnes.empty()) {
+		debug(qAOnes);
+		debug(qBOnes);
+
+		if(qBOnes.empty() || qAOnes.empty()) {
+			// we either need to print one of them fully into the ans;
+			while(!qBOnes.empty()) {
+				ans.pb(1);
+				rep(i,0,qBOnes.front()) {
+					ans.pb(0);
+				}
+				qBOnes.pop();
+			}
+			while(!qAOnes.empty()) {
+				ans.pb(1);
+				rep(i,0,qAOnes.front()) {
+					ans.pb(0);
+				}
+				qAOnes.pop();
+			}
+		} else {
+			if(qBOnes.front()>qAOnes.front()) {
+				flag=false;
+
+			} else
+				if(qBOnes.front()==qAOnes.front()) {
+
+					if(checkSet(qAOnes,qBOnes)) {
+						flag=false;
+						// sBG.pop();
+					} else {
+						// sAG.pop();
+					}
+				}
+
+
+			if(flag) {
+				ans.pb(1);
+				rep(i,0,qAOnes.front()) {
+					ans.pb(0);
+				}
+				qAOnes.pop();
+			} else {
+				ans.pb(1);
+				rep(i,0,qBOnes.front()) {
+					ans.pb(0);
+				}
+				qBOnes.pop();
+			}
+			debug(ans);
+
+		}
+	}
+
+	//print ans ;
+	debug(ans);
+
+	int cntOfOnesTillNow=0;
+	int cntOfInv=0;
+	rep(i,0,ans.size()) {
+		if(ans[i]==1) cntOfOnesTillNow+=1;
+		else {
+			cntOfInv+=cntOfOnesTillNow;
+		}
+	}
+
+	cout<<cntOfInv<<endl;
+
 }
+
 
 
 signed main() {
@@ -78,10 +230,9 @@ signed main() {
 	cin.tie(0); cout.tie(0);
 
 	// freopen("input.in", "r", stdin)c
-
 	// freopen("output.in", "w", stdout);
 	start = clock();
-#ifndef OendlINE_JUDGE
+#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
 #endif
 
@@ -94,7 +245,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;
