@@ -1,0 +1,21 @@
+# how to create a vm on gcp:- 
+	- ls 
+	- git 
+	- sudo apt-get install git 
+	- git  clone http://www.github.com/GoogleCloudPlatform/training-data-analyst
+	- ls ( courses ---> bdml_fundamentals -> demos ->earthquakevm)
+	- less ingest.sh	- .install_missing.sh
+	- ingest.sh ( if wget not found:- sudo apt-get install wget)
+	- head eartquake.csv
+	- ./transform.py
+	- you'll get a *.png file. 
+	- create a bucket with unique name ( storage -> bucket)
+	- gsutil  ls gs://qwiklabs43905831984513
+	- ls 
+	- gsutil cp earthquakes.* gs://qwicklabs1273590989158
+	- give permissions to AllUsers 
+	
+	- gsutil mb  -p [project_name] -c [storage_class] -l [bucket_location]  gs://[Buket_name]/
+	
+# 
+	

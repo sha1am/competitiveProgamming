@@ -1,1 +1,14 @@
-Time Taken: 0.00025
+ans [ ]
+count 0
+count 0
+count 0
+ans [ 3 ]
+ans [ ]
+count 0
+count 0
+count 0
+ans [ 3 ]
+count 1
+count 1
+ans [ 3 5 ]
+Time Taken: 0.000564

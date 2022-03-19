@@ -1,0 +1,10 @@
+Project1:-
+
+savwings /sawings (Logo idea:- vv like w)
+
+
+Program:-
+	- make two three databases
+			- Take a market dataset , and make other two by randomly deleting and updating the prices by for example.
+			- by the end of this, you'll have three datasets of three shops like ds1, ds2 , ds3.
+			- 

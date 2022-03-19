@@ -63,13 +63,115 @@ template<typename T1,typename T2>ostream& operator<<(ostream& out,pair<T1,T2> a)
 template<typename T,typename T1>T amax(T &a,T1 b) {if(b>a)a=b; return a;}
 template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 
-const long long INF=1e18; 
+const long long INF=1e18;
 const int32_t M=1e9+7;
 const int32_t MM=998244353;
 
-void solve(){
-	vector<int> v={1};
-	___typeFun(v[0]);
+void solve() {
+	// string s;
+	// cin>>s;
+	// debug(s);
+	// cout<<"S"<<endl;
+	vector<char> stringO;
+
+	for(int i=0; i<s.length(); i++) {
+		stringO.push_back(s[i]);
+	}
+	vector<char> stringOO=stringO;
+	// debug(stringO);
+	int count=0;
+	int count1=0;
+	//for each new i , we have to travel from the end // to get the biggest palin
+	while(stringO.size()!=0) {
+		char fr=stringO[0];
+		//an array to mark all the characters equal to 0th char from end.
+		vector<int> vis(stringO.size(),-1);
+		for(int i=0; i<stringO.size(); i++) {
+			if(stringO[i]==fr) vis[i]=0; // 0-possible candidate , 1- PC but visited
+		}
+		// debug(vis);
+		bool flagForThisPalindrome=false;
+		while(flagForThisPalindrome!=true) {
+			for(int j=stringO.size()-1; j>=0; j--) {
+				if(vis[j]==0 && stringO[j]==fr) {
+					vis[j]=1; // mark this visited
+					int i=0;
+					int dummyI=0;
+					int dummyJ=j;
+					bool flagThisCase=true; // lets assume its true
+					while(dummyI<dummyJ) {
+						if(stringO[dummyI]!=stringO[dummyJ]) {
+							flagThisCase=false;
+							break;
+						}
+						dummyI++; dummyJ--;
+					}
+					// if the whole while lp gets executed without setting the flag false. delte the indexes.
+					// cout<<i<<" "<<j<<endl;
+					if(flagThisCase) {
+						// cout<<i<<" "<<j<<endl;
+						stringO.erase(stringO.begin()+i,stringO.begin()+j+1);
+						flagForThisPalindrome=true;
+						count+=1;
+						// debug(stringO);
+						break;
+					}
+					// debug(stringO);
+
+				}
+			}
+		}
+
+	}
+	
+	while(stringOO.size()!=0) {
+		char lst=stringOO[stringOO.size()-1];
+		//an array to mark all the characters equal to 0th char lstom end.
+		vector<int> vis(stringOO.size(),-1);
+		for(int i=0; i<stringOO.size(); i++) {
+			if(stringOO[i]==lst) vis[i]=0; // 0-possible candidate , 1- PC but visited
+		}
+		// debug(vis);
+		bool flagForThisPalindrome=false;
+		while(flagForThisPalindrome!=true) {
+			for(int i=0; i<stringOO.size(); i++) {
+				if(vis[i]==0 && stringOO[i]==lst) {
+					vis[i]=1; // mark this visited
+					int j=stringOO.size()-1;
+					int dummyI=i;
+					int dummyJ=j;
+					bool flagThisCase=true; // lets assume its true
+					while(dummyI<dummyJ) {
+						if(stringOO[dummyI]!=stringOO[dummyJ]) {
+							flagThisCase=false;
+							break;
+						}
+						dummyI++; dummyJ--;
+					}
+					// if the whole while lp gets executed without setting the flag false. delte the indexes.
+					// cout<<i<<" "<<j<<endl;
+					if(flagThisCase) {
+						// cout<<i<<" "<<j<<endl;
+						stringOO.erase(stringOO.begin()+i,stringOO.begin()+j+1);
+						flagForThisPalindrome=true;
+						count1+=1;
+						// debug(stringOO);
+						break;
+					}
+					// debug(stringOO);
+
+				}
+			}
+		}
+
+	}
+	// cout<<"A"<<endl;
+	// debug(count);
+	// debug(count1);
+	int minn=min(count, count1);
+	// debug(minn);
+	// return count-1;
+	// return min-1;
 }
 
 
@@ -81,7 +183,7 @@ signed main() {
 
 	// freopen("output.in", "w", stdout);
 	start = clock();
-#ifndef OendlINE_JUDGE
+#ifndef ONLINE_JUDGE
 	freopen("error.in", "w", stderr);
 #endif
 
@@ -94,7 +196,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

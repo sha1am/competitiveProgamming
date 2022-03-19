@@ -1,5 +1,14 @@
 [
 	{
-		"test": ""
+		"test": "2\naab\naaaab\n"
+	},
+	{
+		"test": "1\naab\n"
+	},
+	{
+		"test": "2\naabbc\nabbbcc\n"
+	},
+	{
+		"test": "1\naaabaa\n"
 	}
 ]

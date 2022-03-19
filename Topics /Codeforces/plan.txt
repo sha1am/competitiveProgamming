@@ -1,0 +1,19 @@
+Current :- 
+	-do 20 from 800.
+	-do 30 from 900.
+	-do 30 from 1000.
+	
+
+
+
+Basic:-
+	-try to do 3 hard problems + 4 simple ones
+
+
+While at home:-
+
+
+While at College:-
+	- try to complete all the task in college
+	-solve level A problems from C2ladders ( most solved)
+	-

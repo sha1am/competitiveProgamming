@@ -1,0 +1,42 @@
+Toc Notes:-
+-----------------------------------------------------
+
+vid1:-
+
+-how computer science is studied as a science and how fast can a computer compute and the space it will take.
+-We cannot compute mechannically if a code will run into an infinite loop
+- heirarchy ( VENN DAIGRAM)
+	- Undecidable
+	- turing machine 
+	- CFL ( context free language)
+	- finate state machine
+	- CFL ( context free language)
+	- turing machine 
+	- Undecidable	
+- set of string is called language.
+
+-----------------------------------------------------
+vid2:-
+
+-symbols:- like a,b,c,0,1
+-alphabets:-
+	-denoted by sigma={0,1}
+-string :- sequence of symbols (ie. ab, a, b, aca, abc, 01, 001,111 )
+-language:- set of strings according to a rule. (ie. all string which end with 0)
+
+Example:- given alphabet Sigma={a,b,c}
+	- L1= set of all string of length 2 ( ie. ab, ba, ac, bc,cc, aa, bb)
+	- L2= set of all strings of which start with a and end with c 
+	( ie. a***c, where * can be any of the symbols in the alphabet sigma)
+
+- L1 is finite language and l2 is infinite
+
+- Powers of sigma:-
+	- Sigma^n = set of all strings of length n 
+	- ie. sigma^0={ epsilon}
+	- ie. sigma^2={00,01,10,11}
+	
+
+
+-----------------------------------------------------
+	

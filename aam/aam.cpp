@@ -31,7 +31,7 @@ using namespace std;
 
 //clock
 clock_t start;
-mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
+// mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
 
 void _print(long long t) {cerr << t;}
 void _print(string t) {cerr << t;}
@@ -86,7 +86,7 @@ double  eucleadianDis(int x1,int y1, int x2, int y2) {
 
 void solve() {
 	int a;
-
+	cout<<"sssssssss";
 	// int ans=eucleadianDis(1,2,2,4);
 	// cout<<ans<<endl;
 

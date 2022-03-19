@@ -1,0 +1,89 @@
+#Instructions 
+
+1)First make an account on quiklabs.com
+
+Website:- https://www.qwiklabs.com
+	-This will ask to sign in, 
+	-then it MIGHT/will ask to agree to terms and conditions.
+	
+1.1) 	Make an account on this :- https://go.qwiklabs.com/skillschallenge
+		- this will enroll you to a google skills challenge. 
+		- ( Update:-) This will say go to "ThisRandomLink.com" to enroll for google cloud learning challenge.
+		- Sign up on this link. ( Enter name,phone,Buisness name etc.)
+			- On website cloumn add this website:-   shalam.ddns.net
+		- After filling this , check your mail. (Wait 3 mins.)
+		
+1.2)	You'll get a unique code in your mail. Click on "Start learning" ( blue box in your mail)
+		- do a signin again (if not logged in)
+		- Click on "startup lab". Leave the lab on for 2 mins and then end it.
+	
+	
+	
+	
+	
+------------------------^-steps till now were only to be done one time only -^----------------------
+
+2) Go to course :-
+	Course Name :- Understanding and Combining GKE Autoscaling Strategies
+	Course Link :- https://www.qwiklabs.com/focuses/15636?parent=catalog
+	
+	or 
+	
+	Course Name :- Autoscaling TensorFlow Model Deployments with TF Serving and Kubernetes
+	Course Link :- https://www.qwiklabs.com/focuses/17649?parent=catalog
+	
+	
+
+3) Now open a private tab and go to cloud.google.com
+ - Till now you have two tabs:-
+ 	1) Simple tab -- with quicklabs and course(ie. 1.5 hrs one) would be opened.
+ 	2) Private tab -- with google cloud opened ( Don't login yet.)
+ 	
+4) On the Simple tab:- Click on "Start Lab"
+ 	- A robot verification page will pop up. Complete it.
+ 	- After this, another pop up will pop up.
+ 	- On this window , click on "Use Subscription".
+ 	
+ 
+5) Now the lab will be started, and you could see the countdown timer has started.
+ 	- Now you will have two more stuff 
+ 		- Username 
+ 		- Password 
+ 	-You will use this Username and password to login to cloud.google.com in the private tab.
+ 	- copy the project name to your clipboard (You'll use it in step 7.)
+
+6) Login to cloud.google.com in the private tab. 
+	-After succesful login , it will show an option of "Go to Console" ( in blue, T.Right corner)
+
+	- make sure you are at a website like:- (https://console.cloud.google.com/home/dashboard?project=cloudshell-images&authuser=0&pli=1)
+	
+	
+7) Creating VM :- 
+	- as in tutorial 
+	- command line :-
+	
+	gcloud compute instances create vm1 --project=### --zone=us-central1-a --machine-type=n1-standard-2 --network-interface=network-tier=PREMIUM,subnet=default --metadata=enable-oslogin=true --maintenance-policy=MIGRATE --service-account=###@###.iam.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --create-disk=auto-delete=yes,boot=yes,device-name=vm1,image=projects/debian-cloud/global/images/debian-10-buster-v20220118,mode=rw,size=10,type=projects/###/zones/us-central1-a/diskTypes/pd-standard --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
+	
+	
+	^-(replace ### to the current project name(ie. the one you copied to clipboard));
+	
+8) Open the cloud shell
+	- Enter the command and Enter.
+
+9) Open the virtual machine and done!
+	
+----------------------------------------------------------------
+	
+Questions:- Why to use private tabs? 
+Precautions:- 1) end the test before the timer goes to 2 mins.( Not tested)
+			  2) Creating the vm from step 7 command may result in not use of some google api. ( not tested.)
+			  
+Resource :- https://www.youtube.com/watch?v=QTbEy7AG9U4 --- video tutorial
+			https://www.youtube.com/watch?v=Rx8H2ATzu0A --- What to do if your lab quota exceeds.
+					 
+Other 1.5 hours labs :- https://www.qwiklabs.com/focuses/16327?parent=catalog
+						
+----------------------------------------------------------------
+Author:Shadab 
+----------------------------------------------------------------
+			  

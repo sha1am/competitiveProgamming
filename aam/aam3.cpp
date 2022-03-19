@@ -71,7 +71,7 @@ int w=15; //increase it before using in realfunction ********* maybe 50-100
 int n=103; // for power one equal to size of array in question
 //intitialise inner pair
 vector<int> tempV0(32,0);
-pair<int,vector<int>> tempP=make_pair(-1,tempV0);
+pair<int,vector<int > > tempP=make_pair(-1,tempV0);
 //now initiliaze outer pair
 vector<pair<int,vector<int>>> tempV1; // size of this array is unknown in the begin
 pair<bool,vector<pair<int,vector<int>>>> element=make_pair(false,tempV1);

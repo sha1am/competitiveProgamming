@@ -1,0 +1,79 @@
+v [ 2 4 3 ]
+v[i] 4
+prevCh (
+currCh (
+prevCh (
+currCh )
+tempV [ 4 ]
+v[i] 3
+prevCh )
+currCh )
+prevCh )
+currCh )
+tempV [ 4 3 ]
+vv [ [ 2 4 ] [ 4 3 ] ]
+vv [ [ 4 2 ] [ 4 3 ] ]
+v [ 3 2 3 1 ]
+v[i] 2
+prevCh )
+currCh )
+prevCh )
+currCh (
+tempV [ 2 ]
+v[i] 3
+prevCh (
+currCh (
+prevCh (
+currCh )
+tempV [ 3 ]
+v[i] 1
+prevCh )
+currCh )
+prevCh )
+currCh (
+tempV [ 1 ]
+vv [ [ 3 2 ] [ 2 3 ] [ 3 1 ] [ 1 ] ]
+vv [ [ 3 2 ] [ 3 2 ] [ 3 1 ] [ 1 ] ]
+v [ 69 69 ]
+v[i] 69
+prevCh (
+currCh (
+prevCh (
+currCh (
+tempV [ 69 69 ]
+vv [ [ 69 69 ] ]
+vv [ [ 69 69 ] ]
+v [ 719313 273225 402638 473783 804745 323328 ]
+v[i] 273225
+prevCh )
+currCh )
+prevCh )
+currCh (
+tempV [ 273225 ]
+v[i] 402638
+prevCh (
+currCh (
+prevCh (
+currCh (
+tempV [ 273225 402638 ]
+v[i] 473783
+prevCh (
+currCh (
+prevCh (
+currCh (
+tempV [ 273225 402638 473783 ]
+v[i] 804745
+prevCh (
+currCh (
+prevCh (
+currCh )
+tempV [ 804745 ]
+v[i] 323328
+prevCh )
+currCh )
+prevCh )
+currCh (
+tempV [ 323328 ]
+vv [ [ 719313 273225 ] [ 273225 402638 473783 804745 ] [ 804745 323328 ] [ 323328 ] ]
+vv [ [ 719313 273225 ] [ 804745 473783 402638 273225 ] [ 804745 323328 ] [ 323328 ] ]
+Time Taken: 0.002756
