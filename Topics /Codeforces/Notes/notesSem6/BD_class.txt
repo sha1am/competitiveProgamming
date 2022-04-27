@@ -1,0 +1,5 @@
+
+// How to do the mapreduce program using sql query?
+
+-- select name from database where name[0]='a'
+

@@ -65,78 +65,195 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const long long minINF=-1e18;
 const int32_t M=1e9+7;
+
 const int32_t MM=998244353;
 int N=100002;
-void solve(){
-	int n;
-	cin>>n;
-	
+void solve() {
+	int n,k;
+	cin>>n>>k;
+
 	vector<int> v(n,-1);
-	rep(i,0,n){
+	map<int,int> mp;
+
+	rep(i,0,n) {
 		cin>>v[i];
-	}
-	
-	debug(v);
-	
-	//(  for ascending and ) for descending 
-	char prevCh='x';
-	char currCh='x';
-	if(v[0]<=v[1]){
-		prevCh='(';
-		currCh='(';
-	}
-	else if(v[0]>v[1]){
-		currCh=')';
-		prevCh=')';
-	}
-		
-	//vector of vectors 
-	vector<vector<int>> vv;
-	vector<int> tempV;
-	tempV.pb(v[0]);
-	for(int i=1; i<n; i++){
-		debug(v[i]);
-		debug(prevCh);
-		debug(currCh);
-		if(v[i]<=v[i+1]){
-			//ascending is 
-			currCh='(';
+		if(mp.find(v[i])!=mp.end()) {
+			// the element already exits;
+			mp[v[i]]+=1;
+		} else {
+			mp[v[i]]=1;
 		}
-		else if(v[i]>v[i+1]){
-			currCh= ')';
-		}
-		
-		debug(prevCh);
-		debug(currCh);
-		if(prevCh==currCh){
-			//let it run
-			tempV.pb(v[i]);
-		}
-		
-		else{
-			// now the sequence has changed , 
-			//push the temporary variable into vv
-			// tempV.pb(v[i]);
-			vv.pb(tempV);
-			//clear the temprorary array
-			tempV.clear();
-			//
-			tempV.pb(v[i]);
+	}
+
+	debug(mp);
+
+	// will keep the count of index with the size of the multiset.
+	multiset<pair<int,int>> sCount;
+
+	rep(i,0,k+1) {
+		sCount.insert(make_pair(0,i));
+	}
+	debug(sCount);
+	multiset<int> s[k+1];
+	// multiset<pair<int, multiset<int>>> ss[k+1];
+
+	map<int,int> ::iterator it=mp.begin();
+
+	for(; it!=mp.end(); ++it) {
+		if(it->sc>=k+1) {
+			int kk=it->sc;
+			rep(i,0,kk) {
+
+				// check which s[i] to insert to.
+				int indexToInsert=0;
+				// indexToInsert=sCount.begin()->sc;
+				indexToInsert=i;
+				
+				if(i>=(k+1)) indexToInsert=0;
+
+				s[indexToInsert].insert(it->fr);
+				debug((int)indexToInsert);
+				debug(s[indexToInsert]);
+				// debug(i);
+				//update the count in the count fuction
+				multiset<pair<int,int>> :: iterator it1=sCount.begin();
+				for(; it1!=sCount.end(); it1++) {
+					if(it1->sc==indexToInsert) {
+						int aa=it1->fr;
+						int bb=it1->sc;
+						debug(aa);
+						debug(bb);
+
+						it1=sCount.erase(it1);
+						debug(sCount);
+						sCount.insert(make_pair(aa+1,bb));
+						debug(sCount);
+						break;
+					}
+
+
+				}
+			}
+			// //rest all in s[0]
 			
-			//update the last curr
-			prevCh=currCh;
-			
+			// rep(i,0,(kk-(k+1))){
+			// 	s[]
+			// }
+			cerr<<"HEy"<<endl;
+			//update the new count
+			rep(i,0,k+1) {
+				debug(s[i])
+
+			}
+			mp[it->fr]=0;
+			continue;
+			// it->sc=0;
+			debug(mp);
+
+		} else {
+			//it->sc is whatever else (ie. 3 2 1)
+			while(it->sc>0) {
+				multiset<pair<int,int>> sCountTemp=sCount;
+				//find 0 and remove it;
+				multiset<pair<int,int>> ::iterator it1=sCountTemp.begin();
+				for(; it1!=sCountTemp.end(); ++it1) {
+					if(it1->sc==0) {
+						sCountTemp.erase(it1);
+						break;
+					}
+				}
+				int indexToInsert=0;
+				indexToInsert=sCountTemp.begin()->sc;
+
+				s[indexToInsert].insert(it->fr);
+
+				//update the count in the sCount
+
+				multiset<pair<int,int>>::iterator it2=sCount.begin();
+				for(; it2!=sCount.end(); ++it2) {
+					if(it2->sc==indexToInsert) {
+						int aa=it2->fr;
+						int bb=it2->sc;
+						it2=sCount.erase(it2);
+						sCount.insert(make_pair(aa+1,bb));
+						break;
+
+					}
+
+				}
+				debug(it->sc);
+				it->sc-=1;
+				debug(it->sc);
+
+				rep(i,0,k+1) {
+					debug(s[i]);
+
+				}
+
+			}
 		}
-		
-		debug(tempV);
-		// debug(v[i]);
-		
-		
+		debug(mp);
 	}
-	
-	
-	debug(vv);
+
+	rep(i,0,k+1) {
+		debug(s[i]);
+
+	}
+	cerr<<"Hello"<<endl;
+	//now print acccordingly
+
+
+	///first check if the s[1]-s[k] has equal number of elements
+	bool flag=true;
+	int minn=s[1].size();
+	rep(i,1,k+1) {
+		if(s[i].size()!=minn) flag=false;
+
+		if(s[i].size()<minn) {
+			minn=s[i].size();
+		}
+	}
+	debug(minn);
+	if(flag==false){
+		//shift all extra elements to s[0];
+		rep(i,1,k+1){
+			while(s[i].size()!=minn){
+				int aa=*s[i].begin();
+				s[i].erase(s[i].find(aa));
+				s[0].insert(aa);
+				break;
+			}
+		}
+	}
+
+	rep(i,0,k+1) {
+		debug(s[i]);
+
+	}
+	cerr<<"Hello#"<<endl;
+
+
+	rep(j,0,n) {
+		//now find v[i] is present in which multiset?
+		rep(i,0,k+1) {
+			if(s[i].find(v[j])!=s[i].end()) {
+				//the value is present
+				cout<<i<<" ";
+				//delete from this multiset;
+				s[i].erase(s[i].find(v[j]));
+				break;
+			} else {
+				continue;
+			}
+		}
+	}
+
+	cout<<endl;
+
+
+
 }
+
 signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);

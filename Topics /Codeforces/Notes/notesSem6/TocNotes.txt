@@ -36,7 +36,76 @@ Example:- given alphabet Sigma={a,b,c}
 	- ie. sigma^0={ epsilon}
 	- ie. sigma^2={00,01,10,11}
 	
+- Cardinality :- Number of elements in a set.
+	-ie. Cardinality = 2^n.
+	-ie. Cardinality of sigma^2 = 2^2=4. ( where : sigma^2={00,01,10,11} )
 
+- sigma^* = sigma^0 U sigma^1 U sigma^2 .........
+		  = {epsilon} U {0,1} U {00,01,10,11}......
+		  = set of all strings of all length over 0 to n. ( infinite set)
+		  
 
 -----------------------------------------------------
+vid 3:-
+
+- Finite state machine has two properties:-
+	- its the simplest form of machine 
+	- it has limited memory
 	
+- Finite State Machine (FSM)
+	|---without output	|--- Deterministic finite automata (DFA)
+	|					|--- Non Deterministic finite automata (NDFA) (or NFA)
+	|					|--- Epsilon Non Deterministic finite automata( Epsilon NDFA)
+	|
+	|--- with output	|--- Moore Machine 
+						|--- Mealy Machine
+	
+- ( Q, sigma, qnot,  F , del)
+	-  Q= set of all states
+	- sigma=set of all inputs 
+	- qnot= starting state
+	- F = set of final states
+	- del= transition function from Q x sigma -> Q
+- For this example:-
+	- Q={A,B,C,D}
+	- sigma ={0,1}
+	- qnot= A
+	- F ={D}
+	- del = transition function from all States to inputs.
+	
+			0 1
+		A
+		B
+		C
+		D
+		- If the state is A and 0 is fed which state will it go?
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

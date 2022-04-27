@@ -1,0 +1,12 @@
+ML_Notes:-
+
+- What is elbow method?
+- what is silhoutte score?
+
+
+
+“the objective of K-means is simple: group similar data points together and discover underlying patterns. To achieve this objective, K-means looks for a fixed number (k) of clusters in a dataset.”
+A cluster refers to a collection of data points aggregated together because of certain similarities.
+
+
+
