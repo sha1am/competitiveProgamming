@@ -3,3 +3,28 @@
 
 -- select name from database where name[0]='a'
 
+
+
+#hive commands
+
+create database database_name;
+create database if not exist database_name;
+
+
+create table table_name( col1_name col1_datatype, col2_name col2_datatype) comments 'the comments about this table' row format delimited fields terminated by '\t' rows terminated by '\n' stored as textfile;
+
+create table if not exists table_name(col1_name col1_datatype, col2_name col2_datatype) comments 'the comments about this table' row format delimited field terminated by '\t' rows terminated by '\n' stored as textfile;
+
+alter table_name rename to table_name_new;
+
+alter table_name add columns(new_col_name new_col_name_datatype) ;
+
+alter table_name drop column column_name;
+
+drop table table_name;
+drop table if exists table_name;
+
+insert into table_name (col1_name, col2_name ) values (val1, val2);
+
+insert into table_name values (val1, val2) # in case the columns are already created
+insert into table_name values (val1,val2), values (val3, val4);
