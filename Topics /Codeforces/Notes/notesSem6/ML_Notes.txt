@@ -9,4 +9,148 @@ ML_Notes:-
 A cluster refers to a collection of data points aggregated together because of certain similarities.
 
 
+________________________________________________
+________________________________________________
+
+Chapter -5 :-
+
+FEATURE SELECTION :-
+
+# What is feature selection?
+	- also called variable selection
+	- it is a process by which a data scientist selects automatically/ manually a subset of features that will be used in the machine learning algorithm.
+	- key to make relaible machine learing models
+	- most important features 
+	- have high contribution at final prediction
+
+# Why should we select features?
+	Overveiw:- Redundant Features which contribute minimally to the final prediction need to be removed.
+	
+	1) Smaller models are easier to understand
+	2) Less training time
+	3) Eliminate redundent features ;- Some features just contribute nothing to the final model but introduce noise , which makes the model Overfitting . So the model cannot predict better for further datasets. 
+	4) Remove correlated features:- Some set of features only give the same information. 
+		So , its better to remove the features and select only one of them because the others will just increase noise of the dataset.
+
+# What is d/f bt/w feature engineering and feature selection?
+	Feature engineeering means developing or construction new features from the already existing features.
+	While feature selection means, just choosing the features(from already existing features of the newly engineered ones) that you want to include in your ML model.
+	
+	Also , generally the process of feature engineering happens before feature selection obviously.
+
+	
+# What is d/f bt/w dimensinality reduction and feature selection?
+	Dimensionality reduction uses unsupervised ML algorithms to reduce the number of features.
+	Feature selection just chooses the features, it doesn't modify or change the features 
+	while in dimensionality reduction it Modifies or changes the features to generate new features and reduce dimensions.
+	
+
+*** feature selection method should be written here <-
+
+# Filter Methods:-
+	Filter methods select features according to their characterstics/ or certain criteria without/before applying it to the learning model. 
+	
+	Advantages:-
+	- it is cost efficient and its fast. (ie. Computationally inexpensive)
+	- it is independent of any machine learning algorithm.
+	- it is useful for removing irrelevant , redundant and correlated features.
+	
+# What are the two types of filter methods methods?
+	There are two types of filtor methods ;- 
+		1) Univariate Filter Method :- In this all the features are filtered individually and independently, totally on the basis of their Charactersitcs ,
+		without taking care of the fact that the feature might be correlated to other features in the Feature Space.
+		- they do not consider the relationship between features.
+		
+		2) Multivariate Filter Method:- In this, it evalutes the enitire feature space at once considering the relationships between all the features in the feature space.
+		- multivariate Filter method is able to filter redundant , duplicate and correlated features. 
+		
+# What are the various methods in Filter Methods?
+	There are three methods namely		1) Basic filter methods- use to 
+											filter duplicate features
+										2) Correlation filter methods - used to filter the features which are highly correlated.
+										3) Statistical & Ranking Filter methods- used to filter bases on certain criteria and then rank them and then select the best of them.
+
+# What kind of features does Basic filter methods remove?
+	- Constant Features:- Some features have a constant value in all the enteries.
+						- they hold no value in the prediction because they provide no information. 
+						- so they need to be removed
+	- Quasi-constant features:-  in which most of the records have the same value
+	- Duplicate features - The features which are duplicate of each other. 
+	
+# What is correlation? 
+	- a measure of linear relationship between two quantitative vairiables
+	- how STRONGLY one variable depends on each other.
+	
+# Why to remove correlated features?
+	- both the correlated features provide the same information so its better to remove one of the features so that the dimensionality is reduced
+	-  and also the noise introduced is removed.
+	
+# Which is one popular correlation measure?
+	- pearson correlation
+	- it is used to Summarize the strength b/w two data variables between a score of -1 to 1.
+	- 1 means- the features are highluy correlated. 
+			- if one increases , other also increases.
+	- -1 means - the features are -vly correlated.
+	- 0 mean that there is no correlation between the variables
+	
+
+What is formula of pearson correlation?
+-  Sigma (A)(B)
+   __________________________________
+   
+   root(sigma(A)^2) * root(sigma(B)^2)
+	
+	
+where A= x- xbar and B= y - ybar
+
+#What are statistical and ranking filter methods?
+	- these method shred light on the final output and select features with certain statistically criteria and then rank them and then select the top most features.
+
+# Mutal Information - just like correlation but in general term.
+***
+# What is chi squared score ? 
+# What is chi squared formula?
+
+# what is ANOVA?
+	- ANalysis Of Variance , measures the dependence between two variables.
+# What are the assumptions of ANOVA univariate test?
+	- linear relationship between variables
+	- variables are Normally Distributed.
+	- suited for continuous varibles and requires Binary Target.
+	
+# What is ROC AUC / RMSE?
+	- it is also a univariate test
+	- makes no assumption on the data
+	- suitable for all variables
+	- use RMSE for regression problem and ROCAUC For classification problems
+	- the flow is --- make a decision tree -- then use the RMSE/ROC_AUC model --- now rank according to the score.
+
+What are the disadvantages of filter methods?
+	Filter methods choose features independently which can work on any machine learning algorithm.
+		- it can ignore the effect of features on the PERFORMANCE of the ML model.
+		- as it selects features individually it ignores the fact that certain feature can give better
+		results when combined with other features.
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 

@@ -1,0 +1,8 @@
+# Current plan :-
+	- learn dart for some codes. (BrainMentors)
+	- Go through some flutter codes on github
+	- Learn  flutter through crash course from Google .
+	
+	state mng block provider
+	figma , xd 
+	

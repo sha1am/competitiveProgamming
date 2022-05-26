@@ -1,0 +1,17 @@
+
+
+Hive 
+- open source 
+- database system 
+- on top of hadoop
+- ETL tool. 
+- it can process structered and semi-structed data
+
+
+Why was Hive introduced?
+- large amount of data generated
+- rdbms cannot handle it 
+- then we used hadoop 
+- now to retrieve information , lots of lines of codes are required 
+- so came hive to overcome that problem
+

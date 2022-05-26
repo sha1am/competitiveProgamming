@@ -80,6 +80,13 @@ vid 3:-
 		D
 		- If the state is A and 0 is fed which state will it go?
 
+
+
+_______________________________________________
+
+Lec 45 : Regular Expresssion
+
+	- 
 		
 
 

@@ -1,0 +1,94 @@
+ _______________________________________________________
+ _______________________________________________________
+  
+ # Lecture 10 : UML ( Unified Modeling Language)
+ 
+ 	
+ 
+ 	
+ _______________________________________________________
+ 
+ # Black Box testing :- (Last MT)
+ 
+ 	- BBT is done after all the other modules have been made.
+ 	- its not an alternative of white box testing, why?
+ 	
+ 	- also called behavioural testing because it is used to test how the entire software's behaviour once the software is being made.
+ 	
+ 	- it focuses on the fulfilment of Functional requirements.
+ 	
+ 	- it helps to derive the set of final inputs for the software.
+ 	- it also checks for performance error &&  behavioral errors. 
+ 	
+ 	Different methods of Blackbox testing are:-
+ 		- Graph based testing :-
+ 		- Equivalance partitioning :
+ 		- Boundary Value Analysis :
+ 		- orthogonal Array testing :
+ 		 
+ 	- Graph Based testing : - We make a graph in which we make sure that each node is 							traversed atleast once. 
+ 	- Equivalnce partioning :- In Equivalnce Partioning method of Black Box testing , the input domain is divided into number of partions for which the valid or invalid output is predefined and testing is done on that.
+ 	
+ 	- Boundary Value Analysis : Generally , which developing a software or prgram the probablity of error is maximum at the boundaries of the input domain. Therefore, boundary value analysis derives test cases which checks the working of the system along the citical points.
+ _______________________________________________________
+ 	
+ # COCOMO :-
+ 	
+ 	- cocomo stands for COnstructive COst Model.
+ 	- Project estimation techinique
+ 	- There types of cocomo models 
+ 		- organic 
+ 			- 2-50 kloc of code.
+ 		- semi-detached
+ 			- 50-300 kloc
+ 		- embedded
+ 			- >300 kloc
+ 			
+ 	- Basic cocomo advantages and disadvantages?
+ 		- basic cocomo is good for quick, rough and early estimate of software costs
+ 		- it does not consider hardware constrainsts, personals quality and experience and modern tools and techinique and hence its not very accurate because it does not takes into account every variables.
+ 		
+ 	-Basic Cocomo :
+	 	- Effort = a1 ( KLOC)^ a2 PM
+	 	- T(dev) = b1 ( Efforts)^b2 Months
+	 	- productivity = KLOC/Efforts
+ 	
+ 	-Intermediate Cocomo
+	 	- Effort = a1 ( KLOC)^ a2 *(EAF) PM
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
