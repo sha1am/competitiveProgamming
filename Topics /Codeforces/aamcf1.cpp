@@ -74,7 +74,6 @@ void solve() {
 
 	vector<int> v(n,-1);
 	map<int,int> mp;
-
 	rep(i,0,n) {
 		cin>>v[i];
 		if(mp.find(v[i])!=mp.end()) {

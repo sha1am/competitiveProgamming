@@ -5,9 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Dart & Flutter",
+            "name": "console_full_project_3jun",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program":"bin/console_full_project_3jun.dart",
+            "args":["1","2"]
         }
     ]
 }

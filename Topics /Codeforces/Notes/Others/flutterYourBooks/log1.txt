@@ -1,0 +1,136 @@
+https://flutter.dev/go/android-project-migration
+
+to migrate your project. You may also pass the --ignore-deprecation flag to
+ignore this check and continue with the deprecated v1 embedding. However,
+the v1 Android embedding will be removed in future versions of Flutter.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The detected reason was:
+
+  /Users/shadab/Downloads/yourbooks-mob-yourbooks_mob-c893b15df9ae/android/app/src/main/AndroidManifest.xml uses `android:name="io.flutter.app.FutterApplication"`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This app is using a deprecated version of the Android embedding.
+To avoid unexpected runtime failures, or future build failures, try to migrate this app to the V2 embedding.
+Take a look at the docs for migrating an app: https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects
+Using hardware rendering with device sdk gphone x86. If you notice graphics artifacts, consider enabling software rendering with "--enable-software-rendering".
+Launching lib/main.dart on sdk gphone x86 in debug mode...
+Warning: The plugin open_file requires Android SDK version 30.
+Warning: The plugin permission_handler requires Android SDK version 30.
+One or more plugins require a higher Android SDK version.
+Fix this issue by adding the following to /Users/shadab/Downloads/yourbooks-mob-yourbooks_mob-c893b15df9ae/android/app/build.gradle:
+android {
+  compileSdkVersion 30
+  ...
+}
+
+Checking the license for package Android SDK Build-Tools 28.0.3 in /Users/shadab/Library/Android/sdk/licenses
+License for package Android SDK Build-Tools 28.0.3 accepted.
+Preparing "Install Android SDK Build-Tools 28.0.3 (revision: 28.0.3)".
+"Install Android SDK Build-Tools 28.0.3 (revision: 28.0.3)" ready.
+Installing Android SDK Build-Tools 28.0.3 in /Users/shadab/Library/Android/sdk/build-tools/28.0.3
+"Install Android SDK Build-Tools 28.0.3 (revision: 28.0.3)" complete.
+"Install Android SDK Build-Tools 28.0.3 (revision: 28.0.3)" finished.
+Checking the license for package Android SDK Platform 29 in /Users/shadab/Library/Android/sdk/licenses
+License for package Android SDK Platform 29 accepted.
+Preparing "Install Android SDK Platform 29 (revision: 5)".
+"Install Android SDK Platform 29 (revision: 5)" ready.
+Installing Android SDK Platform 29 in /Users/shadab/Library/Android/sdk/platforms/android-29
+"Install Android SDK Platform 29 (revision: 5)" complete.
+"Install Android SDK Platform 29 (revision: 5)" finished.
+Checking the license for package Android SDK Platform 30 in /Users/shadab/Library/Android/sdk/licenses
+License for package Android SDK Platform 30 accepted.
+Preparing "Install Android SDK Platform 30 (revision: 3)".
+"Install Android SDK Platform 30 (revision: 3)" ready.
+Installing Android SDK Platform 30 in /Users/shadab/Library/Android/sdk/platforms/android-30
+"Install Android SDK Platform 30 (revision: 3)" complete.
+"Install Android SDK Platform 30 (revision: 3)" finished.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Warning
+──────────────────────────────────────────────────────────────────────────────
+Your Flutter application is created using an older version of the Android
+embedding. It is being deprecated in favor of Android embedding v2. Follow the
+steps at
+
+https://flutter.dev/go/android-project-migration
+
+to migrate your project. You may also pass the --ignore-deprecation flag to
+ignore this check and continue with the deprecated v1 embedding. However,
+the v1 Android embedding will be removed in future versions of Flutter.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The detected reason was:
+
+  /Users/shadab/Downloads/yourbooks-mob-yourbooks_mob-c893b15df9ae/android/app/src/main/AndroidManifest.xml uses `android:name="io.flutter.app.FutterApplication"`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+lib/Screens/ViewClientVendorsScreen.dart:76:62: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                          style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+                                                             ^^^^^^^^
+lib/Screens/ViewClientVendorsScreen.dart:87:62: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                          style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+                                                             ^^^^^^^^
+lib/Screens/ViewExpensesPurchasesScreen.dart:164:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                    style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+                                                       ^^^^^^^^
+lib/Screens/ViewExpensesPurchasesScreen.dart:175:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                    style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+                                                       ^^^^^^^^
+lib/Screens/ViewInvoicesScreen.dart:230:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                    style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+                                                       ^^^^^^^^
+lib/Screens/ViewInvoicesScreen.dart:241:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                    style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+                                                       ^^^^^^^^
+lib/Screens/PaymentHistoryScreen.dart:166:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                    style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+                                                       ^^^^^^^^
+lib/Screens/PaymentHistoryScreen.dart:177:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                    style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+                                                       ^^^^^^^^
+lib/Widgets/RecurringInvoiceWidget.dart:78:65: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                                    Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+                                                                ^^^^^^^^
+lib/Widgets/RecurringInvoiceWidget.dart:89:68: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+ - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart' ('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+                                style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+                                                                   ^^^^^^^^
+/usr/local/Caskroom/flutter/2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0/lib/src/interface/local_platform.dart:46:19: Error: Member not found: 'packageRoot'.
+      io.Platform.packageRoot; // ignore: deprecated_member_use
+                  ^^^^^^^^^^^
+
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Script '/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter_tools/gradle/flutter.gradle' line: 1102
+
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildDebug'.
+> Process 'command '/usr/local/Caskroom/flutter/2.10.5/flutter/bin/flutter'' finished with non-zero exit value 1
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 5m 15s
+Running Gradle task 'assembleDebug'...                            321.9s
+Exception: Gradle task assembleDebug failed with exit code 1

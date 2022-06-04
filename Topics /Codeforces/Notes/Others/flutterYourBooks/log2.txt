@@ -1,0 +1,240 @@
+[+21901 ms] lib/Screens/ViewClientVendorsScreen.dart:76:62: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                           style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[   +1 ms]                                                              ^^^^^^^^
+[  +96 ms] lib/Screens/ViewClientVendorsScreen.dart:87:62: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                           style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[  +10 ms]                                                              ^^^^^^^^
+[  +25 ms] lib/Screens/ViewExpensesPurchasesScreen.dart:164:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+[  +73 ms]                                                        ^^^^^^^^
+[  +17 ms] lib/Screens/ViewExpensesPurchasesScreen.dart:175:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[   +1 ms]                                                        ^^^^^^^^
+[  +45 ms] lib/Screens/ViewInvoicesScreen.dart:230:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+[   +9 ms]                                                        ^^^^^^^^
+[   +6 ms] lib/Screens/ViewInvoicesScreen.dart:241:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[   +1 ms] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[   +1 ms]                                                        ^^^^^^^^
+[   +7 ms] lib/Screens/PaymentHistoryScreen.dart:166:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[   +1 ms]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color: Colors.black87),
+[  +10 ms]                                                        ^^^^^^^^
+[  +13 ms] lib/Screens/PaymentHistoryScreen.dart:177:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[   +1 ms]                                                        ^^^^^^^^
+[ +802 ms] lib/Widgets/RecurringInvoiceWidget.dart:78:65: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                                     Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[        ]                                                                 ^^^^^^^^
+[  +60 ms] lib/Widgets/RecurringInvoiceWidget.dart:89:68: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ]                                 style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[   +2 ms]                                                                    ^^^^^^^^
+[+3006 ms] /usr/local/Caskroom/flutter/2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0/lib/src/interface/local_platform.dart:46:19: Error:
+Member not found: 'packageRoot'.
+[        ]       io.Platform.packageRoot; // ignore: deprecated_member_use
+[        ]                   ^^^^^^^^^^^
+[+13483 ms] [+40813 ms] lib/Screens/ViewClientVendorsScreen.dart:76:62: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[   +3 ms] [   +4 ms]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                           style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[        ] [        ]                                                              ^^^^^^^^
+[  +83 ms] [ +134 ms] lib/Screens/ViewClientVendorsScreen.dart:87:62: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[  +94 ms] [   +1 ms]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                           style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[        ] [   +1 ms]                                                              ^^^^^^^^
+[        ] [  +29 ms] lib/Screens/ViewExpensesPurchasesScreen.dart:164:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[        ] [   +2 ms]                                                        ^^^^^^^^
+[        ] [   +3 ms] lib/Screens/ViewExpensesPurchasesScreen.dart:175:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[        ] [        ]                                                        ^^^^^^^^
+[        ] [  +19 ms] lib/Screens/ViewInvoicesScreen.dart:230:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[        ] [        ]                                                        ^^^^^^^^
+[        ] [  +16 ms] lib/Screens/ViewInvoicesScreen.dart:241:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[        ] [        ]                                                        ^^^^^^^^
+[ +193 ms] [ +136 ms] lib/Screens/PaymentHistoryScreen.dart:166:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[        ] [        ]                                                        ^^^^^^^^
+[        ] [   +1 ms] lib/Screens/PaymentHistoryScreen.dart:177:56: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                     style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[        ] [        ]                                                        ^^^^^^^^
+[ +699 ms] [ +701 ms] lib/Widgets/RecurringInvoiceWidget.dart:78:65: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                                     Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700, fontSize: 23.0, color:
+Colors.black87),
+[        ] [        ]                                                                 ^^^^^^^^
+[        ] [   +2 ms] lib/Widgets/RecurringInvoiceWidget.dart:89:68: Error: The getter 'display1' isn't defined for the class 'TextTheme'.
+[        ] [        ]  - 'TextTheme' is from 'package:flutter/src/material/text_theme.dart'
+('/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter/lib/src/material/text_theme.dart').
+[        ] [        ] Try correcting the name to the name of an existing getter, or defining a getter or field named 'display1'.
+[        ] [        ]                                 style: Theme.of(context).textTheme.display1.copyWith(fontSize: 20.0, color: Colors.grey[900]),
+[        ] [   +2 ms]                                                                    ^^^^^^^^
+[+3596 ms] [+3607 ms]
+/usr/local/Caskroom/flutter/2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0/lib/src/interface/local_platform.dart:46:19: Error: Member not
+found: 'packageRoot'.
+[        ] [        ]       io.Platform.packageRoot; // ignore: deprecated_member_use
+[        ] [   +2 ms]                   ^^^^^^^^^^^
+[+19903 ms] [+19869 ms] Persisting file store
+[   +1 ms] [  +23 ms] Done persisting file store
+[        ] [  +23 ms] "flutter assemble" took 70,469ms.
+[        ] [   +4 ms] Target kernel_snapshot failed: Exception
+[        ]            #0      KernelSnapshot.build (package:flutter_tools/src/build_system/targets/common.dart:241:7)
+[        ]            <asynchronous suspension>
+[        ]            #1      _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart:839:9)
+[        ]            <asynchronous suspension>
+[        ]            #2      Future.wait.<anonymous closure> (dart:async/future.dart:473:21)
+[        ]            <asynchronous suspension>
+[        ]            #3      _BuildInstance.invokeTarget (package:flutter_tools/src/build_system/build_system.dart:777:32)
+[        ]            <asynchronous suspension>
+[        ]            #4      FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:606:16)
+[        ]            <asynchronous suspension>
+[        ]            #5      AssembleCommand.runCommand (package:flutter_tools/src/commands/assemble.dart:317:32)
+[        ]            <asynchronous suspension>
+[   +1 ms]            #6      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+[        ]            <asynchronous suspension>
+[        ]            #7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+[        ]            <asynchronous suspension>
+[        ]            #8      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+[        ]            <asynchronous suspension>
+[        ]            #9      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+[        ]            <asynchronous suspension>
+[        ]            #10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+[        ]            <asynchronous suspension>
+[        ]            #11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+[        ]            <asynchronous suspension>
+[        ]            #12     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+[        ]            <asynchronous suspension>
+[        ]            #13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+[        ]            <asynchronous suspension>
+[        ]            #14     main (package:flutter_tools/executable.dart:94:3)
+[        ]            <asynchronous suspension>
+[        ] [  +10 ms] 
+[        ]            #0      throwToolExit (package:flutter_tools/src/base/common.dart:10:3)
+[        ]            #1      AssembleCommand.runCommand (package:flutter_tools/src/commands/assemble.dart:334:7)
+[        ]            <asynchronous suspension>
+[        ]            #2      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+[        ]            <asynchronous suspension>
+[        ]            #3      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+[        ]            <asynchronous suspension>
+[        ]            #4      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+[   +2 ms]            <asynchronous suspension>
+[        ]            #5      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+[        ]            <asynchronous suspension>
+[        ]            #6      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+[        ]            <asynchronous suspension>
+[        ]            #7      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+[        ]            <asynchronous suspension>
+[        ]            #8      run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+[        ]            <asynchronous suspension>
+[        ]            #9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+[   +1 ms]            <asynchronous suspension>
+[        ]            #10     main (package:flutter_tools/executable.dart:94:3)
+[        ]            <asynchronous suspension>
+[ +181 ms] [ +207 ms] ensureAnalyticsSent: 204ms
+[        ] [   +1 ms] Running shutdown hooks
+[        ] [        ] Shutdown hooks complete
+[        ] [        ] exiting with code 1
+[ +104 ms] > Task :app:compileFlutterBuildDebug FAILED
+[        ] 1 actionable task: 1 executed
+[        ] FAILURE: Build failed with an exception.
+[        ] * Where:
+[        ] Script '/usr/local/Caskroom/flutter/2.10.5/flutter/packages/flutter_tools/gradle/flutter.gradle' line: 1102
+[        ] * What went wrong:
+[        ] Execution failed for task ':app:compileFlutterBuildDebug'.
+[        ] > Process 'command '/usr/local/Caskroom/flutter/2.10.5/flutter/bin/flutter'' finished with non-zero exit value 1
+[        ] * Try:
+[        ] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full
+insights.
+[   +1 ms] * Get more help at https://help.gradle.org
+[        ] BUILD FAILED in 1m 29s
+[ +620 ms] Running Gradle task 'assembleDebug'... (completed in 91.8s)
+[  +22 ms] Exception: Gradle task assembleDebug failed with exit code 1
+[   +5 ms] "flutter run" took 98,695ms.
+[  +16 ms] 
+           #0      throwToolExit (package:flutter_tools/src/base/common.dart:10:3)
+           #1      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:687:9)
+           <asynchronous suspension>
+           #2      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+           <asynchronous suspension>
+           #3      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+           <asynchronous suspension>
+           #4      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+           <asynchronous suspension>
+           #5      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+           <asynchronous suspension>
+           #6      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+           <asynchronous suspension>
+           #7      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+           <asynchronous suspension>
+           #8      run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+           <asynchronous suspension>
+           #9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+           <asynchronous suspension>
+           #10     main (package:flutter_tools/executable.dart:94:3)
+           <asynchronous suspension>
+           
+           
+[ +230 ms] ensureAnalyticsSent: 225ms
+[   +1 ms] Running shutdown hooks
+[        ] Shutdown hooks complete
+[   +1 ms] exiting with code 1

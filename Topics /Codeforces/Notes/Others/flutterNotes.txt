@@ -1,0 +1,20 @@
+-------------------------------------------------------
+# Commands :-
+
+- flutter -v run -- ignore-deprecation
+
+
+-
+flutter channel stable
+flutter upgrade
+flutter pub upgrade
+-
+flutter clean
+flutter pub get
+flutter pub upgrade
+-
+
+
+
+-------------------------------------------------------
+-------------------------------------------------------

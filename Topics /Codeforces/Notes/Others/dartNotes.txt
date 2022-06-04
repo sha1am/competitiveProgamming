@@ -1,0 +1,178 @@
+
+______________________________________________________________________
+# Dart (From 8 hours video)
+---------------------------------------------------------------------
+
+	- Dart is type safe language 
+		- means the type of the variables decide wheather a operation can be performed on it or not.
+		
+	- Dart language uses two types of checks to ensure that the code is "type-safe" or not.
+		- 1) Static checks : at compile time 
+		- 2) Run time checks :  at run time
+		
+	- This double checking system (ie. checking at compile-time and checking at Rtime ) 
+		is called Sound Test System. 
+		( coz when all the sounds of the keyboard is the code and it checks the code. Silly right? )
+	
+	- If you don't want dart to check for the correctness of your code,
+		you can use "dynamic" type. 
+		- but it will still check at runtime.
+---------------------------------------------------------------------
+		
+	- dynamic vs var
+		- Dynamic : This is telling dart, hey dont care for what kind of variable it is,
+					 unless at runtime. 
+				- The static check is not working for this variable (ie. dynamic one).
+				- We can assign different types of data to this variable and this will automatically change
+				 its data type.
+		
+		- Var : This is telling dart , that I dont wana write the type for this variable.
+				You decide for yourself. 
+				- The static checker is working in this (ie. var).
+				- We cannot change the variable type once assigned. 
+					- ie. if its assigned double by dart at "var x= 3.4". This is gonna stay double.
+---------------------------------------------------------------------
+	
+	- What happens when the analyser doesn't have enough information on it? (ie. var a;)
+		- it will assign it to be dynamic and it will be checked at runtime.
+		- and if even at runtime, the runtime analyser doesn't know. It will assign null type to a.
+		- Null type - a bad practice.
+	
+	- What is Sound Null Safety?
+		- It says that a variable cannot be null unless the developer specifically says it is. 
+		- ie. the variables can be Nullable or Non-Nullable.
+---------------------------------------------------------------------
+	
+	- Dart uses different compilers for different platforms.
+		- For ARM32, ARM64, and x86_64 
+			- JIT : Just in time compiler
+			- AOT : Ahead of time compiler
+		- For Javascript (Web)
+			- dartdevc compler (development compiler)
+			- dart2js ( production compiler)
+				
+---------------------------------------------------------------------
+	
+	- While developing application : Two phases
+		- Development Phase : Use JIT compiler ( or just in time compiler)
+		- Production Phase : Use AOT compiler ( or Ahead of time compiler)
+		
+---------------------------------------------------------------------
+	*JIT compiler :
+
+	- JIT compiler compiles :-
+		- Just the code it needs : compiler compiles only the portion of code that is changed.
+								-	other wise use the precompiled code
+		- Only when it needs to : If the code is not going to be used, it will not compile it.
+	
+	- JIT doesnt convert the dart code into machine language.
+		- it converts into a intermidiatery language 
+		- because this is fast
+	
+	- JIT is not optimal for production phase. 	
+	
+---------------------------------------------------------------------
+	* AOT compiler :
+	
+		- compiler the entire code into machine language.
+		- compiler before the "before the platform runs the program ***"
+		- gurantees most optimized build 
+		
+---------------------------------------------------------------------
+	- what is SDK?
+		- software development Kit which has 
+			- compiler , debugger, analyser , Library
+	- Installing dart sdk will allow to develop only :
+		- cli applications
+		- server applications
+		- non- flutter Web applications
+	
+	- to develop Standalone Flutter Applications 
+		- install Flutter sdk
+		
+
+---------------------------------------------------------------------
+	- Some useful packages in vs code for dart
+		- Dart extention
+		- Dart data class generator
+		- Pubspec Assist
+		- Bracket Pair coloniser 2
+		- Better comments
+		- vs code icons and material theme
+		
+ 
+ 
+ 
+ 
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+#The notes generated while doing 8 hours dart tutorial
+
+- cannot use capital letter in project name in dart
+- int.parse(s); 
+	- where s is string 
+	- or maybe any other datatype
+---------------------------------------------------------------------
+
+______________________________________________________________________
+ Dart commands:-
+---------------------------------------------------------------------
+ 	- analyze : 
+ 		- dart analyze --fatal-infos
+ 		- dart analyze --[no-]fatal-warnings
+ 			
+ 	- compile :
+ 		- dart compile jit-snapshot
+ 		- dart compile aot-snapshot
+ 		- dart compile exe
+ 		- dart compile js
+ 		- dart compile kernel
+
+ 	- create :
+ 		- dart create --template 
+ 			( where template = console-simple, console-full,  package-simple, server-shelf, web-simple)
+ 		- eg :
+ 			- dart create --package-simple
+ 		- dart create --web-simple --[no-]pub --force 
+ 			
+ 	- devtools :
+ 		- 
+ 		
+ 	- doc :
+ 		-
+ 		
+ 	- fix :
+ 		- dart fix --dry-run
+ 		- dart fix --apply
+ 		
+ 		
+ 	- format 
+ 	
+ 	- migrate
+ 	
+ 	- pub
+ 	
+ 	- run
+ 	
+ 	- test
+ 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+______________________________________________________________________
