@@ -9,7 +9,7 @@
             "request": "launch",
             "type": "dart",
             "program":"bin/console_full_project_3jun.dart",
-            "args":["1","2"]
+            "args":["7","6","1"]
         }
     ]
 }

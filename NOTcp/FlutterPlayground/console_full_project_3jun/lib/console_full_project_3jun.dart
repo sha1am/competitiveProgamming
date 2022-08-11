@@ -1,7 +1,5 @@
-int calculate(List<String> arguments) {
-  int sum = 0;
-  for (int i = 0; i < arguments.length; i++) {
-    sum += int.parse(arguments[i]);
-  }
-  return sum;
-}
+//what is the use of library and how to run main from this file. ***
+// library console_full_project3jun;
+
+// import 'package:console_full_project_3ju';
+export 'src/calculate.dart';

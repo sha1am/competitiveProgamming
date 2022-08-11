@@ -1,0 +1,5 @@
+name: printerr
+environment:
+  sdk: ^2.17.1
+dependencies:
+  lints:

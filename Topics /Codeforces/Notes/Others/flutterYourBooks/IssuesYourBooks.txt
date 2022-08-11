@@ -1,0 +1,6 @@
+#IssuesYourBooks
+
+- The back button goes stright away to exit the app , not to the previous screen
+
+- company details not fetching details.
+- sidebar may underflow in pixels.

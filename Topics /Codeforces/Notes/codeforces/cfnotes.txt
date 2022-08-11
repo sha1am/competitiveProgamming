@@ -1,0 +1,266 @@
+ Bitwise Operations :-
+ --------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Hey there, I am Shadab Alam and I am a software developer.
+ Hope my message reaches to the 
+ 
+ 
+ 
+ Hey there, I am Shadab Alam and I am a software developer and problem solver.
+ Hope my message reaches its destiny.
+ 
+ 
+ Hey there,I am Shadab Alam and I am a software developer and problem solver.
+ Hope my message reaches you.
+ hey hey hey
+ 
+ Hey there, my name is Shadab Alam and I am an software developer and problem solver.
+ Hope my message reaches you.
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+For data science related 
+--------------------------
+
+I have a profound interest in programming and I have been coding in C++ since 4 years now.
+Apart from C/C++, I can code in Java, Python.
+
+Taking about my past, I have passed my 10th class CBSE board exam with a perfect 10 CGPA and 12th CBSE board exams with a score of 94% from PCM stream.
+
+I am pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am currently in my final year pursuing data science as specialization.
+
+
+For Software Development related 
+--------------------------
+
+I have a profound interest in programming and I have been coding in C++ since 4 years now.
+Apart from C/C++, I can code in Java, Python.
+
+Taking about my past, I have passed my 10th class CBSE board exam with a perfect 10 CGPA and 12th CBSE board exams with a score of 94% from PCM stream.
+
+I am pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am currently in my final year.
+
+
+Profressional Summary edited
+------------------------------
+
+I have a profound interest in programming and I have been commpetetive coding in C++ since 4 years now.
+
+Apart from C/C++, I can write programs in Java, Python and I have an understanding of all the basics of web development.
+
+Taking about my past, I have passed my 10th class CBSE board exam with a perfect 10 CGPA and 12th CBSE board exams with a score of 94% from PCM stream.
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+
+
+
+absar:-
+
+Personal Summary:-
+
+I have a keen interest in programming and I have been doing competitive programming  since 4 years now.
+
+I primarily code in C++ while I am also familiar with Java and Python.
+
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+Update :-
+
+I have a keen interest in programming and I have been doing competitive programming  since 4 years now.
+I primarily code in C++/JAVA while I am also familiar with Python and Dart.
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+
+
+
+
+
+
+
+About interships 
+------------------------------
+
+
+I did a paid internship in my final year at Pie Infosystems private limited where
+I worked on a professional accounting software using Flutter development environment. 
+tes
+
+
+
+
+
+
+
+I have profound knowledge of how exactly a compiler works and there are a handful number bugs that I didn't resolved finally.
+
+I have a profound understanding of exactly how a compiler works and due to my persistant and curious nature, I am able to debug most of the codes.
+
+
+
+
+
+
+
+Strengths:- 
+
+I know how to become 'Jack' of a trade in a stipulated amount of time, which according to me is the most important skill in today's continously evolving techworld.
+
+
+I know how to gain proficiency in a entirely new skill in a appropriate amount of time, which according to me is the most important skill required in today's continously evolving techworld.
+
+
+
+With proper guidance, I believe that I can learn an entirely new skill in a relatively short period of time
+which is an important skill required in today's continously evolving techworld.
+
+
+
+
+I can learn an entirely new skill in a relatively short period of time, which is an important skill required to grow in today's continously evolving techworld.
+
+
+SUMMARY FINAL 
+
+I have a keen interest in programming and I have been doing competitive programming  since 4 years now.
+
+I primarily code in C++ or JAVA while I am also familiar with Python and Dart.
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+In my third year, I did an internship at Huawei Technologies Co., Ltd where I learned to write my first android application using Java.
+
+In my final year I did a paid internship at Pie Infosystems Pvt. Ltd.
+
+
+
+Objective :-
+------------------------------------
+Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company.
+
+
+To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.
+
+
+
+To secure a responsible career opportunity in a reputable organization to fully utilize my training and skills while making a significant contribution to the success of the company.
+------------------------------------
+
+
+
+During my third year, I did an internship at HUAWEI Mobiles International Inc. during which I completed the HMS foundation course training.
+
+I also passed the exam and got certified for the same which is globally accepted.
+
+Made an android application and published it on the Huawei app store.
+Application Link:- https://appgallery.huawei.com/app/C104745679
+
+About the app:- 
+App Name :- FAMCHAT
+A chatting application which implements Google Account kit and Google Map interface. ( ~ to Snapchat).
+
+
+
+App Name :- YourBooks
+
+Worked on a professional accounting software using Flutter development environment.
+Designed the app's onboarding page, screens working as a front-end developer and designed some API logics on the backend.
+
+
+------------------------
+
+Android developer Intern
+Organisation: HUAWEI Technologies Co. Ltd
+1st June 2021 - 1st September 2021
+Gurugram, Haryana, India
+Mentor: Mr. Nithin KC , Mr. Debanta
+Key Skills/Technologies:
+
+    Android Studio
+    Android Development
+    Android 
+
+Description: During my third year, I did an internship at HUAWEI Mobiles International Inc. during which I completed the HMS foundation course training.
+
+I also passed the exam and got certified for the same which is globally accepted.
+
+Made an android application and published it on the Huawei app store.
+Application Link:- https://appgallery.huawei.com/app/C104745679
+
+About the app:-
+App Name :- FAMCHAT
+A chatting application which implements Google Account kit and Google Map interface. ( ~ to Snapchat).
+
+
+
+
+--------------
+This was summer internship training program for students at HUAWEI. 
+I have passed the exam and have recieved the certification successfully.
+
+The certification is globally accepted and the certification duration is six weeks.
+
+
+
+
+Huwaei HMS foundation course exam
+Institute: HUAWEI Technologies Co. Ltd .
+1st June 2021 - 1st September 2021
+Key Skills/Technologies:
+
+    Android Studio
+    Android SDK
+    Android
+    Android Development 
+
+Description: This was summer internship training program for students at HUAWEI.
+I have passed the exam and have recieved the certification successfully.
+
+The certification is globally accepted and the certification duration is six weeks.
+
+
+Scholarship in college:- Secured 50% fee waiver scholarship in college due to my academic performance.
+Scored 94% in Board Exams:- I scored second highest in my school 12th board exams.
+Perfect 10 CGPA in Board exams:- Scored a perfect 10 CGPA in my 10th board exams.
+
+
+-----------\
+
+Hello Mam,
+    I, Shadab ( 19csu284 ) did an internship at HUAWEI Mobiles International Inc. during which I completed the HMS foundation course training.
+I also passed the exam and got certified for the same. ( Certificate in mail attachment)
+
+Made an android application and published it on the Huawei app store.
+Application Link:- https://appgallery.huawei.com/app/C104745679
+
+About the app:-
+App Name :- Famchat
+A chatting application which implements Google Account kit and Google Map interface. ( ~ to Snapchat).
+
+Duration : 1st June 2021 - 1st September 2021
+Mentor: Mr. Nithin KC , Mr. Debanta

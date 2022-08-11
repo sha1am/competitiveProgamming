@@ -1,0 +1,15 @@
+
+
+---------------------------------------------------
+
+// image augmentation
+
+- What will we do if we have less nummber of images, and we want to use deep leaning ?
+
+- Y axis is first in _________?
+- colored into grayscale?
+- pixel value 0 means black.
+- what is diff between analog and digital image?
+
+
+---------------------------------------------------

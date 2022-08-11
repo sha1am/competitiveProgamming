@@ -1,6 +1,7 @@
 #include "bits/stdc++.h"
 using namespace std;
 #define int               long long
+// #define double            long long double
 #define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
@@ -68,10 +69,68 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
 int N=100002;
 
-void solve(){
-	
-	
-	
+int poww( int n,int p) {
+	if(p==0) return 1;
+	int ans=1;
+	for(int i=0; i<p; i++) {
+		ans*=n;
+	}
+	// debug(ans);
+	return ans;
+}
+
+void solve() {
+
+	vector<int> arr= {2,4,5,3,1};
+	int cost=0;
+
+	// apply reverse sort
+
+	for(int i=0; i<arr.size(); i++) {
+		// find the smallest element index=k;
+		int minn_elem_this=arr[i];
+		int minn_elem_this_ind=i;
+		for(int j=i; j<arr.size(); j++) {
+			//now find something even less than this one.
+			if(arr[j]<minn_elem_this) {
+				minn_elem_this_ind=j;
+			}
+		}
+		debug(i);
+		debug(minn_elem_this_ind);
+
+		// now reverse from i------j
+
+		int minn_elem_this_ind_cpy=minn_elem_this_ind;
+		int n=i;
+		cost+=(minn_elem_this_ind-i);
+		for(int m=0; m<(int)ceil((minn_elem_this_ind-i)/(double)2); m++) {
+			// swap element at l th and minn_elem_this_ind_cpy. keep decrementing the right pointer.
+
+			// debug(l);
+			debug(minn_elem_this_ind_cpy);
+			debug(arr);
+			int temp=arr[minn_elem_this_ind_cpy];
+			arr[minn_elem_this_ind_cpy]=arr[n];
+			arr[n]=temp;
+			debug(arr);
+			
+
+			//decrease minn--
+			n++;
+			minn_elem_this_ind_cpy-=1;
+
+
+		}
+
+		debug(arr);
+		cerr<<"aaa"<<endl;
+
+	}
+
+	debug(arr);
+	debug(cost);
+
 }
 
 signed main() {
@@ -91,10 +150,10 @@ signed main() {
 #ifdef NCRk
 	init();
 #endif
-	cout << fixed << setprecision(12);
+	// cout << fixed << setprecision(12);
 
 	int t=1;
-	cin>>t;
+	// cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

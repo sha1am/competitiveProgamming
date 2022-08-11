@@ -68,99 +68,29 @@ const int32_t M=1e9+7;
 const int32_t MM=998244353;
 int N=100002;
 
-// int n=1003,m=1003;
-int n=12,m=12;
 
-int xx[]= {0,0,1,-1};
-int yy[]= {1,-1,0,0};
+int poww( int a, int b) {
+	int ans=1;
 
-
-void solve() {
-	//take the grid as input
-
-	vector<char> tempV(m,'#');
-	vector<vector<char>> grid(n,tempV);
-
-	int xa,xb,ya,yb,fa,fb;
-
-	cin>>xa>>xb;
-	cin>>ya>>yb;
-	cin>>fa>>fb;
-
-	debug(xa);
-	debug(xb);
-
-	string tempS;
-	// while(tempS.length()==0) {
-	// 	getline(cin,tempS);
-
-	// }
-	getline(cin,tempS);
-	getline(cin,tempS);
-
-	// 	##A....#
-	//	#..##..#
-	//	#.##.B.#
-	//	#.###..# nxm
-
-	grid[xa-1][xb-1]='A';
-	grid[ya-1][yb-1]='B';
-	grid[fa-1][fb-1]='#';
-
-
-	// //printGrid
-	// rep(i,0,n) {
-	// 	rep(j,0,m) {
-	// 		cout<<grid[i][j];
-	// 	}
-	// 	cout<<endl;
-	// }
-	vector<int> tempVV(m,-1);
-	vector<vector<int>> vis(n,tempVV);
-	int dis=0;
-
-	queue<pair<int,int>> q;
-	q.push(make_pair(xa-1,xb-1));
-
-	while(!q.empty()) {
-		//mark this one as visited.
-		vis[q.front().fr][q.front().sc]=0; // !=-1
-		debug(q);
-		//push all the neighbours into the queue, which are not visited till now;
-		rep(i,0,4) {
-			int newX=q.front().fr+xx[i];
-			int newY=q.front().sc+yy[i];
-			debug(newX);
-			debug(newY);
-			// debug(n);
-			// debug(m);
-
-			if (newX>=0 && newY>=0 && newX<n && newY<m && vis[newX][newY]==-1) {
-				// debug(newX);
-				// debug(newY);
-				q.push(make_pair(newX,newY));
-				vis[newX][newY]=dis+1;
-				debug(vis[newX][newY]);
-			}
-		}
-		q.pop();
-		dis+=1;
-		debug(dis);
-
+	for(int i=0; i<b; i++) {
+		ans=a*ans;
 	}
 
-	//printGrid
-	rep(i,0,n) {
-		rep(j,0,m) {
-			cerr<<vis[i][j];
-		}
-		cerr<<endl;
-	}
-	cerr<<"###"<<endl;
-
-
-
+	return ans;
 }
+void solve() {
+	vector<int> arr={3,8,10,6,1};
+	
+	sort(arr.begin(),arr.end());
+	debug(arr);
+	
+	
+	
+	
+	
+}
+
+
 signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
@@ -181,9 +111,9 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	cin>>t;
-	string temps;
-	getline(cin,temps);
+	// cin>>t;
+	// string temps;
+	// getline(cin,temps);
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

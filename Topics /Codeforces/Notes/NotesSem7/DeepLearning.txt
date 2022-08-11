@@ -1,0 +1,33 @@
+#Deep learning :
+
+
+_____________________________________________________
+- Biological Neuron
+- Artificial Neuron
+- Mc cullah Pitts Model
+	- input 0/1
+	- output 0/1
+		- 
+	- xor cannot be implementated in this model.(with > 2 inputs)
+	- single perceptiron is linear classifier 
+		- which can give out put in 0/1.
+	- number of input (2- line, 3-plane, >3 hyperplane)
+- Single Perception Model
+	- input ( can be real)
+	- add weights
+	- output binary (0/1)
+	- Sigma wi xi > T
+	- find weights such that error minimum
+		- keep on learning the weight till the equation matches the equation.
+	- y = mx + c
+		-
+	- w is perpendicular vector to that line.
+
+- multilayer Perception 
+	- activation function
+		
+			
+
+
+-----------------------------------------------------
+

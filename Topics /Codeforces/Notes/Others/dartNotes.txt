@@ -100,22 +100,111 @@ ______________________________________________________________________
 		- Better comments
 		- vs code icons and material theme
 		
+---------------------------------------------------------------------
+ 	- Dart package , which file is related to which file?
+ 		- Dart package :
+ 			- .dart_tool
+ 			- .packages
+ 			- pubspec.lock
+ 			- pubspec.yaml
+ 			
+ 		- Dart linting :
+ 			- analysis_options.yaml
+ 			
+ 		- Git Source control files
+ 			- .gitignore
+ 			- CHANGELOG.md
+ 			- README.md
+ 		
+ 		- Cmd apps 
+ 			- /bin
+ 		
+ 		- Vs code run configurations
+ 			- /.vscode
+ 		
+ 		- Dart testing  
+ 			- /test
+ 			
+---------------------------------------------------------------------
+	- the library for dart packages online is pub.dev
+	
+ 	-  What is the difference b/w Application package or Library package?
+ 		- the dart package which won't be uploaded to pub.dev is called Application package and which will be uploaded to pub.dev will be called Library package.
+ 		
+---------------------------------------------------------------------
+ 	- The package manager in dart is called pub .
+ 	- .packages is the deprecated version of package_config.json in the .dart_tool folder.
+ 	- pubspec.lock links the packages to the exact version we want to.
+ 	- only the libraries written inside the /lib folder is accessible to public.
  
- 
- 
- 
+---------------------------------------------------------------------
+	- analysis_options.yaml(for linting) is just set of rules imported from a library from pub.dev to check the syntax correctness and other rules.
+---------------------------------------------------------------------
+	- Dart VM ( from here 2x)
+		- componenets of Dart VM
+			- the runtime system 
+			- Development experience components
+				- debugging
+				- hot reload
+			- jit & aot compilation pipelines
+	- Explain the working of Dart VM?
+		- Every code (either be dev code or native code) runs in an Isolate. 
+		- Each isolate has a Mutator thread which begins the execution of the code and Helper thread which controls the internal working of the Dart VM.
+		- It also has a memory - a garbage collection unit called Heap.
+	
+	- What are the two ways a DartVM can execute dart programs?
+		- 1) from source code using JIT/AOT compiler.
+			- dart compile kernal ./bin/console_full_project.dart
+		- 2) from snapshots(ie. JIT/AOT/kernal Snapshots)
+			- dart compile exe ./bin/console_full_project.dart
+---------------------------------------------------------------------
+	- Sound Null Safety 
+		- all the null values should be tracked.
+		- The errors related to null safety should be shown at edit time.
+		- At runtime , its already too late.
+		
+		- Sound null safety means
+			- you'll not see a null value where you dont expect it.
+				- bonus you'll not see any runtime errors regarding null safety if you are using the Sound null safety.
+			- if type system determines that something is not null, then it can never be null.
+			
+		- int? ans; 
+			- this means that int can be nullable, means can hold null values.
+			
+		- implicit downcasts are removed.
+			- use 'as' keyword.
+			- Num aNumVariable = 4;
+			  aFunWhichAcceptsInt(aNumVariable as int); 
+			  void aFunWhichAcceptsInt(int a){}
+			  
+			  - we needt
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
-#The notes generated while doing 8 hours dart tutorial
+
+
+---------------------------------------------------------------------
+#The self-notes generated while doing 8 hours dart tutorial
+---------------------------------------------------------------------
 
 - cannot use capital letter in project name in dart
 - int.parse(s); 
 	- where s is string 
 	- or maybe any other datatype
+- what is native code?
+	- the code compiled for a specific machine.
+- what is dangling else problem?
+	- The nested if else gets ambiguous.
+	- just use curly braces to solve the dangling else problem.
+
 ---------------------------------------------------------------------
+
+
+
+
+
 
 ______________________________________________________________________
  Dart commands:-
@@ -129,7 +218,7 @@ ______________________________________________________________________
  		- dart compile aot-snapshot
  		- dart compile exe
  		- dart compile js
- 		- dart compile kernel
+ 		- dart compile kernel 
 
  	- create :
  		- dart create --template 
@@ -154,6 +243,18 @@ ______________________________________________________________________
  	- migrate
  	
  	- pub
+ 		
+ 		example:
+ 			- this will add the pub packages into the local cache folder.
+ 				- dart pub chache add 
+ 			
+ 			- this will list all the dependencies
+ 				- dart pub deps
+ 			
+ 			- Dont know yet ***
+ 				- dart pub global list
+ 				- dart pub global activate verygoodcli
+ 				- dart pub outdated
  	
  	- run
  	
