@@ -71,54 +71,73 @@ int N=100002;
 
 
 void solve() {
-	vector<int> arr= {0,1,0,3,12};
-	int pZero=0;
-	int pNotZero=0;
-
-	// now put the pZero on the first zero
-	// and pNotZero on the first non zero element
-	int i=0;
-	int j=0;
-
-	while(i!=arr.size() || j!=arr.size()) {
-		while(arr[i]!=0 && i!=(arr.size())) {
-			i++;
-		}
-		debug(i);
-		//check if i==arr.size(), if it is it means that the arr has no more zeros
-
-		// if(i==arr.size()) {
-		// 	//prgram ends here
-		// 	break;
-		// }
-
-		// ~ for pNotZero
-
-
-		while(arr[j]==0 && j!=arr.size()) {
-			j++;
-		}
-		debug(j);
-		debug(arr);
-		if(j==arr.size() && i==arr.size()) {
-			//prgram ends here
-			break;
-		}
-		
-
-		//now we have both pointers in their respective positions.
-
-		//swap both poistions
-		int temp=arr[j];
-		arr[j]=arr[i];
-		arr[i]=temp;
-
-		//index change
-		i=j;
-		j=j+1;
+	// week 3 assignment. question 1
+	int n=-1,q=-1;
+	cin>>n>>q;
+	
+	vector<int> arr(n,-1);
+	 
+	for(int i=0;i<arr.size();i++){
+		cin>>arr[i];
 	}
-
+	
+	// we have the arr here
 	debug(arr);
+	set<int> emptySet;
+	vector<set<int>> vs(n,emptySet); 	// i can always make an empty set and init here.
+	 
+	 
+	set<int> tempSet;
+	
+	for(int i=n-1;i>=0;i--){
+		// tempSet=vs[i]; // add the temp set here to old set.
+	  	tempSet.insert(arr[i]);
+	 	vs[i]=tempSet;
+	 }
+	 debug(vs);
+	
+	int cnt=0;
+	// now handle the queries
+	 for(int i=0;i<q;i++){
+	 	//
+	 	int a,b;
+	 	cin>>a>>b;
+	 	// debug(a);
+	 	// debug(b);
+	 	
+	 	
+	 	// *** this is extra job, this can be optimized.
+	 	//now check if the per can reach from a to b. ( ie. chck is (vs[a]))
+	 	int Z=-1;
+	 	for(int j=0;j<arr.size();j++){
+	 		if(arr[j]==a){
+	 			Z=j;
+	 			debug(Z);
+	 			// Mistake: every time Z will be same to j here
+	 			if(Z==arr.size()){
+	 				// the stop doesnt exist in the route.
+	 				// Z=-1;
+	 			}
+	 			break;
+	 		}
+	 	}
+	 	// debug(Z);
+	 	if(Z==-1)continue;
+	 	
+	 	set<int> tempSet1=vs[Z]; // where z is the index in arr for a
+	 	if(tempSet1.find(b)!=tempSet1.end()){
+	 		//it exists 
+	 		// so we need to add.
+	 		cnt+=1;
+	 	}
+	 }
+	 
+	 cout<<cnt<<endl;
+	 // debug(cnt);
+	 
+	
+	
+	
 
 }
 
@@ -142,7 +161,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

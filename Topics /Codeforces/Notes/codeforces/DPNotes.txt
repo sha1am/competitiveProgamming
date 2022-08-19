@@ -1,0 +1,38 @@
+# Dynamic Programming Notes
+
+-----------------------------------------------------------
+Start
+-----------------------------------------------------------
+
+- How to identify its dynamic programming?
+	- dp is enhanced recursion. (ie.recursion is parent of dp)
+	- How to identify recursion?\
+		- choice ( like you have option or not to chose something)
+			- if the choice is overlapping then its dp.
+			- only if there are two( or more)  calls in recursion then overlapping.
+		- optimal 
+			- min , max, largest,
+	- something optimal is asked in dp.
+	- 
+
+
+
+
+
+
+
+
+___________________________________________________________________
+-----------------------------------------------------------
+#Doubts
+- Will knap 0/1it work with other choice daigram?
+- What is the difference if we take two times x in choice daigram of knapsack 0-1?
+
+
+
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+End
+-----------------------------------------------------------
+

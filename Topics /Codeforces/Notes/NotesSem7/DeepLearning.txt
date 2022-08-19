@@ -1,7 +1,53 @@
 #Deep learning :
 
+-----------------------------------------------------------
+Start
+-----------------------------------------------------------
+_____________________________________________________
+- concept of rotation (or notation)
+- cost function (log loss) ( cross entropy function ig)
+	- summmation from 1 to N y*log(y) + ( 1-y)log(1-y)
+- activation funtion 
+	-
+- Hidden layer 
+	- 2> hidden layer can be called a deep neural network.
+- the output and in put of the inner layer are variables.
+	-we need to change the cost function of the , to fix this.
+- universal approximation
+	- continuosly function can be handled by neural network.
+	- if in chunks or not continuos , then it will not approximate.
+- add continuity 
+	- they are diffrentiable
+- if we want output in the range of 0-1 , then sigmoid
+- if we want output in the range of -1 -1 , then tanh function.( ie.Hyperbolic tangent function)
+- Relu( rectified linear unit)
+	- deals with vanishing gradient.
+- gradient 
+	- rate of change , 
+- difference between perceptron and neuron
+	- 
+- stocastic gradient method	
+	- one - one 
+- mini batch 
+	- data is divided into small chunks (generally batch of 32)
+		- it will not need all data at once
+		
+- softback function , backpropagation
 
 _____________________________________________________
+- Sigmoid function is 1/1+e^x    
+	- (x is something w1x1 + w2x2 +....) 
+	- range 0/1
+
+- Tanh function
+	- (e^x -e^-x)/(e^x +e^-x)
+	
+- Need to add activation function to add multilinearity.
+- How find this derivative ( convergence)
+- random.seed(0) 
+	- same values generate kr  skte hai 
+- gradient descent for optimnal w and m. (ig)
+_________________________________________________________________
 - Biological Neuron
 - Artificial Neuron
 - Mc cullah Pitts Model
@@ -27,7 +73,25 @@ _____________________________________________________
 	- activation function
 		
 			
+-----------------------------------------------------------
+Code 
+-----------------------------------------------------------
+- model.add(Dense(noOfNeurons,input_dim=1,activation='relu'))
+	- eg model.add(Dense(4,input_dim=1,activation='linear'))
+- epochs : Number of iterations.
+	- model.fit(x,y,epochs=500, verbose=1)
 
 
------------------------------------------------------
+
+#resources 
+- https://keras.io/examples/vision/captcha_ocr/
+-----------------------------------------------------------
+Doubts
+-----------------------------------------------------------
+- If NN run twice will it give same results?
+	-
+
+-----------------------------------------------------------
+END
+-----------------------------------------------------------
 

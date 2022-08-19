@@ -1,7 +1,30 @@
+# Image processing 
 
+-----------------------------------------------------------
+Start
+-----------------------------------------------------------
+____________________________________________________________
 
----------------------------------------------------
-
+- rgb into bgr ( to inverse red and blue)
+- concatinate two images 
+	- vertical and horizontal concatination.
+- sklearn and matpot lib
+- image.shape()	
+	- img.shape(512,512,3)
+- default colour scheme
+	- matplotllib : Rgb
+	- opendv : bgr
+- greyscale means shade of grey 
+	- between black and white
+- pixel value 	
+	- 0 means black
+	- 255 means white
+- coloured images ae converted into greyscale 
+	- advatage	
+		- because greyscale can be converted back into coloured
+		- its used to identify deep fakes( ig)
+- deep fake - generate person who doesnt exist.
+____________________________________________________________
 // image augmentation
 
 - What will we do if we have less nummber of images, and we want to use deep leaning ?
@@ -12,4 +35,6 @@
 - what is diff between analog and digital image?
 
 
----------------------------------------------------
+-----------------------------------------------------------
+End
+-----------------------------------------------------------

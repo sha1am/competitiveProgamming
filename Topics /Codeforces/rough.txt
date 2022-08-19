@@ -1,32 +1,76 @@
+ 
+ 
+ 0-1 knapsack, 
+ 
+ matlab ya toh 1 lo, ya toh 0 lo, aur fir dekho kya hota hai.
+ 
+ 
+ 
+ map<int,int> ::iterator it=mp.end()-1;
+ 
+ //what is ordered and unrodered map?
+ // hwo to use greater and ascendnign order
+ 
+ 
+ 
+ [ 3,3,3,3,3,3,3,3,3,7,7,7,7,7,2,2,2,2,2,1,1,1] 10^5 [3,7,2,1] =[3]
+ [7,7,7,7,7,2,2,2,2,2,1,1,1]
+ 
+ 3-7
+ 7-3
+ 5-2
+ 1-1
+ 
+ total size=13
+ tot/2=6.5
+ 
+# map<int,int> mp;
+ 
+ bool check(map<int,int> mp, int a){
+ 	 map<int,int> ::iterator it=mp.begin;
+ 	 bool flag=false;
+ 	 for(;it!=mp.end();it++){
+ 	 	if(it->first==a){
+ 	 		// key exists
+ 	 		flag=true;
+ 	 		break;
+ 	 	}
+ 	 }
+ 	 
+ 	 return flag;
+ }
+ 
+ for(int i=0;i<arr.size();i++){
+ 	int a= arr[i];
+ 	
+ 	//check if a exists as a key in mp
+ 	if(check(mp,a)){
+ 		//exists
+ 		mp[a]+=1;
+ 	}
+ 	else{
+ 		mp[a]=1;
+ 	}
+ 	
+ 	
+ }
+ 
+sort(mp.begin(),mp.end());
+int n=arr.size();
+int nHalf=n/2;
+
+int cnt=0;
+int ans=0;
+map<int,int> ::iterator it=mp.begin;
+ 	 for(;it!=mp.end();it++){
+ 	 	cnt+=it->second;
+ 	 	cntElements+=1;
+ 	 	if(cnt>nHalf){
+ 	 		break;
+ 	 	}
+ 	 }
+
+cout<<ans<<endl;
 
 
-This is to certify that Shadab Alam, B. Tech - CSE, Batch of 2019 - 2023 and a student of The Northcap University, has successfully completed his internship in our organization, period 1 June 2022 to 1 August 2022.
-During this period, he handled software development and design as part of his responsibilities on the project entitled
-YourBooks using the Google Flutter SDK.
-
-During this course of his internship, Shadab Alam has shown a great sense of responsibility and a genuine willingness to learn. His coordination skills and his attention to details are impressive.
-
-We wish him all the very best in his future endeavors.
-
-For IP Details Private Limited
-Shreya Gupta 
-Lead Talent Acquisition
-
-
-
-
-
-
-
-
-- Put stamp on the certificate ( of Hemant Sir or your's)
-- Is there an intership number? ( a unique number that will allow to verify to your records at Pie Info. )
-- When I colleect a hard copy of the origional certificate ?
-
-
-Hello Mam, 
-	I talked to Hemant Sir and he told to tell you to make the changes.
-	Please do the required changes.
-	
-	
-	
+// sort the map

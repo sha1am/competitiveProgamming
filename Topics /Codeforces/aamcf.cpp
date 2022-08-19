@@ -80,57 +80,7 @@ int poww( int n,int p) {
 }
 
 void solve() {
-
-	vector<int> arr= {2,4,5,3,1};
-	int cost=0;
-
-	// apply reverse sort
-
-	for(int i=0; i<arr.size(); i++) {
-		// find the smallest element index=k;
-		int minn_elem_this=arr[i];
-		int minn_elem_this_ind=i;
-		for(int j=i; j<arr.size(); j++) {
-			//now find something even less than this one.
-			if(arr[j]<minn_elem_this) {
-				minn_elem_this_ind=j;
-			}
-		}
-		debug(i);
-		debug(minn_elem_this_ind);
-
-		// now reverse from i------j
-
-		int minn_elem_this_ind_cpy=minn_elem_this_ind;
-		int n=i;
-		cost+=(minn_elem_this_ind-i);
-		for(int m=0; m<(int)ceil((minn_elem_this_ind-i)/(double)2); m++) {
-			// swap element at l th and minn_elem_this_ind_cpy. keep decrementing the right pointer.
-
-			// debug(l);
-			debug(minn_elem_this_ind_cpy);
-			debug(arr);
-			int temp=arr[minn_elem_this_ind_cpy];
-			arr[minn_elem_this_ind_cpy]=arr[n];
-			arr[n]=temp;
-			debug(arr);
-			
-
-			//decrease minn--
-			n++;
-			minn_elem_this_ind_cpy-=1;
-
-
-		}
-
-		debug(arr);
-		cerr<<"aaa"<<endl;
-
-	}
-
-	debug(arr);
-	debug(cost);
-
+	int m=0;
 }
 
 signed main() {
