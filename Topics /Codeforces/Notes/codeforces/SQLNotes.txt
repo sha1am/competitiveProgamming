@@ -1,0 +1,35 @@
+
+
+Queries
+
+selct * form customers;
+	- selects all columns from table named customer;
+
+select col1, col2, from customers;
+	- selects only specific columns from able named customers;
+	
+select * from customers where age >=30 ;
+	- Where adds a filter to the sesarch results. ( only enteries mathcing te where criteria will be satisfied.)
+
+select col1, col2 from customers where age>=20 order by nameb ASC;
+	=- order by statement outputs the input result sorted in ascending order by default on the column specifed.
+	- Note that only asc and des are used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Questions:-
+
+- can we use 'order by ame' instead of 'ordr by name asc' 

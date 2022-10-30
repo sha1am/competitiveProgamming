@@ -1,0 +1,557 @@
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________ 
+____________________________________________________________________  
+ Aspiring Data scientist, who has experience in various programming languages such as C++, JAVA, Python, Dart and used them in various competitive programming contests.
+
+In my third year, I did an internship at Huawei Technologies Co. Ltd., during which I learned to write my first android application using Java.
+
+ Also, in my final year, I did a paid internship at Pie Infosystems Pvt. Ltd.
+ 
+ 
+ 
+ Hey there, I am Shadab Alam and I am a software developer.
+ Hope my message reaches to the 
+ 
+ 
+ 
+ Hey there, I am Shadab Alam and I am a software developer and problem solver.
+ Hope my message reaches its destiny.
+ 
+ 
+ Hey there,I am Shadab Alam and I am a software developer and problem solver.
+ Hope my message reaches you.
+ hey hey hey
+ 
+ Hey there, my name is Shadab Alam and I am an software developer and problem solver.
+ Hope my message reaches you.
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+For data science related 
+--------------------------
+
+I have a profound interest in programming and I have been coding in C++ since 4 years now.
+Apart from C/C++, I can code in Java, Python.
+
+Taking about my past, I have passed my 10th class CBSE board exam with a perfect 10 CGPA and 12th CBSE board exams with a score of 94% from PCM stream.
+
+I am pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am currently in my final year pursuing data science as specialization.
+
+
+For Software Development related 
+--------------------------
+
+I have a profound interest in programming and I have been coding in C++ since 4 years now.
+Apart from C/C++, I can code in Java, Python.
+
+Taking about my past, I have passed my 10th class CBSE board exam with a perfect 10 CGPA and 12th CBSE board exams with a score of 94% from PCM stream.
+
+I am pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am currently in my final year.
+
+
+Profressional Summary edited
+------------------------------
+
+I have a profound interest in programming and I have been commpetetive coding in C++ since 4 years now.
+
+Apart from C/C++, I can write programs in Java, Python and I have an understanding of all the basics of web development.
+
+Taking about my past, I have passed my 10th class CBSE board exam with a perfect 10 CGPA and 12th CBSE board exams with a score of 94% from PCM stream.
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+
+
+
+absar:-
+
+Personal Summary:-
+
+I have a keen interest in programming and I have been doing competitive programming  since 4 years now.
+
+I primarily code in C++ while I am also familiar with Java and Python.
+
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+Update :-
+
+I have a keen interest in programming and I have been doing competitive programming  since 4 years now.
+I primarily code in C++/JAVA while I am also familiar with Python and Dart.
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+
+
+
+
+
+
+
+About interships 
+------------------------------
+
+
+I did a paid internship in my final year at Pie Infosystems private limited where
+I worked on a professional accounting software using Flutter development environment. 
+tes
+
+
+
+
+
+
+
+I have profound knowledge of how exactly a compiler works and there are a handful number bugs that I didn't resolved finally.
+
+I have a profound understanding of exactly how a compiler works and due to my persistant and curious nature, I am able to debug most of the codes.
+
+
+
+
+
+
+
+Strengths:- 
+
+I know how to become 'Jack' of a trade in a stipulated amount of time, which according to me is the most important skill in today's continously evolving techworld.
+
+
+I know how to gain proficiency in a entirely new skill in a appropriate amount of time, which according to me is the most important skill required in today's continously evolving techworld.
+
+
+
+With proper guidance, I believe that I can learn an entirely new skill in a relatively short period of time
+which is an important skill required in today's continously evolving techworld.
+
+
+
+
+I can learn an entirely new skill in a relatively short period of time, which is an important skill required to grow in today's continously evolving techworld.
+
+
+SUMMARY FINAL 
+
+I have a keen interest in programming and I have been doing competitive programming  since 4 years now.
+
+I primarily code in C++ or JAVA while I am also familiar with Python and Dart.
+
+I am currently pursuing Bachelor's of Technology from Computer Science at The NorthCap University, Gurgaon and I am in my final year.
+
+In my third year, I did an internship at Huawei Technologies Co., Ltd where I learned to write my first android application using Java.
+
+In my final year I did a paid internship at Pie Infosystems Pvt. Ltd.
+
+
+
+Objective :-
+------------------------------------
+Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company.
+
+
+To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.
+
+
+
+To secure a responsible career opportunity in a reputable organization to fully utilize my training and skills while making a significant contribution to the success of the company.
+------------------------------------
+
+
+
+During my third year, I did an internship at HUAWEI Mobiles International Inc. during which I completed the HMS foundation course training.
+
+I also passed the exam and got certified for the same which is globally accepted.
+
+Made an android application and published it on the Huawei app store.
+Application Link:- https://appgallery.huawei.com/app/C104745679
+
+About the app:- 
+App Name :- FAMCHAT
+A chatting application which implements Google Account kit and Google Map interface. ( ~ to Snapchat).
+
+
+
+App Name :- YourBooks
+
+Worked on a professional accounting software using Flutter development environment.
+Designed the app's onboarding page, screens working as a front-end developer and designed some API logics on the backend.
+
+
+------------------------
+
+Android developer Intern
+Organisation: HUAWEI Technologies Co. Ltd
+1st June 2021 - 1st September 2021
+Gurugram, Haryana, India
+Mentor: Mr. Nithin KC , Mr. Debanta
+Key Skills/Technologies:
+
+    Android Studio
+    Android Development
+    Android 
+
+Description: During my third year, I did an internship at HUAWEI Mobiles International Inc. during which I completed the HMS foundation course training.
+
+I also passed the exam and got certified for the same which is globally accepted.
+
+Made an android application and published it on the Huawei app store.
+Application Link:- https://appgallery.huawei.com/app/C104745679
+
+About the app:-
+App Name :- FAMCHAT
+A chatting application which implements Google Account kit and Google Map interface. ( ~ to Snapchat).
+
+
+
+
+--------------
+This was summer internship training program for students at HUAWEI. 
+I have passed the exam and have recieved the certification successfully.
+
+The certification is globally accepted and the certification duration is six weeks.
+
+
+
+
+Huwaei HMS foundation course exam
+Institute: HUAWEI Technologies Co. Ltd .
+1st June 2021 - 1st September 2021
+Key Skills/Technologies:
+
+    Android Studio
+    Android SDK
+    Android
+    Android Development 
+
+Description: This was summer internship training program for students at HUAWEI.
+I have passed the exam and have recieved the certification successfully.
+
+The certification is globally accepted and the certification duration is six weeks.
+
+
+Scholarship in college:- Secured 50% fee waiver scholarship in college due to my academic performance.
+Scored 94% in Board Exams:- I scored second highest in my school 12th board exams.
+Perfect 10 CGPA in Board exams:- Scored a perfect 10 CGPA in my 10th board exams.
+
+
+-----------\
+
+Hello Mam,
+    I, Shadab ( 19csu284 ) did an internship at HUAWEI Mobiles International Inc. during which I completed the HMS foundation course training.
+I also passed the exam and got certified for the same. ( Certificate in mail attachment)
+
+Made an android application and published it on the Huawei app store.
+Application Link:- https://appgallery.huawei.com/app/C104745679
+
+About the app:-
+App Name :- Famchat
+A chatting application which implements Google Account kit and Google Map interface. ( ~ to Snapchat).
+
+Duration : 1st June 2021 - 1st September 2021
+Mentor: Mr. Nithin KC , Mr. Debanta
+
+____________________________________________________________________ 
+ 
+ 
+#####################################################################
+ // my attempt to create a linked list.
+ 
+ how to create a linked list
+ 
+# TODO :
+        - to make a node( structure or class.)
+        - to make a linked list if we have a node structure;
+            - create a empty linked list
+                - now can it have 0 element minimum or 1 minimum element.
+        - add elements to the linked list
+            - create a new node ( ie. struct node nn(2,NULL))
+                - make sure this node is the last node ( otherwise the list will not iterate or give garbage value)
+            - now link the last node of the Llist to the add of this node. 
+            - make sure this node 
+        - how to iterate a linked list?
+            - 
+        - how to traverse to the last second element?
+            - or in general to last 5th element
+        - print a linked list
+        - how to insert a node in a middle of the Llist. 
+            - at a specific position ( ie. after 4th node and 4th node is not the last node)
+                - iterate till that pos ( ie. 4th pos)
+                - store the address of the node next to 4th node( 5th node) (ie.    Struct)
+                - 
+                - 
+        
+        
+        
+        
+        - to make a linked list (1,2,3,4,5)
+        - are make a struct node and creating a list different?
+        - 
+        - to traverse the linked list
+        - 
+        - to 
+ 
+ 
+______________________________________________
+Rough:-
+---------------------------------------------
+
+ struct node{
+    // what are the two things in the node? (ie. value, the address to next node)
+    int val;
+    int* next;
+    
+    //what constructors can be made?
+        // - to init a node. ( take val and address to next node)
+        // - 
+    
+    node(){
+        val=1;
+        next=NULL;
+    }
+    
+    node(int val, int* next){
+        
+        val=val;
+        next=next;
+    }
+    
+    
+ }
+ 
+_____________________________________________
+ 
+
+void solve(){
+    // linked list comprises of what ( ie. head, nodes, and last node pointing to null)
+    
+    
+    // create a small linked list.( head, node,this node pointing to NULL)
+                    // make  a random node, 
+                    // - make a variable named head( type: struct node*)
+                        // - coz it stores the address of a node. ( so node*)
+    
+    struct node = tn(1,NULL);
+    struct node* head= &tn;
+    
+    
+    // need to add elements in a Llist. (ie. 2,3,4,5)
+    
+    struct node nn(2,NULL);
+    
+    // iterate the Llist and get till the last element
+        // - make a ptr and make that pointer point to the start of the linked list.
+        // what should be the type of the pointer?
+    
+    struct node* ptr0= head;
+    
+    while(ptr.next!=NULL){
+        ptr= ptr.next;
+    }
+    // now pointer is at the last element.
+    
+    ptr.next=nn;
+    
+    // now the linked list is (1,2).
+    
+    // now we need to print the linked list.
+    
+    printLlist(head); ( head is a pointer to a node , ie, type(head)== struct node* )
+    
+    
+    //now we need to insert an element in the middle of the linked list (ie, 3rd pos)
+        //- ie 1,2,3,4,5 ---> 1,2,3,4 , 17,5
+    
+    struct node* ptr0=head;
+    int afterPos=4;
+    while(afterPos--){
+        ptr0=ptr0.next;
+    }
+    
+    // now we have ptr0 at 4th node.
+    
+    
+    
+    
+    
+    
+    
+    
+}
+ 
+ 
+ ______________________________________________
+ Fair :-
+ ---------------------------------------------
+ 
+ struct node{
+    int val;
+    int* next;
+    
+    node(){
+        // empty constructor
+        val=-1;
+        next=NULL;
+    }
+    
+    node(int val , int* next){
+        // constructor with arguments
+        val=val;
+        next= next;
+    }
+ };
+ 
+ void printLlist(struct node* head){
+ 
+    struct node* ptr= head;
+    while(ptr.next!=NULL){
+        cout<<(*ptr).val <<" ";
+        
+    }
+    cout<<endl;
+ }
+ 
+ void main(){
+ 
+    // make a Llist
+    
+    struct node fn(1,NULL);
+    struct node* head= &fn;
+    
+    // now we have a list (ie 1)
+    
+    // add  2,3,4,5 to the Llist using loop
+    
+    for(int i=2, i<=5;i++){
+        // lets assume for i =2 what we want to do?
+        struct node nn(i,NULL);
+        
+        //now traverse the Llist till it reaches the last element
+        struct node* ptr1;
+        while(ptr1.next!=NULL){
+            ptr=ptr.next;
+        }
+        
+        // set the pointer to next to 
+        ptr.next=nn;
+    }
+    
+    // now the Llist is (1,2,3,4,5);
+    
+    printLlist(head);
+    
+ }
+ 
+ _____________________________________________
+ 
+ #####################################################################
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+____________________________________________________________________
+
+TODO : -  
+
+[1,8,6,2,5,4,8,3,7] N= 10^5
+
+- we have to choose a subArray( which is continuos)
+- |index(se) -index(fe)| is max
+
+
+//first think a brute force appraoch ( TC: n^2)
+ 1,8 -> 1,6 -> 1,2 .......(n times)
+ 8,6 -> 8->2 ->8 ->5.......(n-1 times)
+ 
+ 
+ // now think about something other than brute force approach
+ 	- there can be many but lets try sliding window
+ 
+// sliding window
+ let window size be 2
+ 
+// a subset where second largest element different and diff of indexes(ie. sle*abs(index(sle,)index(le)))
+
+
+[1,8,6,2,5,4,8,3,9]
+
+
+vector<int> arr;
+for(int i =0;arr.size();i++){
+	cin>> arr[i];
+}
+// we have array here.
+int maxx=-1;
+for(ws=2;ws<arr.size();ws++){
+	//ws ( 2,3,4,...n)
+	
+	vector<int> vfs;
+	for(int i=0;i<ws;i++){
+		vfs.push_back(arr[i]);
+	}
+	
+	
+	
+	for(int j=0; ws+j<= arr.size()-1;j++){
+	sort(vfs.begin(),vfs.end();greater<int>());
+		int a= vfs[1]*(ws-1);
+		maxx= max(maxx, a);
+		vfs.push_back(arr[ws+j])
+	
+	}
+	
+	
+	
+}
+
+debug(maxx);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 

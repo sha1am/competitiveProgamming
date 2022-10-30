@@ -65,13 +65,53 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const long long minINF=-1e18;
 const int32_t M=1e9+7;
+
 const int32_t MM=998244353;
 int N=100002;
 
-void solve() {
-	
+void pV(vector<int> v) {
+	for(auto &a: v) cerr<<a<<" ";
+	cerr<<endl;
 }
-
+int lcs(char* X, char* Y, int m, int n,
+        vector<vector<int> >& dp)
+{
+    if (m == 0 || n == 0)
+        return 0;
+    if (X[m - 1] == Y[n - 1])
+        return dp[m][n] = 1 + lcs(X, Y, m - 1, n - 1, dp);
+  
+    if (dp[m][n] != -1) {
+        return dp[m][n];
+    }
+    return dp[m][n] = max(lcs(X, Y, m, n - 1, dp),
+                          lcs(X, Y, m - 1, n, dp));
+}
+  
+void solve() {
+	int n;cin>>n;
+	string s1,s2;
+	cin>>s1>>s2;
+	
+	string s1r="";
+	for(int i=s1.length()-1;i>=0;i--){
+		s1r+=s1[i];
+	}
+	
+	debug(s1);
+	debug(s1r);
+	debug(s2);
+	
+	 char s2c[n + 1];
+	 char s1rc[n + 1];
+ 
+    strcpy(s2c, s2.c_str());
+    strcpy(s1rc, s1r.c_str());
+    
+    vector<vector<int> > dp(n + 1, vector<int>(n + 1, -1));
+	int ans=  lcs( s2c, s1rc, n,n,dp);
+	cout<<ans<<endl;
+}
 
 signed main() {
 	ios_base::sync_with_stdio(false);
@@ -93,9 +133,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
-	// string temps;
-	// getline(cin,temps);
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

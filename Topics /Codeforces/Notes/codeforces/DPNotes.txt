@@ -25,7 +25,7 @@ Start
 ___________________________________________________________________
 -----------------------------------------------------------
 #Doubts
-- Will knap 0/1it work with other choice daigram?
+- Will knap 0/1 it work with other choice daigram?
 - What is the difference if we take two times x in choice daigram of knapsack 0-1?
 
 
@@ -36,3 +36,14 @@ ___________________________________________________________________
 End
 -----------------------------------------------------------
 
+
+Errors I generally make in DP.
+
+- when filling values , you have to iterate according to the vector size provided. Not the T[N][M] , you initialize.
+	-   int minimumTotal(vector<vector<int>>& triangle) {
+	........
+		for(intt i=0;i< triangle.size();i++){
+	            for(intt j=0;j<triangle[i].size();j++){
+	          
+	}
+	

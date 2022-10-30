@@ -1,0 +1,160 @@
+______________________________________________________
+-----------------------------------------------------
+# Mistakes.
+
+- It is getElementById('InsertIdHere').
+	
+- Use single inverted commas instead of double inverted commas
+	- ie . for example :-
+	
+- Its <!DOCTYPE Html>.
+	- not without !---> this is probably preprocessor compiler.
+- document.getElementById('243').innerHTML= Date()
+
+______________________________________________________
+______________________________________________________
+-----------------------------------------------------
+
+# Tips
+
+- Use '' single commas everywhere
+	- only use double commas whenm you know there are going to be ' single commas' inside.
+______________________________________________________
+______________________________________________________
+-----------------------------------------------------
+
+# Questions
+
+- How to hide element in HTML using JS?
+	- document.getElementById('id_here').style.display='none'
+- How to make an element visible in HTML using JS?
+	- document.getElementById('id_here'),style.display='block'
+
+______________________________________________________
+_____________________________________________________
+-----------------------------------------------------
+
+# FreeCodeCamp (3 hours video)
+
+- Two types of commments 
+	- var shad=1 // This is a inline comment to define this line of code
+	- /*  */
+- There are 5 types of variables in javascript
+	- boolean
+	- number
+	- object -> just like dictionaries.
+	- undefined
+	- array
+
+- Three ways to define variables 
+		-   Var a=0;
+			Let a =0;
+			Const a=3.14;
+- To debug use Console.log(a); 
+
+- Javascript is case sensitive language.
+
+- Floating point 
+	- Var a=22.2243
+	- Var a=10;
+	
+- a+=5;
+
+- Var myString= " he said \"hello\""
+
+- Var myString = `' " " '`
+
+- The order is ticks >>> single quotes>> double quotes
+
+- Some concatination operations on strings.
+
+- Use str.length  to find the length of the string.
+	-Notice that its not str.length(). With function brackets.
+	
+- Use square brackets to refer to indexes of string.
+	-   For eg :-
+		var str="Shadab"
+		Str[0] = 's'
+		Use square brackets to refer to indexes of string.
+		For eg :-
+		var str="Shadab"
+		Str[0] = 'S'
+		
+- Strings are immutable. ( Ie. Strings can be added and stuff but individual characters in the string cannot be altered)
+	- Eg :- str[0] = 'a' // this will throw an error
+	- To change shadab to ahadab we have to change the whole string ie. str="Ahadab"
+- To get the last letter use 
+	- str[str.length -1]
+- A word game.
+	-   function hFun( parameter1, parameter2 , parameter 3)
+		{
+		//do stuff;
+		 
+		return ans;
+		)
+- Push(), pop(), shift(),unshift();	
+	arr= ["Shadab", 1];
+	arr.push(["Absar", 2]);
+	arr.pop() removes the last element of the array.
+	arr.shift() removes the first element from.the array.
+	Arr.unshift() pushes at the front of the array.
+
+- Basic stuff about Functions . 
+	- Just the fact , we declare a function with function hFun(a , b){}
+	
+- If var keyword is used outside the scope of the function. Then it becomes global variable.
+	-	Ie. 
+		var a=10;
+		function hFun()
+		{
+		// a can be assced here.
+		}
+
+		// a can be assesed here also
+
+
+	-	If we use 
+		Var a= 10 inside a function means it is usable to that function. 
+		But if we dont use the var keyword , then it automatically becomes global keyword.
+		
+- Variable without var keyword  can be ascessed outside the function too.
+A local variable cannot be assed outside of the function.
+
+- If localV and globalV have the same name then , local variable dominates.
+Basic stuff about return statement.
+
+- JSON.stringify(arr) 
+	- to convert an array into string format
+How to use typeof
+	- typeof myName != "undefined";
+1:09---- notes till here.
+
+______________________________________________________
+_____________________________________________________
+-----------------------------------------------------
+# W3 School exercise
+
+- How to show something in an alert box?
+	- var z=10;
+	  alert(z);
+- JS compiles from left to right.
+- How to empty a variable? 
+	- var a=10;
+	  a= undefined;
+
+- Its onclick not onCLick
+	- <button onclick=alert('This is alert')>Click me </button>
+
+- its onmouseover ---( not onMouseHover)
+
+
+
+
+
+
+
+
+
+
+
+_____________________________________________________

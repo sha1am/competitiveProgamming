@@ -1,0 +1,37 @@
+# Linked list
+__________________________________________
+
+Questions I can think on linked list
+-----------------------------------------
+- insert items in linked list
+- insert 
+- how to traverse  a linked list
+- how to rotate linked list 
+    - (brute force)
+    - k  times using K(N) time complexity
+    - just in 1 iteratation.
+    
+- how to
+__________________________________________
+
+
+
+
+
+
+
+
+
+
+__________________________________________
+List defined in online compilers inluding constructors
+-----------------------------------------
+-  * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+-----------------------------------------

@@ -65,13 +65,57 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const long long minINF=-1e18;
 const int32_t M=1e9+7;
+
 const int32_t MM=998244353;
 int N=100002;
 
-void solve() {
-	
-}
+int findMinInd(vector<int> v,int sP,int eP) {
+	int ans=sP;
+	int mE=v[sP];
+	for(int i=sP; i<v.size(); i++) {
+		if(v[i]<mE) {
+			ans=i; mE=v[i];
+		}
+	}
 
+	return ans;
+}
+void swap(vector<int>& v, int i, int j) {
+
+	int temp= v[j];
+	v[j]=v[i];
+	v[i]=temp;
+}
+int revArray(vector<int>& v, int sP, int eP) {
+	int ans= eP-sP+1;
+
+	int i=sP; int j=eP;
+	while(i<j) {
+		swap(v,i,j);
+		i++; j--;
+	}
+
+
+	return ans;
+}
+int solve() {
+	int n; cin>>n;
+	vector<int> v(n,-1);
+	for(int i=0; i<v.size(); i++) {
+		cin>>v[i];
+	}
+	int cnt=0;
+	for(int i=0; i<v.size()-1; i++) {
+		//find miElementIndex from i till lastindex
+		int mEI=findMinInd(v,i,v.size()-1); \
+
+		cnt+=(revArray(v,i,mEI));
+	}
+	debug(v);
+
+	return cnt;
+
+}
 
 signed main() {
 	ios_base::sync_with_stdio(false);
@@ -86,17 +130,20 @@ signed main() {
 
 #ifdef SIEVE
 	sieve();
-#endif
+#endif`
 #ifdef NCRk
 	init();
 #endif
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
-	// string temps;
-	// getline(cin,temps);
-	while(t--) solve();
+	cin>>t;
+	int i=1;
+	while(t--) {
+		int ans=solve();
+		cout<<"Case #"<<i<<": "<<ans<<endl;
+		i++;
+	}
 	cerr <<"Time Taken: "<<time(start);
 	return 0;
 }

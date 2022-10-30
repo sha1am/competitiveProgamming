@@ -1,0 +1,68 @@
+___________________________________________________
+# Deep Learning Krish Naik
+---------------------------------------------------
+
+- What is AI ?
+	- Any application that can work without an human interaction is an AI application.
+	
+````````````````````````````````````````````````````````````````````````````````````````````
+- What is ML ?
+	- ML is a subset of AI.
+	- It provides stats tools to analyze data || preprocess data || prediction || forecast stuff.
+	- What are types of Machine learning Algorithms? 
+		- Supervised - using labelled data
+		- Unsupervised - using unlabelled data.
+		- What is independent variable and dependent variable? 
+			- What variable we are predicting is called dependent variable, and through which we are predicting is called independent variable.
+		- What is output variable? 
+			- dependent variable is also called output variable.
+		
+		- What are the types of supervised learning algorithm?
+			- Regression -> when output is continous.
+			- Classfication -> when output is fixed number of categories. 
+				-(eg.Binary classification || multiclass classification. || multilabel classification)
+				- what is the diff between multiclass and multilabel classification?
+					- In multiclass classfication, output value can belong to two or more different categories but in multilabel we output can belong to multiple categories.( eg a movie can be action && romance || action && thriller). 
+					- so here we are not predicting for a single category but for mulitple categories.
+					
+		- What category does forecasting belong to and why?
+			- forecasting is a regression problem because it predicts continuos output.
+				- time series analysis was mentioned here.
+				
+		- What is Unsupervised learning?
+			- we dont know the categories of output
+
+````````````````````````````````````````````````````````````````````````````````````````````
+- What is DL ?
+````````````````````````````````````````````````````````````````````````````````````````````
+- What is Data Science ?
+````````````````````````````````````````````````````````````````````````````````````````````
+
+
+
+
+
+
+
+
+
+
+
+
+___________________________________________________
+
+
+//
+- perceptron equation is
+	- y=x1+x2
+	- y=x1w1 + x2w2;
+	- y= (x1w1 +b1) + (x2w2 +b2)
+	
+- 
+
+---------------------------------------
+Dl questions
+
+- What is reinforcement learning?
+- What is deep learning?
+- 

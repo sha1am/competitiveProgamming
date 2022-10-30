@@ -65,13 +65,63 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const long long minINF=-1e18;
 const int32_t M=1e9+7;
+
 const int32_t MM=998244353;
 int N=100002;
 
-void solve() {
+void pV(vector<int> v) {
+	for(auto &a: v) cerr<<a<<" ";
+	cerr<<endl;
+}
+//what to store 
+int N=102;
+
+vector<vector<int>> T(N,)
+int recFun(vector<int> vb, vector<int> vr,int pos, int ans,int cB, int cR){
+	//base condition
+	if(pos<0){
+		return ans;
+	}
+	//real work
+	//if not taking B
+	int kkN= cB;
+	int llN= cR+vr[pos];
+	int a= recFun(vb,vr,pos-1,min(kkN,llN),kkN,llN);
+	
+	int kkT= cB+ vb[pos];
+	int llT= cR;
+	int b= recFun(vb,vr,pos-1,min(kkT,llT),kkT,llT);
+	ans=max(a,b);
+	
+	return ans;
+	
 	
 }
+int hFun(vector<int> vb, vector<int> vr){
+	int pos=vb.size()-1;
+	int ans=0; int anss=0;
+	int cB=0,cR=0;
+	ans=recFun(vb,vr,pos,anss,cB,cR);
+	
+	return ans;
+}
 
+void solve() {
+	int n; cin>>n;
+	vector<int> vb(n,-1);
+	vector<int> vr(n,-1);
+	
+	for(int i=0;i<vb.size();i++){
+		cin>>vb[i];
+	}
+	
+	for(int i=0;i<vr.size();i++){
+		cin>>vr[i];
+	}
+	
+	int ans=hFun(vr,vb);
+	cout<<ans<<endl;
+}
 
 signed main() {
 	ios_base::sync_with_stdio(false);
@@ -93,9 +143,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
-	// string temps;
-	// getline(cin,temps);
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

@@ -1,0 +1,544 @@
+
+_____________________________________--
+
+
+My skillset matches the job profile and I to be a
+An effective communicator with a proven track record of excelling in the task assigned to me.
+
+I am really interested for working at Dreamspring a proven track record of excelling in the task assigned to me.
+
+I would like to say two interships as an experience as a frontend developer and 
+
+
+I would be more than excited to join Dreamspring as it matches my current skillset and future goals. 
+
+# import the necessary packages
+from scipy.spatial import distance as dist
+from collections import OrderedDict
+import numpy as np
+
+class CentroidTracker:
+    def __init__(self, maxDisappeared=50, maxDistance=50):
+        # initialize the next unique object ID along with two ordered
+        # dictionaries used to keep track of mapping a given object
+        # ID to its centroid and number of consecutive frames it has
+        # been marked as "disappeared", respectively
+        self.nextObjectID = 0
+        self.objects = OrderedDict()
+        self.disappeared = OrderedDict()
+
+        # store the number of maximum consecutive frames a given
+        # object is allowed to be marked as "disappeared" until we
+        # need to deregister the object from tracking
+        self.maxDisappeared = maxDisappeared
+
+        # store the maximum distance between centroids to associate
+        # an object -- if the distance is larger than this maximum
+        # distance we'll start to mark the object as "disappeared"
+        self.maxDistance = maxDistance
+
+    def register(self, centroid):
+        # when registering an object we use the next available object
+        # ID to store the centroid
+        self.objects[self.nextObjectID] = centroid
+        self.disappeared[self.nextObjectID] = 0
+        self.nextObjectID += 1
+        # 0 - (2,4), 1- (4,6), 2-
+
+    def deregister(self, objectID):
+        # to deregister an object ID we delete the object ID from
+        # both of our respective dictionaries
+        del self.objects[objectID]
+        del self.disappeared[objectID]
+
+    def update(self, rects):
+        # check to see if the list of input bounding box rectangles
+        # is empty
+        if len(rects) == 0:
+            # loop over any existing tracked objects and mark them
+            # as disappeared
+            for objectID in list(self.disappeared.keys()):
+                self.disappeared[objectID] += 1
+
+                # if we have reached a maximum number of consecutive
+                # frames where a given object has been marked as
+                # missing, deregister it
+                if self.disappeared[objectID] > self.maxDisappeared:
+                    self.deregister(objectID)
+
+            # return early as there are no centroids or tracking info
+            # to update
+            return self.objects
+
+        # initialize an array of input centroids for the current frame
+        inputCentroids = np.zeros((len(rects), 2), dtype="int")
+
+        # loop over the bounding box rectangles
+        for (i, (startX, startY, endX, endY)) in enumerate(rects):
+            # use the bounding box coordinates to derive the centroid
+            cX = int((startX + endX) / 2.0)
+            cY = int((startY + endY) / 2.0)
+            inputCentroids[i] = (cX, cY)
+
+        # if we are currently not tracking any objects take the input
+        # centroids and register each of them
+        if len(self.objects) == 0:
+            for i in range(0, len(inputCentroids)):
+                self.register(inputCentroids[i])
+
+        # otherwise, are are currently tracking objects so we need to
+        # try to match the input centroids to existing object
+        # centroids
+        else:
+            # grab the set of object IDs and corresponding centroids
+            objectIDs = list(self.objects.keys())
+            objectCentroids = list(self.objects.values())
+
+            # compute the distance between each pair of object
+            # centroids and input centroids, respectively -- our
+            # goal will be to match an input centroid to an existing
+            # object centroid
+            D = dist.cdist(np.array(objectCentroids), inputCentroids)
+
+            # in order to perform this matching we must (1) find the
+            # smallest value in each row and then (2) sort the row
+            # indexes based on their minimum values so that the row
+            # with the smallest value as at the *front* of the index
+            # list
+            rows = D.min(axis=1).argsort()
+
+            # next, we perform a similar process on the columns by
+            # finding the smallest value in each column and then
+            # sorting using the previously computed row index list
+            cols = D.argmin(axis=1)[rows]
+
+            # in order to determine if we need to update, register,
+            # or deregister an object we need to keep track of which
+            # of the rows and column indexes we have already examined
+            usedRows = set()
+            usedCols = set()
+
+            # loop over the combination of the (row, column) index
+            # tuples
+            for (row, col) in zip(rows, cols):
+                # if we have already examined either the row or
+                # column value before, ignore it
+                if row in usedRows or col in usedCols:
+                    continue
+
+                # if the distance between centroids is greater than
+                # the maximum distance, do not associate the two
+                # centroids to the same object
+                if D[row, col] > self.maxDistance:
+                    continue
+
+                # otherwise, grab the object ID for the current row,
+                # set its new centroid, and reset the disappeared
+                # counter
+                objectID = objectIDs[row]
+                self.objects[objectID] = inputCentroids[col]
+                self.disappeared[objectID] = 0
+
+                # indicate that we have examined each of the row and
+                # column indexes, respectively
+                usedRows.add(row)
+                usedCols.add(col)
+
+            # compute both the row and column index we have NOT yet
+            # examined
+            unusedRows = set(range(0, D.shape[0])).difference(usedRows)
+            unusedCols = set(range(0, D.shape[1])).difference(usedCols)
+
+            # in the event that the number of object centroids is
+            # equal or greater than the number of input centroids
+            # we need to check and see if some of these objects have
+            # potentially disappeared
+            if D.shape[0] >= D.shape[1]:
+                # loop over the unused row indexes
+                for row in unusedRows:
+                    # grab the object ID for the corresponding row
+                    # index and increment the disappeared counter
+                    objectID = objectIDs[row]
+                    self.disappeared[objectID] += 1
+
+                    # check to see if the number of consecutive
+                    # frames the object has been marked "disappeared"
+                    # for warrants deregistering the object
+                    if self.disappeared[objectID] > self.maxDisappeared:
+                        self.deregister(objectID)
+
+            # otherwise, if the number of input centroids is greater
+            # than the number of existing object centroids we need to
+            # register each new input centroid as a trackable object
+            else:
+                for col in unusedCols:
+                    self.register(inputCentroids[col])
+
+        # return the set of trackable objects
+        return self.objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exp- 1-3 yrs
+Location- Lucknow
+
+Please share your update resume on etika.srivastava@hcl.com
+with Subject line: “HCL Lucknow- Job Opportunity” and below details:
+Total Experience- 6 Months
+Current CTC- NA
+Expected CTC- 8 LPA
+Notice Period- 0 DAYS
+Current Location- DELHI
+Native Location- BIHAR
+
+
+
+
+
+______________________________________________
+Having a profound understanding of internal working of a compiler and due to my persistent and curious nature, I am able to debug very efficiently.
+
+_________________________________________________________
+
+- 
+
+supply_point_index,x_coordinate,y_coordinate,total_parking_slots,existing_num_SCS,existing_num_FCS
+0,50.16310969822545,19.412014469051357,23,5,3
+1,37.336450525122,58.11922465250145,27,4,7
+2,46.70923188864823,57.52565042995158,31,6,14
+3,30.52862569937389,55.379835377384964,26,5,5`````````         
+4,51.52178092883343,35.116755445477715,32,11,6
+5,32.50820112131673,59.70136475052203,28,9,6
+6,38.60388018952851,37.60749210722793,25,9,8
+7,38.1623591413188,24.63367334225027,32,6,6
+8,39.21748351159083,42.026200895336245,30,9,1
+9,15.5542798119588,46.81531013061426,21,6,5
+
+From_House_id, toHouseID, CarID, timeStart, TimeEnd(Y)-, 
+
+122312,1324124, 1234, 0700, y, 
+_________________________________________________________
+
+
+AI enabled drone to capture pictures on vacation spots and users can download those images from anywhere in the world. 
+
+The idea is to capture so vivid and beautiful images so that the user is urged to download and subscribe to online gallary network which would be a free place to download your past clicked images. 
+
+
+
+
+Traffic light optimizer - using AI and machine learing we will develop a software which will decide the time of red and green light on traffic signals while taking live traffic data from google maps optimally so that the total average waiting time can be reduced.
+1. What is the problem that you want/wish to solve? - Save time.
+2. Who experiences that problem (target customers) - everyone in cities.
+4. Why is your solution better? - because it has not been implemented yet. 
+
+_________________________________________________________
+
+  0 1 2 3 4 5 7  RESULT
+L 0 1 0 0 1 0 0                    ( budget issue)
+M 1 1 1 0 1 1 0
+H 1 1 0 0 1 1 1
+S 1 1 1 0 0 0 0
+
+  3 4 2 0 3 2 
+
+_________________________________________________________
+_________________________________________________________
+_________________________________________________________
+
+0) SIDE view mirror angle adjuster -> We will adjust the mirror size according to the eye level of the driver and also , we will make vehicles communicate with each other on highway. 
+
+1) Traffic light optimizer using AI-> We will optimise ,red and green traffic time using AI and ML. 
+
+2) Qr based examination attendence system - > In this we will provide student with qr code stickers ,
+                                            so that the papers are not misplaced.
+
+4) AI based eye health app -> We will make an app which will be controlled by eye movements, and give excerxise to eyes.
+
+5) Voice to notes : Convert voice to notes
+
+6) Distributed learning MS - Facebook clone , bachho doubts . ( leader boards, chatting ) 
+
+7) Blood storage optimzation 
+ 
+ Things we kept in mind while deciding these projects:- Data science se related , software based.
+_________________________________________________________
+
+Scholarship in college Secured 50% fee waiver scholarship in college due to my academic performance
+
+_________________________________________________________
+
+Implemented and updated application modules under the direction of Senior Software Developers while working on a professional accounting software using Google's Flutter Software development environment. 
+Designed the app's on boarding page, screens working as a front-end developer and designed dozens of API logics on the back-end.
+
+
+Innovative Programmer striving to make the world a more unified place and solve problems of the masses in attempt of making people's life easier.
+A dedicated problem solving enthusiast with research oriented mindset. Identifying efficiencies and problem areas within data streams, while communicating needs for projects. Adept at receiving and monitoring data from multiple data streams, including Excel,SQL,CSVs etc. 
+Bringing forth the ability to synthesize quantitative information and interact effectively with colleagues and clients. 
+A creative thinker, adept in software development and working with proven track record of excelling in the task assigned to me.
+
+_________________________________________________________
+
+Innovative Programmer and dedicated problem solving enthusiast with research oriented mindset .Identifying efficiencies and problem areas within data streams, while communicating needs for projects. Adept at receiving and monitoring data from multiple data streams, including SQL,csv etc. Bringing forth the ability to synthesize quantitative information and interact effectively with colleagues and clients. Proven track record of excelling in my work.
+
+Innovative Programmer striving to make the world a more unified place and solve problems of the masses in attempt of making people's life easier.
+A dedicated problem solving enthusiast with research oriented mindset .Identifying efficiencies and problem areas within data streams, while communicating needs for projects. 
+Adept at receiving and monitoring data from multiple data streams, including Excel,SQL,Csvs etc. 
+Bringing forth the ability to synthesize quantitative information and interact effectively with colleagues and clients. 
+A creative thinker, adept in software development and working with proven track record of excelling in my work.
+
+
+_________________________________________________________
+College toolkit cross-platform application
+
+
+Kit, Univ Utilities
+_________________________________________________________
+
+Shadab Alam              19CSU284
+Muskan Singh             19CSU181
+Lovjit Bhardwaj          19CSU168
+Hunny Munjal             19CSU130
+
+_________________________________________________________
+
+
+
+- Muskan - 
+- Lovjit - face time attendence.
+- Hunny - ola
+- Shadab - 
+
+
+Synopsis? 
+    - report type , abstract.
+    - feasibilty study
+    - 
+    
+Conclusion : - make student app.
+            - 
+
+
+
+
+
+_________________________________________________________
+
+Hey Senior! Shadab, from the NorthCap 19csu batch this side. 
+I wanted to know about the work culture and if Data Scientist posts are available at Cognizant.
+
+Looking forward to have a short conversation.
+It won't take much of your precious time.  
+Thank you so much. 
+_________________________________________________________
+In this period Pie Infosystems assigned me a project named Your books.
+It’s an Cross- platform accounting application which takes care of all the transactions and records that a Chartered Accountant has to take care of. 
+
+For this training we needed to research a lot about the accounting parts. 
+We researched about the invoice and government rules about GST, CST, SST and how does it apply to our daily lives.
+
+_________________________________________________________
+___________________________
+Organization Name-Pie Infosystems 
+Mentor Name- Mr. Hemant Nagpal, Director and Mrs.Shreya Gupta, HR at Pie infosystems,
+Flutter software developer internship was offered to me by PIE Infosystems as part of our summer internsship
+Role- Flutter software developer
+Duration: 1 June 2022  – 1 August 2022
+______________________________
+
+ 
+About the Summer Internship
+Project Description
+Steps of Algorithms
+Other Technical Topics covered
+Daily Task
+Certificate
+Conclusion
+
+_________________________________________________________
+
+
+
+Out training was from starting in real life projects. 
+Intially, We were trained to learn and understand Dart programming language.
+
+After some days of rigirous training we were given the task of UI/Ux design of the apps.
+Then looking at my performance in the UI/UX part , I was given responsibility of designing all the webpages such as 
+
+    a) Dashboard
+    b) Quotations
+    c) Invoices
+    d) Payments
+    e) Clients/ Vendors
+    f) Expenses and purchases
+    g) Company details
+    h) Inventory
+    i) About us ,logout
+    
+
+    
+Fig 1: Dashboard Screen
+Fig 2: Quotations Screen
+Fig 3: Invoices Screen
+Fig 4: Payments Screen
+Fig 5: Clients/ Vendors Screen
+Fig 6: Expenses and purchases Screen
+Fig 7: Company details Screen
+Fig 8: Inventory Screen
+Fig 9: About us
+    
+
+_________________________________________________________
+
+https://pieinfosystems.com/
+
+https://flutter.dev/
+
+https://dart.dev/
+
+https://yourbooks.in/
+
+Dart: Course by flutterly 
+https://www.youtube.com/watch?v=F3JuuYuOUK4
+_________________________________________________________
+
+In conclusion, Pie Infosystems internship has been a very useful experience for me. I can safely say that my understanding of the job environment has increased greatly. I successfully completed all the tasks assigned to me during my internship. I have gained new knowledge and skills. I experienced that you are always learning something and that is an important factor for progress. There is a lot to explore and to improve. The two main things that I learned after my experience in this internship are the importance of time management and being self-motivated. In my internship I successfully able to learn about machine learning which is one of the most growing fields now-a-days. And this internship will also help in my academics for sure.
+
+Internship was also a good way to find out my strengths and weaknesses. This helped me to define what skills and knowledge I must improve in the coming future. It would be better that the knowledge level of technical concepts is sufficient to contribute fully to projects. It would also be better if I can present and express myself more confidently.
+
+At last, this internship has given me new insights and motivation also given rewards(In Form of Stipends).
+
+_________________________________________________________
+Pie Infosystems is leading provider of Business Technology Solutions and Services. We help customers perform at higher levels to create increased value for their employees, customers, and stakeholders.
+
+Pie Infosystems help good organizations turn better with their smart solutions by developing efficent software solutions. Pie Infosystems are helping enterprises transforming themselves while also creating new avenues to generate value.
+
+Majorly Pie Infosystems work on software development using all the popular frameworks such as React ,JavaScript , Flutter , Android etc.
+
+Start with how to design app screens and UI/UX interface for a professional accounting software named "Yourbooks". Basically, to understand application screens are made.
+
+Then with with our programming skills we must perform certain backend tasks and develop algorithms and finally deploying that feature into their service applications.
+
+Ever since the technology has climbed the apex in Digital World, Pie Infosystems technologies thought of being the top tier IT solutions company.
+
+With the best skills of speaking the language of problem solving, they find your needs fulfilled here with the utmost satisfaction. 
+
+Pie Infosystems has been developing IT solutioions that facilitate firms flourish reaching to convert ideas into reality, additionally as style correct prognostication tools, they have a tendency to deliver peace officer IT solutions that cowl knowledge quality assurance, knowledge integration, knowledge management, knowledge visual image and a lot of, additionally as give outsourcing during this space. With end to end smart Infrastructure, Pie Infosystems builds intelligent IT solutions for every business who chooses it.
+
+•   Website :                       https://pieinfosystems.com/
+•   Industry :                      Computer Software
+•   Company size :                  100-200 employees
+•   Headquarters:                   Gurgaon, Haryana
+•   Type:                           Private Ltd.
+•   Founded:                        2015
+
+
+_________________________________________________________
+I carried out my internship at Pie Infosystems where I worked on a professional accounting software using Flutter development environment. Pie infosystems is a software consulting and product development company based in Gurugram,India.
+
+Pie infosystems Technologies is leading provider of software & IT  Solutions and Services. They help customers perform at higher levels to create increased value for their employees, customers, and stakeholders.
+Pie infosystems help good organizations run their buisiness by building cutting edge software solutions to handle their buisnesses effectively.
+Pie infosystems are helping enterprises transforming themselves while also creating new avenues to generate value.
+
+In this Internship my role was to develop a accounting software using Google's latest SDK called Flutter.
+
+I would like to thank our internship mentors from Pie infosystems, Mr. Hemant Nagpal, Director and Mrs.Shreya Gupta, HR at Pie infosystems, members for their patience, motivation, and inspiration as well as my teachers that have disseminated me their knowledge for making all of this possible.
+
+_________________________________________________________
+
+Pie Infosystems
+Flutter App developer Intern
+ 
+Professional accounting software using Flutter development environment.
+
+Name: Shadab Alam 
+Roll No: 19CSU284
+
+
+1st June 2022 To 1st August 2022
+
+_________________________________________________________
+
+
+[[1,3],[2,5][6,7],[8,10]] //they are ordered srted order
+
+[1,3],2,5]
+[a,b]
+[a,b][6,7]
+
+
+
+// stack [1,5]
+
+
+
+
+How to use maps to find an index and output the value?
+    -   map<int,int> m;
+        // 2 -> 9
+
+        if(m.count(2)){
+        cout << m[2];
+        }
+
+        *min_element;
+
+
+-----------------------------------------------------------
+Start
+-----------------------------------------------------------
+_____________________________________________________
+_____________________________________________________
+
+- TO analyse 2021 companies.
+
+_____________________________________________________
+Core -> Dream
+
+prime only if good company and package 7>.
+
+
+List of companies 
+
+Core:-
+
+    - on 26th of sept.
+    
+- cognizant 
+    
+- vegazva 
+    - looks good .
+- Gemini solutions
+Prime: 
+    - NCR   
+        - october visit 
+    - Delloite
+Dream:
+- Lumiq 2023
+    - data analyst
+    - Online Aptitude & Coding Assessment
+_____________________________________________________ha

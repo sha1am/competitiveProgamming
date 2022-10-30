@@ -1,0 +1,27 @@
+ 
+______________________________________________________
+-----------------------------------------------------
+
+# How to study for CP:-
+
+- setup your accounts on everywhere, like codechef etc
+- ✅Reverse sort ( google code jam 2021 qualification round)
+	- https://codingcompetitions.withgoogle.com/codejam/round/000000000043580a/00000000006d0a5c
+- Reverse sort Engineering ( google code jam 2021 qualification round)
+	- https://codingcompetitions.withgoogle.com/codejam/round/000000000043580a/00000000006d12d7
+	
+- Numbers Game :- ( google code jam 1A 2010)
+	- https://codingcompetitions.withgoogle.com/codejam/round/0000000000433085/0000000000432fe1
+	
+- Learn Game theory
+-
+______________________________________________________
+_____________________________________________________
+-----------------------------------------------------
+
+#
+
+- 
+
+______________________________________________________
+_____________________________________________________

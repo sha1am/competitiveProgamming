@@ -65,13 +65,38 @@ template<typename T,typename T1>T amin(T &a,T1 b) {if(b<a)a=b; return a;}
 const long long INF=1e18;
 const long long minINF=-1e18;
 const int32_t M=1e9+7;
+
 const int32_t MM=998244353;
 int N=100002;
 
+void pV(vector<int> v) {
+	for(auto &a: v) cerr<<a<<" ";
+	cerr<<endl;
+}
 void solve() {
+	int n; cin>>n;
+	debug(n);
+	vector<int> v(n,-1);
+	for(int i=0;i<v.size();i++){
+		cin>>v[i];
+	}
+	debug(v);
+	pV(v);
+	int cnt=0;int ans=cnt;
+	int xr=v[0];
+	int i=1;
+	for(i=1;i<v.size();i++){
+		xr=xr^v[i];
+		if(xr==1) {
+			cnt+=1;
+			xr=v[i+1];i++;
+			continue;
+		}
+	}
+	ans=cnt;
+	cout<<ans<<endl;
 	
 }
-
 
 signed main() {
 	ios_base::sync_with_stdio(false);
@@ -93,9 +118,7 @@ signed main() {
 	cout << fixed << setprecision(12);
 
 	int t=1;
-	// cin>>t;
-	// string temps;
-	// getline(cin,temps);
+	cin>>t;
 	while(t--) solve();
 	cerr <<"Time Taken: "<<time(start);
 	return 0;

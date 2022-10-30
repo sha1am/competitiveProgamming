@@ -4,6 +4,112 @@
 Start
 -----------------------------------------------------------
 ____________________________________________________________
+____________________________________________________________
+____________________________________________________________
+
+- analog ---> digital 
+ 	- sampling 
+ 		- digital coordinate vector
+ 		- quantization
+ 		
+ 	- Colour and intensity
+	 	- black - intensity min
+	 	- grey - intensity low
+	 	- blue - intensity medium
+	 	- white - intensity max
+	 
+	- a graph 
+			- idk i we graw a line , how the intensity changes according to the image.
+	- Nieghbour hood of pixels
+			- horizontal neighbour 2
+			- vertical neighbour 2
+			- daigonal neighbour 4
+	- Adjancy==4
+			- if we consider horizontal and veritcal neighbours
+			- if we consider H,V,ajacent.
+	- We have a 4x4 matrix with 0 and 1.
+		- adjancy=4 
+			- We will be given a set , which values we have to find in the veritcal and horizontal.
+			
+		- adjancy=8
+			- We will be given a set , which values we have to find in the veritcal and horizontal and daigonal too.
+			
+	- Connectivity- to which pixels this pixel is connected.
+			
+			
+	
+____________________________________________________________
+
+- Curse of dimensionality.
+	- PCA
+		- step1 : Standarize data (using Z score)
+		- step 2 : Generate covariance matrix or corellation matrix.
+		- step 3 : Find covariance between two variables
+					- Cov(X,Y)= (x-xmean)(y-ymean)/n
+					- correlation = Cov(X,Y)/SDX*SDY
+						- Corr lies between [-1,1]
+					- 
+					- reconstruction error
+					- Eigen vector's direction never changes. ( jiddi vector.)
+						
+	- LDA
+		- does classifcation and sdimensiionlity reduction.
+	- SVD
+____________________________________________________________
+
+- otsu method (Image thresholding): Method to find the threshold value ( which seperates )
+	- image classification 
+		- class 0 : pixels that are in foreground.
+		- class 1 : pixels that are in background
+	- image segmentation
+		- bounding box
+		- pixel val < t (142-> 0)
+		- pixel val > t (142-> 255)
+		
+	- Weight formula
+		- wB = no of background pixels/ total no of pixels.
+	
+	- Muu formula 
+		- Mu b = mean of 
+	- varience between classes ( sigma square) = wb wf(mub- muu f )^2
+	
+	- Maximize sigma square- to get threshold value.
+
+- Implement Otsu in python 
+	- make histogram.
+	- find threshold.
+	
+- ROI - region of interest
+	- identify module is there or not ?
+	- then identify the size of the module.
+	- identify multiple modules in the image.
+
+- Beningn : Module hai , but Its not cancerous for now.
+- DICOM images. 
+	- extenstion .dm  ( library in python is pydicom)
+	- small size 
+
+	
+____________________________________________________________
+
+-Edge detection algos like:
+	- canny edge detection algorithm	
+		- second order derivative.
+			- first derivative matrix is called Jacobian
+			- Second derivative matrix is called gassian matrix.
+		- cv.canny(negative_img, 100,200)
+	- prewit edge detection algo
+	
+	- image type dico (dca)
+		- python library name : Pydilon
+		
+
+
+
+
+
+
+____________________________________________________________
 
 - rgb into bgr ( to inverse red and blue)
 - concatinate two images 

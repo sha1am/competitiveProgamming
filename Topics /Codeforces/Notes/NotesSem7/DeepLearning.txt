@@ -4,6 +4,138 @@
 Start
 -----------------------------------------------------------
 _____________________________________________________
+
+- Backpropagation through time
+	- cross entropy formula
+	
+_____________________________________________________
+
+- Backpropagation through time for RNN ( Recurrent neural Network) ( used by alexa , google)
+- Normal ANN and CNN will not work.
+	- because the input is not dependent on previous input/ output.
+	- We use RNN
+		- where sequence of words/input is important.
+		
+(brackey);
+	- types of structures
+		- one to one
+		- many to one etc. (words to next word)
+		- one to many - ( image ---> caption)
+		- 
+	- Context data?
+_____________________________________________________
+
+# Deep learning after minors ( RNN - Recurrent Neural network.)
+	- ann, backpropagation, 
+	- Inputs are independent of each other ( till now)
+		- 1 st row is not dependedent on second row
+		- CNN - 	
+			- Images pr convultion.
+			- generally used for images
+	- texual data  next word prediction.
+		- lemmentization. 
+		- stock market price is similar problem. 
+			- we are predicting the next days stock.
+	- 3rd unit will be dealing 	
+	- recurrent relation like fiboonaci number.
+	- till now there was no relation between input to output.
+		- but in sentences , there will be dependency of previous .
+	- Image captioning , using RNN.
+	
+_____________________________________________________
+
+Self Notes :-
+- Perceptron Model
+		- perceptron model used for classification of linear models.
+		- It consists of input/weight and bais.
+		- Single perceptron model	
+			- Artitecture of single layer perceptron?
+			- formula of single layer perceptron. 
+				- y= (sigma wi*xi) +b; 
+		- Algo for single layer perceptron (confusion)
+			- Initialize w=0 and b=0 (ie.bais) ,Set Alpha (ie. learning rate) anything between 0 -1.
+			
+			- while Stopping criteria is false. Iterate below steps
+			- 
+		
+
+_____________________________________________________
+
+- Transfer learning 
+	- Purpose of transfer learning?
+		- we generally use pretrained model and we modify the model existing
+		- Similar problems only , transfer learning.
+		
+	- 
+	- 
+_____________________________________________________
+
+- COnvulation
+	- (input - filter + 2*padding / stride) /2   + 1;
+	- 
+	
+- Max pooling		
+			-
+- image -> convultioin -> relu -> pooling 
+		- CRP+
+		
+- this will convert the matrix into smaller size 
+	- and will convert the matrix into 1D array and then it mmatches with the new images. 
+	
+- Nummerical and backpropagation
+	- neural network , activation function , single neutron
+	- dropout
+	- early stopping
+	- momentum based gradium
+	- adamm based optimizer. 
+	- Weight bais. 
+	- how weight are adjusted fromm the beggining till end.
+	- All activation functions
+	- activation functions maths behind it 
+_____________________________________________________
+
+- What is the need of convulational network?
+- Convulation neural network 
+	- convulation and stride.
+	- padding 
+	- pooling
+	- flattening 
+	- classify
+
+- 
+_____________________________________________________
+
+- convulation using Cnn
+	- How to reduce imae size using sliding square. 
+	- 6x6 ---> 
+	
+-
+_____________________________________________________
+
+- Backpropagate
+	- kuch samajh nhi aa rha.
+	- s
+
+
+_____________________________________________________
+
+- leaky value - ( negative values or something)
+- Multiclass 
+	- two types of out put.
+- Difference between Non -Exclusive and Mutually Exclusive.
+	- 1 data point can belong to more than one class in non exclusive multiclass classification.
+	- 1 data point can't belong to only one class in non exclusive multiclass classification.
+- softmax function
+	- estimates values beween -1 and 1.
+	
+- Capital X and Capital W  means array or matrix
+- quadratic cost function
+- 
+
+
+
+_____________________________________________________
+
 - concept of rotation (or notation)
 - cost function (log loss) ( cross entropy function ig)
 	- summmation from 1 to N y*log(y) + ( 1-y)log(1-y)
@@ -49,6 +181,7 @@ _____________________________________________________
 - gradient descent for optimnal w and m. (ig)
 _________________________________________________________________
 - Biological Neuron
+	- 
 - Artificial Neuron
 - Mc cullah Pitts Model
 	- input 0/1
@@ -95,3 +228,7 @@ Doubts
 END
 -----------------------------------------------------------
 
+What if I search ,w hat is not a dog.
+kaggle?
+crowd analytics
+end to end machine learning

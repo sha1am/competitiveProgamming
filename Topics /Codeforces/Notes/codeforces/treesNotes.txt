@@ -1,0 +1,20 @@
+# Tree
+
+
+ 
+___________________________________________________________________
+Recap :
+--------------------------------------------------------------------
+
+- What I know about trees?
+	- in tree at every step we have two options to go , therefore the time complexity is 1/2 every time . (Order of Log(n))
+	- Binary Trees is the first topic to study
+	- Binary Search tree is an implementation of binary trees.( ig)
+	- What is prefix and postfix expression?
+	- prefix to postfix ( Atleast 20 questions will be good to go)
+	- postfix to prefix ( Atleast 20 questions will be good to go)
+	- AVL is a self balancing tree. 
+
+____________________________________________________________________ 
+Recap Ends here
+____________________________________________________________________ 
